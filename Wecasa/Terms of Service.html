@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta content='ie=edge' http-equiv='x-ua-compatible'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"cc4760ec78","applicationID":"28937327","transactionName":"cg4PQEteDV9dRBcWU1YEEhtNVBNeS2lXAG1CBBNCUFIE","queueTime":0,"applicationTime":796,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQICVlRVABACXFhRAAIFUQ==",licenseKey:"cc4760ec78",applicationID:"28937327"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(27),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(28),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(28),a=t(27);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(24),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=t(21).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;if("string"==typeof o?n=o:"object"==typeof o&&o instanceof y?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n),"data"!==this.params.protocol){var s=(""+(o&&o instanceof y&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(27),s=t(28),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(29);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var i=[r],o=a({});o&&i.push(o),p("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,l,p=t("handle"),h=t("loader"),m=t(26),v=t(19),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}l=new PerformanceObserver(o);try{l.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],24:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(t)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],25:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],26:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],27:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],28:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],29:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(27),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!O++){var t=S.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+S.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+S.offset],null,"api")}var a=t(22),s=t("handle"),c=t(27),f=t("ee"),u=t(25),d=t(17),l=t(19),p=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),S=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(16),t(23),m[v]?(m[v]("DOMContentLoaded",o,l(!1)),h[v]("load",r,l(!1))):(m[w]("onreadystatechange",i),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var O=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(28),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script>
+<meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'>
+<title>Conditions générales</title>
+<meta content='Conditions générales du service Wecasa' name='description'>
+<link rel="canonical" href="https://www.wecasa.fr/conditions-generales">
+<link rel="alternate" hreflang="x-default" href="https://www.wecasa.fr/conditions-generales">
+<link rel="alternate" hreflang="fr-FR" href="https://www.wecasa.fr/conditions-generales">
+<link rel="alternate" hreflang="en-GB" href="https://www.wecasa.co.uk/terms-and-conditions">
+<meta charset='utf-8'>
+<link rel="icon" type="image/png" href="https://www.wecasa.fr/assets/favicon-f118854648a9d1bde40935bf3f66611afcf82cfc7e8f4848654e6813d04ede3e.png" />
+<meta content='7af407d07002402c800d99d32eee9d1a' name='p:domain_verify'>
+
+<meta content='summary' name='twitter:card'>
+<meta content='@Wecasa_fr' name='twitter:site'>
+<meta content='Conditions générales - Wecasa' name='twitter:title'>
+<meta content='Conditions générales du service Wecasa' name='twitter:description'>
+<meta content='https://www.wecasa.fr/assets/wecasa-social-logo-b4a77b64278891f3ba230f2f4f407a5b359c24a4e5155c3551940080e1451710.jpg' name='twitter:image'>
+<meta content='https://www.wecasa.fr/conditions-generales' property='og:url'>
+<meta content='article' property='og:type'>
+<meta content='Conditions générales - Wecasa' property='og:title'>
+<meta content='Conditions générales du service Wecasa' property='og:description'>
+<meta content='https://www.wecasa.fr/assets/wecasa-social-logo-b4a77b64278891f3ba230f2f4f407a5b359c24a4e5155c3551940080e1451710.jpg' property='og:image'>
+<meta content='www.wecasa.fr' property='og:site_name'>
+
+<script src="https://cdn.pagesense.io/js/wecasa/e5082152feb94ff093562f2843f93063.js"></script>
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="07-YaS4C0JpRmsqLY2IotksIoDg3l_02nZtbF1E9mT9rvts7NPmjozN6VzwjtrVWroXc8dpPmwh39lnwOViN7w" />
+<link rel="stylesheet" href="https://www.wecasa.fr/packs/css/application-9f5eadd8.css" media="all" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Work+Sans:400,500,700&amp;display=swap" media="all" />
+
+
+</head>
+<body>
+<script>
+  window.dataLayer = window.dataLayer || [];
+</script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5K64L9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5K64L9');</script>
+<!-- End Google Tag Manager -->
+
+<header class='header js-main-header'>
+<div class='container header__content'>
+<a href="/"><img alt='Logo Wecasa' class='header__logo' src='https://www.wecasa.fr/packs/media/images/logo-104a47289b94b3579cb4c647e612f9a0.svg'>
+</a><nav class='header__navigation header__navigation--hide-desktop js-menu'>
+<img class='header__logo header__logo--mobile' src='https://www.wecasa.fr/packs/media/images/logo-104a47289b94b3579cb4c647e612f9a0.svg'>
+<p class='header__back'>
+<svg class="header__back-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-left" /></svg>
+Retour
+</p>
+<ul class='header__mobile-menu js-menu-main-panel'>
+<p class='header__mobile-menu-title'>Les univers</p>
+<li>
+Coiffure à domicile
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<div class='header__mobile-menu-universe-container'>
+<p class='header__mobile-menu-title'>Coiffeur à domicile</p>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByaXgtcmVzZXJ2YXRpb24=
+">Choisir mon coiffeur</span>
+
+</div>
+<p class='header__mobile-menu-title'>Les services coiffure</p>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vY291cGUtZmVtbWU=
+">Coupe cheveux courts et mi-longs</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vY291cGUtaG9tbWU=
+">Coupe homme</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vYnJ1c2hpbmc=
+">Brushing (courts et mi-longs)</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vY291bGV1ci1yYWNpbmVz
+">Couleur (racines)</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vbWVjaGVz
+">Mèches</span>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--more'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlI3VuaXZlcnNlLXNlcnZpY2Vz
+">Voir les services coiffure</span>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--other'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1jb2lmZmV1cg==
+">Devenir coiffeur Wecasa</span>
+</li>
+<p class='header__mobile-menu-title'>Partout en France</p>
+<li>
+Les villes
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3Bhcmlz
+">Paris</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL2JvdWxvZ25lLWJpbGxhbmNvdXJ0LTkyMTAw
+">Boulogne-Billancourt</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ZlcnNhaWxsZXMtNzgwMDA=
+">Versailles</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL2x5b24=
+">Lyon</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL21hcnNlaWxsZQ==
+">Marseille</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL25pY2UtMDYwMDAtMDYxMDAtMDYyMDA=
+">Nice</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL2JvcmRlYXV4LTMzMDAwLTMzMTAwLTMzMjAw
+">Bordeaux</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL2xpbGxlLTU5MDAw
+">Lille</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3RvdWxvdXNlLTMxMDAwLTMxMTAwLTMxMjAw
+">Toulouse</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL25hbnRlcy00NDAwMC00NDEwMC00NDIwMA==
+">Nantes</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3RvdWxvbi04MzAwMC04MzEwMC04MzIwMA==
+">Toulon</span></li>
+</ul>
+</li>
+<li>
+Les régions
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL2lsZS1kZS1mcmFuY2U=
+">Île-de-France</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL2F1dmVyZ25lLXJob25lLWFscGVz
+">Auvergne-Rhône-Alpes</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3Byb3ZlbmNlLWFscGVzLWNvdGUtZC1henVy
+">Provence-Alpes-Côte d&#39;Azur</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL25vdXZlbGxlLWFxdWl0YWluZQ==
+">Nouvelle-Aquitaine</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL2hhdXRzLWRlLWZyYW5jZQ==
+">Hauts-de-France</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL29jY2l0YW5pZQ==
+">Occitanie</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3BheXMtZGUtbGEtbG9pcmU=
+">Pays de la Loire</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL2JyZXRhZ25l
+">Bretagne</span></li>
+</ul>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--titlelize'>
+Nos articles coiffure
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul class='header__mobile-menu-item-list'>
+<li><a href="/coiffure-domicile/articles/10-idees-coupe-cheveux-enfants">10 idées de coupe cheveux enfants en 2022</a></li>
+<li><a href="/coiffure-domicile/articles/10-idees-coupes-cheveux-homme">10 idées de coupes de cheveux pour homme en 2022</a></li>
+<li><a href="/coiffure-domicile/articles/top-5-coiffure-enfant-fille"> Top 5 idées de coiffure enfant fille en 2022</a></li>
+<li><a href="/coiffure-domicile/articles/top-5-idees-de-coiffure-pour-enfant-garcon">Top 5 idées de coiffure enfant garçon en 2022</a></li>
+<li><a href="/coiffure-domicile/articles/prix-coupe-cheveux">Prix d&#39;une coupe de cheveux</a></li>
+<li><a href="/coiffure-domicile/articles/coiffeur-ouvert-dimanche">Coiffeur ouvert dimanche : comment en trouver</a></li>
+<li><a href="/coiffure-domicile/articles/secrets-belle-barbe">Les secrets d&#39;une belle barbe</a></li>
+<li><a href="/coiffure-domicile/articles/coupe-cheveux-longs-femme">Les coupes de cheveux longs</a></li>
+<li><a href="/coiffure-domicile/articles/faire-coiffure-domicile">Pourquoi faire une coiffure à domicile ?</a></li>
+<li><a href="/coiffure-domicile/articles/coiffure-mariage">Coiffure de mariage : comment bien la choisir</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+Beauté à domicile
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<div class='header__mobile-menu-universe-container'>
+<p class='header__mobile-menu-title'>Esthéticienne à domicile</p>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJpeC1yZXNlcnZhdGlvbg==
+">Réserver mon esthéticienne</span>
+
+</div>
+<p class='header__mobile-menu-title'>Les services beauté</p>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9leHRlbnNpb25z
+LWNpbHMtZWZmZXQtbmF0dXJlbA==
+">Effet naturel 1 cil sur 2</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9leHRlbnNpb24t
+Y2lsLWNpbA==
+">Cil à cil</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9leHRlbnNpb24t
+Y2lscy12b2x1bWUtcnVzc2UtY2ls
+">Volume russe 1 cil sur 2</span>
+</li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VwaWxhdGlvbi1ob21tZQ==
+">Épilation homme</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLW1hcXVpbGxhZ2UtbWFyaWFnZQ==
+">Maquillage et coiffure de mariée</span></li>
+<li class='header__mobile-menu-item header__mobile-menu-item--more'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUjdW5pdmVyc2Utc2VydmljZXM=
+">Voir les services beauté</span>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--other'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1lc3RoZXRpY2llbm5l
+">Devenir esthéticienne Wecasa</span>
+</li>
+<p class='header__mobile-menu-title'>Partout en France</p>
+<li>
+Les villes
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcGFyaXM=
+">Paris</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvYm91bG9nbmUtYmlsbGFuY291cnQt
+OTIxMDA=
+">Boulogne-Billancourt</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvdmVyc2FpbGxlcy03ODAwMA==
+">Versailles</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvbHlvbg==
+">Lyon</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvbWFyc2VpbGxl
+">Marseille</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvbmljZS0wNjAwMC0wNjEwMC0wNjIw
+MA==
+">Nice</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvYm9yZGVhdXgtMzMwMDAtMzMxMDAt
+MzMyMDA=
+">Bordeaux</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvbGlsbGUtNTkwMDA=
+">Lille</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvdG91bG91c2UtMzEwMDAtMzExMDAt
+MzEyMDA=
+">Toulouse</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvbmFudGVzLTQ0MDAwLTQ0MTAwLTQ0
+MjAw
+">Nantes</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvdG91bG9uLTgzMDAwLTgzMTAwLTgz
+MjAw
+">Toulon</span></li>
+</ul>
+</li>
+<li>
+Les régions
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvaWxlLWRlLWZyYW5jZQ==
+">Île-de-France</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvYXV2ZXJnbmUtcmhvbmUtYWxwZXM=
+">Auvergne-Rhône-Alpes</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJvdmVuY2UtYWxwZXMtY290ZS1k
+LWF6dXI=
+">Provence-Alpes-Côte d&#39;Azur</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvbm91dmVsbGUtYXF1aXRhaW5l
+">Nouvelle-Aquitaine</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvaGF1dHMtZGUtZnJhbmNl
+">Hauts-de-France</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvb2NjaXRhbmll
+">Occitanie</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcGF5cy1kZS1sYS1sb2lyZQ==
+">Pays de la Loire</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvYnJldGFnbmU=
+">Bretagne</span></li>
+</ul>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--titlelize'>
+Nos articles beauté
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul class='header__mobile-menu-item-list'>
+<li><a href="/estheticienne-domicile/articles/epilation-homme-domicile">Epilation à domicile, le choix idéal pour les hommes</a></li>
+<li><a href="/estheticienne-domicile/articles/epilation-homme">Epilation homme : pourquoi ? Comment ? On vous dit tout</a></li>
+<li><a href="/estheticienne-domicile/articles/epilation-grossesse">Epilation à domicile, le choix idéal pendant la grossesse</a></li>
+<li><a href="/estheticienne-domicile/articles/estheticiennes-wecasa">Les esthéticiennes Wecasa : comment sont-elles sélectionnées ?</a></li>
+<li><a href="/estheticienne-domicile/articles/meilleures-estheticiennes-paris">Les meilleures esthéticiennes de Paris</a></li>
+<li><a href="/estheticienne-domicile/articles/epilation-levres">Épilation des lèvres : quelle technique choisir</a></li>
+<li><a href="/estheticienne-domicile/articles/epilation-jambes">L’épilation jambe : quelles sont les techniques efficaces ?</a></li>
+<li><a href="/estheticienne-domicile/articles/epilation-sourcils">Épilation des sourcils : tout ce qu&#39;il faut savoir</a></li>
+<li><a href="/estheticienne-domicile/articles/epilation">L&#39;épilation à domicile : les questions les plus fréquemment posées aux esthéticiennes !</a></li>
+<li><a href="/estheticienne-domicile/articles/soins-beaute-bien-etre-domicile">Soins beauté et bien-être : faites-vous chouchouter à domicile !</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+Massage à domicile
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<div class='header__mobile-menu-universe-container'>
+<p class='header__mobile-menu-title'>Massage à domicile</p>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJpeC1yZXNlcnZhdGlvbg==
+">Réserver mon massage</span>
+
+</div>
+<p class='header__mobile-menu-title'>Les services massage</p>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLWRlY291dmVy
+dGU=
+">Massage découverte</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLXJlbGF4YW50
+">Massage relaxant</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLWRlZXAtdGlz
+c3Vl
+">Massage deep tissue</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLWF5dXJ2ZWRp
+cXVl
+">Massage ayurvédique</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLWxvbWktbG9t
+aQ==
+">Massage lomi-lomi</span>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--more'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUjdW5pdmVyc2Utc2VydmljZXM=
+">Voir les services massage</span>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--other'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1tYXNzZXVy
+">Devenir masseur Wecasa</span>
+</li>
+<p class='header__mobile-menu-title'>Partout en France</p>
+<li>
+Les villes
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcGFyaXM=
+">Paris</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvYm91bG9nbmUtYmlsbGFuY291cnQtOTIxMDA=
+">Boulogne-Billancourt</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvdmVyc2FpbGxlcy03ODAwMA==
+">Versailles</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvbHlvbg==
+">Lyon</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvbWFyc2VpbGxl
+">Marseille</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvbmljZS0wNjAwMC0wNjEwMC0wNjIwMA==
+">Nice</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvYm9yZGVhdXgtMzMwMDAtMzMxMDAtMzMyMDA=
+">Bordeaux</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvbGlsbGUtNTkwMDA=
+">Lille</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvdG91bG91c2UtMzEwMDAtMzExMDAtMzEyMDA=
+">Toulouse</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvbmFudGVzLTQ0MDAwLTQ0MTAwLTQ0MjAw
+">Nantes</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvdG91bG9uLTgzMDAwLTgzMTAwLTgzMjAw
+">Toulon</span></li>
+</ul>
+</li>
+<li>
+Les régions
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvaWxlLWRlLWZyYW5jZQ==
+">Île-de-France</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvYXV2ZXJnbmUtcmhvbmUtYWxwZXM=
+">Auvergne-Rhône-Alpes</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJvdmVuY2UtYWxwZXMtY290ZS1kLWF6dXI=
+">Provence-Alpes-Côte d&#39;Azur</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvbm91dmVsbGUtYXF1aXRhaW5l
+">Nouvelle-Aquitaine</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvaGF1dHMtZGUtZnJhbmNl
+">Hauts-de-France</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvb2NjaXRhbmll
+">Occitanie</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcGF5cy1kZS1sYS1sb2lyZQ==
+">Pays de la Loire</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvYnJldGFnbmU=
+">Bretagne</span></li>
+</ul>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--titlelize'>
+Nos articles massage
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul class='header__mobile-menu-item-list'>
+<li><a href="/massage-domicile/articles/meilleures-masseuses-paris">Les meilleures masseuses de Paris</a></li>
+<li><a href="/massage-domicile/articles/meilleurs-masseurs-paris">Les meilleurs masseurs de Paris</a></li>
+<li><a href="/massage-domicile/articles/praticiens-wecasa">Les praticiens Wecasa</a></li>
+<li><a href="/massage-domicile/articles/massage-thailandais">Le massage thaïlandais à domicile</a></li>
+<li><a href="/massage-domicile/articles/massage-prenatal">Le massage prénatal : c&#39;est quoi ? Quels sont les effets ? </a></li>
+<li><a href="/massage-domicile/articles/massage-duo">Massage duo : le bonheur à deux !</a></li>
+<li><a href="/massage-domicile/articles/massage-californien">Le massage californien à domicile</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+Ménage &amp; repassage
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<div class='header__mobile-menu-universe-container'>
+<p class='header__mobile-menu-title'>Ménage sans engagement</p>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wcml4LXJlc2VydmF0aW9u
+">Réserver mon ménage</span>
+
+</div>
+<p class='header__mobile-menu-title'>Les services ménage</p>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wcml4LXJlc2VydmF0aW9u
+">Ménage</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wcml4LXJlc2VydmF0aW9u
+">Repassage</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wcml4LXJlc2VydmF0aW9u
+">Ménage Airbnb</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wcml4LXJlc2VydmF0aW9u
+">Ménage état des lieux</span>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--more'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZSN1bml2ZXJzZS1zZXJ2aWNlcw==
+">Voir les services ménage</span>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--other'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1haWRlLW1lbmFnZXJl
+">Devenir aide ménagère Wecasa</span>
+</li>
+<p class='header__mobile-menu-title'>Partout en France</p>
+<li>
+Les villes
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wYXJpcw==
+">Paris</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9ib3Vsb2duZS1iaWxsYW5jb3VydC05
+MjEwMA==
+">Boulogne-Billancourt</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS92ZXJzYWlsbGVzLTc4MDAw
+">Versailles</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9seW9u
+">Lyon</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9tYXJzZWlsbGU=
+">Marseille</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9uaWNlLTA2MDAwLTA2MTAwLTA2MjAw
+">Nice</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9ib3JkZWF1eC0zMzAwMC0zMzEwMC0z
+MzIwMA==
+">Bordeaux</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9saWxsZS01OTAwMA==
+">Lille</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS90b3Vsb3VzZS0zMTAwMC0zMTEwMC0z
+MTIwMA==
+">Toulouse</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9uYW50ZXMtNDQwMDAtNDQxMDAtNDQy
+MDA=
+">Nantes</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS90b3Vsb24tODMwMDAtODMxMDAtODMy
+MDA=
+">Toulon</span></li>
+</ul>
+</li>
+<li>
+Les régions
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9pbGUtZGUtZnJhbmNl
+">Île-de-France</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9hdXZlcmduZS1yaG9uZS1hbHBlcw==
+">Auvergne-Rhône-Alpes</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wcm92ZW5jZS1hbHBlcy1jb3RlLWQt
+YXp1cg==
+">Provence-Alpes-Côte d&#39;Azur</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9ub3V2ZWxsZS1hcXVpdGFpbmU=
+">Nouvelle-Aquitaine</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9oYXV0cy1kZS1mcmFuY2U=
+">Hauts-de-France</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9vY2NpdGFuaWU=
+">Occitanie</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wYXlzLWRlLWxhLWxvaXJl
+">Pays de la Loire</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9icmV0YWduZQ==
+">Bretagne</span></li>
+</ul>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--titlelize'>
+Nos articles ménage
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul class='header__mobile-menu-item-list'>
+<li><a href="/femme-menage-domicile/articles/hommes-femmes-menage-wecasa">Les hommes et femmes de ménage Wecasa</a></li>
+<li><a href="/femme-menage-domicile/articles/credit-impot-menage">Déduction impôt femme de ménage : on vous dit tout sur le crédit d’impôt ménage</a></li>
+<li><a href="/femme-menage-domicile/articles/aide-menagere">Aide-ménagère : leur savoir-faire</a></li>
+<li><a href="/femme-menage-domicile/articles/premier-menage">Premier ménage à domicile : nos conseils pour vous préparer !</a></li>
+<li><a href="/femme-menage-domicile/articles/menage-airbnb">Ménage Airbnb : pourquoi faire appel à des aides-ménagères professionnelles ?</a></li>
+<li><a href="/femme-menage-domicile/articles/planning-taches-menageres">Planning des tâches ménagères : comment bien s’organiser</a></li>
+<li><a href="/femme-menage-domicile/articles/menage-printemps">Ménage de printemps : nos astuces pour un nettoyage efficace</a></li>
+<li><a href="/femme-menage-domicile/articles/femme-menage-pour-contre">Faire appel à un homme ou une femme de ménage : pour ou contre ?</a></li>
+<li><a href="/femme-menage-domicile/articles/produits-menagers">Produits ménagers : lesquels choisir, comment les fabriquer ?</a></li>
+<li><a href="/femme-menage-domicile/articles/tarifs-prix">Tarif femme de ménage : Nettoyage et ménage à domicile à prix accessible</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+Garde d&#39;enfants
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<div class='header__mobile-menu-universe-container'>
+<p class='header__mobile-menu-title'>Garde d&#39;enfants en toute sérénité</p>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9wcml4LXJlc2VydmF0aW9u
+">Réserver ma nounou</span>
+
+</div>
+<p class='header__mobile-menu-title'>Les services garde d&#39;enfants</p>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2JhYnlzaXR0aW5n
+">Garde ponctuelle en journée</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2JhYnlzaXR0aW5n
+">Garde ponctuelle en soirée</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9wcml4LXJlc2VydmF0aW9u
+">Garde régulière</span>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--more'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudCN1bml2ZXJzZS1zZXJ2aWNlcw==
+">Voir les services garde d&#39;enfants</span>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--other'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1ub3Vub3U=
+">Devenir nounou Wecasa</span>
+</li>
+<p class='header__mobile-menu-title'>Partout en France</p>
+<li>
+Les villes
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9wYXJpcw==
+">Paris</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9ib3Vsb2duZS1iaWxsYW5jb3VydC05MjEwMA==
+">Boulogne-Billancourt</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9tb250cmV1aWwtOTMxMDA=
+">Montreuil</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9hc25pZXJlcy1zdXItc2VpbmUtOTI2MDA=
+">Asnières-sur-Seine</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9jb3VyYmV2b2llLTkyNDAw
+">Courbevoie</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9jaGFtcGlnbnktc3VyLW1hcm5lLTk0NTAw
+">Champigny-sur-Marne</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9seW9uLTNlLWFycm9uZGlzc2VtZW50LTY5MDAz
+">Lyon 3e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9seW9uLTllLWFycm9uZGlzc2VtZW50LTY5MDA5
+">Lyon 9e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC92aWxsZXVyYmFubmUtNjkxMDA=
+">Villeurbanne</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC92YXVseC1lbi12ZWxpbi02OTEyMA==
+">Vaulx-en-Velin</span></li>
+</ul>
+</li>
+<li>
+Les régions
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9pbGUtZGUtZnJhbmNl
+">Île-de-France</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9hdXZlcmduZS1yaG9uZS1hbHBlcw==
+">Auvergne-Rhône-Alpes</span></li>
+</ul>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--titlelize'>
+Nos articles garde d&#39;enfants
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul class='header__mobile-menu-item-list'>
+<li><a href="/garde-enfant/articles/tout-savoir-sur-le-babysitting-ponctuel">Tout savoir sur le babysitting ponctuel </a></li>
+<li><a href="/garde-enfant/articles/comment-trouver-une-assistante-maternelle-agreee">Comment trouver une assistante maternelle agréée ?</a></li>
+<li><a href="/garde-enfant/articles/grille-tarifaire-assistante-maternelle">Grille tarifaire assistante maternelle : le guide ultime</a></li>
+<li><a href="/garde-enfant/articles/nounou-wecasa">Comment sont sélectionnées les nounous pour la garde d’enfants Wecasa ?</a></li>
+<li><a href="/garde-enfant/articles/frais-garde-enfant-impot">Comment bénéficier du crédit d&#39;impôt lié à la garde d’enfants ?</a></li>
+<li><a href="/garde-enfant/articles/comment-declarer-sa-nounou-a-la-caf">Comment déclarer sa nounou à la CAF ?</a></li>
+<li><a href="/garde-enfant/articles/cmg-caf-garde-enfant">Qu&#39;est-ce que le CMG ou CAF garde d&#39;enfant ?</a></li>
+<li><a href="/garde-enfant/articles/tarif-baby-sitting">Quel est le tarif d&#39;un baby-sitting ?</a></li>
+<li><a href="/garde-enfant/articles/nounou-domicile">Comment choisir sa nounou à domicile ?</a></li>
+<li><a href="/garde-enfant/articles/tarif-garde-enfant">Combien coûte la garde d&#39;enfant ?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+Coach sportif à domicile
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<div class='header__mobile-menu-universe-container'>
+<p class='header__mobile-menu-title'>Coach sportif à domicile</p>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJpeC1yZXNlcnZhdGlvbg==
+">Réserver mon coach sportif</span>
+
+</div>
+<p class='header__mobile-menu-title'>Les services coach sportif</p>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9zb3Bocm9sb2dp
+ZQ==
+">Séance de sophrologie</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9waWxhdGVz
+">Cours de pilates</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9zdHJldGNoaW5n
+">Cours de stretching</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9oaWl0
+">Cours de HIIT</span>
+</li>
+<li>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9jYXJkaW8tdHJh
+aW5pbmc=
+">Cours de cardio-training</span>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--more'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUjdW5pdmVyc2Utc2VydmljZXM=
+">Voir les services coach sportif</span>
+</li>
+<li class='header__mobile-menu-item header__mobile-menu-item--other'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1jb2FjaC1zcG9ydGlm
+">Devenir coach sportif Wecasa</span>
+</li>
+<p class='header__mobile-menu-title'>Partout en France</p>
+<li>
+Les villes
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXM=
+">Paris</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMDEtNzUwMDE=
+">Paris 1er Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMDItNzUwMDI=
+">Paris 2e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMDMtNzUwMDM=
+">Paris 3e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMDQtNzUwMDQ=
+">Paris 4e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMDUtNzUwMDU=
+">Paris 5e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMDYtNzUwMDY=
+">Paris 6e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMDctNzUwMDc=
+">Paris 7e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMDgtNzUwMDg=
+">Paris 8e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtOS03NTAwOQ==
+">Paris 9e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMTAtNzUwMTA=
+">Paris 10e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMTFlLWFycm9uZGlzc2Vt
+ZW50LTc1MDEx
+">Paris 11e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMTItNzUwMTI=
+">Paris 12e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMTMtNzUwMTM=
+">Paris 13e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMTQtNzUwMTQ=
+">Paris 14e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMTUtNzUwMTU=
+">Paris 15e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMTYtNzUwMTY=
+">Paris 16e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMTctNzUwMTc=
+">Paris 17e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMTgtNzUwMTg=
+">Paris 18e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMTktNzUwMTk=
+">Paris 19e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGFyaXMtMjAtNzUwMjA=
+">Paris 20e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbHlvbi0xZXItYXJyb25kaXNzZW1l
+bnQtNjkwMDE=
+">Lyon 1er Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbHlvbi0yZS1hcnJvbmRpc3NlbWVu
+dC02OTAwMg==
+">Lyon 2e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbHlvbi0zZS1hcnJvbmRpc3NlbWVu
+dC02OTAwMw==
+">Lyon 3e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbHlvbi00ZS1hcnJvbmRpc3NlbWVu
+dC02OTAwNA==
+">Lyon 4e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbHlvbi01ZS1hcnJvbmRpc3NlbWVu
+dC02OTAwNQ==
+">Lyon 5e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbHlvbi02ZS1hcnJvbmRpc3NlbWVu
+dC02OTAwNg==
+">Lyon 6e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbHlvbi03ZS1hcnJvbmRpc3NlbWVu
+dC02OTAwNw==
+">Lyon 7e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbHlvbi04ZS1hcnJvbmRpc3NlbWVu
+dC02OTAwOA==
+">Lyon 8e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbHlvbi05ZS1hcnJvbmRpc3NlbWVu
+dC02OTAwOQ==
+">Lyon 9e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxl
+">Marseille</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTFlci1hcnJvbmRp
+c3NlbWVudC0xMzAwMQ==
+">Marseille 1er Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTJlLWFycm9uZGlz
+c2VtZW50LTEzMDAy
+">Marseille 2e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTNlLWFycm9uZGlz
+c2VtZW50LTEzMDAz
+">Marseille 3e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTRlLWFycm9uZGlz
+c2VtZW50LTEzMDA0
+">Marseille 4e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTVlLWFycm9uZGlz
+c2VtZW50LTEzMDA1
+">Marseille 5e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTZlLWFycm9uZGlz
+c2VtZW50LTEzMDA2
+">Marseille 6e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTdlLWFycm9uZGlz
+c2VtZW50LTEzMDA3
+">Marseille 7e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLThlLWFycm9uZGlz
+c2VtZW50LTEzMDA4
+">Marseille 8e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTllLWFycm9uZGlz
+c2VtZW50LTEzMDA5
+">Marseille 9e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTEwZS1hcnJvbmRp
+c3NlbWVudC0xMzAxMA==
+">Marseille 10e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTExZS1hcnJvbmRp
+c3NlbWVudC0xMzAxMQ==
+">Marseille 11e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTEyZS1hcnJvbmRp
+c3NlbWVudC0xMzAxMg==
+">Marseille 12e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTEzZS1hcnJvbmRp
+c3NlbWVudC0xMzAxMw==
+">Marseille 13e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTE0ZS1hcnJvbmRp
+c3NlbWVudC0xMzAxNA==
+">Marseille 14e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTE1ZS1hcnJvbmRp
+c3NlbWVudC0xMzAxNQ==
+">Marseille 15e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbWFyc2VpbGxlLTE2ZS1hcnJvbmRp
+c3NlbWVudC0xMzAxNg==
+">Marseille 16e Arrondissement</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbmljZS0wNjAwMC0wNjEwMC0wNjIw
+MA==
+">Nice</span></li>
+</ul>
+</li>
+<li>
+Les régions
+<svg class="header__mobile-menu-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-right" /></svg>
+<ul>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvaWxlLWRlLWZyYW5jZQ==
+">Île-de-France</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvYm91cmdvZ25lLWZyYW5jaGUtY29t
+dGU=
+">Bourgogne-Franche-Comté</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbm9ybWFuZGll
+">Normandie</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvaGF1dHMtZGUtZnJhbmNl
+">Hauts-de-France</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvZ3JhbmQtZXN0
+">Grand Est</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcGF5cy1kZS1sYS1sb2lyZQ==
+">Pays de la Loire</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvYnJldGFnbmU=
+">Bretagne</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvbm91dmVsbGUtYXF1aXRhaW5l
+">Nouvelle-Aquitaine</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvb2NjaXRhbmll
+">Occitanie</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvYXV2ZXJnbmUtcmhvbmUtYWxwZXM=
+">Auvergne-Rhône-Alpes</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJvdmVuY2UtYWxwZXMtY290ZS1k
+LWF6dXI=
+">Provence-Alpes-Côte d&#39;Azur</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/carte-cadeau">Carte cadeau</a></li>
+<p class='header__mobile-menu-title'>Mon compte</p>
+<li>
+<span class="js-obfuscated-link obfuscated-link" data-o="L2VzcGFjZS1jbGllbnQvY29ubmV4aW9u
+">Connexion</span>
+</li>
+<p class='header__mobile-menu-title'>À propos</p>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L2NvbnRhY3Q=
+">Nous contacter</span></li>
+<li><span target="_blank" rel="noopener" class="js-obfuscated-link obfuscated-link" data-o="aHR0cHM6Ly9oZWxwLndlY2FzYS5mci9mcg==
+">Centre d&#39;aide</span></li>
+<li><span class="js-obfuscated-link obfuscated-link" data-o="L21hZy8=
+">Le Mag&#39; Wecasa</span></li>
+<li class='header__mobile-menu-item header__mobile-menu-item--other'>
+<span class="js-obfuscated-link obfuscated-link" data-o="L3Bybw==
+">Devenir pro Wecasa</span>
+</li>
+</ul>
+</nav>
+<nav class='header__navigation header__navigation--hide-mobile'>
+<ul class='header__universes'>
+<li class='header__universe'>
+<a class="header__link" href="/coiffure-domicile"><span class='header__link-content'>Coiffure</span>
+</a><div class='header__universe-submenu'>
+<div class='header__universe-submenu-book-container'>
+<span class='h3 header__universe-submenu-title'>Coiffeur à domicile</span>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByaXgtcmVzZXJ2YXRpb24=
+">Choisir mon coiffeur</span>
+
+<div class='header__universe-submenu-pro-container'>
+<div class='arrow-link'>
+<span class='arrow-link__text'>
+<span class="arrow-link__anchor  js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1jb2lmZmV1cg==
+">Devenir coiffeur Wecasa</span>
+</span>
+<span class='arrow-link__icon'>
+<svg class="icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-to" /></svg>
+</span>
+</div>
+
+</div>
+</div>
+<span class='header__universe-submenu-services-title'>
+Les services coiffure
+</span>
+<ul class='header__universe-submenu-services'>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vY291cGUtZmVtbWU=
+">Coupe cheveux courts et mi-longs</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vY291cGUtaG9tbWU=
+">Coupe homme</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vYnJ1c2hpbmc=
+">Brushing (courts et mi-longs)</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vY291bGV1ci1yYWNpbmVz
+">Couleur (racines)</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vbWVjaGVz
+">Mèches</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vYmFsYXlhZ2U=
+">Balayage</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vY29pZmZ1cmUtc29pcmVl
+">Coiffure de soirée (chignon, tresses, attaches…)</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vY29pZmZ1cmUtbWFyaWVl
+">Coiffure de mariée</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vbGlzc2FnZS1icmVzaWxp
+ZW4=
+">Lissage brésilien</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlL3ByZXN0YXRpb24vY291cGUtZW5mYW50
+">Coupe enfant</span>
+</li>
+</ul>
+<span class="header__universe-submenu-service-others link link--primary js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxlI3VuaXZlcnNlLXNlcnZpY2Vz
+">Autres services coiffure</span>
+</div>
+</li>
+<li class='header__universe'>
+<a class="header__link" href="/estheticienne-domicile"><span class='header__link-content'>Beauté</span>
+</a><div class='header__universe-submenu'>
+<div class='header__universe-submenu-book-container'>
+<span class='h3 header__universe-submenu-title'>Esthéticienne à domicile</span>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJpeC1yZXNlcnZhdGlvbg==
+">Réserver mon esthéticienne</span>
+
+<div class='header__universe-submenu-pro-container'>
+<div class='arrow-link'>
+<span class='arrow-link__text'>
+<span class="arrow-link__anchor  js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1lc3RoZXRpY2llbm5l
+">Devenir esthéticienne Wecasa</span>
+</span>
+<span class='arrow-link__icon'>
+<svg class="icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-to" /></svg>
+</span>
+</div>
+
+</div>
+</div>
+<span class='header__universe-submenu-services-title'>
+Les services beauté
+</span>
+<ul class='header__universe-submenu-services'>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9leHRlbnNpb25z
+LWNpbHMtZWZmZXQtbmF0dXJlbA==
+">Effet naturel 1 cil sur 2</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9leHRlbnNpb24t
+Y2lsLWNpbA==
+">Cil à cil</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9leHRlbnNpb24t
+Y2lscy12b2x1bWUtcnVzc2UtY2ls
+">Volume russe 1 cil sur 2</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9leHRlbnNpb24t
+Y2lscy12b2x1bWUtcnVzc2UtY2lsLWNpbA==
+">Volume russe cil à cil</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9leHRlbnNpb24t
+Y2lscy1taXh0ZQ==
+">Mixte</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9yZW1wbGlzc2Fn
+ZS1jaWxzLWNpbC1jaWw=
+">Remplissage cil à cil</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9yZW1wbGlzc2Fn
+ZS1jaWxzLW1peHRl
+">Remplissage mixte</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9yZW1wbGlzc2Fn
+ZS1jaWxzLXZvbHVtZS1ydXNzZQ==
+">Remplissage Volume Russe</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VwaWxhdGlvbi1ob21tZQ==
+">Épilation homme</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLW1hcXVpbGxhZ2UtbWFyaWFnZQ==
+">Maquillage et coiffure de mariée</span>
+</li>
+</ul>
+<span class="header__universe-submenu-service-others link link--primary js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUjdW5pdmVyc2Utc2VydmljZXM=
+">Autres services beauté</span>
+</div>
+</li>
+<li class='header__universe'>
+<a class="header__link" href="/massage-domicile"><span class='header__link-content'>Massage</span>
+</a><div class='header__universe-submenu'>
+<div class='header__universe-submenu-book-container'>
+<span class='h3 header__universe-submenu-title'>Massage à domicile</span>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJpeC1yZXNlcnZhdGlvbg==
+">Réserver mon massage</span>
+
+<div class='header__universe-submenu-pro-container'>
+<div class='arrow-link'>
+<span class='arrow-link__text'>
+<span class="arrow-link__anchor  js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1tYXNzZXVy
+">Devenir masseur Wecasa</span>
+</span>
+<span class='arrow-link__icon'>
+<svg class="icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-to" /></svg>
+</span>
+</div>
+
+</div>
+</div>
+<span class='header__universe-submenu-services-title'>
+Les services massage
+</span>
+<ul class='header__universe-submenu-services'>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLWRlY291dmVy
+dGU=
+">Massage découverte</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLXJlbGF4YW50
+">Massage relaxant</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLWRlZXAtdGlz
+c3Vl
+">Massage deep tissue</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLWF5dXJ2ZWRp
+cXVl
+">Massage ayurvédique</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLWxvbWktbG9t
+aQ==
+">Massage lomi-lomi</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLXByZS1uYXRh
+bA==
+">Massage prénatal</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9tYXNzYWdlLWFzc2lz
+">Massage assis</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUvcHJlc3RhdGlvbi9yZWZsZXhvbG9naWUtcGxh
+bnRhaXJl
+">Réflexologie plantaire</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9zb2luLWh5ZHJh
+dGFudC02MG1u
+">Soin hydratant</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGUvcHJlc3RhdGlvbi9zb2luLWFudGkt
+YWdl
+">Soin anti-âge</span>
+</li>
+</ul>
+<span class="header__universe-submenu-service-others link link--primary js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGUjdW5pdmVyc2Utc2VydmljZXM=
+">Autres services massage</span>
+</div>
+</li>
+<li class='header__universe'>
+<a class="header__link" href="/femme-menage-domicile"><span class='header__link-content'>Ménage</span>
+</a><div class='header__universe-submenu'>
+<div class='header__universe-submenu-book-container'>
+<span class='h3 header__universe-submenu-title'>Ménage sans engagement</span>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wcml4LXJlc2VydmF0aW9u
+">Réserver mon ménage</span>
+
+<div class='header__universe-submenu-pro-container'>
+<div class='arrow-link'>
+<span class='arrow-link__text'>
+<span class="arrow-link__anchor  js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1haWRlLW1lbmFnZXJl
+">Devenir aide ménagère Wecasa</span>
+</span>
+<span class='arrow-link__icon'>
+<svg class="icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-to" /></svg>
+</span>
+</div>
+
+</div>
+</div>
+<span class='header__universe-submenu-services-title'>
+Les services ménage
+</span>
+<ul class='header__universe-submenu-services'>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wcml4LXJlc2VydmF0aW9u
+">Ménage</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wcml4LXJlc2VydmF0aW9u
+">Repassage</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wcml4LXJlc2VydmF0aW9u
+">Ménage Airbnb</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZS9wcml4LXJlc2VydmF0aW9u
+">Ménage état des lieux</span>
+</li>
+</ul>
+<span class="header__universe-submenu-service-others link link--primary js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZSN1bml2ZXJzZS1zZXJ2aWNlcw==
+">Autres services ménage</span>
+</div>
+</li>
+<li class='header__universe'>
+<a class="header__link" href="/garde-enfant"><span class='header__link-content'>Garde d&#39;enfants</span>
+</a><div class='header__universe-submenu'>
+<div class='header__universe-submenu-book-container'>
+<span class='h3 header__universe-submenu-title'>Garde d&#39;enfants en toute sérénité</span>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9wcml4LXJlc2VydmF0aW9u
+">Réserver ma nounou</span>
+
+<div class='header__universe-submenu-pro-container'>
+<div class='arrow-link'>
+<span class='arrow-link__text'>
+<span class="arrow-link__anchor  js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1ub3Vub3U=
+">Devenir nounou Wecasa</span>
+</span>
+<span class='arrow-link__icon'>
+<svg class="icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-to" /></svg>
+</span>
+</div>
+
+</div>
+</div>
+<span class='header__universe-submenu-services-title'>
+Les services garde d&#39;enfants
+</span>
+<ul class='header__universe-submenu-services'>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2JhYnlzaXR0aW5n
+">Garde ponctuelle en journée</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2JhYnlzaXR0aW5n
+">Garde ponctuelle en soirée</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudC9wcml4LXJlc2VydmF0aW9u
+">Garde régulière</span>
+</li>
+</ul>
+<span class="header__universe-submenu-service-others link link--primary js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudCN1bml2ZXJzZS1zZXJ2aWNlcw==
+">Autres services garde d&#39;enfants</span>
+</div>
+</li>
+<li class='header__universe'>
+<a class="header__link" href="/coach-sportif-domicile"><span class='header__link-content'>Coach sportif</span>
+</a><div class='header__universe-submenu'>
+<div class='header__universe-submenu-book-container'>
+<span class='h3 header__universe-submenu-title'>Coach sportif à domicile</span>
+<span class="button button--primary     js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJpeC1yZXNlcnZhdGlvbg==
+">Réserver mon coach sportif</span>
+
+<div class='header__universe-submenu-pro-container'>
+<div class='arrow-link'>
+<span class='arrow-link__text'>
+<span class="arrow-link__anchor  js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1jb2FjaC1zcG9ydGlm
+">Devenir coach sportif Wecasa</span>
+</span>
+<span class='arrow-link__icon'>
+<svg class="icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-to" /></svg>
+</span>
+</div>
+
+</div>
+</div>
+<span class='header__universe-submenu-services-title'>
+Les services coach sportif
+</span>
+<ul class='header__universe-submenu-services'>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9zb3Bocm9sb2dp
+ZQ==
+">Séance de sophrologie</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9waWxhdGVz
+">Cours de pilates</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9zdHJldGNoaW5n
+">Cours de stretching</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9oaWl0
+">Cours de HIIT</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9jYXJkaW8tdHJh
+aW5pbmc=
+">Cours de cardio-training</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9maXRuZXNzLWVu
+ZmFudHM=
+">Cours de fitness enfant</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi9jdWlzc2VzLWFi
+ZG9zLWZlc3NpZXJz
+">Cours de cuisses-abdos-fessiers</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi95b2dhLWNsYXNz
+aXF1ZQ==
+">Cours de yoga doux</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi95b2dhLWVuZmFu
+dHM=
+">Cours de yoga enfant</span>
+</li>
+<li class='header__universe-submenu-service'>
+<span class="header__universe-submenu-service-link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUvcHJlc3RhdGlvbi95b2dhLWR5bmFt
+aXF1ZQ==
+">Cours de yoga dynamique</span>
+</li>
+</ul>
+<span class="header__universe-submenu-service-others link link--primary js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGUjdW5pdmVyc2Utc2VydmljZXM=
+">Autres services coach sportif</span>
+</div>
+</li>
+</ul>
+</nav>
+<div class='header__buttons'>
+<span class="header__button js-obfuscated-link obfuscated-link" data-o="L2NhcnRlLWNhZGVhdQ==
+"><svg class="header__icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/layouts/sprite-01c8b4b3458e25107214ee76ce17b3cc.svg#gift" /></svg>
+<span class='header__button-text'>Carte cadeau</span>
+</span><a class="header__button header__button--hide-mobile" href="/pro"><svg class="header__icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/layouts/sprite-01c8b4b3458e25107214ee76ce17b3cc.svg#pro" /></svg>
+<span class='header__button-text'>Devenir pro</span>
+</a><a class="header__button header__button--hide-mobile" href="/mag/"><svg class="header__icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/layouts/sprite-01c8b4b3458e25107214ee76ce17b3cc.svg#mag" /></svg>
+<span class='header__button-text'>Le mag&#39;</span>
+</a><span class="header__button js-obfuscated-link obfuscated-link" data-o="L2VzcGFjZS1jbGllbnQvY29ubmV4aW9u
+"><svg class="header__icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/layouts/sprite-01c8b4b3458e25107214ee76ce17b3cc.svg#user-not-connected" /></svg>
+<span class='header__button-text'>Connexion</span>
+</span><div class='header__button header__button--hide-desktop js-menu-open'>
+<svg class="header__icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-menu" /></svg>
+</div>
+</div>
+</div>
+<ul class='header-universes'>
+<li class='header-universes__item'>
+<span class="header-universes__link js-obfuscated-link obfuscated-link" data-o="L2NvaWZmdXJlLWRvbWljaWxl
+">Coiffure</span>
+</li>
+<li class='header-universes__item'>
+<span class="header-universes__link js-obfuscated-link obfuscated-link" data-o="L2VzdGhldGljaWVubmUtZG9taWNpbGU=
+">Beauté</span>
+</li>
+<li class='header-universes__item'>
+<span class="header-universes__link js-obfuscated-link obfuscated-link" data-o="L21hc3NhZ2UtZG9taWNpbGU=
+">Massage</span>
+</li>
+<li class='header-universes__item'>
+<span class="header-universes__link js-obfuscated-link obfuscated-link" data-o="L2ZlbW1lLW1lbmFnZS1kb21pY2lsZQ==
+">Ménage</span>
+</li>
+<li class='header-universes__item'>
+<span class="header-universes__link js-obfuscated-link obfuscated-link" data-o="L2dhcmRlLWVuZmFudA==
+">Garde d&#39;enfants</span>
+</li>
+<li class='header-universes__item'>
+<span class="header-universes__link js-obfuscated-link obfuscated-link" data-o="L2NvYWNoLXNwb3J0aWYtZG9taWNpbGU=
+">Coach sportif</span>
+</li>
+</ul>
+
+</header>
+
+
+<main>
+<div class='global-pages'>
+<div class='global-pages__content'>
+<h1 class="title title--h1 title--primary global-pages__title">Conditions générales d&#39;utilisation Wecasa
+</h1>
+<div>Dernière mise à jour le 21/06/2021</div>
+<h2 class="title title--subtitle global-pages__title">1. Définitions
+</h2>
+<p>
+Les définitions suivantes sont applicables à l'intégralité des CGU.
+</p>
+<ul>
+<li>
+<strong>
+<i>« Application »</i>
+:
+</strong>
+désigne l'application mobile exploitée par Wecasa disponible sur iOS et Android, réservée aux Clients.
+</li>
+<li>
+<strong>
+<i>« Application Wecasa Pro »</i>
+:
+</strong>
+désigne l'application mobile exploitée par Wecasa disponible sur iOS et Android et réservée aux Partenaires.
+</li>
+<li>
+<strong>
+<i>« CGU »</i>
+:
+</strong>
+désigne les présentes conditions générales d'utilisation.
+</li>
+<li>
+<strong>
+<i>« Client »</i>
+:
+</strong>
+désigne toute personne physique ou morale utilisant la Plateforme dans le but d'être mise en relation avec un
+Partenaire pour bénéficier d'une Prestation.
+</li>
+<li>
+<strong>
+<i>« Commande »</i>
+:
+</strong>
+désigne une commande d'une Prestation faite par un Client.
+</li>
+<li>
+<strong>
+<i>« Compte » :</i>
+</strong>
+désigne l'espace numérique dédiée et individualisé d'un Utilisateur sur la Plateforme.
+</li>
+<li>
+<strong>
+<i>« Contenu » :</i>
+</strong>
+désigne tout propos, messages, information ou données mis en ligne sur la Plateforme.
+</li>
+<li>
+<strong>
+<i>« Plateforme »</i>
+</strong>
+désigne la plateforme de mise en relation opérée par Wecasa accessible depuis le Site, l'Application et
+l'Application Wecasa Pro, permettant de réaliser les Services.
+</li>
+<li>
+<strong>
+<i>« Partenaire »</i>
+:
+</strong>
+désigne un prestataire de service exerçant par l'intermédiaire d'une société ou du statut d'autoentrepreneur,
+régulièrement inscrit sur la Plateforme et disposant des compétences nécessaires pour effectuer des Prestations.
+</li>
+<li>
+<strong>
+<i>« Site »</i>
+:
+</strong>
+désigne le site Internet
+<a class="link" href="https://www.wecasa.fr/">https://www.wecasa.fr/</a>
+ainsi que l'ensemble de ses sous-domaines.
+</li>
+<li>
+<strong>
+<i>« Prestation »</i>
+:
+</strong>
+désigne la prestation de service à domicile rendue par un Partenaire à un Client dans le domaine de la
+beauté/esthétique, de la coiffure, des massages de l'entretien ou de toute autre prestation de service à
+domicile proposée sur la Plateforme.
+</li>
+<li>
+<strong>
+<i>« Services »</i>
+:
+</strong>
+désigne l'ensemble des services rendus par Wecasa aux Utilisateurs (et notamment la mise en relation entre
+les Partenaires et les Clients, les outils de facturation et de paiement, l'assurance des Prestations, etc.).
+</li>
+<li>
+<strong>
+<i>« Utilisateur »</i>
+:
+</strong>
+désigne indifféremment un Client ou un Partenaire qui utilise la Plateforme.
+</li>
+<li>
+<strong>
+<i>« Wecasa »</i>
+:
+</strong>
+désigne la société par actions simplifiée WECASA, enregistrée au registre du commerce et des
+sociétés de Paris sous le numéro 822 686 788, domiciliée au 23 rue du départ, boite 37, 75014 Paris.
+</li>
+</ul>
+<p>
+Sauf exigence contraire résultant du contexte, les termes et définitions déclinés au singulier incluent le
+pluriel, et inversement.
+</p>
+<h2 class="title title--subtitle global-pages__title">2. Objet et portée des CGU
+</h2>
+<p>
+Wecasa exploite la Plateforme, qui permet aux Partenaires d'être mis en relation avec des Clients, afin que
+ceux-ci bénéficient de Prestations.
+</p>
+<p>
+Les présentes conditions générales d'utilisation ont pour objet la définition des modalités d'accès et
+d'utilisation de la plateforme, ainsi que de définir les droits et obligations de Wecasa, des Partenaires et des
+Clients en lien avec l'utilisation de la Plateforme.
+</p>
+<p>
+Les CGU ne régissent pas la relation contractuelle entre un Client et un Partenaire pour la réalisation des
+Prestations. En sa qualité d'opérateur de plateforme en ligne, Wecasa n'assume aucune obligation au titre des
+relations contractuelles entre le Client et le Partenaire. Le rôle de Wecasa est limité à la fourniture des
+Services.
+</p>
+<h2 class="title title--subtitle global-pages__title">3. Inscription et acceptation des CGU
+</h2>
+<h3 class="title title--section-title global-pages__title">3.1. Pour le client
+</h3>
+<p>
+Le Client peut créer son Compte et s'inscrire sur la Plateforme au moyen du (i) Site, au cours du processus de
+réservation d'une Commande ou en cliquant sur « Créer mon compte » dans l'onglet « Connexion » ou au moyen
+de (ii) l'Application, au cours du processus de réservation d'une Commande.
+</p>
+<p>
+Le Client doit fournir les informations nécessaires à la création de son Compte lors de sa première connexion,
+et notamment son nom, son prénom, son adresse email, son numéro de téléphone et les coordonnées de son domicile. Le Client garantit à
+Wecasa qu'il dispose du pouvoir et de la capacité pour créer le Compte et utiliser les Services.
+</p>
+<p>
+Conformément à l’article L223-2 du Code de la consommation, le Client est informé de son droit à s’inscrire sur la liste
+d’opposition au démarchage téléphonique
+<a class="link" href="https://conso.bloctel.fr/">(https://conso.bloctel.fr/)</a>.
+</p>
+<p>
+Lors du processus de création du Compte, le Client s'engage à lire les CGU lorsqu'il matérialise son
+consentement à celles-ci en cochant la case
+<i>« J'accepte les conditions générales d'utilisation ».</i>
+Le Client est libre d'accepter ou de refuser les CGU.
+</p>
+<p>
+A compter de son acceptation et/ou à l'issue du processus de réservation d'une Commande, le Client reçoit un
+courrier électronique confirmant la création du Compte.
+</p>
+<h3 class="title title--section-title global-pages__title">3.2. Pour le Partenaire
+</h3>
+<p>
+Le Partenaire peut s'inscrire sur la Plateforme et créer son Compte via (i) le Site, dans la section dédiée aux
+Partenaires, ou (ii) l'Application Wecasa Pro.
+</p>
+<p>
+Lors de sa première connexion, le Partenaire doit obligatoirement fournir les informations suivantes, pour la
+création de son Compte: son nom, son prénom, son numéro de SIREN, son adresse email, sa date de naissance, son
+téléphone, son adresse et son domaine d'activité parmi les choix proposés. Le Partenaire garantit à Wecasa
+qu'il dispose du pouvoir et de la capacité pour créer le Compte et utiliser les Services.
+</p>
+<p>
+Lors du processus de création du Compte, le Partenaire s'engage à lire les CGU lorsqu'il matérialise son
+consentement à celles-ci en cochant la case
+<i>« J'accepte les conditions générales d'utilisation ».</i>
+Le Partenaire
+est libre d'accepter ou de refuser les CGU.
+</p>
+<p>
+A compter de son acceptation, le Partenaire reçoit un courrier électronique confirmant la création du Compte.
+Ce courrier contient une copie PDF des conditions générales d'utilisation que le Partenaire a acceptées.
+</p>
+<h2 class="title title--subtitle global-pages__title">4. Conditions d&#39;inscription spécifiques aux Partenaires.
+</h2>
+<p>
+Afin de finaliser la création de son Compte et pouvoir réaliser des Prestations, le Partenaire doit fournir à
+Wecasa, en plus des informations initialement fournies :
+</p>
+<ul>
+<li>
+pour tous les Partenaires : (i) un document justificatif d'identité autorisant le travail en France et (ii) la
+documentation relative à leur statut légal (n° SIRET ou d'immatriculation au RCS) ;
+</li>
+<li>
+pour tout Partenaire exerçant une profession réglementée ou subordonnée à la détention d'une qualification
+professionnelle au sens de la loi n°96-603 du 5 juillet 1996, par exemple dans les domaines
+<i>« beauté», « massage »</i>
+et
+<i>« coiffure »</i>
+tel qu'indiqué sur la Plateforme : les diplômes attestant de leurs compétences ;
+et
+</li>
+<li>
+pour tout Partenaire exerçant une activité de services à la personne au sens des articles L.7231- 1 et s. et
+D.7231-1 et s. du Code du travail, par exemple dans le domaine
+<i>« ménage » et de la « garde d'enfant »</i>
+au sens de la Plateforme :
+justifier (i) d'un minimum de 12 mois d'expérience, (ii) de documents d'identité autorisant le travail en
+France (iii) d'un extrait de casier judiciaire et (iv) de la déclaration de services à la personne.
+</li>
+</ul>
+<p>
+Le Partenaire comprend et accepte que Wecasa peut soumettre le Partenaire à un entretien téléphonique et à
+un processus de validation de compétences, notamment par le passage d'un test. Wecasa peut refuser
+l'inscription d'un Partenaire sans avoir à s'en justifier auprès de lui.
+</p>
+<h2 class="title title--subtitle global-pages__title">5. Évolution des Services et modification des CGU
+</h2>
+<p>
+Pour améliorer son fonctionnement et sa qualité, Wecasa fait évoluer les caractéristiques et les
+fonctionnalités de la Plateforme et des Services.
+</p>
+<p>
+Wecasa peut modifier unilatéralement les CGU concernant les aspects techniques de la Plateforme et des Services
+dès lors qu'il n'en résulte ni augmentation du prix ni altération de la qualité et que les caractéristiques
+auxquelles l'Utilisateur a subordonné son engagement ont pu figurer dans les CGU.
+</p>
+<p>
+Pour les autres modifications des CGU et des Services, Wecasa informera l'Utilisateur, par tout moyen, au moins
+15 jours avant leur entrée en vigueur.
+</p>
+<p>
+En l'absence d'objection par l'Utilisateur dans ce délai, les modifications seront considérées comme étant lues
+et acceptées. En cas d'objection ou de refus, les CGU seront immédiatement résiliées et l'Utilisateur devra
+cesser d'utiliser la Plateforme et les Services, sous réserve de la parfaite exécution des obligations en
+vigueur (en particulier, les Utilisateurs devront honorer les Commandes en cours).
+</p>
+<h2 class="title title--subtitle global-pages__title">6. Accès, usage et sécurité du Compte
+</h2>
+<p>
+L'accès à la Plateforme et aux Services est exclusivement réservé aux Utilisateurs. Chaque Utilisateur comprend
+et accepte qu'il est responsable de l'accès et de l'utilisation de son Compte.
+</p>
+<p>
+Sauf défaillance technique imputable à Wecasa ou cas de force majeure, chaque Utilisateur est responsable de la
+confidentialité de ses données de connexion et s'engage à mettre en œuvre toutes les mesures de nature à
+assurer la sécurité et la confidentialité des données de connexion.
+</p>
+<p>
+S'il a des raisons de croire que ses données de connexion (en particulier, son identifiant ou son mot de passe)
+ont été perdues, volées, détournées ou compromises d'une quelconque manière, ou en cas d'utilisation non
+autorisée de son Compte, l'Utilisateur doit immédiatement le notifier à Wecasa.
+</p>
+<p>
+Dans une telle situation, l'Utilisateur autorise Wecasa à prendre toutes les mesures appropriées pour empêcher
+tout nouvel accès au Compte.
+</p>
+<h2 class="title title--subtitle global-pages__title">7. Réalisation des Prestations
+</h2>
+<h3 class="title title--section-title global-pages__title">7.1. Commande
+</h3>
+<p>
+Le Client peut effectuer des Commandes sur le Site ou l'Application. Il doit sélectionner une ou plusieurs
+Prestation(s) particulière(s) au sein des catégories de Prestations proposées et renseigner la date et l'heure
+souhaitée.
+</p>
+<p>
+Les Prestations ne peuvent être réalisées qu'aux horaires indiqués sur le Site ou l'Application. Les Prestations
+effectuées à certaines heures peuvent faire l'objet d'un supplément tarifaire, tel qu'indiqué sur le Site ou
+l'Application au moment de la Commande.
+</p>
+<p>
+Avant validation de la Commande, le Client a accès à un récapitulatif de celle-ci et peut renseigner des
+demandes particulières ou donner des indications au Partenaire qui sera sélectionné. Le Client comprend et
+accepte que ces informations ne sont données qu'à titre indicatif et que le Partenaire ne s'y engage pas.
+</p>
+<p>
+Pour les Prestations relatives à la garde d’enfants et aux services à la personne, le Client pourra obtenir
+gratuitement un devis avant la Prestation.
+</p>
+<p>
+Le Client et le Partenaire peuvent convenir d'un commun accord de modifier une Commande avant la date prévue
+de la Prestation.
+</p>
+<h3 class="title title--section-title global-pages__title">7.2. Mise en relation des Clients et des Partenaires
+</h3>
+<p>
+Après validation, la Commande est transmise, grâce à l'algorithme de Wecasa, aux Partenaires disponibles et
+correspondant au mieux à la demande du Client. Une fois qu'un Partenaire a accepté la Commande, celle-ci est
+considérée comme validée.
+</p>
+<p>
+Les Partenaires réalisant des Prestations relevant des prestations de services à la personne au sens de
+l’article L7231-1 du Code du travail fournissent les Prestations en mode prestataire (article L7232-6 3°
+du Code du travail).
+</p>
+<p>
+Wecasa sélectionne un Partenaire pour le Client sur la base d'un score qui varie notamment en fonction des
+critères suivants :
+</p>
+<ul>
+<li>
+la capacité de fidélisation des Clients par le Partenaire
+</li>
+<li>
+la note du Partenaire attribuée par les Clients ; et
+</li>
+<li>
+le nombre d'annulation de Commandes à l'initiative du Partenaire.
+</li>
+</ul>
+<p>
+Les Prestations sont également attribuées en fonction de la localisation des Partenaires et des Clients.
+</p>
+<p>
+Lorsqu'il reçoit une proposition de Prestation, le Partenaire demeure libre de l'accepter ou de la refuser, en
+utilisant la fonctionnalité correspondante sur la Plateforme. Passé ce délai, le Partenaire sera réputé avoir
+refusé la proposition.
+</p>
+<p>
+Dès qu'une Commande est réalisée, Wecasa sollicite plusieurs Partenaires. Les Partenaires sollicités en
+priorité sont ceux bénéficiant de scores élevés sur la base des critères ci-dessus. Plus la Commande sera
+urgente, plus les Partenaires seront sollicités rapidement afin de satisfaire la Commande.
+</p>
+<p>
+En l'absence de réponse d'un Partenaire dans un temps qui dépend de l'urgence de la Commande, la Commande est
+ensuite proposée à d'autres Partenaires , jusqu'à ce qu'elle soit acceptée par l'un d'entre eux.
+</p>
+<h3 class="title title--section-title global-pages__title">7.3. Rétractation et annulation d&#39;une Commande
+</h3>
+<p>
+Lorsqu'une Commande est validée plus de 14 jours à l'avance conformément au paragraphe ci-dessus, le Client
+bénéficie du droit de rétractation légalement prévu. Pour l'exercer le Client peut annuler la Commande sur la
+Plateforme, en utilisant la fonctionnalité correspondante sur le Site ou l'Application, et celle-ci sera annulée
+sans frais.
+</p>
+<p>Wecasa met à disposition en annexe des CGU un formulaire-type de rétractation.</p>
+<p>
+Lorsqu'une Commande est validée moins de 14 jours à l'avance conformément au paragraphe ci-dessus, le Client
+requiert que l'exécution d'une prestation de services commence avant la fin du délai de rétractation. À ce
+titre, il renonce expressément à son droit de rétractation.
+</p>
+<p>
+Dans tous les cas et pour toutes les Commandes, les règles d'annulation suivantes s'appliquent :
+</p>
+<ul>
+<li>
+annulation plus de 6 heures ouvrées avant le rendez-vous prévu : aucun
+frais d'annulation ;
+</li>
+<li>
+annulation entre 3 heures et 6 heures ouvrées avant le rendez-vous
+prévu : frais d'annulation forfaitaires de dix (10) euros ;
+</li>
+<li>
+annulation entre 1 heure et 3 heures ouvrées avant le rendez-vous prévu : frais d'annulation de 50% du
+montant de la Commande, pour un maximum de vingt (20) euros ;
+</li>
+<li>
+annulation entre 1 heure ouvrée et l'heure du rendez-vous prévu : frais d'annulation de 80% de la Commande,
+pour un maximum de trente (30) euros ;
+</li>
+<li>
+annulation après l'heure du rendez-vous prévu, ou dans le cas où le Client serait absent 30 minutes après
+l'heure du rendez-vous : 100% de la Commande, pour un maximum de quarante (40) euros
+</li>
+</ul>
+<p>
+Pour l'application de cet article, il est convenu que les heures ouvrées désignent les périodes allant de 7h à
+22h30, 7 jours sur 7.
+</p>
+<h3 class="title title--section-title global-pages__title">7.4. Déroulement des Prestations
+</h3>
+<p>
+Wecasa n'intervient pas au moment de la Prestation, qui relève de la seule responsabilité et des compétences du
+Partenaire.
+</p>
+<p>
+A l'issue d'une Prestation, le Client évalue le Partenaire, par l'intermédiaire d'un système de notation. Les
+évaluations ont vocation à être définitives et ne sont supprimées qu'exceptionnellement après une demande
+expresse de leur auteur.
+</p>
+<p>
+Le Partenaire évalue également le Client. Les avis laissés par les Partenaires ne sont pas publics.
+</p>
+<h2 class="title title--subtitle global-pages__title">8. Conditions financières
+</h2>
+<h3 class="title title--section-title global-pages__title">8.1. Prix des Prestations
+</h3>
+<p>
+Le prix des Prestations est fixé par Wecasa. Le prix de chaque Prestation particulière apparaît sur la
+Plateforme. Le Client doit régler les Prestations par carte bancaire.
+</p>
+<p>
+La rémunération du Partenaire correspond au montant qui lui est proposé avant qu'il n'accepte une Prestation.
+</p>
+<p>
+La rémunération de Wecasa pour la réalisation des Services correspond à la différence entre le prix accepté par
+le Partenaire et le prix payé par le Client.
+</p>
+<p>
+Le Client comprend et accepte que certaines Prestations soient soumises à des minimums de Commandes, tel
+qu'indiqué sur la Plateforme.
+</p>
+<h3 class="title title--section-title global-pages__title">8.2. Paiement des Prestations
+</h3>
+<p>
+Le prix des Prestations fait l'objet d'une pré-autorisation bancaire 24h avant le début de la Prestation et est
+prélevé au Client dans un délai de 24h à compter de la réalisation de la Prestation. Les montants
+correspondants sont reversés au Partenaire de façon hebdomadaire par défaut, ou mensuelle s'il
+en fait la demande. Un délai supplémentaire de 8 jours est ensuite nécessaire à la transmission des fonds.
+</p>
+<p>
+Pour la gestion des flux financiers, Wecasa a recours à Stripe, un prestataire de services de paiement qui
+commercialise une solution permettant la gestion des flux de paiement entre Wecasa, les Partenaires et les
+Clients. Les services de paiement réalisés par Stripe sur la Plateforme sont soumis aux conditions générales
+d'utilisation du produit « Stripe Connect » de Stripe et sont disponibles à l'adresse suivante :
+<a class="link" href="https://stripe.com/fr/connect-account/legal#translation">https://stripe.com/fr/connect-account/legal#translation/</a>
+. En utilisant la Plateforme, le Partenaire et le Client consentent à ces conditions générales d'utilisation.
+</p>
+<h3 class="title title--section-title global-pages__title">8.3. Facturation
+</h3>
+<p>
+Les factures des Prestations dont bénéficient le Client ainsi que les factures relatives aux Services sont
+disponibles dans son Compte dans les 4 jours suivant la réalisation de la Prestation. Le Client peut également
+télécharger les factures lui permettant de bénéficier du crédit d'impôt services à la personne pour les
+activités éligibles. Une attestation fiscale sera également mise à disposition du Client.
+</p>
+<p>
+Les factures générées pour le compte du Partenaire en vertu du mandat de facturation visé ci-dessous et les
+factures pour la rémunération des Services sont envoyés au Partenaire par email dans les 4 jours suivant la
+réalisation de la Prestation.
+</p>
+<h3 class="title title--section-title global-pages__title">8.4. Mandat de facturation
+</h3>
+<p>
+Le Partenaire donne expressément mandat à Wecasa, qui l'accepte, d'établir en son nom et pour son compte, les
+factures relatives aux Prestations.
+</p>
+<p>
+Il est précisé que le Partenaire conserve l'entière responsabilité de ses obligations légales et fiscales en
+matière de facturation au titre des factures originales émises en son nom et pour son compte par Wecasa,
+notamment en ce qui concerne ses obligations en matière de TVA.
+</p>
+<p>
+Le mandat de facturation est effectif pendant toute la durée où les CGU sont en vigueur entre le Partenaire et
+Wecasa. Wecasa et le Partenaire sont chacun tenus de conserver une copie des factures.
+</p>
+<p>
+Pour les besoins du mandat, le Partenaire transmet à Wecasa les informations suivantes, selon sa situation :
+</p>
+<ul>
+<li>Prénom et nom / ou raison sociale ;</li>
+<li>Adresse postale / ou siège social ;</li>
+<li>Numéro de SIRET / ou numéro d'immatriculation au RCS ;</li>
+<li>Adresse email ;</li>
+<li>Copie d'une pièce d'identité en cours de validité (recto/verso) / ou extrait Kbis ;</li>
+<li>Photo en format portrait ;</li>
+<li>Relevé d'identité bancaire ;</li>
+<li>Un avis de situation SIRENE de moins de 3 mois ;</li>
+<li>Un numéro de TVA intracommunautaire si les Prestations sont réalisées hors de France.</li>
+</ul>
+<p>
+Le Partenaire s'engage (i) à verser au Trésor public la taxe sur la valeur ajoutée dont il est le cas échéant
+redevable, (ii) à demander et à conserver une copie des factures émises pour son compte par Wecasa et (iii) à
+signaler à Wecasa toute modification dans les informations ci-dessus.
+</p>
+<h2 class="title title--subtitle global-pages__title">9. Engagements de Wecasa
+</h2>
+<p>
+Wecasa s'engage à mettre la Plateforme et les Services à la disposition des Utilisateurs ainsi qu'à faire ses
+meilleurs efforts pour en assurer l'accessibilité et le bon fonctionnement.
+</p>
+<p>
+À ce titre, Wecasa s'engage à ce que la Plateforme et les Services soient accessibles 24/24h et 7/7j sauf cas
+de force majeure ou comportement imprévisible et insurmontable d'un tiers, et sous réserve des éventuelles
+pannes et interventions de maintenance et de mise à jour nécessaires au bon fonctionnement de la Plateforme et
+à la fourniture des Services.
+</p>
+<p>
+Wecasa met à la disposition des Utilisateurs un service de support pour répondre aux questions et fournir une
+assistance en cas de difficulté. Pour toute question ou demande d'information concernant la Plateforme ou les
+Services, l'Utilisateur peut contacter Wecasa en lui adressant un courrier électronique à l'adresse
+suivante :
+<a class="link" href="mailto:bonjour@wecasa.fr">bonjour@wecasa.fr</a>.
+</p>
+<p>
+En cas d'un dysfonctionnement ou d'une anomalie perturbant le bon fonctionnement de la Plateforme ou des
+Services, Wecasa s'engage à faire ses meilleurs efforts pour rétablir la situation.
+</p>
+<h2 class="title title--subtitle global-pages__title">10. Responsabilité de Wecasa
+</h2>
+<p>
+Les Utilisateurs reconnaissent et acceptent que la responsabilité de Wecasa est limitée à son rôle d'opérateur
+de plateforme en ligne.
+</p>
+<p>
+En aucun cas, Wecasa n'engagera sa responsabilité au titre des Prestations puisque, en sa qualité
+d'intermédiaire numérique, Wecasa n'est pas chargée de leur réalisation.
+</p>
+<p>
+Par ailleurs, Wecasa n'est pas responsable des difficultés ou impossibilités momentanées d'accès à la
+Plateforme, au Compte ou aux Services si elles ont pour origine une faute d'un Utilisateur, des circonstances
+qui lui sont extérieures, la force majeure, ou encore qui seraient dues à des perturbations des réseaux de
+télécommunication ou aux limites inhérentes au fonctionnement d'un service sur Internet.
+</p>
+<p>
+En tout état de cause, dans les cas où la responsabilité de Wecasa pourrait être engagée, celle-ci est limitée
+aux préjudices certains, directs et prévisibles. Pour les dommages résultant d'un manquement de Wecasa, la
+réparation due aux Utilisateurs, au cas où sa responsabilité serait directement engagée et prouvée, sera
+strictement limitée au coût supporté par l'Utilisateur.
+</p>
+<h2 class="title title--subtitle global-pages__title">11. Engagements des Utilisateurs
+</h2>
+<h3 class="title title--section-title global-pages__title">11.1. Engagements communs aux Utilisateurs
+</h3>
+<p>
+L'Utilisateur s'engage expressément à :
+</p>
+<ul>
+<li>
+respecter les lois et règlements en vigueur et à ne pas porter atteinte à l'ordre public, aux bonnes mœurs ou
+aux droits de tiers et à n'enfreindre aucune disposition législative ou règlementaire ;
+</li>
+<li>
+ne permettre à aucun tiers d'utiliser son Compte ;
+</li>
+<li>
+ne pas publier de Contenus injurieux, diffamant, dénigrant, calomnieux, contraire aux bonnes mœurs,
+contrefaisant, portant atteinte à l'ordre public ou aux droits de tiers, susceptible de porter atteinte aux
+droits, à la réputation et à l'image de Wecasa ou d'un autre Utilisateur ;
+</li>
+<li>
+ne pas utiliser la Plateforme ou les Services de manière frauduleuse (ex : un faux compte ou une fausse
+identité) et/ou pour nuire aux intérêts de Wecasa ou d'un autre Utilisateur ;
+</li>
+<li>
+ne pas céder ou transférer d'une quelconque manière son Compte à un tiers ;
+</li>
+<li>
+fournir à Wecasa toutes les informations nécessaires à la bonne exécution des Services et garantir leur
+exactitude ;
+</li>
+<li>
+faire une utilisation loyale de la Plateforme et des Services, c'est-à-dire de participer au processus
+d'inscription, de Commandes ou encore de notation ;
+</li>
+<li>
+informer Wecasa en cas de complication de toute nature, de tout problème avec un autre Utilisateur ou lors
+de l'utilisation de la Plateforme, du Compte et des Services ; et
+</li>
+<li>
+conserver strictement confidentiel et ne partager à aucun tiers tout échange, conversation, information et,
+plus généralement, tout élément concernant les Prestations, les Commandes et les échanges entre Utilisateurs
+ou avec Wecasa.
+</li>
+</ul>
+<p>
+L'Utilisateur comprend et accepte qu'est strictement interdit : (i) tout comportement de nature à
+interrompre, suspendre, ralentir ou empêcher la continuité de la Plateforme ou des Services, (ii) toute
+intrusion ou tentative d'intrusions dans les systèmes de Wecasa, (iii) tout détournement des ressources
+système du Compte et de la Plateforme, (iv) toute action de nature à imposer une charge disproportionnée sur
+les infrastructures numériques de Wecasa, (v) toute atteinte aux mesures de sécurité et d'authentification,
+(vi) tout acte de nature à porter atteinte aux droits et intérêts financiers, commerciaux ou moraux de Wecasa
+et des autres Utilisateurs, (vii) tout manquement aux CGU, (viii) toute copie et/ou le détournement de
+l'infrastructure numérique de Wecasa et (ix) plus généralement toute pratique détournant la Plateforme et les
+Services à des fins autres que celles pour lesquelles ils ont été conçus.
+</p>
+<h3 class="title title--section-title global-pages__title">11.2. Engagements du Client
+</h3>
+<p>
+Le Client s'engage expressément à :
+</p>
+<ul>
+<li>
+avoir une attitude correcte, polie et décente vis-à-vis des Partenaires (par ex. conserver ses sous-vêtements
+pendant les Prestations de massage, qui sont des massages de bien être) ;
+</li>
+<li>
+ne pas annuler des Commandes de façon récurrente ou répétitive ;
+</li>
+<li>
+mettre les Partenaires dans les meilleures dispositions pour leur permettre de réaliser les Prestations dans
+de bonnes conditions (par exemple, prévoir une pièce avec un espace suffisant) ;
+</li>
+<li>
+informer le Partenaire de certaines conditions particulières à des Prestations, et en particulier informer de
+la présence d'animaux au domicile du Client (cela peut empêcher certains Partenaires ayant des allergies de
+réaliser des Prestations) ; et
+</li>
+<li>
+ne pas contacter les Partenaires après la réalisation d'une Prestation afin que ceux-ci réalisent des
+prestations en dehors de la Plateforme.
+</li>
+</ul>
+<h3 class="title title--section-title global-pages__title">11.3. Engagements du Partenaire
+</h3>
+<p>
+Le Partenaire s'engage expressément à :
+</p>
+<ul>
+<li>
+répondre aux propositions de Prestations transmises par Wecasa, que sa réponse soit positive ou négative, le
+Partenaire demeurant libre d'accepter ou de refuser une proposition de Prestation ;
+</li>
+<li>
+honorer les rendez-vous qu'il a pris pour réaliser les Prestations ; et
+</li>
+<li>
+disposer des compétences nécessaires à l'exercice des Prestations tout au long de la durée des CGU et tant
+qu'il réalise des Prestations par l'intermédiaire de la Plateforme.
+</li>
+<li>
+se comporter de façon loyale vis-à-vis de Wecasa, en invitant notamment les Clients à faire usage de la
+Plateforme lorsqu'ils souhaitent réserver une nouvelle prestation.
+</li>
+</ul>
+<h2 class="title title--subtitle global-pages__title">12. Responsabilité des Utilisateurs
+</h2>
+<p>
+L'Utilisateur est responsable de son utilisation de la Plateforme et des Services, de sorte qu'il répond de
+tout préjudice qu'il est susceptible de causer du fait de son comportement et d'informations inexactes,
+incomplètes, et/ou trompeuses qu'il fournirait lors de son inscription ou en l'absence de mise à jour de ces
+informations, ce dont il assume seul les conséquences.
+</p>
+<p>
+Plus spécifiquement, les Utilisateurs sont responsables :
+</p>
+<ul>
+<li>
+des informations qu'ils choisissent de mettre en ligne sur leur Compte et qu'ils diffusent en utilisant la
+Plateforme ou les Services ; et
+</li>
+<li>
+de la négociation, de la conclusion et de l'exécution des contrats qui interviennent le cas échéant entre eux
+pour la réalisation des Prestations, Wecasa n'étant qu'une plateforme numérique de mise en relation.
+</li>
+</ul>
+<h2 class="title title--subtitle global-pages__title">13. Durée, suspension et résiliation
+</h2>
+<h3 class="title title--section-title global-pages__title">13.1. Durée des CGU
+</h3>
+<p>
+Les CGU sont conclues pour une durée indéterminée et entrent en vigueur à compter de leur acceptation par
+l'Utilisateur.
+</p>
+<h3 class="title title--section-title global-pages__title">13.2. Limitations du compte pour les partenaires
+</h3>
+<h4 class="title title--section-title global-pages__title">13.2.1 Limitations manuelles
+</h4>
+<p>
+Le Compte et les Services rendus au Partenaire seront limités, pendant une durée déterminée, dans les cas
+suivants :
+</p>
+<ul>
+<li>
+le Partenaire a envoyé des messages désobligeants ou agressifs aux équipes de Wecasa ;
+</li>
+<li>
+le Partenaire s'est comporté de manière désagréable ou agressive avec les Clients ;
+</li>
+<li>
+le Partenaire a reçu de manière répétée des avis négatifs de la part des Clients ;
+</li>
+<li>
+le Partenaire n'a pas honoré un rendez-vous prévu avec un Client sans informer celui-ci au préalable ;
+</li>
+<li>
+le Partenaire a annulé de manière répétée des rendez-vous chez des Clients qu'il avait préalablement acceptés.
+</li>
+</ul>
+<p>
+Au plus tard au moment où la limitation prend effet, Wecasa s'engage à envoyer au Partenaire un courrier
+électronique précisant (i) la mise en œuvre de la mesure de limitation, (ii) sa durée, (iii) les motifs ayant
+conduit à celle-ci et (iv) la faculté pour le Partenaire de fournir des explications sur cette situation.
+</p>
+<p>
+Pendant cette période, le Partenaire conservera un accès total à la Plateforme et à son Compte mais il sera
+moins sollicité pour des Commandes formulées par des nouveaux Clients.
+</p>
+<p>
+Au terme de cette période, selon les performances du Partenaire et l'évolution de la situation, la mesure de
+limitation sera levée ou les CGU seront résiliées conformément aux stipulations de l'article 13.3.
+</p>
+<h4 class="title title--section-title global-pages__title">13.2.2 Limitations automatiques
+</h4>
+<p>
+Le Compte et les Services rendus au Partenaire seront limités dans les cas suivants :
+</p>
+<ul>
+<li>
+le Partenaire n'a pas répondu à 4 propositions de Prestations de suite en ayant eu pour chacune d'entre elle un
+temps suffisant pour la consulter et répondre ;
+</li>
+<li>
+le Partenaire n'a accepté aucune des 50 dernières propositions de Prestations transmises.
+</li>
+</ul>
+<p>
+Au plus tard au moment où la limitation prend effet, Wecasa s'engage à envoyer au Partenaire un courrier
+électronique précisant (i) la mise en œuvre de la mesure de limitation et (ii) les motifs ayant conduit à
+celle-ci.
+</p>
+<p>
+Pendant cette période, le Partenaire continuera de recevoir les Commandes des Clients pour lesquels il a déjà
+réalisé des Prestations, son profil professionnel sera toujours en ligne et actif et les accès à la Plateforme
+ainsi qu'au Compte seront maintenus. En revanche, le Partenaire ne sera plus sollicité pour des Commandes
+formulées par des nouveaux Clients.
+</p>
+<p>
+Pour lever la limitation, le Partenaire peut notamment accepter une proposition de Prestation reçue, écrire à
+Wecasa par le chat ou par email ou prendre rendez-vous avec Wecasa s'il rencontre des difficultés.
+</p>
+<h3 class="title title--section-title global-pages__title">13.3. Résiliation des CGU
+</h3>
+<h4 class="title title--section-title global-pages__title">13.3.1 Entre le Client et Wecasa
+</h4>
+<p>
+En ce qui concerne leur rapport contractuel, Wecasa et les Clients peuvent résilier les CGU à tout moment, par
+tout moyen, sans motif et sans préavis.
+</p>
+<h4 class="title title--section-title global-pages__title">13.3.2 Entre le Partenaire et Wecasa
+</h4>
+<h5 class="title title--section-title global-pages__title">A. Résiliation avec préavis
+</h5>
+<h6 class="title title--section-title global-pages__title">a) Pour le Partenaire
+</h6>
+<p>
+Moyennant un préavis de trente (30) jours, les CGU peuvent être résiliées par le Partenaire sans motif. Le
+Partenaire s'engage à envoyer à Wecasa un courrier électronique l'informant de sa décision de résilier les CGU.
+</p>
+<p>
+Pendant cette période, le Partenaire continue de bénéficier des Services et chaque Partie s'engage à respecter
+ses obligations.
+</p>
+<p>
+La résiliation des CGU donnera lieu à aucune indemnité.
+</p>
+<p>
+Au terme du préavis, le Partenaire n'aura plus accès au Compte, à la Plateforme et aux Services.
+</p>
+<h6 class="title title--section-title global-pages__title">b) Pour Wecasa
+</h6>
+<p>
+Moyennant un préavis de trente (30) jours, les CGU peuvent être résiliées par Wecasa :
+</p>
+<ul>
+<li>
+si le Partenaire a manqué à ses obligations contractuelles au titre des CGU (par exemple, l'absence de
+compétences pour réaliser les Prestations) ;
+</li>
+<li>
+si les Clients ne sont pas satisfaits du Partenaire (par exemple, des mauvais avis/retours de Clients ou
+l'annulation de rendez-vous) ;
+</li>
+<li>
+si le Partenaire a envoyé des messages désobligeants ou agressifs aux équipes de Wecasa ;
+</li>
+<li>
+si le Partenaire s'est comporté de manière désagréable ou agressive avec les Clients ;
+</li>
+<li>
+si le Partenaire n'a pas honoré un rendez-vous prévu avec un Client sans informer celui-ci au préalable ;
+</li>
+<li>
+si le Partenaire a annulé de manière répétée des rendez-vous chez des Clients qu'il avait préalablement
+acceptés ;
+</li>
+<li>
+si le Partenaire n'est plus en mesure d'exécuter ses engagements au titre des CGU (par exemple, en cas de
+procédure collective).
+</li>
+</ul>
+<p>
+Au plus tard trente (30) jours avant que la résiliation ne prenne effet, Wecasa s'engage à envoyer au Partenaire
+un courrier électronique précisant (i) la mise en œuvre de la mesure de résiliation, (ii) la date à laquelle
+celle-ci sera effective, (iii) les motifs ayant conduit à celle-ci et (iv) la faculté pour le Partenaire de
+fournir des explications sur cette situation.
+</p>
+<p>
+Pendant cette période, le Partenaire continue de bénéficier des Services et chaque Partie s'engage à respecter
+ses obligations.
+</p>
+<p>
+La résiliation des CGU donnera lieu à aucune indemnité.
+</p>
+<p>
+Au terme du préavis, le Partenaire n'aura plus accès au Compte, à la Plateforme et aux Services.
+</p>
+<h5 class="title title--section-title global-pages__title">B. Résiliation sans préavis
+</h5>
+<p>
+Les CGU pourront être résiliées sans préavis par les Parties dans les cas suivants :
+</p>
+<ul>
+<li>
+à l'initiative du Partenaire :
+<ul>
+<li>
+si une obligation légale ou règlementaire ne permet pas au Partenaire de respecter le délai de préavis de
+trente (30) jours ;
+</li>
+<li>
+si le Partenaire exerce un droit de résiliation pour une raison impérative prévue par le droit français et
+conforme avec le droit européen ;
+</li>
+<li>
+si le Partenaire peut apporter la preuve que Wecasa a enfreint, à plusieurs reprises ou de manière
+grave, à ses obligations contractuelles au titre des CGU (par exemple, l'absence d'accès à la Plateforme
+ou une défaillance dans la mise en relation).
+</li>
+</ul>
+</li>
+<li>
+à l'initiative de Wecasa :
+<ul>
+<li>
+si une obligation légale ou règlementaire ne permet pas à Wecasa de respecter le délai de préavis de
+trente (30) jours ;
+</li>
+<li>
+si Wecasa exerce un droit de résiliation pour une raison impérative prévue par le droit français et
+conforme avec le droit européen ;
+</li>
+<li>
+si Wecasa peut apporter la preuve que le Partenaire a enfreint, à plusieurs reprises ou de manière
+grave, à ses obligations contractuelles au titre des CGU (par exemple, l'absence d'accès à la Plateforme
+ou une défaillance dans la mise en relation).
+</li>
+</ul>
+</li>
+</ul>
+<p>
+Sans retard indu à compter de la décision de résiliation, la Partie souhaitant résilier les CGU s'engage à
+envoyer à l'autre un courrier électronique précisant (i) la mise en œuvre de cette mesure de résiliation,
+(ii) la date à laquelle celle-ci sera effective, (iii) les motifs ayant conduit à celle-ci et (iv) la faculté
+pour le Partenaire de fournir des explications sur cette situation.
+</p>
+<p>
+La résiliation des CGU donnera lieu à aucune indemnité.
+</p>
+<p>
+À compter du terme des CGU, le Partenaire n'aura plus accès au Compte, à la Plateforme et aux Services.
+</p>
+<h2 class="title title--subtitle global-pages__title">14. Respect des obligations fiscales et sociales par le Partenaire
+</h2>
+<p>
+Le Partenaire est informé que son activité sur la Plateforme génère des obligations légales, fiscales, sociales
+et administratives, dont il doit s'acquitter en vertu de la législation applicable.
+</p>
+<p>
+Le Partenaire est seul responsable de toutes les déclarations et formalités nécessaires à son activité et doit
+satisfaire à toutes les obligations lui incombant le cas échéant en application du droit français et/ou de la
+législation étrangère dont il dépend, et notamment du paiement des cotisations et contributions sociales dues
+par les travailleurs indépendants.
+</p>
+<p>
+Le Partenaire est notamment invité à se renseigner auprès des administrations concernées :
+</p>
+<ul>
+<li>
+pour les impôts :
+<a class="link" href="https://www.impots.gouv.fr/portail/node/10841">https://www.impots.gouv.fr/portail/node/10841</a>
+</li>
+<li>
+pour les obligations sociales :
+<a class="link" href="https://www.urssaf.fr/portail/home/espaces-dedies/activites-relevant-de-leconomie.html">https://www.urssaf.fr/portail/home/espaces-dedies/activites-relevant-de-leconomie.html</a>
+</li>
+</ul>
+<h2 class="title title--subtitle global-pages__title">15. Autonomie et indépendance
+</h2>
+<p>
+Wecasa et le Partenaire exercent leur activité en totale autonomie et indépendance, chacune d'elles supportant
+les risques de son activité.
+</p>
+<p>
+En tant que partenaire commercial indépendant, le Partenaire est libre de choisir ses jours d'activité et de
+repos ainsi que d'utiliser le matériel de son choix pour réaliser les Prestations.
+</p>
+<p>
+Le Partenaire n'est soumis à aucune obligation d'exclusivité vis-à-vis de Wecasa. Le Partenaire est libre de
+conclure un/des contrat(s) similaire(s) ou équivalent(s) aux CGU avec toute personne physique ou morale,
+concurrente ou non de Wecasa, mais également de fournir ses prestations à sa clientèle personnelle ou encore
+d'offrir ses services sur d'autres sites Internet.
+</p>
+<p>
+Le Partenaire n'est soumis à aucune obligation de chiffre d'affaires ou de niveau d'activité minimum.
+</p>
+<p>
+Le Partenaire est informé qu'il peut bénéficier du Soutien de Wecasa pour le développement de son activité
+indépendante, dans le cadre de sa responsabilité sociale de plateforme, prévue aux articles L.7342-1 et
+suivants du Code du travail.
+</p>
+<h2 class="title title--subtitle global-pages__title">16. Porte-fort
+</h2>
+<p>
+Lorsqu'il effectue une Commande pour le compte d'un tiers, le Client s'engage à porter à la connaissance et à
+faire accepter les présentes CGU au tiers qui bénéficiera de la (les) Prestation(s) (ci-après, le
+<strong>« Bénéficiaire »</strong>
+).
+</p>
+<p>
+Le Client se porte-fort du respect des CGU par le Bénéficiaire. En cas de dommage causé par le Bénéficiaire
+consécutif au non-respect des CGU, le Client accepte de garantir Wecasa contre toute action, demande ou
+revendication de toute nature contre Wecasa, formulée par un Prestataire ou tout autre tiers.
+</p>
+<h2 class="title title--subtitle global-pages__title">17. Assurance
+</h2>
+<p>
+Certains dommages qui pourraient résulter des Prestations sont assurés par AXA.
+</p>
+<p>
+Pour plus d'informations sur les garanties et les exclusions applicables, les Utilisateurs peuvent consulter
+la page suivante :
+<a class="link" href="https://www.wecasa.fr/assurance-services-domicile">https://www.wecasa.fr/assurance-services-domicile</a>
+</p>
+<p>
+Les prestations réalisées en dehors de la Plateforme ne sont pas couvertes.
+</p>
+<h2 class="title title--subtitle global-pages__title">18. Propriété intellectuelle
+</h2>
+<p>
+La Plateforme, le Site, l'Application, l'Application Wecasa Pro et l'intégralité des éléments qui les composent
+(ci-après, les
+<strong>« Éléments de Propriété Intellectuelle »</strong>
+), notamment, mais non limitativement, les logiciels, structures, infrastructures, bases de données et contenus
+de toute nature (textes, images, visuels, logos, marques…) exploités par Wecasa sont protégés par tous droits
+de propriété intellectuelle en vigueur.
+</p>
+<p>
+Tout Utilisateur reconnait et convient que les Éléments de Propriété Intellectuelle, y compris tous les droits
+de propriété intellectuelle associés, sont la propriété exclusive de Wecasa.
+</p>
+<p>
+Toute reproduction ou représentation, intégrale ou partielle, des Éléments de Propriété Intellectuelle, sans
+l'autorisation de Wecasa, est interdite.
+</p>
+<p>
+De même, l'Utilisateur s'interdit, sauf autorisation écrite et préalable de Wecasa, d'utiliser, de reproduire,
+d'adapter, de modifier, de créer des œuvres dérivées, de distribuer, de concéder une licence sur, de vendre, de
+transférer, de présenter publiquement, de transmettre, de diffuser ou d'exploiter de toute autre manière les
+Éléments de Propriété Intellectuelle.
+</p>
+<h2 class="title title--subtitle global-pages__title">19. Données personnelles
+</h2>
+<p>
+Wecasa accorde une grande importance aux données personnelles des Utilisateurs et au respect du Règlement (UE)
+2016/679 du Parlement Européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à
+l'égard du traitement des données à caractère personnel et à la libre circulation de ces données (
+<strong>RGPD</strong>
+).
+</p>
+<p>
+Pour en savoir plus sur le traitement et la sécurisation de leurs données personnelles, les Utilisateurs
+peuvent consulter la politique de confidentialité de Wecasa sur le Site disponible à l'adresse suivante :
+<a class="link" href="https://www.wecasa.fr/politique-confidentialite">https://www.wecasa.fr/politique-confidentialite</a>.
+</p>
+<h2 class="title title--subtitle global-pages__title">20. Règlement des différends et médiation
+</h2>
+<p>
+En cas de litige entre un Utilisateur et Wecasa, les Utilisateurs et Wecasa s'engagent à rechercher un mode de
+résolution amiable. Le statut de Wecasa étant limité à son rôle de plateforme d'intermédiation numérique, sa
+responsabilité ne pourra être recherchée en cas de mauvaise exécution d'une Prestation. Cependant, en cas de
+litige entre un Partenaire et un Client, Wecasa pourra jouer un rôle d'intermédiation aux fins de parvenir à
+une résolution amiable du litige.
+</p>
+<p>
+Pour toute réclamation, l'Utilisateur s'engage à contacter Wecasa par courrier électronique à l'adresse
+suivante :
+<a class="link" href="mailto:bonjour@wecasa.fr">bonjour@wecasa.fr</a>.
+L'annulation peut aussi être réalisée à tout moment directement en ligne depuis votre espace client
+</p>
+<p>
+Conformément aux articles L. 611-1 et suivants du Code de la consommation concernant le règlement amiable des
+litiges, Wecasa adhère aux services de médiation de l’Association Nationale des Médiateurs (ANM) . Le service
+du médiateur peut être saisi, après avoir tenté sans succès une résolution amiable du litige, pour tout litige
+de consommation dont le règlement n’aurait pas abouti. La saisine du Médiateur s'effectue soit par courrier en
+écrivant au 62, rue Tiquetonne 75002 PARIS soit par e-mail en remplissant le formulaire de saisine en ligne à
+l’adresse suivante: <a class="link" href="https://www.anm-conso.com/">www.anm-conso.com</a>.
+</p>
+<h2 class="title title--subtitle global-pages__title">21. Divers
+</h2>
+<p>
+Les CGU remplacent les négociations, déclarations et accords ayant pu exister antérieurement.
+</p>
+<p>
+Au cas où une stipulation des CGU s'avérait en tout ou partie nulle ou invalide, la validité des autres clauses
+des CGU ne serait pas affectée.
+</p>
+<p>
+L'absence d'exercice par Wecasa ou par un Utilisateur des droits qui lui sont reconnus en application des CGU
+ne constitue pas une renonciation à s'en prévaloir.
+</p>
+<h2 class="title title--subtitle global-pages__title">22. Loi applicable – juridiction compétente
+</h2>
+<p>
+Les CGU sont régies et interprétées par le droit français.
+</p>
+<p>
+Tout litige ou contestation relatif à la validité, à l'interprétation, à l'exécution et/ou à la rupture des CGU
+sera soumis à la compétence exclusive du Tribunal de commerce de Paris.
+</p>
+<p>
+En application de l'article R. 631-3 du Code de la consommation, le consommateur peut saisir à son choix, outre
+l'une des juridictions territorialement compétentes en vertu du code de procédure civile, la juridiction du
+lieu où il demeurait au moment de la conclusion du contrat ou de la survenance du fait dommageable.
+</p>
+<h2 class="title title--subtitle title--align-center global-pages__title"><p>Annexe</p>
+<div class='simple-link'>
+<a class="link" href="formulaire_de_rétraction.docx">Formulaire de rétractation</a>
+</div>
+
+
+</h2></div>
+</div>
+
+
+</main>
+<footer class='footer'>
+<div class='container footer__wrapper'>
+<div class='footer__logo-container'>
+<svg class="footer__logo"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-wecasa" /></svg>
+<p class='footer__logo-subtitle'>Services d&#39;aide et de bien-être à domicile</p>
+</div>
+<div class='footer__app-container footer__app-container--hide-desktop'>
+<span>Échangez avec vos pros et réservez facilement :</span>
+<div class='footer__apps'>
+<span class="footer__app-link js-obfuscated-link obfuscated-link" target="_blank" rel="noopener" data-o="aHR0cHM6Ly9pdHVuZXMuYXBwbGUuY29tL2ZyL2FwcC9hcHBsZS1zdG9yZS9p
+ZDEzMzk2NDc1MjY/cHQ9MTE4ODM2MjExJmN0PXdlYnNpdGUtZm9vdGVyJm10
+PTg=
+"><img srcset="https://www.wecasa.fr/assets/fr/app/download-app-store-badge@2x-83b70e443ce2893c47aa824f495c95b31eda2818d35ab41cde144a8d65b39497.png 2x, https://www.wecasa.fr/assets/fr/app/download-app-store-badge@3x-9e922c503c0db2c3871fbd8d051db4a41cf627cec518dcc7cb1f843e00e515ab.png 3x" class="footer__app" alt="Application Wecasa sur App Store" src="https://www.wecasa.fr/assets/fr/app/download-app-store-badge-57a837fe2347009960b5c74c35eaad57c0638d5fb4850c8c7652520204b81b1b.png" />
+</span><span class="footer__app-link js-obfuscated-link obfuscated-link" target="_blank" rel="noopener" data-o="aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lk
+PWNvbS53ZWNhc2EmZ2w9ZnImaGw9ZnI=
+"><img srcset="https://www.wecasa.fr/assets/fr/app/download-google-play-badge@2x-fe087f2a51ea65063eb23d1bf3d459c320a7070dec9d12d8aade78afd38ee6fe.png 2x, https://www.wecasa.fr/assets/fr/app/download-google-play-badge@3x-0fbff6bee2015f710e659f1e2e86a21a27544617a41da0349b8f3a8504e176e0.png 3x" class="footer__app" alt="Application Wecasa sur Google Play" src="https://www.wecasa.fr/assets/fr/app/download-google-play-badge-3028f4c81706a354ac030c724da4cfc61d02af63bda9a60825ef0a829b0d96da.png" />
+</span></div>
+</div>
+<div class='footer__categories'>
+<div class='footer__category'>
+<span class='footer__category-title'>À propos</span>
+<ul class='footer__category-list'>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" data-o="L3F1aS1zb21tZXMtbm91cw==
+">Qui sommes-nous ?</span>
+</li>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" data-o="L21hZy9hdmlzLXdlY2FzYS8=
+">Avis sur Wecasa</span>
+</li>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" data-o="L21hZy9jb2Rlcy1wcm9tby8=
+">Code promos</span>
+</li>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" data-o="L21hZy8=
+">Le Mag&#39; Wecasa</span>
+</li>
+</ul>
+</div>
+<div class='footer__category'>
+<span class='footer__category-title'>Pour les pros</span>
+<ul class='footer__category-list'>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" data-o="L3Bybw==
+">Devenir pro Wecasa</span>
+</li>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1jb2lmZmV1cg==
+">Devenir coiffeur Wecasa</span>
+</li>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1lc3RoZXRpY2llbm5l
+">Devenir esthéticienne Wecasa</span>
+</li>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1tYXNzZXVy
+">Devenir masseur Wecasa</span>
+</li>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1haWRlLW1lbmFnZXJl
+">Devenir aide ménagère Wecasa</span>
+</li>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1ub3Vub3U=
+">Devenir nounou Wecasa</span>
+</li>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" data-o="L3Byby9pbnNjcmlwdGlvbi1jb2FjaC1zcG9ydGlm
+">Devenir coach sportif Wecasa</span>
+</li>
+</ul>
+</div>
+<div class='footer__category'>
+<span class='footer__category-title'>Contact</span>
+<ul class='footer__category-list'>
+<li class='footer__category-item'>
+<span class="footer__category-link true js-obfuscated-link obfuscated-link" data-o="L2NvbnRhY3Q=
+">Nous contacter</span>
+</li>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" target="_blank" rel="noopener" data-o="aHR0cHM6Ly93ZWNhc2Eud2VsY29tZWtpdC5jby8=
+">Nous rejoindre</span>
+<span class='label label--xxs bg--primary footer__category-label'>On recrute !</span>
+
+</li>
+</ul>
+</div>
+<div class='footer__category'>
+<span class='footer__category-title'>Besoin d&#39;aide ?</span>
+<ul class='footer__category-list'>
+<li class='footer__category-item'>
+<span class="footer__category-link js-obfuscated-link obfuscated-link" target="_blank" rel="noopener" data-o="aHR0cHM6Ly9oZWxwLndlY2FzYS5mci9mcg==
+">FAQ / Centre d&#39;aide</span>
+</li>
+<li class='footer__category-item'>
+<span class="footer__category-link js-init-chat js-obfuscated-link obfuscated-link" data-o="Iw==
+">Démarrer un chat</span>
+</li>
+</ul>
+</div>
+</div>
+<div class='footer__apps-socials-container'>
+<div class='footer__app-container footer__app-container--hide-mobile'>
+<span>Échangez avec vos pros et réservez facilement :</span>
+<div class='footer__apps'>
+<span class="footer__app-link js-obfuscated-link obfuscated-link" target="_blank" rel="noopener" data-o="aHR0cHM6Ly9pdHVuZXMuYXBwbGUuY29tL2ZyL2FwcC9hcHBsZS1zdG9yZS9p
+ZDEzMzk2NDc1MjY/cHQ9MTE4ODM2MjExJmN0PXdlYnNpdGUtZm9vdGVyJm10
+PTg=
+"><img srcset="https://www.wecasa.fr/assets/fr/app/download-app-store-badge@2x-83b70e443ce2893c47aa824f495c95b31eda2818d35ab41cde144a8d65b39497.png 2x, https://www.wecasa.fr/assets/fr/app/download-app-store-badge@3x-9e922c503c0db2c3871fbd8d051db4a41cf627cec518dcc7cb1f843e00e515ab.png 3x" class="footer__app" alt="Application Wecasa sur App Store" src="https://www.wecasa.fr/assets/fr/app/download-app-store-badge-57a837fe2347009960b5c74c35eaad57c0638d5fb4850c8c7652520204b81b1b.png" />
+</span><span class="footer__app-link js-obfuscated-link obfuscated-link" target="_blank" rel="noopener" data-o="aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lk
+PWNvbS53ZWNhc2EmZ2w9ZnImaGw9ZnI=
+"><img srcset="https://www.wecasa.fr/assets/fr/app/download-google-play-badge@2x-fe087f2a51ea65063eb23d1bf3d459c320a7070dec9d12d8aade78afd38ee6fe.png 2x, https://www.wecasa.fr/assets/fr/app/download-google-play-badge@3x-0fbff6bee2015f710e659f1e2e86a21a27544617a41da0349b8f3a8504e176e0.png 3x" class="footer__app" alt="Application Wecasa sur Google Play" src="https://www.wecasa.fr/assets/fr/app/download-google-play-badge-3028f4c81706a354ac030c724da4cfc61d02af63bda9a60825ef0a829b0d96da.png" />
+</span></div>
+</div>
+<div class='footer__social-container'>
+<span class='footer__social-text'>Suivez-nous</span>
+<span target="_blank" rel="noopener" class="js-obfuscated-link obfuscated-link" data-o="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3dlY2FzYS5mci8=
+"><svg class="footer__social-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-facebook-square" /></svg>
+</span><span target="_blank" rel="noopener" class="js-obfuscated-link obfuscated-link" data-o="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS93ZWNhc2FfZnIv
+"><svg class="footer__social-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-instagram-square" /></svg>
+</span></div>
+</div>
+<div class='footer__legal-container'>
+<ul class='footer__legal'>
+<li class='footer__legal-item'>
+<span class="footer__legal-link js-obfuscated-link obfuscated-link" data-o="L21lbnRpb25zLWxlZ2FsZXM=
+">Mentions légales</span>
+</li>
+<li class='footer__legal-item'>
+<span class="footer__legal-link js-obfuscated-link obfuscated-link" data-o="L2NvbmRpdGlvbnMtZ2VuZXJhbGVzLXdlbGxuZXNz
+">CGU Wecasa</span>
+</li>
+<li class='footer__legal-item'>
+<span class="footer__legal-link js-obfuscated-link obfuscated-link" data-o="L2NvbmRpdGlvbnMtZ2VuZXJhbGVzLWNhcmU=
+">CGU Wecasa Care</span>
+</li>
+<li class='footer__legal-item'>
+<span class="footer__legal-link js-obfuscated-link obfuscated-link" data-o="L3BvbGl0aXF1ZS1jb25maWRlbnRpYWxpdGU=
+">Politique de confidentialité</span>
+</li>
+<li class='footer__legal-item'>
+<span class="footer__legal-link js-obfuscated-link obfuscated-link" data-o="L2luZm9ybWF0aW9uLWNvbnNvbW1hdGV1cnM=
+">Info. des consommateurs</span>
+</li>
+<li class='footer__legal-item'>
+<span class="footer__legal-link js-obfuscated-link obfuscated-link" data-o="amF2YXNjcmlwdDogQ29va2llYm90LnNob3coKQ==
+">Cookies</span>
+</li>
+</ul>
+<div class='footer__country'>
+<span class='footer__country-value'>
+France
+</span>
+<svg class="footer__country-icon js-country-icon"><use xlink:href="https://www.wecasa.fr/packs/media/images/symbol-defs-22793ca751d6fe254f0115303339be0a.svg#icon-arrow-down" /></svg>
+<div class='footer__country-dropdown-container'>
+<div class='footer__country-dropdown footer__country-dropdown--hidden js-country-dropdown'>
+<ul class='footer__country-list'>
+<li class='footer__country-list-item'>
+<a class="footer__country-link footer__country-link--selected" href="https://www.wecasa.fr/">France</a>
+</li>
+<li class='footer__country-list-item'>
+<a class="footer__country-link" href="https://www.wecasa.co.uk/">Royaume-Uni</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+<script src="https://www.wecasa.fr/packs/js/application-28ecd6853335f4ed6009.js"></script>
+
+<script id="IntercomSettingsScriptTag">
+//<![CDATA[
+window.intercomSettings = {"app_id":"derkpl7b","widget":{"activator":".js-init-chat"}};(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/derkpl7b';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}};})()
+//]]>
+</script>
+</body>
+</html>
