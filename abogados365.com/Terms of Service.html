@@ -1,0 +1,855 @@
+
+<!DOCTYPE html>
+<html lang="es-ES"   >
+
+<head>
+    <meta charset="utf-8"/><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"a9443b4dd8",applicationID:"604860747"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <title>Aviso Legal - Abogados365.com</title>
+                <link media="screen" type="text/css" rel="stylesheet" href="/10014081/css/gen/abogados/landing_master.css"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    
+    <meta name="robots" content="index,follow" />
+            <link rel="canonical" href="https://www.abogados365.com/aviso_legal" />
+    
+    
+    <!-- Open Graph -->
+            <meta property="og:title" content="Aviso Legal - Abogados365.com" />
+            <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.abogados365.com/aviso_legal" />
+    <meta property="og:image" content="https://www.abogados365.com/site/own/site_cover.png" />
+    <meta property="og:site_name" content="abogados365" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@abogados365" />
+        <meta name="twitter:title" content="Aviso Legal - Abogados365.com" />
+                <meta name="twitter:image" content=" https://www.abogados365.com/site/own/site_cover.png " />
+    
+    <!-- The Grid -->
+            <link media="screen" type="text/css" rel="stylesheet" href="/10014081/css/gen/abogados/front_master.css" />
+    
+            <script async src="https://www.googletagmanager.com/gtag/js" data-cookiefirst-category="advertising"></script>
+<script data-cookiefirst-category="necessary">
+
+    window.dataLayer = window.dataLayer || [];
+    window.tmhAn = window.tmhAn || {};
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+        
+        window.tmhAn.ga = {
+        custom_map: {
+            'dimension1': 'transaction_type',               // Hit - Ambito evento purchase
+            'dimension2': 'client_type',                    // Hit - Ambito evento purchase
+            'dimension3': 'lead_type',                      // Hit - Ambito evento purchase
+            'dimension4': 'cd_user_id',                     // User - Ambito usuario
+            'dimension5': 'cd_user_type',                   // User - Ambito usuario
+            'dimension6': 'cd_user_logged',                 // Session - Ambito usuario
+            'dimension7': 'cd_com_id',                      // User - Ambito usuario
+            'dimension8': 'cd_client_id',                   // Session - Ambito usuario
+            'dimension9': 'cd_user_lead_timestamp',         // Hit - Ambito evento
+            'dimension10': 'cd_user_lead_com_id',           // Hit - Ambito evento
+            'dimension11': 'cd_user_lead_com_name',         // Hit - Ambito evento
+            'dimension12': 'cd_lead_unique_transact',       // Hit - Ambito evento
+            'dimension13': 'cd_lead_serv_type',             // Hit - Ambito evento
+            'dimension14': 'cd_lead_pop_type',              // Hit - Ambito evento
+            'dimension15': 'cd_lead_popservice_type',       // Hit - Ambito evento
+            'dimension16': 'cd_lead_therapy_type',          // Hit - Ambito evento
+            'dimension17': 'cd_page_type',                  // Hit - Ambito evento
+            'dimension18': 'cd_lead_page_path',             // Hit - Ambito evento
+            'dimension19': 'cd_lead_pro_position',          // Hit - Ambito evento
+            'dimension20': 'cd_req_headquarter',            // Hit - Ambito evento
+            'dimension21': 'cd_transaction_id',             // Hit - Ambito evento
+            'dimension22': 'cds_lead_popservice_type',      // Session - Ambito evento
+            'dimension23': 'cds_page_type',                 // Session - Ambito evento
+            'dimension24': 'cds_lead_page_path',            // Session - Ambito evento
+            'dimension25': 'cds_transaction_id',            // Session - Ambito evento
+            'metric1': 'cm_lead_unique_transact'
+        }
+    };
+
+
+    window.tmhAn.listingProperties = {
+        serId: 0,
+        serTitle: 'undefined',
+        zoneId: 0,
+        zoneTitle: 'undefined',
+        onMobileCompanyCard: () => {
+            return (
+                window.location.toString().includes("appointment_start") ||
+                window.location.toString().includes("request?company=")
+            ) && document.body.classList.contains("js-mobile");
+        },
+        listUrl: () => {
+            let url = window.location.toString().replace(window.location.origin, '');
+            if (window.tmhAn.listingProperties.onMobileCompanyCard()) {
+                url = document.referrer.replace(window.location.origin, '');
+            }
+
+            return url;
+        },
+        pageType: () => {
+            if (window.tmhAn.listingProperties.onMobileCompanyCard()) {
+                return 'ie_com_card';
+            }
+
+            let type = window.document.body.getAttribute('data-meta');
+            if (type == null) {
+                type = window.document.body.getAttribute('id');
+            }
+
+            return type;
+        }
+    };
+    
+                    // Global code
+        gtag('config', 'UA-11698778-2', {
+            'custom_map': window.tmhAn.ga.custom_map,
+            'send_page_view': false
+            //'groups': 'analytics'
+        });
+                        // Country code
+        gtag('config', 'UA-11698778-3', {
+            'custom_map': window.tmhAn.ga.custom_map,
+            'send_page_view': false
+            //'groups': 'analytics'
+        });
+            
+        // Project code
+    gtag('config', 'UA-4540995-1', {
+        //'currency': 'EUR',
+        'country': 'ES',
+        'custom_map': window.tmhAn.ga.custom_map,
+        'send_page_view': false
+        //'groups': 'analytics'
+    });
+    
+            gtag('config', 'G-EPXMD5YT9D', {
+        //'currency': 'EUR',
+        'country': 'ES',
+        'custom_map': window.tmhAn.ga.custom_map,
+        'send_page_view': false,
+        
+        //'groups': 'analytics'
+    });
+    
+    
+    new Promise(resolve => {
+        gtag('get', 'G-EPXMD5YT9D', 'client_id', resolve)
+    }).then(client_id => {
+        gtag('set', {'cd_client_id': client_id});
+        gtag('set', 'user_properties', {'cd_client_id': client_id});
+    });
+
+    gtag('event', 'page_view');
+
+            //Adwords code
+        gtag('config', 'AW-1041870942', {
+            'groups' : 'adwords',
+            'allow_enhanced_conversions' : true
+            });
+
+        gtag('event', 'page_view', {
+            'send_to': 'adwords'
+        });
+    
+        var enhanced_conversion_data = {
+        "email": ''
+    }; 
+
+</script>
+        <script data-cookiefirst-category="advertising">
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '747212239038486');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=747212239038486&ev=PageView&noscript=1" alt=""/>
+    </noscript>
+        
+
+    
+
+    <!-- The Google Ads block -->
+    
+    <!-- The Mind Hub Analytics -->
+    
+            <style>
+
+        html #otherapy #hero, html[data-webp] #article_listing #hero {
+            background-image: url('/img/web/psico/otherapy.webp');
+        }
+        html bo#otherapy #hero, html[data-webp] #article_listing #hero,
+        html[data-webp] #qanda_home #hero, html[data-webp] #forum-list #hero {
+            background-image: url('/img/web/psico/otherapy.jpg');
+        }
+        @media (max-width: 768px){
+            html .hide-mobile {
+                display: none !important;
+            }
+            html #side_nav_container > nav {
+                display: none
+            }
+            html #main_header.isOpen #side_nav_container > nav {
+                display:block
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('lazybeforeunveil', function(e){
+            var bg = e.target.getAttribute('data-bg');
+            if(bg){
+                e.target.style.backgroundImage = 'url(' + bg + ')';
+            }
+        });
+    </script>
+
+    
+    </head>
+
+
+<body class="hide-sticky"                  data-pro="17">
+
+        
+    <main class="container" >
+            
+
+    <header id="main_header" class="header w-100">
+        <div id="toggle_menu" class="hamburguer pointer" data-role="hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <div class="wrapper center h-100" id="side_nav_container">
+                                    <div class="logo h-100 flex jc-center center">
+                    <a href="/" title="abogados" rel="home">
+                 <img src="/site/own/logo_color.svg" alt="abogados"
+                      title="abogados"/>
+             </a>
+                    </div>
+        
+                        <nav class="h-100" role="navigation">
+
+                                <div class="prof-login relative border-bottom p-r-16 p-l-16 p-t-16 p-b-28">
+    <label for="prof-access" id="prof-access-label" class="flex m-b-12 pointer noselect">
+       <span class="m-r-4">
+            <img src="" width=21 height=18 class="lazyload" data-src="/img/svg/abogados/suitcase.svg" />
+       </span>
+        <span class="f-12 bold">Área profesionales</span>
+
+        <span class="icon-arrow-down-3 f-16 bold m-l-4 hide-mobile"></span>
+        <span class="icon-arrow-up-3 f-16 bold m-l-4 hide"></span>
+    </label>
+
+    <input type="checkbox"
+           class="prof-login-dropdown hide"
+           id="prof-access"
+           name="prof-access">
+
+    <div id="prof-cta" class="prof-cta hide-desktop">
+        <a class="cta button-grey w-100 m-b-12" href="/front/user_account/login"
+           title="Acceso profesionales" onclick="window.gaqTrackEvent('access_header', 'login_client', '');">
+            Acceso profesionales
+        </a>
+
+        <a class="cta button-primary w-100" href="/register_web"
+           title="Regístrate gratis" onclick="window.gaqTrackEvent('access_header', 'register_client', '');">
+            Regístrate gratis
+        </a>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    var label = document.getElementById('prof-access-label');
+
+    label.addEventListener('click', function() {
+        label.classList.toggle('active');
+    });
+</script>
+                <ul class="tabs p-l-16 p-r-16 p-t-24">
+
+                                        <li class="p-b-16 hide pointer">
+                        <a href="/" title="Inicio Abogados365.com"
+                           rel="home" aria-label="Inicio"
+                           class="flex ai-center">
+                            <span class="icon-home2 f-18 m-r-8"></span>
+                            <span class="f-16">Inicio<span class="name"> Abogados365.com</span></span>
+                        </a>
+                    </li>
+
+
+                                        <li class="p-b-16 pointer">
+                        <a id="js_companies_list_btn" href="/bufetes"
+                           title="Bufetes de abogados"
+                           class="flex ai-center ">
+                            <span class="icon-list-2 m-r-8 f-18 hide-desktop"></span>
+                            <span class="f-16">Abogados</span>
+                        </a>
+                    </li>
+
+
+                                        <li class="p-b-16 pointer">
+                        <a href="/articulos" title="Todo sobre Abogados"
+                           class="flex ai-center ">
+                            <span class="icon-article m-r-8 f-18 hide-desktop"></span>
+                            <span class="f-16">Artículos</span>
+                        </a>
+                    </li>
+
+
+                                                                <li class="p-b-16 pointer">
+                            <a href="/consultas" title="Consultorio online"
+                               class="flex ai-center">
+                                <span class="icon-question-bubble m-r-8 f-18 hide-desktop"></span>
+                                <span class="f-16">Consultorio online</span>
+                            </a>
+                        </li>
+                    
+
+                                        
+
+                                                                <li class="p-b-16 pointer">
+                                                            <a href="/packs" title="Productos precio cerrado" class="flex ai-center">
+                                    <span class="icon-business-man2 m-r-8 hide-desktop"></span>
+                                    <span class="f-16 m-r-8">Productos precio cerrado</span>
+                                    <span class="new-label m-r-8">Nuevo</span>
+                                </a>
+                                                    </li>
+                    
+                </ul>
+
+
+                                <ul id="user_login" class="user-login p-r-16 p-l-16 p-b-16">
+                                        <li class="p-b-16 pointer">
+                        <a href="/profile/register" title="Regístrate"
+                           class="flex ai-center" rel="nofollow"
+                           onclick="window.gaqTrackEvent('access_header', 'register_user', '');">
+
+                            <span class="m-r-8 hide-desktop">
+                                <img src="" width=19 height=16 class="lazyload" data-src="/img/svg/abogados/register.svg" />
+                            </span>
+                            <span class="f-16">Regístrate</span>
+                        </a>
+                    </li>
+
+                                        <li class="p-b-16 pointer">
+                        <a href="/profile/login" title="Entra"
+                           class="flex ai-center" rel="nofollow"
+                           onclick="window.gaqTrackEvent('access_header', 'login_user', '');">
+
+                            <span class="m-r-8 hide-desktop">
+                                <img src="" width=12 height=15 class="lazyload" data-src="/img/svg/abogados/login.svg" />
+                            </span>
+                            <span class="f-16">Entra</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+
+
+
+            <aside data-role="breadcrumb" class="new-breadcrumb">
+        <ul>
+            <li>
+                                                <span>
+                    <a href="/" title="Abogados">
+                        <span>Abogados</span>
+                    </a> /
+                </span>
+
+                                    </li>
+            <li>
+                                                <strong>Aviso Legal</strong>
+                                    </li>
+    </ul>
+
+<script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "numberOfItems": "2",
+            "itemListOrder": "http://schema.org/ItemListOrderAscending",
+            "itemListElement": [
+                                {
+                  "@type": "ListItem",
+                  "position": "1",
+                  "item": {
+                                                                        "@id": "https://www.abogados365.com/",
+                                                                                    "name": "Inicio"
+                                      }
+                },                                {
+                  "@type": "ListItem",
+                  "position": "2",
+                  "item": {
+                                                            "name": "Aviso Legal"
+                                      }
+                }                            ]
+        }
+    ]
+</script>
+    </aside>
+
+    <section class="max-wrapper">
+        <aside class="lan-content">
+            <div class="m-b-24">
+
+            <h2>Condiciones generales de uso del Sitio Web abogados365.com e información al usuario</h2><h3>Preámbulo</h3><p>VERTICALES INTERCOM, S.L.  pone a disposición de los USUARIOS de Internet el Sitio Web abogados365.com.</p> <p>El acceso a y/o uso del Sitio Web abogados365.com es totalmente voluntario y atribuye a quien lo realiza la condición de USUARIO. Todo USUARIO acepta, desde el mismo momento en el que accede, sin ningún tipo de reserva, el contenido de las presentes "Condiciones generales de uso", la "Política de Protección de datos" así como, en su caso, las "Condiciones particulares" que puedan complementarlas, sustituirlas o modificarlas en algún sentido en relación con los servicios y contenidos del Sitio Web. </p><p>En consecuencia, el USUARIO deberá leer detenidamente unas y otras antes del acceso y de utilización de cualquier servicio del Sitio Web bajo su entera responsabilidad.</p><p>El USUARIO puede acceder, imprimir, descargar y guardar las Condiciones generales de uso en todo momento. Estas Condiciones estarán permanentemente accesibles en el Sitio Web a través del enlace "Condiciones legales".</p><p>La utilización de este Sitio Web implica la plena aceptación de las disposiciones incluidas en las presentes "Condiciones legales" en la versión publicada en el Sitio Web en el momento en que el USUARIO acceda al mismo. La utilización de este Sitio Web (en especial la entrada en el menú personal y la gestión y edición de los datos propios o de las informaciones que el portal ofrece a las empresas) implica por parte del USUARIO la aceptación de la aparición en el Sitio Web.</p><p>Asimismo VERTICALES INTERCOM, S.L. pone en conocimiento de los USUARIOS de este Sitio Web que estas Condiciones generales de uso pueden ser modificadas sin notificación previa. En consecuencia el USUARIO debe leer atentamente el presente Aviso Legal en cada una de las ocasiones en que se proceda a utilizar el Sitio Web, ya que aquél puede sufrir modificaciones.</p><p>Asimismo VERTICALES INTERCOM, S.L.  se reserva la posibilidad de modificar sin previo aviso, el diseño, presentación y/o configuración de este Sitio Web, así como algunos o todos los servicios, y añadir servicios nuevos.</p><p>En cualquier caso,VERTICALES INTERCOM, S.L.  se reserva el derecho de, en cualquier momento y sin necesidad de previo aviso, denegar el acceso a este sitio a aquellos USUARIOS que incumplan cualesquiera de estas condiciones generales de uso o de las particulares que les sean de aplicación.</p><p>La utilización de ciertos servicios ofrecidos a los USUARIOS a través del Sitio Web puede encontrarse sometida a condiciones particulares propias que, según los casos sustituyen, completan y/o modifican las presentes Condiciones generales de uso. Por lo tanto, con anterioridad a la utilización de dichos servicios, el USUARIO también ha de leer atentamente y aceptar asimismo las correspondientes condiciones particulares propias.</p><h3>Objeto</h3><p>El presente aviso legal regula el acceso y el uso del servicio del Sitio Web abogados365.com (en adelante, el Sitio Web) que VERTICALES INTERCOM, S.L. pone a disposición de los USUARIOS de Internet interesados en sus servicios y contenidos (en adelante, los USUARIOS).</p><p>La finalidad del Sitio Web es la de difundir los anuncios de los servicios ofrecidos por los clientes del Sitio Web a través del propio Sitio Web, Internet y cualquier otro medio de difusión o comunicación existente y permitir a los USUARIOS contactar con los clientes directamente a través de formularios.</p><p>VERTICALES INTERCOM, S.L.  sólo facilitará a los demás USUARIOS los datos y/o información proporcionados por el USUARIO cuando estos datos y/o información no vulneren disposiciones legales o las presentes Condiciones generales de uso.</p><p>VERTICALES INTERCOM, S.L podrá eliminar del Sitio Web contenidos ilegales sin previo aviso, así como aquellos contenidos que pudieran considerarse inapropiados o pudieran vulnerar derechos de terceros.</p><p>El USUARIO reconoce que técnicamente no es posible lograr disponibilidad del Sitio Web de VERTICALES INTERCOM, S.L.  al 100%. Sin embargo,VERTICALES INTERCOM, S.L  se esforzará por mantener disponible el Sitio Web de la forma más constante posible. Especialmente por razones de mantenimiento, seguridad o capacidad, así como a causa de acontecimientos sobre los que no puede influir VERTICALES INTERCOM, S.L  (por ejemplo anomalías de redes públicas de comunicación, cortes de electricidad, etc.) pueden producirse breves anomalías o la suspensión pasajera de los servicios del Sitio Web.</p><h3>Obligaciones de los USUARIOS en el Sitio Web</h3><p>El USUARIO se compromete a hacer un uso diligente del Sitio Web y de los servicios accesibles desde el mismo, con total sujeción a la Ley, a las buenas costumbres y las presentes Condiciones generales de uso y, en su caso, condiciones particulares, así como manteniendo el debido respeto a los demás USUARIOS.</p><p>Queda expresamente prohibido cualquier uso diferente a la finalidad de este Sitio Web.</p><p>En este sentido, el USUARIO renunciará a utilizar cualquiera de los materiales e informaciones contenidos en este Sitio Web con fines ilícitos y expresamente prohibidos en las presentes Condiciones generales de uso así como a las condiciones particulares que, en su caso, se habiliten que resulten contrarios a los derechos e intereses de VERTICALES INTERCOM, S.L , sus miembros y/o terceros, y deberá responder frente a los mismos en caso de contravenir o incumplir dichas obligaciones y/o que, de cualquier modo (incluida la introducción o difusión de virus informáticos), dañe, inutilice, sobrecargue, deteriore o impida la normal utilización de los materiales e informaciones contenidos en el Sitio Web, los sistemas de información o los documentos, archivos y toda clase de contenidos almacenados en cualquier equipo informático (hacking) de VERTICALES INTERCOM, S.L. , de sus miembros o de cualquier usuario.</p><p>Asimismo, el USUARIO manifiesta expresamente cumplir con toda la normativa y requisitos aplicables respecto del ejercicio de la actividad contenida en el anuncio, exonerando a abogados365.com de cualquier eventual reclamación derivada de la falsedad o inexactitud de dicha manifestación.</p><p>Con carácter general la prestación de los servicios no exige la previa suscripción o registro de los USUARIOS. No obstante,VERTICALES INTERCOM, S.L.  condiciona la utilización de algunos de los servicios a la previa cumplimentación del correspondiente registro de USUARIO (empresa o particular), seleccionando el identificador y la contraseña que el usuario se compromete a conservar y a usar con la diligencia debida.</p><p>El uso de la contraseña es personal e intransferible, no estando permitida la cesión, ni siquiera temporal, a terceros. En tal sentido, el USUARIO deberá adoptar las medidas necesarias para la custodia de la contraseña por él seleccionada, evitando el uso de la misma por terceros. En consecuencia, el USUARIO es el único responsable de la utilización que, de su contraseña se realice, con completa indemnidad para VERTICALES INTERCOM, S.L.  En el supuesto de que el USUARIO conozca o sospeche del uso de su contraseña por terceros deberá poner tal circunstancia en conocimiento de VERTICALES INTERCOM, S.L.  a la mayor brevedad.</p><p>El citado registro del USUARIO se efectuará en la forma expresamente indicada en el propio servicio.</p><p>Toda la información que facilite el USUARIO a través de los servicios deberá ser veraz y exacta. A estos efectos, el USUARIO garantiza la autenticidad de todos aquellos datos que comunique como consecuencia de la cumplimentación de los formularios necesarios para la suscripción de los Servicios.</p><p>De igual forma, será responsabilidad del USUARIO mantener toda la información facilitada a VERTICALES INTERCOM, S.Lpermanentemente actualizada de forma que responda, en cada momento a la situación real del USUARIO. En todo caso el USUARIO será el único responsable de las manifestaciones falsas o inexactas que realice y de los perjuicios que cause a VERTICALES INTERCOM, S.L o a terceros por la información que facilite.</p><p>El USUARIO se obliga a respetar las leyes aplicables y los derechos de terceros al utilizar los contenidos y servicios del Sitio Web. Asimismo queda prohibida la reproducción, distribución, transmisión, adaptación o modificación, por cualquier medio y en cualquier forma, de los contenidos del Sitio Web (textos, diseños, gráficos, informaciones, bases de datos, archivos de sonido y/o imagen, logos, etc.) y demás elementos de este Sitio Web, salvo autorización previa de sus legítimos titulares o cuando así resulte permitido por la ley.</p><p>En especial al usuario le estará prohibido: utilizar contenidos injuriosos o calumniosos, con independencia de que esos contenidos afecten a otros USUARIOS o a otras personas o empresas, utilizar contenidos pornográficos o que vulneren las leyes de protección de menores, o hacer publicidad, ofrecer o distribuir productos pornográficos o que vulneren las leyes de protección de menores, molestar a otros USUARIOS (especialmente mediante spam),utilizar contenidos protegidos legalmente (p. ej. por la legislación relativa a la propiedad intelectual, a marcas, a patentes, a modelos de utilidad o a modelos estéticos) sin tener derecho a ello, o hacer publicidad, ofrecer o distribuir bienes o servicios protegidos legalmente, así como realizar o fomentar acciones contrarias a la libre competencia, incluidas las encaminadas a la captación de clientes progresiva (como sistemas en cadena, de bola de nieve o piramidales).</p><p>Se prohíbe al usuario las siguientes acciones:</p><ul><li>Utilizar mecanismos, software o scripts en relación con la utilización del Sitio Web.</li><li>Bloquear, sobrescribir, modificar o copiar, a no ser que ello sea necesario para la correcta utilización de los servicios de los sitios web. Por ejemplo, el copiado mediante tecnologías de buscador tipo "Robot/Crawler" no es necesario para la correcta utilización de los servicios del Sitio Web,  por lo que está prohibido expresamente.</li><li>Difundir y reproducir públicamente contenidos del Sitio Web de VERTICALES INTERCOM, S.L  o de otros USUARIOS, sin la autorización previa.</li><li>Toda acción apta para perjudicar la funcionalidad de la infraestructura de VERTICALES INTERCOM, S.L , especialmente para sobrecargarla.</li><li>A utilizar cualquiera de los materiales e informaciones contenidos en este Sitio Web con fines ilícitos y expresamente prohibidos en las presentes Condiciones Generales de Uso, así como a las condiciones particulares que, en su caso, se habiliten que resulten contrarios a los derechos e intereses de VERTICALES INTERCOM, S.L. , sus miembros y/o terceros, y deberá responder frente a los mismos en caso de contravenir o incumplir dichas obligaciones y/o que, de cualquier modo (incluida la introducción o difusión de "virus informáticos"), dañe, inutilice, sobrecargue, deteriore o impida la normal utilización de los materiales e informaciones contenidos en el Sitio Web, los sistemas de información o los documentos, archivos y toda clase de contenidos almacenados en cualquier equipo informático (hacking) de VERTICALES INTERCOM, S.L. , de sus miembros o de cualquier usuario.</li></ul><p>El usuario es consciente de, y acepta voluntariamente, que el uso del servicio tiene lugar, en todo caso, bajo su única y exclusiva responsabilidad.</p><p>El USUARIO responderá de los daños y perjuicios de toda naturaleza que VERTICALES INTERCOM, S.L.  o cualquier tercero pueda sufrir como consecuencia del incumplimiento de cualesquiera de las obligaciones a las que queda sometido por virtud de estas "Condiciones generales de uso" o de la ley en relación con la utilización del servicio.</p><h3>Obligaciones en la publicación de anuncios en abogados365.com</h3><p>A través de la inserción de información y/o imágenes en el Sitio Web de abogados365.com, el usuario se declara titular legítimo de los derechos de propiedad intelectual e industrial del contenido para la reproducción, distribución y comunicación pública a través de cualquier medio electrónico, principalmente Internet y correo electrónico, para todo el mundo con tiempo ilimitado.</p><p>En este sentido, el USUARIO declara tener los derechos suficientes para la inserción de la información y/o imágenes en el Sitio Web de abogados365.com.</p><p>VERTICALES INTERCOM, S.L  no permite la inserción de contenidos que deterioren la calidad del servicio. Está prohibida la inserción de contenidos que:</p><ul><li>Que sean presuntamente ilícitos por la normativa nacional, comunitaria o internacional o que realicen actividades presuntamente ilícitas o contravengan los principios de la buena fe.</li><li>Que no reúnan los parámetros de calidad establecidos en VERTICALES INTERCOM, S.L </li><li>Que atenten contra los derechos fundamentales de las personas, puedan buscar la debilidad del usuario, falten a la cortesía en la red, molesten o puedan generar opiniones negativas en nuestros USUARIOS o terceros. En concreto, y a modo enunciativo pero no limitativo: cualesquiera de los derechos legales de terceros; aquellos que favorezcan o potencien la creación, mantenimiento y fomento de negocios relacionados con la pornografía, material obsceno o gestión de contactos eróticos; aquellos que estén relacionados con la videncia, tarot, "ciencias ocultas" o cualquier otro contenido relacionado; y en general cualesquiera contenidos que VERTICALES INTERCOM, S.L.  considere no apropiados para los USUARIOS y, en especial, para los menores de edad.</li><li>Y en general que contravengan los principios de legalidad, honradez, responsabilidad, protección de la dignidad humana, protección de menores, protección del orden público, la protección de la vida privada, la protección del consumidor y los derechos de propiedad intelectual e industrial.</li></ul><p>Asimismo, VERTICALES INTERCOM, S.L  se reserva la potestad de retirar del Sitio Web aquellos contenidos que se consideren no apropiados a las características y finalidades de abogados365.com.</p><p>VERTICALES INTERCOM, S.L  no puede controlar todos y cada uno de los contenidos publicados, de manera que no puede asumir la responsabilidad sobre los contenidos. En especial, VERTICALES INTERCOM, S.L.  no puede asumir la responsabilidad sobre las imágenes que acompañan a las ofertas o promociones incluidas en el portal, que en ningún caso tendrán carácter contractual.</p><p>De todas maneras, periódicamente se revisan los contenidos insertados y publicados para asegurar los principios de calidad de THE MIND HUB COMPANY, S.L.  así como las normas aquí indicadas.</p> <p>Si advierte algún contenido inapropiado en el Sitio Web, por favor contacte con nosotros a través de nuestro servicio de Atención al usuario: info@abogados365.com.</p><p>Los USUARIOS son los únicos responsables de obtener cualquier tipo de autorización, permiso o licencia, en caso de ser necesarios para la realización y publicación de cualquier contenido.</p><p>Cualquier usuario que inserte un contenido que contravenga la legalidad vigente asumirá la responsabilidad exclusiva de los perjuicios y consecuencias derivadas de la misma, eximiendo a VERTICALES INTERCOM, S.L  de cualquier responsabilidad.</p><h3>Responsabilidad y difusión de contenidos, datos y/o información de los USUARIOS</h3><p>El usuario autoriza expresamente a VERTICALES INTERCOM, S.L para que difunda los datos relacionados con los contenidos que haya aportado a VERTICALES INTERCOM, S.L  En especial, mediante las presentes Condiciones generales de uso, Tv VERTICALES INTERCOM, S.L está facultado para reenviar los datos del USUARIO que realiza un contacto con una empresa del Sitio Web a otras empresas relacionadas para garantizar que el USUARIO reciba un servicio de calidad.Asimismo, los USUARIOS autorizan a VERTICALES INTERCOM, S.La utilizar los contenidos e imágenes aportados al Sitio Web en las redes sociales en las que VERTICALES INTERCOM, S.L. participa, vinculándolos al Sitio Web.</p><p>El usuario autoriza expresamente a VERTICALES INTERCOM, S.La modificar algunos contenidos con el objeto de respetar el diseño gráfico del Sitio Web o de los demás soportes de comunicación utilizados en la plataforma de VERTICALES INTERCOM, S.L.  Estos derechos o licencia de utilización se conceden para todo el mundo y durante la vigencia legal de la protección de los derechos del usuario.</p><p>VERTICALES INTERCOM, S.L no tiene obligación de controlar y no controla la utilización que los USUARIOS hacen del servicio y, por consiguiente, no garantiza que los USUARIOS utilicen los mismos de conformidad con lo establecido en las Condiciones, ni que hagan un uso diligente y/o prudente de los mismos.</p><p>Asimismo, VERTICALES INTERCOM, S.L.  tampoco tiene la obligación de verificar y no verifica la identidad de los USUARIOS, ni la veracidad, vigencia, exhaustividad y/o autenticidad de los datos que los USUARIOS proporcionan sobre sí mismos.</p><p>Sin perjuicio de lo anterior, VERTICALES INTERCOM, S.L  se reserva la facultad de limitar, total o parcialmente, el acceso a los servicios a determinados USUARIOS, así como de cancelar, suspender, bloquear o eliminar determinado tipo de contenidos mediante la utilización de instrumentos tecnológicos aptos al efecto, si tuviese conocimiento efectivo de que la actividad o la información almacenada es ilícita o de que lesiona bienes o derechos de un tercero. En este sentido, VERTICALES INTERCOM, S.L.  podrá establecer los filtros necesarios a fin de evitar que a través del servicio puedan verterse en la red contenidos ilícitos o nocivos.</p><h3>Exclusión de garantías y responsabilidad</h3><p>Salvo en aquellos casos expresamente descritos en las Condiciones generales de uso y el resto del marco normativo del Sitio Web, VERTICALES INTERCOM, S.L.  no se responsabiliza por los daños y perjuicios de toda naturaleza que puedan deberse a la falta de exactitud, exhaustividad, actualidad, así como a errores u omisiones de los que pudieran adolecer las informaciones y servicios contenidos de este Sitio Web u otros contenidos a los que se pueda acceder a través del mismo ni asume ningún deber o compromiso de verificar ni de vigilar sus contenidos e informaciones.</p><p>Asimismo, VERTICALES INTERCOM, S.L  no garantiza la disponibilidad, continuidad ni la infalibilidad del funcionamiento del Sitio Web, y en consecuencia excluye, en la máxima medida permitida por la legislación vigente, cualquier responsabilidad por los daños y perjuicios de toda naturaleza que puedan deberse a la falta de disponibilidad o de continuidad del funcionamiento del Sitio Web y de los servicios habilitados en el mismo, así como a los errores en el acceso a las distintas páginas web o a aquellas desde las que, en su caso, se presten dichos servicios.</p><p>VERTICALES INTERCOM, S.L.  excluye cualquier responsabilidad por los daños y perjuicios de toda índole que pudieran deberse a los servicios prestados por terceros a través de este Sitio Web así como a los medios que éstos habilitan para gestionar las solicitudes de servicio, y concretamente, a modo enunciativo y no limitativo: por los actos de competencia desleal y publicidad ilícita como consecuencia de la prestación de servicios por terceros a través del Sitio Web, así como a la falta de veracidad, exactitud, exhaustividad, vicios, defectos, pertinencia y/o actualidad de los contenidos transmitidos, difundidos, almacenados, recibidos, obtenidos, puestos a disposición o accesibles mediante los servicios prestados por terceros a través de este Sitio Web.</p><p>Asimismo, VERTICALES INTERCOM, S.L. no será responsable de las opiniones vertidas por los USUARIOS a través del Sitio Web, el consultorio, las opiniones, el foro u otras herramientas de participación u opinión, aunque utilizará los medios a su alcance para moderar en la medida de sus posibilidades las opiniones expresadas por los usuarios en el Sitio Web, con el fin de evitar la vulneración de derechos de terceros.</p><h3>Enlaces ("links") a páginas de terceros </h3><p>VERTICALES INTERCOM, S.L.  incluye dentro de sus contenidos enlaces con sitios pertenecientes y/o gestionados por terceros con el objeto de facilitar el acceso a información disponible a través de Internet.</p><p>VERTICALES INTERCOM, S.L.  no asume ninguna responsabilidad derivada de la existencia de enlaces entre los contenidos de este sitio y contenidos situados fuera del mismo o de cualquier otra mención de contenidos externos a este sitio. Tales enlaces o menciones tienen una finalidad exclusivamente informativa y, en ningún caso, implican el apoyo, aprobación, comercialización o relación alguna entre VERTICALES INTERCOM, S.L.  y las personas o entidades autoras y/o gestoras de tales contenidos o titulares de los sitios donde se encuentren.</p><h3>Legislación Aplicable y Jurisdicción</h3><p>Las presentes Condiciones generales de uso y el resto de condiciones legales del Sitio Web se regirán por la legislación española.</p><p>Para cuantas cuestiones pudieran suscitarse o acciones ejercitarse derivadas de la prestación de los servicios y contenidos de VERTICALES INTERCOM, S.L.  y sobre la interpretación, aplicación, cumplimiento o incumplimiento de lo aquí establecido, VERTICALES INTERCOM, S.L  y el USUARIO, con renuncia expresa a cualquier otro fuero que pudiera corresponderles, se someten a la jurisdicción de los Juzgados y Tribunales de Barcelona, España. Esta renuncia no será aplicable para USUARIOS entendidos como consumidores finales en la que se aplicará la jurisdicción determinada por la legislación vigente.</p><h2>Declaración del Cliente sobre el contenido publicado</h2><p>Todo información o contenido que el Cliente publique en cualquiera de los portales de VERTICALES INTERCOM, S.L.  deberá ser legal y veraz y no susceptible de vulnerar derechos de terceros ni la normativa vigente. A estos efectos el Cliente garantiza la autenticidad de toda la información publicada en el Sitio Web.</p><p>El Cliente tiene prohibido publicar contenido que puedan considerarse dañino, amenazador, ilegal, confidencial, difamatorio, injurioso, hostigador, obsceno, indecente, fraudulento, transgresor de los derechos de confidencialidad o publicidad, expresión de odio o de naturaleza racista, étnica u otra, que vaya en contra o limite o ponga trabas a cualquier individuo en su utilización o disfrute del Sitio, o que pueda exponer a terceros o VERTICALES INTERCOM, S.L.  a cualquier daño o responsabilidad de cualquier tipo.</p><p>El Cliente no debe en ningún caso subir información privada de terceros, incluyendo, entre otra, imágenes, dirección postal, número de teléfono, dirección de correo electrónico, entre otros. El Cliente puede publicar únicamente contenido del que sea propietario o del que posea permiso o licencia del propietario.</p><h2>Condiciones generales de uso del servicio de Ofertas y Promociones de abogados365.com y de las opiniones</h2><p>Los descuentos, pruebas gratuitas y otras ofertas y promociones que los USUARIOS incluyen en abogados365.com son de la entera responsabilidad del USUARIO que la incluye. Todo lo relativo a eventuales incumplimientos de contrato o de los compromisos publicitarios adquiridos, pago del servicio disfrutado, devoluciones, etc. corresponde al USUARIO.</p> <p>Los usuarios se abstendrán de emitir opiniones ofensivas o en contra de la legalidad. Será responsabilidad del usuario la veracidad de las opiniones emitidas VERTICALES INTERCOM, S.L.  podrá en todo caso eliminar o no mostrar cualquier opinión que pueda resultar inadecuada para el correcto funcionamiento del Sitio Web.</p><h2>Condiciones generales de uso del servicio de Citas de abogados365.com</h2><p>abogados365.com no es responsable de la idoneidad, utilidad, calidad y/o efectividad de los servicios que los profesionales del derecho ofrezcan a través de este sitio web. El hecho de que un USUARIO contrate un servicio de un profesional a través de este sitio web no significa que abogados365.com invite, avale, recomiende o promueva la contratación de dicho servicio.</p><p>En caso de que el USUARIO no acuda a la visita concertada a través de este sitio web, perderá la reserva realizada.</p>
+
+<h2>Condiciones generales del uso de la plataforma de videoconferencias</h2>
+<p>
+Se prohíbe utilizar la presente plataforma de videoconferencias para fines distintos que le son
+propios, crear identidades falsas y/o su utilización para fines ilícitos y/o fraudulentos.</p>
+<p>
+De acuerdo con lo establecido en la Ley Orgánica 3/2018 y en el Reglamento (UE) 2016/679, le informamos que el uso de la presente plataforma de videoconferencia conlleva el tratamiento
+de datos personales, tal y como nombre, IP y navegador del usuario, recogiéndose otros datos
+estadísticos del funcionamiento de la navegación necesarios para valorar la calidad de los
+servicios ofrecidos. No queda almacenado en nuestro sistema el contenido de las
+conversaciones que se produzcan (entre ellos, imagen y voz de los usuarios). El responsable de los datos es VERTICALES INTERCOM, S.L y la base de legitimación es el consentimiento del interesado y ejecución contractual. Los datos proporcionados no serán cedidos a ningún
+tercero, salvo obligación o requerimiento legal. Puede ejercer sus derechos de acceso,
+rectificación, supresión, oposición, limitación y portabilidad de los datos en la dirección del
+responsable cuya dirección de correo electrónico es dpoie-es@intercomempresas.com. Si
+considera que sus derechos han sido vulnerados puede solicitar la tutela de sus derechos ante
+la Agencia Española de Protección de Datos. Si desea información adicional de nuestra política
+de privacidad, puede consultarla en https://www.abogados365.com//proteccion_datos.</p>
+
+
+<h2>Boletín y comunicaciones electrónicas comerciales</h2>
+<p>La suscripción a los servicios prestados desde el Sitio Web supone la suscripción por parte del USUARIO al boletín electrónico y push digital que pudiera crearse, donde se incluyen las noticias y novedades más relevantes del Sitio Web. En este sentido, el USUARIO consiente y acepta la recepción de los mismos. Si el USUARIO no desea recibir más correos del Sitio Web, podrá darse de baja clicando sobre el enlace incluido en el pie de página de dichos correos. </p><h2>Derechos de propiedad intelectual e industrial</h2><p>Copyright © [2007-2016] VERTICALES INTERCOM, S.L - Todos los derechos</p><p>Quedan reservados todos los derechos de explotación.</p><p>Este Sitio Web se rige por las leyes españolas y se encuentra protegido por la legislación nacional e internacional sobre propiedad intelectual e industrial.</p><p>Todos los contenidos que se muestran en el Sitio Web y, en particular, artículos, bases de datos, estudios comerciales, diseños, textos, gráficos, logos, iconos, código en lenguaje, software, nombres comerciales, marcas, dibujos industriales o cualesquiera otros signos susceptibles de utilización industrial y/o comercial, están sujetos a derechos de propiedad industrial e intelectual de VERTICALES INTERCOM, S.L.  y/o de terceros titulares de los mismos que han autorizado debidamente su inclusión en el Sitio Web.</p><p>Cualquier reproducción, transmisión, adaptación, traducción, modificación, comunicación al público, o cualquier otra explotación de todo o parte del contenido de este sitio, efectuada de cualquier forma o por cualquier medio, electrónico, mecánico u otro, están estrictamente prohibidos salvo autorización previa por escrito de VERTICALES INTERCOM, S.L  o terceros titulares. Cualquier infracción de estos derechos puede dar lugar a procedimientos extrajudiciales o judiciales civiles o penales que correspondan.</p><p>VERTICALES INTERCOM, S.Lno concede ninguna licencia o autorización de uso de ninguna clase sobre sus derechos de propiedad intelectual e industrial o sobre cualquier otra propiedad o derecho relacionado con el Sitio Web, los servicios o los contenidos del mismo.</p><p>El USUARIO autoriza a VERTICALES INTERCOM, S.L.  a utilizar sus logos, marcas comerciales y contenidos aportados al Sitio Web para la prestación de los servicios contratados. En particular, autoriza a VERTICALES INTERCOM, S.L.  a utilizar dichos logos, marcas y contenidos en todas las secciones del Sitio Web así como en aquellas redes sociales en las que VERTICALES INTERCOM, S.L.  tenga presencia, si bien siempre citando el origen de los mismos.</p><p>El USUARIO manifiesta expresamente que la totalidad de contenidos facilitados a VERTICALES INTERCOM, S.L.  no vulneran de ninguna forma derechos de propiedad industrial o intelectual, o de cualquier otra índole, de terceros, exonerando expresamente a VERTICALES INTERCOM, S.L S.L.  respecto de cualquier reclamación relacionada con este ámbito efectuada por cualquier tercero y asumiendo íntegramente la responsabilidad por estos hechos.</p><p>La legitimidad de los derechos de propiedad intelectual o industrial correspondientes a los contenidos aportados por los USUARIOS es de la exclusiva responsabilidad de los mismos.</p><p>A los efectos de preservar los posibles derechos de propiedad intelectual, en el caso de que cualquier USUARIO o un tercero considere que se ha producido una violación de sus legítimos derechos por la introducción de un determinado contenido en el Sitio Web, deberá notificar dicha circunstancia, por escrito, a VERTICALES INTERCOM, S.L. , Sant Cugat Trade Center Av. Corts Catalanes, 5-7 - Oficina A-0408173 Sant Cugat del Vallés (Barcelona), indicando: </p><ul><li>Datos de carácter personal identificativos del interesado titular de los derechos presuntamente infringidos. Si la reclamación la presenta un tercero distinto del interesado, deberá indicar la representación que ostenta con la que actúa.</li><li>Indicación de los contenidos protegidos por los derechos de propiedad intelectual y su ubicación en el web.</li><li>Acreditación de la existencia, titularidad y vigencia de los citados derechos de propiedad intelectual. </li><li>Declaración expresa en la que el interesado se responsabilice de la veracidad de los datos e información facilitados en la notificación a que se refiere este punto.</li></ul>
+
+            
+            </div>
+            <h2> </h2>
+            <div class="m-b-24">
+                <p>
+                     
+                </p>
+            </div>
+            <h2>Razón social</h2>
+            <p>
+                                    <strong>Verticales Intercom, S.L.</strong><br />Titular del sitio web abogados365.com<br />Dirección: Sant Cugat Trade Center Av. Corts Catalanes, 5-7 - Oficina A-0408173 <br />08174 Sant Cugat del Vallès (Barcelona), España<br /><strong>N.I.F. :</strong> B-64724131
+                
+                Inscrita en el Registro Mercantil de Barcelona, T. 40097, F.214, H. B 360009.<br />Fecha inscripción 05/12/2007
+
+                 
+            </p>
+        </aside>
+        <hr>
+        <div class="p-x-16 last-update">
+            <span>Actualizado: Junio 2022</span>
+        </div>
+    </section>
+
+        
+<footer id="footer" class="clear">
+
+    
+        <aside class="footer p-x-24">
+        <div class="wrapper">
+            <div class="footer-site m-b-16">
+
+                <img src="" data-src="/site/own/logo_white.svg" alt="abogados"
+                     title="abogados" class="project-logo m-b-20 lazyload"/>
+
+                <div class="sitemap flex jc-between m-b-24">
+                    <ul>
+                        <li class="m-b-16">
+                            <a href="/quienes"
+                               title="Quiénes somos">
+                                Quiénes somos
+                            </a>
+                        </li>
+
+                        <li class="m-b-16">
+                            <a href="/aviso_legal" rel="nofollow"
+                               title="Condiciones legales">
+                                Condiciones legales
+                            </a>
+                        </li>
+
+                        <li class="m-b-16">
+                            <a href="/proteccion_datos" rel="nofollow"
+                               title="Protección de datos">
+                                Protección de datos
+                            </a>
+                        </li>
+
+                        
+
+                        <li class="m-b-16">
+                            <a href="/politica-publicidad" rel="nofollow"
+                               title="Política de publicidad">
+                                Política de publicidad
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/cookies" rel="nofollow"
+                               title="Política de cookies">
+                                Política de cookies
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <ul>
+
+                                                    <!-- BR excluded -->
+                                                        <li class="m-b-16">
+                                <a id="home_premium" href="/upgrade_presencial" rel="nofollow"
+                                   title="Plan Premium" target="_blank">
+                                    Plan Premium
+                                </a>
+                            </li>
+                                                    
+                        <li class="m-b-16">
+                            <span class="pointer" data-sl="/register_web"
+                                  title="Añade tu bufete">
+                                Añade tu bufete
+                            </span>
+                        </li>
+
+                        <li class="m-b-16">
+                            <a href="/front/user_account/login" rel="nofollow"
+                               title="Acceso bufetes">
+                                Acceso bufetes
+                            </a>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+
+                                                    <div class="social flex ai-center m-b-24">
+                        <span>Síguenos:</span>
+
+                                                                            <a title="abogados Facebook" aria-label="Facebook"
+                               data-ga-event="socialButtons, footer_web, facebook" class="m-l-12"
+                               href="https://www.facebook.com/Abogados365com" target="_blank" rel="noopener">
+
+                                <img height=30 width=30 class="lazyload" src="" data-src="/img/web/psico/svg/facebook.svg" />
+
+                            </a>
+                        
+                                                                            <a title="abogados Twitter" aria-label="Twitter"
+                               data-ga-event="socialButtons, footer_web, twitter" class="m-l-12"
+                               href="https://twitter.com/abogados365" target="_blank" rel="noopener">
+
+                                <img height=30 width=30 class="lazyload" src="" data-src="/img/web/psico/svg/twitter.svg" />
+
+                            </a>
+                        
+                                                                            <a title="abogados Instagram" aria-label="Instagram"
+                                data-ga-event="socialButtons, footer_web, instagram" class="m-l-12"
+                                href="https://www.instagram.com/abogados365com/" target="_blank" rel="noopener">
+                                <img height=30 width=30 class="lazyload" src="" data-src="/img/web/psico/svg/instagram.svg" />
+                            </a>
+                        
+                    </div>
+                
+                                
+                                
+            </div>
+
+            <div class="footer-seo">
+
+                                                            <p class="m-b-12">Últimos bufetes de abogados</p>
+
+                        <ul class="m-b-32">
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/de-donato-advocats" title="DE DONATO ADVOCATS">
+                                        DE DONATO ADVOCATS
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/ariasrwaflar" title="ARIAS&amp;R.WAFLAR">
+                                        ARIAS&amp;R.WAFLAR
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/lourdes-valero-lorenzo" title="Lourdes Valero Lorenzo">
+                                        Lourdes Valero Lorenzo
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/h-justo-ley" title="H JUSTO LEY">
+                                        H JUSTO LEY
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/alejandro-galvez-carrillo" title="Alejandro Gálvez Carrillo">
+                                        Alejandro Gálvez Carrillo
+                                    </a>
+                                </li>
+                                                    </ul>
+                    
+                                            <p class="m-b-12">Ciudades Top</p>
+
+                        <ul class="m-b-32">
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/barcelona" title="Abogados Barcelona">
+                                        Abogados Barcelona
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/madrid" title="Abogados Madrid">
+                                        Abogados Madrid
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/zaragoza" title="Abogados Zaragoza">
+                                        Abogados Zaragoza
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/cordoba" title="Abogados Córdoba">
+                                        Abogados Córdoba
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/jaen" title="Abogados Jaén">
+                                        Abogados Jaén
+                                    </a>
+                                </li>
+                            
+                                                    </ul>
+                    
+                    
+                                            <p class="m-b-12">Últimas búsquedas</p>
+
+                        <ul>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/derecho-civil" title="Derecho Civil">
+                                        Derecho Civil
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/clausulas-suelo" title="Cláusulas suelo">
+                                        Cláusulas suelo
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/despidos" title="Despidos">
+                                        Despidos
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/dacion-en-pago" title="Dación en pago">
+                                        Dación en pago
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/derecho-inmobiliario" title="Abogados Inmobiliario">
+                                        Abogados Inmobiliario
+                                    </a>
+                                </li>
+                                                            <li class="m-b-16">
+                                    <a href="/bufetes/abogados-divorcios" title="Abogados divorcios">
+                                        Abogados divorcios
+                                    </a>
+                                </li>
+                                                    </ul>
+                                    
+                                            </div>
+        </div>
+    </aside>
+
+
+        <aside class="footer-flags" >
+
+        <div class="wrapper">
+
+            <ul class="flex f-wrap">
+                                    <li class="flex ai-center m-b-20">
+                        <span class="flg-ar lazyload"></span>
+                        <a href="https://www.legal.com.ar" class="f-10">
+                            Legal.com.ar
+                        </a>
+                    </li>
+                                    <li class="flex ai-center m-b-20">
+                        <span class="flg-br lazyload"></span>
+                        <a href="https://www.mundoadvogados.com.br" class="f-10">
+                            MundoAdvogados.com.br
+                        </a>
+                    </li>
+                                    <li class="flex ai-center m-b-20">
+                        <span class="flg-cl lazyload"></span>
+                        <a href="https://www.bufetes.cl" class="f-10">
+                            Bufetes.cl
+                        </a>
+                    </li>
+                                    <li class="flex ai-center m-b-20">
+                        <span class="flg-co lazyload"></span>
+                        <a href="https://www.abogados.com.co" class="f-10">
+                            Abogados.com.co
+                        </a>
+                    </li>
+                                    <li class="flex ai-center m-b-20">
+                        <span class="flg-es lazyload"></span>
+                        <a href="https://www.abogados365.com" class="f-10">
+                            Abogados365.com
+                        </a>
+                    </li>
+                                    <li class="flex ai-center m-b-20">
+                        <span class="flg-fr lazyload"></span>
+                        <a href="https://www.annuaireavocats.fr" class="f-10">
+                            AnnuaireAvocats.fr
+                        </a>
+                    </li>
+                                    <li class="flex ai-center m-b-20">
+                        <span class="flg-it lazyload"></span>
+                        <a href="https://www.studilegali.com" class="f-10">
+                            StudiLegali.com
+                        </a>
+                    </li>
+                                    <li class="flex ai-center m-b-20">
+                        <span class="flg-mx lazyload"></span>
+                        <a href="https://www.abogacia.mx" class="f-10">
+                            Abogacia.mx
+                        </a>
+                    </li>
+                
+                            </ul>
+
+        </div>
+                    </aside>
+    
+
+    </footer>
+
+
+                
+<script id="modal_template" type="x-template">
+    <div>
+        <div class="ie-modal-overlay" :class="{open: show}"></div>
+        <div class="ie-modal-wrapper" :class="{open: show}">
+            <div class="ie-modal" :class="{fullWidth: fullWidth}">
+                <span class="ie-modal-close icon-x" @click="close"></span>
+
+                <slot name="title"></slot>
+                <div class="ie-modal-container">
+                    <slot></slot>
+                </div>
+
+                <slot name="cta"></slot>
+            </div>
+        </div>
+    </div>
+</script>
+
+
+        <script id="super_modal_template" type="x-template">
+    <div class="ie-sp"
+         :class="[{'isSmall': isSmall, 'isBig': isBig, 'isRounded': isRounded}, customClass]"
+         v-if="isVisible || isLoading">
+        <div class="ie-sp-wrap">
+        <span class="ie-sp-close"
+              v-if="showClose"
+              @click="remove">×</span>
+
+            <div class="ie-sp-ttl"
+                 v-if="title && !isLoading"
+                 v-html="title"></div>
+            <div class="ie-sp-content"
+                 v-show="!isLoading"
+                 ref="content"
+                 v-html="content">
+            </div>
+
+            <div class="ie-sp-loader"
+                 v-if="isLoading">
+                <div class="ie-sp-loader-item"></div>
+            </div>
+        </div>
+    </div>
+</script>
+        <script id="super_lightbox_template" type="x-template">
+    <div class="ie-sp ie-sp--light-box"
+         :class="{'isSmall': isSmall, 'isBig': isBig}"
+         v-if="isVisible || isLoading">
+        <div class="ie-sp-wrap" @click="onClickOutside">
+            <span class="ie-sp-close"
+                  v-if="showClose"
+                  @click="remove">×</span>
+
+            <div class="ie-sp-content"
+                 v-show="!isLoading"
+                 ref="content"
+                 v-html="content">
+            </div>
+
+            <div class="ie-sp-loader"
+                 v-if="isLoading">
+                <div class="ie-sp-loader-item"></div>
+            </div>
+        </div>
+    </div>
+</script>
+
+            </main>
+            
+<script type="text/javascript" src="/10014081/site/own/_configurations.js"></script>
+<script type="text/javascript" src="/10014081/js/jquery-iempresas.js"></script>
+    <script type="text/javascript" src="/10014081/js/iempresas.js"></script>
+
+<script type="text/javascript">
+    //<![CDATA[
+    $.extend(App.pageVar, {
+        couId: "6",
+        proId: "17"
+    });
+    //]]>
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Organization",
+  "name": "Abogados365.com",
+  "url": "https://www.abogados365.com",
+  "logo": "https://www.abogados365.com/site/own/logo_color.png",
+  "sameAs": [
+            "https://www.facebook.com/Abogados365com",
+                "https://twitter.com/abogados365"
+          ]
+}
+</script>
+
+
+<!-- GuidaPsicologi.it ONLY -->
+
+
+
+
+
+
+    <script src="https://consent.cookiefirst.com/banner.js" data-cookiefirst-key="8c7f25dc-7b47-4f23-a854-e22529d2b61f"></script>
+
+
+
+
+            <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a9443b4dd8","applicationID":"604860747,604861294","transactionName":"YAFXbEcDCEMHVkANWllLdk1GFgldSXNGC1tDXnx9WBIUVRVURzh2WApBSloOClUUaXIWWlkQaX5HDQhENUFVEFxUXlldUgMKcQJDXRdQ","queueTime":0,"applicationTime":54,"atts":"TEZUGg8ZG00=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
