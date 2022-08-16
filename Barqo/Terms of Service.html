@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Terms and conditions | Barqo</title>
+	<meta name="description" content="The terms and conditions needs to be familiar to every user. Users needs to agree these terms when registering online.">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"7152e57455",applicationID:"792492130"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@barqoclub" />
+	<meta name="twitter:title" content="Terms and conditions | Barqo" />
+	<meta name="twitter:description" content="The terms and conditions needs to be familiar to every user. Users needs to agree these terms when registering online." />
+	<meta property="fb:app_id" content="739029716164558" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Terms and conditions | Barqo" />
+	<meta property="og:description" content="The terms and conditions needs to be familiar to every user. Users needs to agree these terms when registering online." />
+	<meta property="og:url" content="https://barqo.co/en/terms-conditions" />
+	<meta property="og:site_name" content="Barqo" />
+	<meta property="og:image" content="https://barqo.co/assets/images/share_img.jpg" />
+	<meta property="og:image:width" content="1920" />
+	<meta property="og:image:height" content="1283" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/assets/icons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/icons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/assets/icons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/assets/icons/manifest.json">
+	<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="Barqo">
+	<meta name="application-name" content="Barqo">
+	<meta name="msapplication-TileColor" content="#2d89ef">
+	<meta name="msapplication-TileImage" content="/assets/icons/mstile-144x144.png">
+	<meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="preload" href="/assets/fonts/opensans-regular-webfont.woff" as="font" type="font/woff" crossorigin>
+	<link rel="preload" href="/assets/fonts/opensans-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/assets/fonts/spinnaker-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/assets/fonts/opensans-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/assets/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/assets/fonts/poppins-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/assets/fonts/poppins-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/assets/fonts/GoodDog.otf" as="font" type="font/otf" crossorigin>
+
+	<link rel="canonical" href="https://barqo.co/en/terms-conditions" />
+	<link rel="alternate" hreflang="x-default" href="https://barqo.co/algemene-voorwaarden" />
+    <link rel="alternate" hreflang="nl" href="https://barqo.co/algemene-voorwaarden" />
+    <link rel="alternate" hreflang="en" href="https://barqo.co/en/terms-conditions" />
+		<script type="text/javascript">
+window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:9,2:8,3:6,4:10,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:9,2:8,3:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],6:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:25,ee:"QJf3ax",gos:"7eSDFh"}],7:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:25,ee:"QJf3ax"}],8:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,ee:"QJf3ax"}],9:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:25,ee:"QJf3ax"}],10:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:6,2:25,ee:"QJf3ax"}],11:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),p=t(3),l=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,p&&(p>34||10>p)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof l&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof l&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof l&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:12,3:14,4:10,5:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],12:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],13:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],14:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=l.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;l.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=l.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},p=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),l=e.exports={offset:i(),origin:u,features:{},xhrWrappable:p};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:23,2:13,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(p){throw f(e+"err",[n,i,p],s),p}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,11,5]);
+;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"7152e57455",applicationID:"14722252",sa:1,agent:"js-agent.newrelic.com/nr-852.min.js"}
+</script>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WGL829');</script>
+<!-- End Google Tag Manager -->
+
+	
+<link rel="stylesheet" href="https://barqo.co/assets/css/style.css?ts=1660140198" />
+<link rel="stylesheet" href="https://barqo.co/assets/intercom-hidden.css?ts=1660140198" /></head>
+<body class="has-mobile-navbar  with-message-bar ">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGL829"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="message_bar">
+	<a href="https://barqo.co/en/advice" target="_blank" rel="noopener noreferrer">Receive professional advice from our experts for your boat holiday here!</a>
+	<div id="close_message_bar">
+		<i class="fa fa-times" aria-hidden="true"></i>
+	</div>
+</div>
+
+	<!--  Profile action topbar -->
+	
+	
+<div id="react-menu" class="menu top ">
+	<div class="component-menu">
+		<div class="menu-logo"></div>
+	</div>
+</div>
+
+	
+	<div id="subpage">
+	<div class="container subcontainer page31">
+		<h2>DISCLAIMER</h2>
+
+<p>THE COMPANY MAKES NO REPRESENTATION, WARRANTY, OR GUARANTY AS TO THE RELIABILITY, TIMELINESS, QUALITY, SUITABILITY, AVAILABILITY, ACCURACY OR COMPLETENESS OF THE COMPANY SERVICE, WEBSITE OR APPLICATION. THE COMPANY DOES NOT REPRESENT OR WARRANT THAT (A) THE USE OF THE COMPANY SERVICE, WEBSITE OR APPLICATION WILL BE SECURE, TIMELY, UNINTERRUPTED OR ERROR-FREE OR OPERATE IN COMBINATION WITH ANY OTHER HARDWARE, APPLICATION, SYSTEM OR DATA, (B) THE COMPANY SERVICE AND THE BOAT SERVICES, WEBSITE OR APPLICATION WILL MEET YOUR REQUIREMENTS OR EXPECTATIONS, (C) ANY STORED DATA WILL BE ACCURATE OR RELIABLE, INCLUDING BUT NOT LIMITED TO THE INFORMATION, DESCRIPTIONS AND/OR PICTURES OF THE BOATS AND BOAT SERVICES (D) THE QUALITY OF ANY PRODUCTS, BOATS, SERVICES, INFORMATION, OR OTHER MATERIAL PURCHASED, RENTED OR OTHERWISE OBTAINED BY YOU THROUGH THE COMPANY SERVICE WILL MEET YOUR REQUIREMENTS OR EXPECTATIONS, (E) ERRORS OR DEFECTS IN THE COMPANY SERVICE, WEBSITE OR APPLICATION WILL BE CORRECTED, (F) THE COMPANY SERVICE OR THE SERVER(S) THAT MAKE THE COMPANY SERVICE AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS, (G) BOAT SERVICES WILL BE AVAILABLE AT ADVERTISED DATES, TIMES, LOCATIONS, AND/OR PRICES, INCLUDING PURSUANT TO A CONFIRMED AND/OR PURCHASED RESERVATION, (H) BOAT SERVICES WILL BE PROVIDED INCLUDING (SUFFICIENT) FUEL FOR THE INTENDED USE OR OPERATION AND (I) THE PROVIDERS OF BOAT SERVICES (INCLUDING THE OWNERS OF THE BOATS LISTED ON THE WEBSITE) CARRY SUFFICIENT AND PROPER INSURANCE AND COMPLY TO ALL LOCAL LAWS AND REGULATIONS WITH REGARD TO SUCH BOAT SERVICES AND/OR OPERATING BOATS BY USERS (INCLUDING, BUT NOT LIMITED TO, SAFETY AND MAINTENANCE REGULATIONS AND PROVISIONS, AS WELL AS OBTAINING AND KEEPING ALL REQUIRED LICENSES AND/OR PERMITS RELATED TO</P>
+
+<p>BOAT SERVICES AND/OR OPERATING BOATS BY USERS) IN ANY JURISDICTION.</p>
+
+<p>THE COMPANY'S SERVICES, WEBSITE AND APPLICATION IS PROVIDED TO YOU STRICTLY ON AN "AS IS" AND "AS AVAILABLE" BASIS. ALL CONDITIONS, REPRESENTATIONS AND WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON- INFRINGEMENT OF THIRD PARTY RIGHTS, ARE HEREBY DISCLAIMED TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW BY THE COMPANY. THE COMPANY MAKES NO REPRESENTATION, WARRANTY, OR GUARANTY AS TO THE RELIABILITY, SAFETY, TIMELINESS, QUALITY, SUITABILITY OR AVAILABILITY OF ANY SERVICES, BOATS, PRODUCTS OR GOODS PURCHASED, RENTED OR OTHERWISE OBTAINED BY THIRD PARTIES THROUGH THE USE OF THE COMPANY'S SERVICES OR APPLICATION. YOU ACKNOWLEDGE AND AGREE THAT THE ENTIRE RISK ARISING OUT OF YOUR USE OF THE COMPANY SERVICE, WEBSITE AND APPLICATION, AND ANY THIRD PARTY SERVICES OR PRODUCTS REMAINS SOLELY WITH YOU.</p>
+
+<h2>TERMS OF SERVICE</h2>
+
+<p>PLEASE READ THESE TERMS OF USE CAREFULLY. BY ACCESSING OR USING OUR SERVICES YOU AGREE TO THESE TERMS OF SERVICE, WHETHER YOU ARE THE OWNER OF A BOAT, HIRER, POTENTIAL HIRER, OR ANY OTHER PERSON. IF YOU DO NOT AGREE TO THESE TERMS YOU ARE NOT PERMITTED TO ACCESS OR USE OUR SERVICES.</p>
+
+<p>SECTION C OF THESE TERMS INCLUDES PROVISIONS WHICH WILL, SUBJECT TO THE NEXT SENTENCE, BE AUTOMATICALLY INCORPORATED INTO, AND FORM PART OF, THE CONTRACT BETWEEN THE OWNER OF A BOAT AND A HIRER FOR THE HIRE OF A BOAT. WHERE A PROVISION IN SECTION C CONTRADICTS, OR IS INCONSISTENT WITH, ANY TERM IN A WRITTEN CHARTER AGREEMENT SIGNED BY THE OWNER OF A BOAT AND THE HIRER OF THE BOAT, THAT PROVISION OF SECTION C SHALL NOT APPLY BETWEEN THE OWNER OF A BOAT AND THE HIRER.</p>
+
+<p>SECTION D OF THESE TERMS INCLUDES PROVISIONS WHICH LIMIT AND EXCLUDE BARQO'S LIABILITY TO YOU. IF YOU ARE A HIRER OR A POTENTIAL HIRER, SECTION D ALSO INCLUDES PROVISIONS WHICH LIMIT AND EXCLUDE THE LIABILITY OF THE OWNER OF A BOAT TO YOU AND WHICH OBLIGE YOU TO INDEMNIFY US (THAT IS COMPENSATE AND HOLD HARMLESS) IN CERTAIN CIRCUMSTANCES.</p>
+
+<h1>A. GENERAL</h1>
+<h2 id="1">1. Definitions</h2>
+
+<p id="1-1">1.1 In these Terms of Service (“Terms”) the following words and expressions shall have the following meanings unless the context otherwise requires:</p>
+
+<h3>“Actual Hire Period”</h3>
+<p>The period of time during which the Hirer actually has use of the Boat, including any sea trials, whether greater or lesser than the Agreed Hire Period;</p>
+
+<h3>“Advertisement”</h3>
+<p>Any advertisement, regardless its content or form, advertising a Boat for hire on the Website;</p>
+
+<h3>“Agreed Hire Period”</h3>
+<p>The period of time during which the Hirer will have use of the Boat as agreed between the Owner of a Boat and the Hirer;</p>
+
+<h3>“Ancillary Services”</h3>
+<p>Any ancillary or additional services which may be provided or arranged by us from time to time, including cleaning, checking out and in of boats, supply of provisions for Hirers, and refueling of boats;</p>
+
+<h3>"Application"</h3>
+<p></p>
+
+<h3>“Barqo Account”</h3>
+<p>An account with us created by you or on your behalf by a person acting with your knowledge and consent;</p>
+
+<h3>“Barqo Content”</h3>
+<p>All content that Barqo makes available through the Website, Application, or Services, including any Content licensed from a third party, but excluding member Content;</p>
+
+<h3>“Boat”</h3>
+<p>Any vessel, powered or non-powered, capable of carrying people on water including, but not limited to a yacht, motor cruiser, barge, motor boat, RIB, dinghy, jet ski, rowing boat, canoe, kayak, including all equipment and furnishings offered for use with the boat;</p>
+
+<h3>“Collective Content”</h3>
+<p>Member Content and Barqo Content;</p>
+
+<h3>“Content”</h3>
+<p>Text, graphics, images, music, software (excluding the Application), audio, video, information and any other content or materials of the Website;</p>
+
+<h3>“Hire”</h3>
+<p>The hire of a Boat by a Hirer from an Owner pursuant to these Terms;</p>
+
+<h3>“Hire Charges”</h3>
+<p>Charges payable by a Hirer to an Owner for the hire of a boat, in the amount displayed in an Advertisement for that boat or as otherwise agreed between the owner of the Boat and the hirer of the Boat;</p>
+
+<h3>“Hirer”</h3>
+<p>Any person who agrees with an Owner to hire a Boat using the Services;</p>
+
+<h3>“Insurance Policy”</h3>
+<p>The marine insurance policy insuring Boats during Actual Periods of Hire;</p>
+
+<h3>“Late Charges”</h3>
+<p>Charges payable to an Owner by a Hirer who fails to return a Boat to the agreed place at or before the end of the Agreed Hire Period, in the amount displayed in an Advertisement for that Boat or as otherwise agreed between the Owner of the Boat and the Hirer of the Boat;</p>
+
+<h3>“Member Content”</h3>
+<p>All Content that a Member posts, uploads, publishes, submits or transmits to be made available through the Services;</p>
+
+<h3>“Member”</h3>
+<p>A person who completes our account registration process, including an Owner, Potential Hirer, and Hirer;</p>
+
+<h3>“Owner”</h3>
+<p>Any person who owns a Boat which he or she wishes to hire out using the Services;</p>
+
+<h3>“Potential Hirer”</h3>
+<p>Any person who wishes to hire a Boat using the Services;</p>
+
+<h3>“Security Deposit”</h3>
+<p>As defined in <a href="#17-1">paragraph 17.1</a>; 
+
+<h3>“Service Fees”</h3>
+<p>As defined in <a href="#18-1">paragraph 18.1</a>;</p>
+
+<h3>“Services”</h3>
+<p>The provision of an online platform enabling Owners to advertise Boats for hire, Owners and Potential Hirers to make arrangements (including payment arrangements) in relation to the hire of those Boats, and for related purposes including arranging Ancillary Services;</p>
+
+<h3>“Social Network Site”</h3>
+<p>As defined in <a href="#4-4">paragraph 4.4</a>;</p>
+
+<h3>“Tax”</h3>
+<p>Taxes and duties of any description in any jurisdiction, in the Netherlands including but not limited to income tax, capital gains tax, inheritance tax, corporation tax, value added tax, excise duties, and import duties;</p>
+
+<h3>“Third Party Account”</h3>
+<p>An account with a Social Network Site;
+
+<h3>“TPA Content”</h3>
+<p>As defined in <a href="#4-7">paragraph 4.7</a>;</p>
+
+<h3>“we”, “us”, “our”</h3>
+<p>Barqo B.V., a private company with limited liability, incorporated under the laws of The Netherlands, registered with chamber of commerce under number 61504467, with its registered seat at Amsterdam, The Netherlands.</p>
+
+<h3>“Website”</h3>
+<p>www.barqo.nl or any other website through which we make the Services available from time to time;</p>
+
+<h3>“You”</h3>
+<p>Any person accessing or using the Services, whether as an Owner, Potential Hirer, Hirer or otherwise.</p>
+
+<p id="1-2">1.2. Section and paragraph headings shall not affect the interpretation of these Terms, they are merely there .</p>
+
+<p id="1-3">1.3. A person includes a natural person, corporate or unincorporated body (whether or not having separate legal personality) and that person's legal and personal representatives, successors and permitted assigns.</p>
+
+<p id="1-4">1.4. A reference to a company shall include any company, corporation or other body corporate, wherever and however incorporated or established.</p>
+
+<p id="1-5">1.5. Words in the singular shall include the plural and vice versa.</p>
+
+<p id="1-6">1.6. A reference to one gender shall include a reference to the other genders.</p>
+
+<p id="1-7">1.7. The Terms and any dispute or claim arising out of or in connection with it shall be governed by the laws of The Netherlands and the competent court of Amsterdam has exclusive jurisdiction to settle any such dispute or claim.</p>
+
+<p id="1-8">1.8. A reference to a statute, statutory provision or subordinated legislation is a reference to it as it is in force from time to time, taking account of any amendment or re-enactment and includes any statute, statutory provision or any other type of legislation which it amends or re-enacts.</p>
+
+<p id="1-9">1.9. Any reference to a Dutch legal term for any action, remedy, method of judicial proceeding, legal document, legal status or legal concept will be interpreted in accordance with the laws of The Netherlands. If such is not possible under any specific jurisdiction, then the Dutch legal term is deemed to include what most nearly approximates in that jurisdiction to the Dutch legal term.</p>
+
+<p id="1-10">1.10. A reference to writing or written includes e-mail.</p>
+
+<p id="1-11">1.11. Any obligation under these Terms on a person not to do something includes an obligation not to agree or allow such thing to be done.</p>
+
+<p id="1-12">1.12. A reference to a document is a reference to that document as varied or replaced (in each case, other than in breach of these Terms) at any time.</p>
+
+<p id="1-13">1.13. Any phrase introduced by the terms “including”, “include”, “in particular” or any similar expression shall be construed as illustrative and shall not limit the sense of the words preceding those terms.</p>
+
+<h2 id="2">2. Applicability of these Terms</h2>
+
+<p id="2-1">2.1. Certain areas of the Services (and your access to or use of certain aspects of the Services or Collective Content) may have different terms and conditions posted or may require you to agree with and accept additional terms and conditions. If there is a conflict between these Terms and terms and conditions posted for a specific area and/or part of the Services, the latter terms and conditions will take precedence with respect to your use of or access to that area of the Services.</p>
+
+<p id="2-2">2.2. You acknowledge and agree that, by accessing or using the Services or by downloading or posting any content from or on the Services you are indicating that you have read, and that you understand and agree to be bound by these Terms, whether or not you have registered with us. If you do not agree to these Terms, then you have no right to access or use the Services.</p>
+
+<p id="2-3">2.3. If you accept or agree to these Terms on behalf of a company or any other legal entity, you represent and warrant that you have the authority to bind that company or other legal entity to these Terms and, in such event, “you” and “your” will refer and apply to that company or other legal entity.</p>
+
+<p id="2-4">2.4. If one or more of the provisions of these Terms are invalid or set aside, the remaining provisions of the Terms shall remain applicable in full. Barqo will use its best effort to replace the invalid provisions with new provisions, which are as closely related to the former provisions with regard to their purpose and tenor.</p>
+
+<h2 id="3">3. About the Services & About Us</h2>
+
+<p id="3-1">3.1. The Services enable Owners to advertise Boats they wish to hire out and Potential Hirers to make arrangements with Owners to Hire those Boats. The Services also enable Owners and Hirers to make arrangements in relation to Ancillary Services. We do not own or hire out any Boats ourselves nor do we provide Ancillary Services ourselves.</p>
+
+<p id="3-2">3.2. You agree that you will only make a claim in relation to the acts or omissions of a Member or third party (including a provider of Ancillary Services), including in relation to any breach of contract, against that Member or third party and not against us. You will communicate directly with other Members via the Services regarding any Advertisements or bookings of Boats made by you. This paragraph does not affect the right of an Owner to make a claim against us in relation to any payment due by us to that Owner following receipt by us on behalf of that Owner of a payment from a Hirer.</p>
+
+<p id="3-3">3.3. You may view Advertisements as an unregistered visitor to the Website but in order to create an Advertisement or hire a Boat, you must first register and create a Barqo Account (see paragraph 4 below).</p>
+
+<p id="3-4">3.4. We have no control over the Content of any Advertisement nor do we check or warrant whether a Boat is as described in an Advertisement nor whether a Boat described in an Advertisement is in any particular condition.</p>
+
+<p id="3-5">3.5. We are not a party to any arrangements or agreements entered into between Owners and Potential Hirers, Owners and Hirers, or Owner or Hirers and providers of Ancillary Services nor are we in any way liable for any claim and/or damages under any such arrangements or agreements.</p>
+
+<p id="3-6">3.6. We do not endorse, certify, recommend, warrant, or guarantee any Members, Boats, or providers of Ancillary Services. We obtain evidence of identity, address, and Sailing licenses for all Members but we do not guarantee the identity or address or existence or sufficiency of qualifications of any Member nor the accuracy of any other information supplied by any Member or provider of Ancillary Services. You are solely responsible for determining the identity and suitability of others who you contact via the Services. Except as expressly provided in these Terms, we will not be responsible and/or liable for any damage or harm resulting from or arising in connection with your use of the Services or any contact or dealings you may have with other Members or providers of Ancillary Services.</p>
+
+<p id="3-7">3.7. We have no authority to act for, or enter into contracts or other binding obligations on behalf of Owners, Potential Hirers, Hirers or providers of Ancillary Services. We have no control over, and shall have no responsibility for, nor shall we be in any way be liable for the acts or omissions of any Owners, Potential Hirers, Hirers or providers of Ancillary Services.</p>
+
+<p id="3-8">3.8. We are not brokers, agents (except for the limited purpose of receiving payments on behalf of Owners and suppliers of Ancillary Services), travel agents, insurers or marine surveyors nor do we hold ourselves out as suppliers of any goods or services other than the Services.</p>
+
+<h2 id="4">4. Account Registration</h2>
+
+<p id="4-1">4.1. In order to access certain features of the Services, create an Advertisement, or hire a Boat, you must register to create a Barqo Account and become a Member. You may register directly via the Services or as described in this section.</p>
+
+<p id="4-2">4.2. We will create your Barqo Account and your Barqo Account profile page for your use of the Services based upon the personal information you provide us with or that we obtain via a third party as described below. You may not have more than one active Barqo Account at any given time.</p>
+
+<p id="4-3">4.3.You agree to provide accurate, current, and complete information during the registration process and to update such information if necessary to ensure that it is accurate, current and complete. We reserve the right to suspend or terminate your Barqo Account and your access to the Services if you create or allow to exist more than one Barqo Account at a time or if any information provided during the registration process or thereafter proves to be inaccurate, misleading, out of date or incomplete.</p>
+
+<p id="4-4">4.4 We may (but shall not be obliged to) from time to time enable you to create a Barqo Account by logging into your account with an account from certain third party social networking sites, including Facebook (“Social Network Site”), each such account with a Social Network Site being a “Third Party Account”.</p>
+
+<p id="4-5">4.5 We may (but shall not be obliged to) from time to time provide functionality within the Services enabling you to link your Barqo Account with one or more Third Party Accounts by either:</p>
+
+<p id="4-5-1">4.5.1. providing your Third Party Account login information to us via the Services; or</p>
+
+<p id="4-5-2">4.5.2. allowing us to access your Third Party Account, as is permitted under the applicable terms and conditions that govern your use of each Third Party Account.</p>
+
+<p id="4-6">4.6. You represent and promise to us that you are entitled to:</p>
+
+<p id="4-6-1">4.6.1. disclose any Third Party Account login information you disclose to us; and</p>
+
+<p id="4-6-2">4.6.2. grant us access to your Third Party Account, without breach by you of any of the terms and conditions that govern your use of the applicable Third Party Account and without making us liable to pay any fees or making us subject to any usage limitations imposed by the relevant Social Network Site.</p>
+
+<p id="4-7">4.7 By granting us access to any Third Party Accounts, you understand that we will access, make available and store (if applicable) any Content that you have provided to and stored in your Third Party Account (“TPA Content”) so that it is available on and through the Services via your Barqo Account and Barqo Account profile page, to the extent permitted under the applicable terms and conditions and settings that govern your use of each Third Party Account. Unless otherwise specified in these Terms, all TPA Content, if any, will be considered to be Member Content for all purposes of these Terms. Depending on the Third Party Accounts you choose and subject to the privacy settings that you have set in such Third Party Accounts, personally identifiable information that you post to your Third Party Accounts will be available on and through your Barqo Account on the Website, Services and Application.</p>
+
+<p id="4-8">4.8.Please note that if a Third Party Account or associated service becomes unavailable or Barqo’s access to such Third Party Account is terminated by the Social Network Site, then TPA Content will no longer be available on and through the Website, Services and Application. You have the ability to disable the connection between your Barqo Account and your Third Party Accounts, at any time, by accessing the “Account” section of the Website and Application. Your relationship with the Social Network Site associated with your Third Party Account is governed solely by your agreement with such Social Network Site. We make no effort to review any TPA Content for any purpose, including for accuracy, legality or non-infringement and we are not responsible for any TPA Content.</p>
+
+<h2 id="5">5. Account Security</h2>
+
+<p id="5-1">5.1. You are responsible for safeguarding your password. You agree that you will not store your password in any way (whether electronically, on paper, or otherwise) and that you will not disclose your password to any person. Please note that we will never ask for your password by email, phone or in any other way. If anyone claims to be from Barqo and asks for your password you should not provide them with such, but should notify us by email at info@barqo.nl as soon as possible with copies of any relevant emails you have received or sent and details, including where possible phone numbers of any phone conversations you have had.</p>
+
+<p id="5-2">5.2. You will immediately change your password if at any time you believe someone may have discovered your password. You will immediately notify us if you become aware of any unauthorised use of your Barqo Account, including if you discover that your password has been changed without your consent.</p>
+
+<p id="5-3">5.3. You will take sole responsibility for any activities or actions under your Barqo Account, whether or not you have authorised such activities or actions, except where such activities or actions were authorised by a third party as a result of a failure of our security systems beyond your control.</p>
+
+<h2 id="6">6. User Conduct</h2>
+
+<p id="6-1">6.1. You understand and agree that you are solely responsible for compliance with any and all laws, rules, regulations, and Tax obligations that may apply to your use of the Services and Content. In connection with your use of the Services, you may not and you agree that you will not:</p>
+
+<p id="6-1-1">6.1.1. violate any laws, rules, regulations of any jurisdiction, including any maritime laws or any order of a court of competent jurisdiction;</p>
+
+<p id="6-1-2">6.1.2. use manual or automated software, devices, scripts, robots, other means or processes to access, “scrape,” “crawl” or “spider” any web pages or other services contained in the Services or Content;</p>
+
+<p id="6-1-3">6.1.3. use the Services for any commercial or other purposes that are not expressly permitted by these Terms;</p>
+
+<p id="6-1-4">6.1.4. copy, store or otherwise access any information contained in/on the Services or Content for purposes not expressly permitted by these Terms;</p>
+
+<p id="6-1-5">6.1.5. infringe the rights of any person or entity, including their intellectual property, privacy, publicity or contractual rights;</p>
+
+<p id="6-1-6">6.1.6. interfere with or damage our Services, including through the use of viruses, cancel bots, Trojan horses, harmful code, flood pings, denial- of-service attacks, packet or IP spoofing, forged routing or electronic mail address information or similar methods or technology;</p>
+
+<p id="6-1-7">6.1.7. use our Services to transmit, distribute, post or submit any information concerning any other person or entity, including photographs of others without their permission, personal contact information or credit, debit, calling card or account numbers;</p>
+
+<p id="6-1-8">6.1.8. use our Services in connection with the distribution of unsolicited commercial email ("spam") or Advertisements unrelated to a Boat available for hire;</p>
+
+<p id="6-1-9">6.1.9. "stalk" or harass any other user of our Services or collect or store any personally identifiable information about any other user other than for purposes of transacting as a Hirer, Potential Hirer or Owner;</p>
+
+<p id="6-1-10">6.1.10. offer, as an Owner, any Boats that you do not yourself own or have permission to hire out;</p>
+
+<p id="6-1-11">6.1.11. offer, as an Owner, any Boats which may not be lawfully made available for hire and/or are hired;</p>
+
+<p id="6-1-12">6.1.12. offer, as an Owner, any Boats which are subject to a mortgage or any other third party rights without first obtaining all necessary consents to do so;</p>
+
+<p id="6-1-13">6.1.13. register for more than one Barqo Account or register for a Barqo Account on behalf of an individual other than yourself;</p>
+
+<p id="6-1-14">6.1.14. contact an Owner for any purpose other than asking a question related to a booking such Owner’s Boats or Advertisements;</p>
+
+<p id="6-1-15">6.1.15. contact a Hirer for any purpose other than asking a question related to a booking;</p>
+
+<p id="6-1-16">6.1.16. use the Services to recruit or otherwise solicit any Owner or other Member to join third party services or websites that are competitive to Barqo;</p>
+
+<p id="6-1-17">6.1.17. impersonate any person or entity, or falsify or otherwise misrepresent yourself or your affiliation with any person or entity;</p>
+
+<p id="6-1-18">6.1.18. use automated scripts to collect information or otherwise interact with the Services;</p>
+
+<p id="6-1-19">6.1.19. use the Services to find an Owner or Hirer and then complete a booking of a Boat transaction independent of the Services in order to circumvent the obligation to pay any Service Fees related to Barqo’s provision of the Services;</p>
+
+<p id="6-1-20">6.1.20. as an Owner, submit any Advertisement with false or misleading prices or other information, or submit any Advertisement with a price or other terms that you do not intend to honour;</p>
+
+<p id="6-1-21">6.1.21. post, upload, publish, submit or transmit any Content that, in Barqo’s sole judgment:</p>
+
+<p>(i) infringes, misappropriates or violates a third party’s patent, copyright, trademark, trade secret, moral rights or other intellectual property rights, or rights of publicity or privacy; (ii) violates, or encourages any conduct that would violate, any applicable law or regulation or would give rise to civil or criminal liability; (iii) is fraudulent, false, misleading or deceptive; (iv) is defamatory, obscene, pornographic, vulgar or offensive; (v) promotes discrimination, bigotry, racism, hatred, harassment or harm against any individual or group; (vi) is violent or threatening or promotes violence or actions that are threatening to any other person; or (vii) promotes illegal or harmful activities or substances;</p>
+
+<p id="6-1-22">6.1.22. Systematically retrieve data or other Content from our Services to create or compile, directly or indirectly, in single or multiple downloads, a collection, compilation, database, directory or the like, whether by manual methods, through the use of bots, crawlers, or spiders, or otherwise;</p>
+
+<p id="6-1-23">6.1.23. use, display, mirror or frame the Services, or any individual element within the Services, Barqo’s name, any Barqo trademark, logo or other proprietary information, or the layout and design of any page or form contained on a page, without Barqo’s express prior written consent;</p>
+
+<p id="6-1-24">6.1.24 .access, tamper with, or use non-public areas of the Services, Barqo’s computer systems, or the technical delivery systems of its providers;</p>
+
+<p id="6-1-25">6.1.25. attempt to probe, scan, or test the vulnerability of any Barqo system or network or breach any security or authentication measures;</p>
+
+<p id="6-1-26">6.1.26. avoid, bypass, remove, deactivate, impair, descramble, or otherwise circumvent any technological measure implemented by Barqo or any of Barqo’s providers or any other third party (including another user) to protect the Services or Collective Content;</p>
+
+<p id="6-1-27">6.1.27. forge any TCP/IP packet header or any part of the header information in any email or newsgroup posting, or in any way use the Services or Collective Content to send altered, deceptive or false source- identifying information;</p>
+
+<p id="6-1-28">6.1.28. attempt to decipher, decompile, disassemble or reverse engineer any of the software used to provide the Services or Collective Content; or</p>
+
+<p id="6-1-29">6.1.29. advocate, encourage, or assist any third party in doing any of the foregoing.</p>
+
+<p id="6-2">6.2. Barqo will have the right to investigate and pursue (possible) violations of any of the above to the fullest extent of the law. Barqo may involve and cooperate with the police and/or prosecuting authorities in prosecuting anyone who violate these Terms. You acknowledge that Barqo has no obligation to monitor your access to or use of the Services or Collective Content or to review or edit any Member Content, but has the right to do so for the purpose of operating the Services, to ensure your compliance with these Terms, or to comply with applicable law or the order of a court of competent jurisdiction, administrative agency or other governmental body. Barqo reserves the right, at any time and without prior notice, to remove or disable access to any Collective Content that Barqo, at its sole discretion, considers to be objectionable for any reason, in violation of these Terms or otherwise harmful to the Services.</p>
+
+<p id="6-3">6.3. If you interact with another user of the Services who you feel is acting or has acted inappropriately, including anyone who (i) engages in offensive, violent or sexually inappropriate behaviour, (ii) you suspect of committing an offence in relation to you, or (iii) engages in any other disturbing conduct, you should immediately report such person to Barqo at info@barqo.nl. You are also free to contact the appropriate authorities and then contactBarqo and providing them with the information of the police station you reported the foregoing to and a report number at info@barqo.nl; provided that your report will not obligate us to take any action beyond that required by law (if any) or cause us to incur any liability to you.</p>
+
+<h2 id="7">7. Age Restrictions</h2>
+
+<p>You may only access or use the Services if you are at least 18 years of age and by accessing or using the Services you represent and warrant that you are at least 18 years old. Owners may specify any minimum age they consider appropriate to hire out their Boats, however unless otherwise specified in any Advertisement for a Boat or expressly agreed in writing with an Owner, the minimum age to hire a Boat is 25.</p>
+
+<h2 id="8">8. Privacy</h2>
+
+<p>See Barqo’s Privacy Policy www.barqo.nl/termsandconditions/ for information and notices concerning Barqo’s collection and use of your personal information.</p>
+
+<h2 id="9">9. Intellectual Property</h2>
+
+<p id="9-1">9.1. The Services and Collective Content are protected by copyright, trademark, and other laws of The Netherlands and other jurisdictions. You acknowledge and agree that the Services and Collective Content, including all associated intellectual property rights are the exclusive property of Barqo and its licensors. You will not remove, alter or obscure any copyright, trademark, service mark or other proprietary rights notices incorporated in or accompanying the Services or Collective Content.</p>
+
+<p id="9-2">9.2. All trademarks, service marks, logos, trade names and any other proprietary designations of Barqo used in/on the Website or Services are trademarks or registered trademarks of Barqo. Any other trademarks, service marks, logos, trade names and any other proprietary designations are the trademarks or registered trademarks of their respective owners.</p>
+
+<p id="9-3">9.3. Barqo respects copyright law and expects you to do the same. It is Barqo’s policy to terminate, if deemed appropriate by Barqo, the Barqo Accounts of Members or other account holders who infringe or are believed to be infringing the rights of copyright holders. Please see Barqo’s Copyright Dispute Policy at www.barqo.nl for further information.</p>
+
+<h2 id="10">10. Barqo Content and Member Content License</h2>
+
+<p id="10-1">10.1. Subject to your compliance with these Terms, Barqo grants you a limited, non-exclusive, non-transferable and non-sub licensable license, to (i) access and view any Barqo Content to which you are permitted access, solely for your personal and non-commercial purposes and (ii) access and view any Member Content to which you are permitted access, solely for your personal and non- commercial purposes.</p>
+
+<p id="10-2">10.2. You will not use, copy, adapt, modify, prepare derivative works based upon, distribute, license, sell, transfer, publicly display, publicly perform, transmit, broadcast or otherwise exploit the Services or Collective Content, except as expressly permitted in these Terms. No licenses or rights are granted to you by implication or otherwise under any intellectual property rights owned or controlled by Barqo or its licensors, except for the licenses and rights expressly granted in these Terms.</p>
+
+<h2 id="11">11. Member Content</h2>
+
+<p id="11-1">11.1 We may, in our sole discretion, permit Members to post, upload, publish, submit or transmit Member Content. By making available any Member Content on or through the Website and Services, you hereby grant to Barqo a worldwide, irrevocable, perpetual, non-exclusive, transferable, royalty-free license, with the right to sublicense, to use, view, copy, adapt, modify, distribute, license, sell, transfer, publicly display, publicly perform, transmit, stream, broadcast, access, view, and otherwise exploit such Member Content on, through, or by means of the Services or otherwise. Barqo does not claim any ownership rights in/to any such Member Content and nothing in these Terms will be deemed to restrict any rights that you may have to use and exploit any such Member Content.</p>
+
+<p id="11-2">11.2 You acknowledge and agree that you are solely responsible for all Member Content that you make available through the Services. Accordingly, you represent and warrant that: (i) you either are the sole and exclusive owner of all Member Content that you make available through the Services or you have all rights, licenses, consents and releases that are necessary to grant to Barqo the rights in/to such Member Content, as contemplated under these Terms; and (ii) neither the Member Content nor your posting, uploading, publication, submission or transmittal of the Member Content or Barqo’s use of the Member Content (or any portion thereof) on, through or by means of the Services or otherwise will infringe, misappropriate or violate a third party’s patent, copyright, trademark, trade secret, moral rights or other proprietary or intellectual property rights, or rights of publicity or privacy, or result in the violation of any applicable law or regulation.</p>
+
+<p id="11-3">11.3 You hereby indemnify and keep indemnified Barqo from any and all claims, and all direct and indirect liabilities, costs, proceedings, damages, losses and expenses (including legal and other professional expenses), awarded against, or incurred or paid by Barqo, as a result of or in connection with any claim arising out of a violation of <a href="#11-2">article 11.2</a>.</p>
+
+<h2 id="12">12. Links</h2>
+
+<p>The Services may contain links to third-party websites or resources. You acknowledge and agree that Barqo is not responsible or liable for: (i)</p>
+
+<p>the availability or accuracy of such websites or resources; or (ii) the content, products, or services on or available from such websites or resources. Links to such websites or resources do not imply any endorsement by Barqo of such websites or resources or the content, products, or services available from such websites or resources. You acknowledge sole responsibility for and assume all risk arising from your use of any such websites or resources or the content, products or services on or available from such websites or resources.<p>
+
+<h2 id="13">13. Feedback</h2>
+
+<p>We welcome and encourage you to provide feedback, comments and suggestions for improvements to the Services (“Feedback”). You may submit Feedback by emailing us at info@barqo.nl. You acknowledge and agree that all Feedback will be the sole and exclusive property of Barqo and you hereby irrevocably assign to Barqo and agree to irrevocably assign to Barqo all of your right, title, and interest in and to all Feedback, including all worldwide patent, copyright, trade secret, moral and other proprietary or intellectual property rights therein. At Barqo’s request and expense, you will execute documents and take such further acts as Barqo may reasonably request to assist Barqo to acquire, perfect, and maintain its intellectual property rights and other legal protections for the Feedback.</p>
+
+<h2 id="14">14. Terminations and Barqo Account Cancellation</h2>
+
+<p>We may, in our discretion and without liability to you, with or without cause, with prior notice of 7 days and at any time: (a) terminate these Terms or your access to our Services, and (b) deactivate or cancel your Barqo Account. Upon termination we will promptly pay you any amounts, which we are legally obligated to pay you. In the event Barqo terminates these Terms, or your access to our Services or deactivates or cancels your Barqo Account you will remain liable for all amounts due hereunder. You may cancel your Barqo Account at any time by sending an email to info@barqo.com. Please note that if your Barqo Account is cancelled, we do not have an obligation to delete or return to you any Content you have posted to the Website or otherwise using the Services, including any reviews or Feedback.</p>
+
+<h1>B. ADVERTISEMENTS AND BOOKINGS</h1>
+
+<h2 id="15">15. Advertisements</h2>
+
+<p id="15-1">15.1. You may create an Advertisement if you are both an Owner and a Member. You will be asked a number of questions about the Boat to be advertised, including the location, size, features, availability, qualifications /experience required, restrictions on use, and pricing. You agree that Advertisements will be made publicly available via the Services. Other Members will be able to hire your Boat via the Services based upon the information provided in your Advertisement. Once an Owner and a Hirer have agreed the hire of Boat the price and other terms agreed for that hire may only be altered with the consent of both the Owner and the Hirer.</p>
+
+<p id="15-2">15.2. You acknowledge and agree that you are responsible for any and all Advertisements you post. You represent and warrant to us and to all other Members that any Advertisement you post, the booking of a Boat advertised in an Advertisement posted by you, and the use by a Hirer in accordance with the agreed terms of the hire of any Boat advertised in an Advertisement posted by you, you will:</p>
+
+<p id="15-2-1">15.2.1. not breach any agreements you have entered into with any third parties, including any person who has financed the purchase of the Boat;</p>
+
+<p id="15-2-2">15.2.2. be in compliance with all applicable laws, rules and regulations, including laws relating to the commercial use of Boats and marina regulations.</p>
+
+<p id="15-3">15.3 Barqo assumes no responsibility for an Owner’s compliance with any applicable laws, rules and regulations and Owner hereby indemnifies Barqo of any claims and/or liability, from either a third party or Owner arising out of or in connection with the non-compliance of Owner with any applicable laws, rules and regulations, including laws, rules and regulations relating to operating permits and mooring permits. Barqo reserves the right, at any time and without prior notice, to remove or disable access to any Advertisement which Barqo, in its reasonable opinion, considers to be in breach of these Terms or otherwise objectionable or harmful to Barqo’s reputation.</p>
+
+<p id="15-4">15.4. You understand and agree that Barqo does not act as an insurer or as an agent with power to enter into contracts for you as an Owner. If a Potential Hirer requests a booking of your Boat, any agreement you enter into with that Potential Hirer is between you and the Potential Hirer and Barqo is not a party to that agreement. Notwithstanding the foregoing, Barqo serves as the limited agent of the Owner for the purpose of accepting payments from Hirers on behalf of the Owner and is responsible for transmitting such payments to the Owner in accordance with the Terms.</p>
+
+<p id="15-5">15.5. When you create an Advertisement, you may also choose to include certain requirements which must be met by the Members who are eligible to request a booking of your Boat, including requiring Members to have a profile picture or verified phone number, in order to hire your Boat. Any Member wishing to hire Boats included in Advertisements with such requirements must meet these requirements. We do not guarantee that any Member claiming to meet any requirements in fact does so and it is your sole responsibility to determine whether or not a Member does meet your requirements. More information on how to set such requirements is available via the “Owners” section of the Services.</p>
+
+<p id="15-6">15.6. If you are an Owner, Barqo may make certain tools available to you to help you to make informed decisions about which Members you choose to hire your Boat to. You acknowledge and agree that, as an Owner, you are solely responsible for your own acts and omissions. Barqo does not represent or guarantee that any person you decide to hire your Boat to, whether or not on the basis of any tools made available by Barqo, is qualified or suitable to hire your Boat.</p>
+
+<h2 id="16">16. Bookings</h2>
+
+<p id="16-1">16.1. If you are an Owner and a booking is requested for your Boat via the Services, you may be required to either confirm or reject the booking within 24 hours of when the booking is requested or the booking request may be automatically cancelled. When a booking is requested via the Services, we will share with you (a) the first and last name of the Potential Hirer who has requested the booking, and (b) a link to the Potential Hirer’s Barqo Account profile page so that you can view the information on that page before confirming or rejecting the booking. If you are unable to confirm or decide to reject a booking of a Boat within such 24 hour period, any amounts collected by Barqo for the requested booking will be refunded to the applicable Potential Hirer’s credit card and any pre-authorisation of such credit card will be released. When you confirm a booking requested by a Potential Hirer, Barqo will send you an email message via the Services confirming such booking, depending on the selections you make via the Services.</p>
+
+<p id="16-2">16.2. The fees displayed in each Advertisement are comprised of the Hire Charges and the Late Charges. Where applicable, Tax may be charged in addition to the Hire Charges and Late Charges, such will clearly be stated in the Advertisement. The Hire Charges, Late Charges and applicable Tax are collectively referred to in these Terms as the “Total Fees”. The amounts due and payable by a Hirer solely relating to an Owner’s Boat which are actually collected by Barqo are the “Hire Charges”. Please note that it is the Owner and not Barqo which determines the Hire Charges. The Hire Charges may include a cleaning fee, pre-paid fuel charges, or additional training costs, at the Owner’s discretion.</p>
+
+<p id="16-3">16.3. Owners, not Barqo, are solely responsible for honouring any confirmed bookings and making available any Boats reserved through the Services. If you, as a Hirer, choose to enter into a transaction with an Owner for the booking of a Boat, you agree and understand that you will be entering into a contract with the Owner and you agree to accept any terms, conditions, rules and restrictions associated with such Boat imposed by the Owner, all of which will be notified to you before you are required to commit to that contract. You acknowledge and agree that you, and not Barqo, will be responsible for performing the obligations of any such contracts, that Barqo is not a party to such agreements, and that, with the exception of its obligations hereunder to pay Hire Charges and Late Charges to the applicable Owner, Barqo disclaims all liability arising from or related to any such agreements. You acknowledge and agree that, notwithstanding the fact that Barqo is not a party to the agreement between you and the Owner, Barqo acts as the Owner’s payment agent for the limited purpose of accepting payments from you on behalf of the Owner. Upon your payment of amounts to Barqo which are due to the Owner, your payment obligation to the Owner for such amounts is fulfilled, and Barqo is responsible for remitting such amounts, less Barqo’s Service Fees, to the Owner. In the event that Barqo does not remit any such amounts to an Owner, such Owner will have recourse for such amounts only against Barqo.</p>
+
+<p id="16-4">16.4. You, the Hirer, agree to pay Barqo the Hire Charges and Late Charges for any booking requested in connection with your Barqo Account if such requested bookings are confirmed by the applicable Owner. In order to establish a booking pending the applicable Owner’s confirmation of your requested booking, you understand and agree that Barqo, on behalf of the Owner, reserves the right, in its sole discretion, to (i) obtain a pre-authorisation via your credit card for the Hire Charges or (ii) charge your credit card a nominal amount, not to exceed one euro (€1) to verify your credit card. Once Barqo receives confirmation of your booking from the applicable Owner, Barqo will collect the Hire Charges and Late Charges in accordance with these Terms and the pricing terms set forth in the applicable Listing. Please note that Barqo cannot control any fees that may be charged to a Hirer by his or her bank related to Barqo’s collection of the Hire Charges or Late Charges, and Barqo disclaims all liability in this regard.</p>
+
+<p id="16-5">16.5. In connection with a requested booking, a Prospective Hirer will be asked to provide customary billing information such as name, billing address and credit card information either to Barqo or its third party payment processor. You agree to pay Barqo for Hire Charges and Late Charges for any confirmed bookings made in connection with your Barqo Account in accordance with these Terms by one of the methods described on the Website – e.g. by credit card. You hereby authorize the collection of such amounts by charging the credit card provided as part of requesting the booking, either directly by Barqo or indirectly, via a third party online payment processor or by one of the payment methods described on the Services. You also authorize Barqo to charge your credit card in the event of damage caused to a Boat as contemplated in <a href="#17">paragraph 17</a>. If you are directed to Barqo’s third party payment processor, you may be subject to terms and conditions governing use of that third party’s service and that third party’s personal information collection practices. Please review such terms and conditions and, if applicable their privacy policy, before using the services. Once your confirmed booking transaction is complete you will receive a confirmation email summarizing your confirmed booking.</p>
+
+<h2 id="17">17. Security Deposits</h2>
+
+<p id="17-1">17.1. A security deposit will be specified in every Advertisement (“Security Deposit”). For all Security Deposits included in an Advertisement for a confirmed booking of a Boat, Barqo will, in its capacity as the payment agent of the Owner, use its reasonable endeavours to obtain a pre-authorisation of the Hirer’s credit card in the amount the Owner determines for the Security Deposit within a reasonable time prior to the commencement of the Hirer’s hire of the Boat. Barqo will also use its reasonable endeavours to address Owners’ requests and claims related to such Security Deposits, but Barqo is not responsible for administering or accepting any claims by Owners related to Security Deposits, and disclaims any and all liability in this regard.</p>
+
+<p id="17-2">17.2. A Security Deposit may be applied towards, and a Hirer’s credit card charged up to the amount of the Security Deposit for:</p>
+
+<p id="17-2-1">17.2.1. the cost of making good any damage to a Boat for which a Hirer is responsible and which is not covered by the Insurance Policy, including damage up to the amount of any excess on the Insurance Policy for the respective Boat;</p>
+
+<p id="17-2-2">17.2.2. any Late Charges payable by a Hirer.</p>
+
+<p id="17-3">17.3. A Hirer’s liability for damage to a Boat is not limited to the amount of the Security Deposit provided by the Hirer. See <a href="#26">paragraph 26</a> below for further terms in relation to damage to Boats.</p>
+
+<h2 id="18">18. Service Fees payable by Owners</h2>
+
+<p id="18-1">18.1. In consideration for providing the Services, Barqo charges service fees to Owners (“Service Fees”). Service Fees are based upon a percentage of the amount of Hire Charges and Late Charges (if any), excluding any Tax. Where applicable, Value Added Tax and any other applicable Tax may also be charged to Owner in addition to the Service Fees. Service Fees are deducted from the Hire Charges before remitting the Hire Charges to the Owner, within 24 hours of when the Hirer checks in the applicable Boat at the end of the Actual Hire Period.</p>
+
+<p id="18-2">18.2. Balances will be remitted in Euro’s by Barqo to Owners by direct credit transfer or other payment methods described on the Services. More information on Services Fees can be found at www.barqo.nl. Except as otherwise provided herein, Service Fees are non-refundable.</p>
+
+<h2 id="19">19. Cancellation Policy</h2>
+
+<p id="19-1">19.1. If, as a hirer, you cancel your requested booking before the requested booking is confirmed by an Owner, Barqo will cancel any pre-authorization to your credit card and/or refund any nominal amounts charged to your credit card in connection with the requested booking within a commercially reasonable time. If, as a hirer, you wish to cancel a confirmed booking made via the Services, the cancellation policy of the Owner contained in the applicable Advertisement will apply to such cancellation. The owner has the choice of Strict, Medium or Flexible cancellation policy. 
+
+<p><b>STRICT</b></p>
+<p>If you cancel the booking you will be fully refunded up to 7 days after the booking has been made. Between 30-60 days before check-in you will be charged 50% of the booking amount. Up to 30 days before check-in you will be charged 100% of the booking.
+</p>
+<p><b>MEDIUM</b></p>
+<p>If you cancel the booking up to 14 days before check-in you will be fully refunded. Between 7-14 days before check-in you will be charged 50% of the booking amount. 
+</p>
+<p> <b>FLEXIBLE</b></p>
+<p>If you cancel the booking, you will be fully refunded up to 48 hours before sailing. Between 48-24 hours before check-in you will be charged 50% of the booking amount.
+</p>
+
+<p>If there is no cancellation policy shown in the owners advertisement the the general policy will count as shown in 19.2.</p> 
+
+<p id="19-2">19.2. Subject to <a href="#22-4">paragraph 22.4</a> Guest will receive a full refund of booking price in the case, if a cancellation will be made at least thirty (30) days prior to the check-in date (local time at the holiday starting destination). Cancellations made less than thirty (30) days prior to the check-in date will not be reimbursed (local time at the holiday starting destination).
+
+<p><b>The Service Fees of Barqo are non-refundable in all cases.</b></p>
+
+<p>The reservation is officially cancelled when the Guest clicks the corresponding cancellation button on the confirmation page, which is found under: Bookings > Cancel.
+In case of complaints from any party, Barqo has the final word in any dispute in its sole discretion.
+Cancellation policies may be superseded by the safety cancellations, Guest Refund Policy (as below defined), or Extenuating Circumstances (as below defined). All users are encouraged to check these carefully by reading the following exceptions.</p>
+
+<p id="19-3">19.3. If, as a boat owner, you cancel a confirmed booking made via the services, the cancellation policy of the platform will apply. Boat owners are allowed to cancel a confirmed booking up to 6 months prior to check-in date (local time at the holiday starting destination). If you would like to cancel a confirmed booking please contact us at booking@barqo.nl.</p>
+
+<h2 id="20">20. Appointment of Barqo as Payment Agent</h2>
+
+<p>for Owner</p>
+
+<p id="20-1">20.1. Each Owner hereby appoints Barqo as the Owner’s limited agent solely for the purpose of collecting payments made by Hirers on behalf of the Owner and forwarding such payments to Owner, minus the applicable Service Fees. Each Owner agrees that payment of Hire Charges made by a Hirer to Barqo shall be considered the same as a payment made directly to the Owner and the Owner will make the Boat available to a Hirer in the agreed upon manner as if the Owner has received the Hire Charges. Each Owner agrees that Barqo may, in accordance with the cancellation policy selected by the Owner and reflected in the relevant Advertisement, (i) permit the Hirer to cancel the booking and (ii) refund to the Hirer that portion of the Hire Charges specified in the applicable cancellation policy. In accepting appointment as the limited authorised agent of the Owner, Barqo assumes no liability for any acts or omissions of the Owner.</p>
+
+<p id="20-2">20.2. Barqo does not currently charge fees for the creation of Advertisements. However, you acknowledge and agree that Barqo reserves the right, in its sole discretion, to charge you for and collect fees from you for the creation of Advertisements, or for other features of the Services. Barqo will provide adequate notice of any such additional fees via the Services, prior to implementing such fees, and if you do not wish to incur such fees you do not have to post any further Advertisements and you are free to remove any Advertisements.</p>
+
+<h1>C. BOAT HIRE TERMS</h1>
+
+<h2 id="21">21. Hirer’s & Crew’s Competency</h2>
+
+<p>The Hirer warrants and undertakes to the Owner that the Hirer and the Hirer’s crew have all necessary qualifications, experience, and competence to operate and navigate the Boat safely and in compliance with all applicable laws and are in possession of a boatmaster's licence ("vaarbewijs") if such is required. The Hirer shall, if requested, produce to the Owner or the Owner’s representative prior to the commencement of the Agreed Hire Period original or officially issued boatmaster's licence in relation to any qualifications the Hirer and/or the Hirer’s crew has or have claimed to possess in the Hirer’s Barqo Account profile page. Failure to produce any such licence may result in the Hirer being denied access to the Boat.</p>
+
+<h2 id="22">22. Pre-Hire Inspection & Sea Trials</h2>
+
+<p id="22-1">22.1. Prior to the commencement of the Agreed Hire Period, the Hirer may inspect the Boat in the company of the Owner or the Owner’s representative to assess the condition of the Boat and to satisfy the Hirer that the Boat is as described in the Advertisement the Hirer responded to or is otherwise in such condition as has been agreed between the Owner and the Hirer.</p>
+
+<p id="22-2">22.2. Either the Hirer or the Owner (including the Owner’s representative) may require the other to undertake a sea trial of up to one hour to assess (in the case of the Hirer) the condition of the Boat and (in the case of the Owner or the Owner’s representative) the competency of the Hirer and the Hirer’s crew.</p>
+
+<p id="22-3">22.3. If, following inspection or sea trial in accordance with <a href="#22-1">paragraphs 22.1</a> or <a href="#22-2">22.2</a>, the Hirer (acting reasonably) determines that (i) the condition of the Boat is not as described in the Advertisement the Hirer responded to or is otherwise not in such condition as has been agreed with the Owner or (ii) the Boat is unseaworthy, the Hirer may terminate the Hire and shall be entitled to (i) a refund of all sums paid and shall have no liability to the Owner to pay any Hire Charges or Late Charges, and (ii) the release of the Hirer’s Security Deposit.</p>
+
+<p id="22-4">22.4. If, before or after sea trial in accordance with <a href="#22-2">paragraph 22.2</a>, the Owner or the Owner’s representative (in either case acting reasonably) determines that the Hirer and/or the Hirer’s crew is or are not competent to operate and navigate the Boat safely and in compliance with all applicable laws, the Owner may terminate the Hire and shall be entitled to payment of such sums as would be payable under the cancellation policy of the Owner contained in the applicable Advertisement in the event of a cancellation by the Hirer on the day the Agreed Hire Period was due to commence. If the Owner is able to re-hire the Boat for any part of the original Agreed Hire Period the Owner shall give credit to the original Hirer for any sums received for such re-hire, less any additional costs incurred by the Owner.</p>
+
+<p id="22-5">22.5. Acceptance of the Boat by the Hirer shall be evidence that the Boat is in a satisfactory condition in accordance with the terms of the contract between the Hirer and the Owner.</p>
+
+<p id="22-6">22.6. If the Hirer does not accept delivery of the Boat within three hours from the start of the Agreed Hire Period and has not notified the Owner of Hirer’s intention to accept delivery later during the Agreed Hire Period, the Owner may terminate the Hire and shall be entitled to payment of such sums as would be payable under the cancellation policy of the Owner contained in the applicable Advertisement in the event of a cancellation by the Hirer on the day the Agreed Hire Period was due to commence. If the Owner is able to re- hire the Boat for any part of the original Agreed Hire Period, the Owner shall give credit to the original Hirer for any sums received for such re-hire, less any additional costs incurred by the Owner.</p>
+
+<h2 id="23">23. Hirer’s Undertakings</h2>
+
+<p>A Hirer commits to the Owner whose Boat is Hired to the Hirer throughout the Actual Hire Period:</p>
+
+<p id="23-1">23.1. to operate and navigate the Boat safely and in compliance with all applicable laws (including customs, marina, harbour, and port regulations applicable at any place where the Boat is from time to time) and to be fully responsible for the safety and security of the Boat at all times during the Actual Hire Period;</p>
+
+<p id="23-2">23.2. not to allow the Boat to dry out or be stranded and to ensure that the Boat is moored only at secure and properly maintained mooring points;</p>
+
+<p id="23-3">23.3. not to anchor the Boat in a place where anchoring is restricted or is otherwise unsuitable for anchoring the Boat;</p>
+
+<p id="23-4">23.4. to at no time during the Actual Hire Period, allow the Boat to be left unattended unless the Boat is safely moored or anchored in a marina, harbour or other similar location and all locks giving access to the interior of the Boat, any equipment on the Boat, or enabling any engine on the Boat to be operated are locked and the keys removed from the Boat;</p>
+
+<p id="23-5">23.5. to pay all running costs of the Boat during the Actual Hire Period including fuel, marina/harbour/port/mooring fees, pilot fees, charts (other than charts, if any, provided by the Owner with the Boat), food, and water;</p>
+
+<p id="23-6">23.6. to use the Boat solely for private pleasure cruising for the Hirer, the Hirer’s crew and guests and not use the Boat for any commercial or business purpose;</p>
+
+<p id="23-7">23.7. not to carry on the Boat more than the number of persons the Boat is licensed to carry by any relevant authority;</p>
+
+<p id="23-8">23.8. not to allow any animals on board the Boat without the express prior written permission of the Owner (which may be withheld at the Owner’s absolute discretion);</p>
+
+<p id="23-9">23.9. not to use the Boat outside any geographical limits specified by the Owner;</p>
+
+<p id="23-10">23.10. not to race the Boat without the express prior written permission of the Owner (which may be withheld at the Owner’s absolute discretion);</p>
+
+<p id="23-11">23.11. not to sell, mortgage, pledge, hire, lend, encumber with any limited right or otherwise give up possession entirely or partially of the Boat or attempt or claim to do so;</p>
+
+<p id="23-12">23.12. to pay for, or at the discretion of the Owner, make good any loss of, or damage to, the Boat during the Actual Hire Period which is not recoverable under the Insurance Policy;</p>
+
+<p id="23-13">23.13. to notify the Owner of any failure of, or damage to, the Boat or any incident involving a third party as soon as reasonably possible , but in any case within eight hours of such failure, damage or incident, and comply with any reasonable instructions given by the Owner in relation to the same;</p>
+
+<p id="23-14">23.14. not to knowingly or recklessly do or omit to do any act or thing which may void, or allow the insurers to void, the Insurance Policy in whole or in part, or which may result in any claim under the Insurance Policy being denied in whole or in part;</p>
+
+<p id="23-15">23.15. to indemnify (that is compensate and hold harmless) the Owner against any loss or damage incurred or suffered by the Owner as a result of any breach by the Hirer of <a href="#23-14">paragraph 23.14</a> above;</p>
+
+<p id="23-16">23.16. to deliver the Boat to the Owner at the end of the Agreed Hire Period, free of any mortgage, pledge, limited rights or any debts (other than mortgages or debts incurred by the Owner), in as good, clean and tidy condition as when the Boat was delivered to the Hirer (fair wear and tear excepted), at the place the Boat was delivered to the Hirer or at such other place as has been agreed between the Owner and the Hirer;</p>
+
+<p id="23-17">23.17. if the Hirer fails to deliver the Boat as required in <a href="#23-16">paragraph 23.16</a>, to pay Late Charges to the Owner for the whole period between the end of the Agreed Hire Period and the end of the Actual Hire Period, unless such failure is caused by the occurrence of a risk covered by the Insurance Policy or by a mechanical or other failure of the Boat which is not the Hirer’s responsibility under these Terms.</p>
+
+<h2 id="24">24. Owner’s Undertakings</h2>
+
+<p>Subject to <a href="#22-4">paragraph 22.4</a>, an Owner commits to the Hirer who hires the Owner’s Boat:</p>
+
+<p id="24-1">24.1. to deliver the Boat to the Hirer:</p>
+
+<p id="24-1-1">24.1.1. at the start of the Agreed Hire Period at the agreed place, failing which (i) if the delay is up to 25% of the Agreed Hire Period, the Owner’s liability shall be limited to a pro rata refund of the Hire Charges, and (ii) if the delay is 25% or more of the Agreed Hire Period the Hirer shall be entitled to terminate the Hire and receive a refund of all sums paid and shall have no liability to the Owner to pay any Hire Charges or Late Charges and shall be entitled to the release of the Hirer’s Security Deposit;</p>
+
+<p id="24-1-2">24.1.2. in the condition described in the Advertisement the Hirer responded to or in such other condition as agreed with the Hirer;</p>
+
+<p id="24-2">24.2. in the event of a Hirer terminating the Hire under <a href="#24-1-1">paragraph 24.1.1</a>, to compensate the Hirer for any non-refundable travel or accommodation expenses reasonably incurred in connection with, or anticipation of, the Hire, provided that (i) the Owner shall have no liability to the Hirer in respect of any other consequential loss or loss of use or enjoyment of the Boat, and (ii) the Owner’s liability to the Hirer for any breach of contract entitling the Hirer to terminate the Hire under <a href="#24-1-1">paragraph 24.1.1</a> shall not exceed 50% of the Hire Charges agreed for the Hire;</p>
+
+<p id="24-3">24.3. to permit the Hirer to use the Boat in accordance with these Terms for the Agreed Hire Period, provided that the Owner does not warrant or represent that the Boat is suitable for any particular purpose unless expressly stated in the Advertisement the Hirer responded to or as otherwise agreed in writing by the Owner;</p>
+
+<h1>D. INSURANCE & DAMAGE TO BOATS</h1>
+<h2 id="26">26. Scope of Barqo’s obligations</h2>
+
+<p id="26-1">26.1. If you choose to use the Services, you do so at your own risk. You acknowledge and agree that Barqo does not have an obligation to conduct background checks on any Member, including (Potential) Hirers and Owners, but, at its sole discretion, may conduct such background checks. The Services and/or Collective Content are provided “as is”, without warranty of any kind, either express or implied. Without limiting the foregoing, Barqo explicitly disclaims any warranties of merchantability, fitness for a particular purpose, or non-infringement of any kind, and any warranties arising out of or in the course of dealing or usage of trade. Barqo makes no warranty that the Services and/or Collective Content, including the Advertisements or any Boats, will meet your requirements or be available on an uninterrupted, secure, or error-free basis. Barqo makes no warranty regarding the quality of any Advertisements, Boats, or the Services or Member Content or the accuracy, timeliness, truthfulness, completeness or reliability of any Member Content.</p>
+
+<p id="26-2">26.2. No advice or information, whether oral or written, obtained from Barqo or through the Services or Collective Content, will create any warranty not expressly made herein, unless expressly made in any such advice or information.</p>
+
+<p id="26-3">26.3. You are solely responsible for all of your communications and interactions with other users of the Services and with other persons with whom you communicate or interact as a result of your use of the Services, including any Owners or (Potential) Hirers. You understand that Barqo does not make any attempt to verify the statements of users on/of the Website or Services or to review or inspect any Boats. Barqo makes no representations or warranties as to the conduct of users of the Website, Application or Services or their compatibility with any current or future users of the Website, Application or Services. You agree to take reasonable precautions in all communications and interactions with other users of the Website, Application or Services and with other persons with whom you communicate or interact as a result of your use of the Website, Application or Services, including (Potential) Hirers and Owners, particularly if you decide to meet offline or in person regardless of whether such meetings are organized by Barqo.</p>
+
+<p id="26-4">26.4. Notwithstanding Barqo’s appointment as the limited agent of the Owners for the purpose of accepting payments from Hirers on behalf of the Owners, Barqo explicitly disclaims any and all liability for any act or omission of any Potential Hirer, Hirer or other third party.</p>
+
+<h2 id="27">27. Limitation of Liability</h2>
+
+<p id="27-1">27.1. You acknowledge and agree that, the entire risk arising out of or in connection with your access to and use of the Services and Collective Content, your Advertisement or booking of and use of any Boats via the Services, and any contact you have with other users of the Services whether in person or online remains with you. Neither Barqo nor any other party involved in creating, producing, or delivering the Service and/or Collective Content will be liable for any direct or indirect damages, including lost profits, loss of data or loss of goodwill, service interruption, computer damage or system failure or the cost of substitute products or services, or for any damages for personal or bodily injury or emotional distress arising out of or in connection with these Terms, from the use of or inability to use the Services and/or Collective Content, from any communications, interactions or meetings with other users of the Services or other persons with whom you communicate or interact as a result of your use of the Services, or from your Advertisement, booking, or use of any Boat via the Services, whether based on warranty, contract, unlawful act, product liability or any other legal basus, and whether or not Barqo has been informed of the possibility of such damage, even if a limited remedy set forth herein is found to have failed of its essential purpose.</p>
+
+<p id="27-2">27.2. Except for our obligations to pay amounts due by Hirers to Owners pursuant to these Terms, in no event will Barqo’s aggregate liability arising out of or in connection with these Terms and your use of the Services including from your Advertisement, booking or use of any Boat via the Services, or from the use of or inability to use the Services, or Collective Content and in connection with any Boat or interactions with any other Members, exceed the amounts you have paid for bookings via the Website, Application and Services as a guest in the twelve (12) month period prior to the event giving rise to the liability, or if you are an Owner, the amounts paid by Barqo to you in the twelve (12) month period prior to the event giving rise to the liability, or EUR 100.-, if no such payments have been made, as applicable. The limitations of damages set forth above are fundamental elements of the basis of the contract between Barqo and you. Some jurisdictions do not allow the exclusion or limitation of liability for consequential or incidental damages, so the above limitation may not apply to you if that is the case in your jurisdiction.</p>
+
+<p id="27-3">27.3. Nothing in this <a href="#27">paragraph 27</a> shall limit or exclude Barqo’s liability in respect of death or personal injury caused by its acts or defaults or the acts or defaults of any person for whom it is liable.</p>
+
+<h2 id="28">28. Indemnification</h2>
+
+<p id="28-1">28.1. You agree to release, defend, indemnify, and hold harmless Barqo and all companies in its group of companies including parent companies, and their officers, directors, employees and agents, from and against any claims, liabilities, damages, losses, and expenses, including reasonable legal and other professional fees, arising out of or in any way connected with (a) your access to or use of the Services and/or Collective Content or your violation of these Terms; (b) your Member Content; (c) your (i) interaction with any Member, (ii) booking, hire or use of a Boat, (iii) creation of an Advertisement or (iv) the use, condition or hire of a Boat by you, including any injuries, losses, or damages (compensatory, direct, incidental, consequential or otherwise) of any kind arising in connection with or as a result of a hire , booking or use of a Boat.</p>
+
+<p id="28-2">28.2. Nothing in this <a href="#28">paragraph 28</a> shall limit or exclude Barqo’s liability in respect of death or personal injury caused by its acts or defaults or the acts or defaults of any person for whom it is liable.</p>	</div>
+</div>
+
+<script>
+	var barqo_react = {"common":{"isMobileDevice":false,"locale":"en","currentPage":"findcontent","languages":[{"id":"63","slug":"nl","title":"Nederlands","url":"https:\/\/barqo.co\/algemene-voorwaarden"},{"id":"64","slug":"en","title":"English","url":"https:\/\/barqo.co\/en\/terms-conditions"}],"languagesAlt":[{"id":"1","slug":"nl","name":"Nederlands","language_code":"nl_NL","status":"1"},{"id":"2","slug":"en","name":"English","language_code":"en_US","status":"1"}],"urls":{"home":"\/en\/","search":"\/en\/search","explore":"https:\/\/barqo.co\/en\/regions","boat":"\/en\/boat-rental","dashboard":"\/en\/dashboard","messages":"\/en\/messages","manageBoats":"\/en\/my-boats","trips":"\/en\/trips","advice":"\/en\/advice","wishlists":"https:\/\/barqo.co\/en\/dashboard\/wishlists","settings":"\/en\/settings","listBoat":"\/en\/list-boat","help":"\/en\/help","serviceTerms":"\/en\/terms-conditions","privacyPolicy":"\/en\/privacy-policy","paymentPolicy":"\/en\/paymentpolicy","cancellationPolicy":"\/en\/cancellationpolicy","balance":"\/en\/balance","informationOwner":"\/en\/owner","informationRenter":"\/en\/renter","insurance":"\/en\/insurance","profile":"\/en\/profile","request":"\/en\/request","safenedCallback":"https:\/\/barqo.co\/settings\/safened"},"user":null,"searchSuggestions":["Amsterdam","Friesland, Netherlands","Loosdrecht, Netherlands","Kaag, Leiden, Netherlands","Haarlem, Netherlands ","Rotterdam, Netherlands "],"search":{"input":null,"filters":null,"sortMode":null,"themes":[{"id":24,"name":"Party","data":{"filters":{"dayPrice":{"from":1,"to":500}},"sort_mode":"lowestMinimumPrice"}},{"id":25,"name":"Romantic","data":{"filters":[],"sort_mode":null}},{"id":26,"name":"Family","data":{"filters":{"capacity":5,"dayPrice":{"from":0,"to":500}},"sort_mode":"lowestMinimumPrice"}},{"id":27,"name":"Luxury","data":{"filters":{"dayPrice":{"from":2001,"to":1000000}},"sort_mode":"lowestMinimumPrice"}},{"id":28,"name":"Day trip","data":{"filters":{"capacity":1,"type":"tender","dayPrice":{"from":0,"to":500}},"sort_mode":"lowestMinimumPrice"}}]},"highlightedAmenities":[8,168,91,7,166,60],"apiUrl":"https:\/\/api.barqo.co","safenedEnvironment":"prod","feeStructure":{"default":0.08,"ranges":[{"from":0,"to":150,"service_fee":0.15},{"from":150,"to":250,"service_fee":0.12},{"from":250,"to":null,"service_fee":0.08}]}}};
+</script>
+
+<footer class="clearfix">
+	<div class="wrapper clearfix">
+		<nav class="mobile">
+			<a href="https://barqo.co/en/about-us">About us</a>
+			<br/>
+			<a href="https://barqo.co/blog/">Blog</a>
+			<br/>
+			<a href="https://barqo.co/en/help">Frequently asked questions</a>
+			<br/>
+			<a href="https://barqo.co/en/insurance">Insurance</a>
+			<br/>
+			<a href="https://barqo.co/en/owner">How it works for owners</a>
+			<br/>
+			<a href="https://barqo.co/en/renter">How it works for renters</a>
+			<br/>
+			<a href="https://barqo.co/en/paymentpolicy">Payment Policy</a>
+			<br/>
+			<a href="https://barqo.co/en/cancellationpolicy">Cancellation Policy</a>
+			<br/>
+			<a href="https://barqo.co/en/reviews">Reviews</a>
+		</nav>
+		<nav class="site">
+			<div class="row">
+				<div class="col col-3">
+					<div class="holder">
+						<h4>Company</h4>
+						<ul>
+							<li><a href="https://barqo.co/en/about-us">About us</a></li>
+							<li><a href="https://barqo.co/en/paymentpolicy">Payment Policy</a></li>
+							<li><a href="https://barqo.co/en/cancellationpolicy">Cancellation Policy</a></li>
+							<li><a href="https://barqo.co/en/contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col col-3">
+					<div class="holder">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="https://barqo.co/blog/">Blog</a></li>
+							<li id="review-aggregate" itemscope="" itemtype="http://schema.org/Product">
+								<p itemprop="name" style="color: #333C4E;font: 12px/18px 'Open Sans Semibold';padding-top:20px;">Reviews</p>
+								<div class="average_block" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+									<p>
+										<span class="average" itemprop="ratingValue">4.6</span> / 5
+									</p>
+									<span class="rating">
+										<span class="stars" style="width: 92%">
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+											<i class="fa fa-star"></i>
+										</span>
+										<i class="fa fa-star-o"></i>
+										<i class="fa fa-star-o"></i>
+										<i class="fa fa-star-o"></i>
+										<i class="fa fa-star-o"></i>
+										<i class="fa fa-star-o"></i>
+									</span>
+									<p>
+										<span class="votes" itemprop="reviewCount">25625</span>
+										<a href="https://barqo.co/en/reviews">reviews</a>
+									</p>
+								</div>
+							</li>
+							<li style="padding-top: 20px;">
+								<!-- TrustBox script -->
+								<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+								<!-- End TrustBox script -->
+
+								<!-- TrustBox widget - Mini -->
+								<div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="590b25c70000ff0005a1cc45" data-style-height="24px" data-style-width="100%" data-theme="light">
+									<a href="https://nl.trustpilot.com/review/barqo.co" target="_blank" rel="noopener">Trustpilot</a>
+								</div>
+								<!-- End TrustBox widget -->
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col col-3">
+					<div class="holder">
+						<h4>Support</h4>
+						<ul>
+							<li><a href="https://barqo.co/en/help">Frequently asked questions</a></li>
+							<li><a href="https://barqo.co/en/insurance">Insurance</a></li>
+							<li><a href="https://barqo.co/en/owner">How it works for owners</a></li>
+							<li><a href="https://barqo.co/en/renter">How it works for renters</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col col-3">
+					<div class="holder">
+						<h4>Destinations</h4>
+						<ul>
+							<li>
+								<a href="https://barqo.co/en/search/europe/netherlands/north-holland/amsterdam">
+									Amsterdam								</a>
+							</li>
+							<li>
+								<a href="https://barqo.co/en/search/europe/netherlands/north-holland/loosdrecht">
+									Loosdrecht								</a>
+							</li>
+							<li>
+								<a href="https://barqo.co/en/search/europe/netherlands/utrecht/utrecht">
+									Utrecht								</a>
+							</li>
+							<li>
+								<a href="https://barqo.co/en/search/europe/netherlands/friesland">
+									Friesland								</a>
+							</li>
+							<li>
+								<a href="https://barqo.co/en/search/europe/netherlands/north-holland/haarlem">
+									Haarlem								</a>
+							</li>
+							<li>
+								<a href="https://barqo.co/en/search/europe/netherlands/south-holland/kaag">
+									Kaag								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="more">
+		<img class="logo-footer" src="/assets/images/logo.png" alt="Barqo" title="Barqo"/>
+		<div class="copyrights">
+			<ul>
+				<li><a href="https://barqo.co/en/about-us">About us</a></li>
+				<!--<li><a href="https://jobs.barqo.co" target="_blank" rel="nofollow">Work with us</a></li>-->
+				<li><a href="https://barqo.co/blog/pers/">Press</a></li>
+				<li><a href="https://barqo.co/en/terms-conditions">Terms and conditions</a></li>
+				<li><a href="https://barqo.co/en/privacy-policy">Privacy policy</a></li>
+			</ul>
+			<h3>&copy; 2014-2022 Barqo. All rights reserved. No part of this site may be reproduced without our written permission.</h3>
+		</div>
+		<div class="social">
+			<a href="https://www.facebook.com/barqoclub" class="fb" target="_blank" rel="nofollow noopener">Facebook</a>
+			<a href="https://twitter.com/barqoclub" class="tw" target="_blank" rel="nofollow noopener">Twitter</a>
+			<a href="https://www.instagram.com/barqoclub/" class="in" target="_blank" rel="nofollow noopener">Instagram</a>
+		</div>
+		<div class="mobile">
+			<a href="https://barqo.co/en/privacy-policy">Privacy policy</a>
+			<span class="sep"></span>
+			<a href="https://barqo.co/en/terms-conditions">Terms and conditions</a>
+			<span class="sep"></span>
+			<a href="https://barqo.co/en/contact">Contact</a>
+		</div>
+	</div>
+	<div class="mobile">
+		<p>&copy; 2014-2022 Barqo. All rights reserved. No part of this site may be reproduced without our written permission.</p>
+	</div>
+</footer>
+
+<div class="modal-overlay ie">
+	<div class="content clearfix">
+		<h3>
+			Internet Explorer does not support this website. Please use another browser such as
+			<a href="https://www.google.com/chrome/" rel="nofollow">Chrome</a>,
+			<a href="https://www.mozilla.org/firefox/" rel="nofollow">Firefox</a> or
+			<a href="https://www.apple.com/safari/" rel="nofollow">Safari</a>.
+		</h3>
+	</div>
+</div>
+
+
+
+<a href="https://barqo.co/en/help" target="_blank" class="help-link">
+	<i class="icon fa fa-life-ring" aria-hidden="true"></i>
+</a>
+
+<script src="https://barqo.co/assets/js/jquery/jquery.v1.11.2.min.js?ts=1660140198"></script>
+<script src="https://barqo.co/assets/js/jquery/jquery-ui.v1.11.4.min.js?ts=1660140198"></script>
+<script src="https://barqo.co/assets/js/bootstrap.min.js?ts=1660140198"></script>
+
+<script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+<script type="text/javascript">var suggestion1 = "Amsterdam";var suggestion2 = "Friesland, Netherlands";var suggestion3 = "Loosdrecht, Netherlands";var suggestion4 = "Kaag, Leiden, Netherlands";var suggestion5 = "Haarlem, Netherlands ";var suggestion6 = "Rotterdam, Netherlands ";</script><script>var current_url = "https://barqo.co/en/terms-conditions"; var home_url = "https://barqo.co/en/";</script><script src="https://maps.googleapis.com/maps/api/js?v=3&amp;libraries=places&amp;language=en&amp;key=AIzaSyBDbeDGrLVkqscu9OQJF58wMQkxiH-SLxM"></script>
+<script src="https://barqo.co/assets/js/site.js?ts=1660140198"></script>
+<script src="https://barqo.co/assets/translations/en.js?h=905382cbd105792815613751de414c15"></script>
+<script src="https://barqo.co/assets/regions/en.js?h=dbdf9bda34f2f0c01b2d63ed6ae3668a"></script>
+<script src="https://barqo.co/assets/js/react/data.js"></script>
+<script src="https://barqo.co/assets/js/react/common.js?ts=1660140198"></script>
+<script src="https://barqo.co/assets/js/react/menu.js?ts=1660140198"></script><script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- Hotjar Tracking Code for https://barqo.co -->
+<script>
+   (function(h,o,t,j,a,r){
+       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+       h._hjSettings={hjid:127692,hjsv:5};
+       a=o.getElementsByTagName('head')[0];
+       r=o.createElement('script');r.async=1;
+       r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+       a.appendChild(r);
+   })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script type="application/ld+json">{"@context": "http://schema.org", "@type": "Product", "name": "Barqo", "url": "https://barqo.co/", "sameas": "https://barqo.co/reviews", "aggregateRating": {"@type": "AggregateRating", "name": "Barqo", "worstRating": "1", "bestRating": "5", "ratingValue": "4.6/5", "reviewCount": "25625"}}</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '985566188133771');
+fbq('track', "PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=985566188133771&ev=PageView&noscript=1" alt="fb" title="fb" /></noscript>
+<!-- End Facebook Pixel Code -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7152e57455","applicationID":"792492130","transactionName":"MlJUYEAAW0JYVxEIVwsYd1dGCFpfFnIMD1wGWFhAVw9BHlBaAQRA","queueTime":0,"applicationTime":460,"atts":"HhVXFggaSEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
