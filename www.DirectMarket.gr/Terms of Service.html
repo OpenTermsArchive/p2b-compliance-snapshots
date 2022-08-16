@@ -1,0 +1,1896 @@
+
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<title>The Greek e-Mall | directmarket.gr </title>
+<meta name="description" content="directmarket.gr Marketplace Επιχειρήσεων, Ελληνικά Προϊόντα, Τοπικά Παραδοσιακά Προϊόντα">
+<meta name="keywords" content="directmarket.gr Marketplace Επιχειρήσεων, Ελληνικά Προϊόντα, Τοπικά Παραδοσιακά Προϊόντα">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/dmarket/marketplc/images/icon.png" rel="shortcut icon"/>
+<link rel="stylesheet" type="text/css" href="/dmarket/marketplc/css/global_style.css" media="screen"> 
+<link rel="stylesheet" type="text/css" href="/dmarket/marketplc/css/0_global_style.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/dmarket/marketplc/assets/bootstrapValidator/bootstrapValidator.min.css"/> 
+<link rel="stylesheet" type="text/css" href="/dmarket/marketplc/assets/owl-carousel/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/dmarket/marketplc/assets/owl-carousel/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="/dmarket/marketplc/assets/malihu-custom-scrollbar/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" type="text/css" href="/dmarket/marketplc/assets/megamenu/css/style.css">
+<link rel="stylesheet" type="text/css" href="/dmarket/marketplc/css/responsive.css" media="screen">
+<!-- Select2 -autocomplete Start-->
+<link rel="stylesheet" type="text/css" href="/dmarket/marketplc/assets/select2/css/select2.min.css">
+<link rel="stylesheet" type="text/css" href="/dmarket/marketplc/assets/select2/css/select2-bootstrap.min.css">
+<!-- Select2 -autocomplete End-->
+<style type='text/css'>
+header, nav, section, article, aside, footer {
+display:block;
+}
+.navbar-collapse {
+padding-right: 0px;
+padding-left: 0px;
+}
+.navbar-nav.navbar-right:last-child {
+margin-right: -20px;
+}
+.breadcrumb > .active {
+color: #3F465E;
+font-weight: 600;
+}
+.input-group-addon, .input-group-btn {
+vertical-align: top;
+}
+@media (min-width: 959px){
+.navbar-right .dropdown-menu {
+right: -120px !important;
+}
+}
+@media (min-width: 959px){
+.navbar-nav{
+float:none !important;
+margin: 0 auto !important;
+display: table !important;
+table-layout: fixed !important;
+}
+}
+.owl-wrapper {
+margin: 0 auto !important;
+}
+</style>
+<meta property="og:image" content="https://www.directmarket.gr/dmarket/marketplc/images/logos/0_logo_el.png" />
+<meta property="og:title" content="Πανελλήνια Αγορά Προϊόντων" />
+<meta property="og:url" content="https://www.directmarket.gr" />
+<meta property="og:type" content="website" />
+<!--searchbar Start-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+<style type="text/css">
+#result-table-in-top{display:table;width:100%;background-color:white;font-size:14px;outline: 1px solid #ddedf7;}
+#prod-results, #cat-results, #org-results, #prod-results-mob, #cat-results-mob, #org-results-mob{text-align: left;}
+.header-result {margin-left:0px;margin-right:0px;}
+.d-none{display:none!important}
+.form-control{font-size: 13px;padding: 6px;}
+#search-value{display:flex;width:100%;background-color: #def9f9;color:black;font-size: 15px;}
+#search-value:hover{background-color: #bee3fd;color: #4b4b4b;cursor: pointer;}
+</style>
+<!--searchbar End-->
+<!-- JavaScript -->
+<script type="text/javascript" src="/dmarket/marketplc/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="/dmarket/marketplc/assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/dmarket/marketplc/js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="/dmarket/marketplc/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/dmarket/marketplc/js/jquery.easing.js"></script>
+<script type="text/javascript" src="/dmarket/marketplc/js/bootstrap-paginator.min.js"></script>
+<script src="/dmarket/marketplc/assets/select2/select2.min.js"></script>
+<script src="/dmarket/marketplc/assets/select2/i18n/el.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<!-- Plugins -->
+<script type="text/javascript" src="/dmarket/marketplc/assets/hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/dmarket/marketplc/assets/page-scroller/jquery.gotop.js"></script>
+<script type="text/javascript" src="/dmarket/marketplc/assets/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/dmarket/marketplc/assets/bootstrapValidator/bootstrapValidator.min.js"></script>
+<script type="text/javascript" src="/dmarket/marketplc/assets/owl-carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/dmarket/marketplc/assets/malihu-custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>	
+<script type="text/javascript" src="/dmarket/marketplc/assets/megamenu/js/megamenu.js"></script>
+<script src="//www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script type="text/javascript">
+var widgetId1;
+var widgetId2;
+var onloadCallback = function() { 
+if ( $('#register-recaptcha-div').length ) {
+try{
+widgetId1 = grecaptcha.render('register-recaptcha-div', {
+'sitekey' : '6Le1p_4SAAAAABePhhNhYfEXBtbq3hbrGR1pRpxM',
+'hl': 'el'
+});
+}catch(error){/*possible duplicated instances*/}
+}
+if ( $('#recaptcha-div').length ) {
+try{
+widgetId2 = grecaptcha.render('recaptcha-div', {
+'sitekey' : '6Le1p_4SAAAAABePhhNhYfEXBtbq3hbrGR1pRpxM',
+'hl': 'el'
+});
+}catch(error){/*possible duplicated instances*/}
+}
+};
+</script>
+<script type="text/javascript">
+//Display Loading Image
+function Display_Load()	{
+$("#loading-modal").modal("show");
+}
+//Hide Loading Image
+function Hide_Load(){	
+$(document).ajaxStop(function () {
+$("#loading-modal").modal("hide");
+});
+};
+function scrollBackToTop(){
+$('html, body').animate({
+scrollTop: $('.wrapper').offset().top
+}, 1000);
+}
+// Fancybox
+$(".theater").fancybox();
+$("[rel='tooltip']").tooltip();
+function isEmpty(str) {
+return (!str || 0 === str.length);
+}
+function isBlank(str) {
+return (!str || /^\s*$/.test(str));
+}
+//on top select search type
+function ModifyPlaceHolder(element) {
+if (element=='p'){	
+$(".searchKeywords").attr('name', 'keywords');
+$(".searchKeywords").attr('placeholder', 'Αναζητήστε Προϊόντα...');
+}
+if (element=='o'){
+$(".searchKeywords").attr('name', 'okeywords');
+$(".searchKeywords").attr('placeholder', 'Αναζητήστε Επιχειρήσεις...');
+}
+}
+//pagination alignment
+function alignElement(element, options) {
+if (!options.alignment) return;
+switch (options.alignment.toLowerCase()) {
+case "center":
+element.parent().addClass("pagination-centered");
+break;
+case "right":
+element.parent().addClass("pagination-right");
+break;
+default:
+element.parent().addClass("pagination-left");
+break;
+}
+}
+$.fn.accordionChevrons = function() {
+return this.each(function(i, accordion) {
+$(".accordion-toggle", accordion).click(function(ev) {
+var link = ev.target;
+var header = $(link).closest(".panel-heading");
+var chevState = $("i.indicator", header)
+.toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+$("i.indicator", accordion)
+.not(chevState)
+.removeClass("glyphicon-chevron-down")
+.addClass("glyphicon-chevron-up");
+});
+});
+};
+function getPageName() {
+return location.pathname.split("/").slice(-1);
+}
+function getQueryParamsOnLoad() {
+var loc = window.location;
+var params = decodeURIComponent(loc.search.substring(1));
+return params;
+}
+function getQueryParams() {
+var loc = window.location;
+var params = decodeURIComponent(loc.search.substring(1));
+if (params.indexOf("page")!=-1) params = params.substring(0, params.indexOf("page")-1);
+return params;
+}
+function getParameterByName( name ){
+var regexS = "[\\?&]"+name+"=([^&#]*)", 
+regex = new RegExp( regexS ),
+results = regex.exec( window.location.search );
+if( results == null ){
+return "";
+} else{
+return decodeURIComponent(results[1].replace(/ {2,}/g, " ").replace(/\+/g, " "));
+}
+}
+function getParameterByUrl(sParam, sUrl) {
+var sPageURL = decodeURIComponent(sUrl).replace(/\+/g, " "),
+sURLVariables = sPageURL.split('&'),
+sParameterName,
+i;
+for (i = 0; i < sURLVariables.length; i++) {
+sParameterName = sURLVariables[i].split('=');
+if (sParameterName[0] === sParam) {
+return sParameterName[1] === undefined ? true : sParameterName[1];
+}
+}
+};
+function activateAddToCartButton(){
+$('#cart-add-item-button').removeAttr("disabled");	
+$("#cart-add-item-button").html('Προσθήκη στο Καλάθι');
+}
+function addHidden(theForm, key, value) {// Create a hidden input element, and append it to the form:
+$("<input type='hidden' />")
+.attr("name", key)
+.attr("value", value)
+.appendTo(theForm);
+}
+//Escapes special characters and returns a valid jQuery selector
+function jqSelector(str){
+return str.replace(/[!"#$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, "\\\$&");
+}
+var inputValueSearch; //search - input from user
+$(document).ready(function() { //search - take input from user
+$('body').on('input', '#ac, #ac-mob', function() {
+inputValueSearch=this.value;
+});
+});
+//search - onClick button
+function Search(){
+if(inputValueSearch.length > 2){
+window.location ="/dmarket/marketplc/categories.jsp?keywords="+inputValueSearch.replace("&", " ").replace(/ {2,}/g, ' ')+"&searchtype=p" ;
+}
+}
+$(document).ready(function() {
+$('.megamenu-mobile').text('Προϊόντα');
+$('#reports').on('shown.bs.collapse', function() {
+$(".chevron_toggleable").addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
+});
+$('#reports').on('hidden.bs.collapse', function() {
+$(".chevron_toggleable").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
+});
+//Carousels
+$('.carousel-4').carousel({
+interval: false 
+});
+$('#accordionJoinId').accordionChevrons();
+$("#organizationCarousel").owlCarousel({
+autoPlay: 4000,
+items : 3,
+itemsDesktop : [1199,3],
+itemsDesktopSmall : [980,2],
+itemsTablet: [600,2],
+itemsTabletSmall: false,
+itemsMobile : [479,1],
+pagination : true,	
+transitionStyle : "fade"
+});
+$('#joinTop').show();
+$('#modal-join-tab').show();
+$('.footerChamberCd').click(function (event){ 
+event.preventDefault();	
+location.href = $(this).attr('href');
+});
+$(".topmenusearch ").find('.btn-search').html( $(".topmenusearch .dropdown-menu li").first().html()+'<span class="caret"></span>' );
+$(".topmenusearch .dropdown-menu li a").click(function(event){
+event.preventDefault(); 
+var searchtype = $(this).attr('href');
+var selText = $(this).html();
+//working version - for single button //
+//$('.btn:first-child').html(selText+'<span class="caret"></span>'); 
+//working version - for multiple buttons //
+$(this).parents('.topmenusearch').find('.btn-search').html(selText+' <span class="caret"></span>');
+$('input[name="searchtype"]').val( searchtype );
+ModifyPlaceHolder(searchtype); 
+});	
+$('form[name=searchForm], form[name=searchRespForm]').submit(function(e) {
+var formID = $(this).attr('id');
+if ( isEmpty( $(this).find(':text').filter(':visible:first').val() ) || $(this).find(':text').filter(':visible:first').val().length < 3){
+$("#"+formID+"-keywords-alert").show();
+e.preventDefault();
+return;
+}
+$("#"+formID+"-keywords-alert").hide();
+var data = $(this).serializeArray();
+var actions = { p: "/dmarket/marketplc/categories.jsp", o: "/dmarket/marketplc/organizations.jsp"};
+$(this).attr("action", actions[$('input[name=searchtype]').val()]);
+});
+$("#shoppingCartTop").load("/dmarket/marketplc/cart/cart_top_load.jsp #shoppingCartTop > *");
+$("#shoppingCartTop, #shoppingCartIn").on('click','a.cart-remove', function(event){
+var res = $(this).attr('data-cart-remove-item').split("#");	
+var organizationid = res[0];
+var productid = res[1];	
+var optionid = res[2];
+$("#shoppingCartTop").load("/dmarket/marketplc/cart/cart_top_load.jsp #shoppingCartTop > *", {action:'remove', orgid: organizationid, pid: productid, optionid:optionid});
+});
+$('#shoppingCartIn').on('change', 'select[name="quantity"]', function(event) {	
+var res = $(this).val().split("#");
+var quantity = res[0];
+var organizationid = res[1];
+var productid = res[2];	
+var optionid = res[3];
+$.when( $("#shoppingCartIn").load("/dmarket/marketplc/cart/cart_edit_load.jsp #shoppingCartIn > *", {action:'quantity', orgid: organizationid, pid: productid, optionid:optionid, quant: quantity}) ).done(function() {
+$("#shoppingCartTop").load("/dmarket/marketplc/cart/cart_top_load.jsp #shoppingCartTop > *") });
+});	
+$(document).on('click','a[id^="like-productid-"]', function(event){
+var res = $(this).attr('id').substring(('like-productid-').length);	
+var organizationid = res.substring(0, res.indexOf('-'));
+var productid = res.substring(organizationid.length+1);
+$('.signin').click();
+});
+$(document).on('click','a[id^="unlike-productid-"]', function(event){
+var res = $(this).attr('id').substring(('unlike-productid-').length);	
+var organizationid = res.substring(0, res.indexOf('-'));
+var productid = res.substring(organizationid.length+1);
+$.ajax({
+url: "/dmarket/marketplc/account/user_action.jsp",
+type: "POST",
+async: true,
+data: { organizationid: organizationid, productid: productid, action: 'unlike' },
+success: function(data){	
+productid2 = jqSelector(productid);
+if (!$('#unlike-productid-'+organizationid+'-'+productid2).hasClass("btn-product-like")){
+$('#unlike-productid-'+organizationid+'-'+productid2).removeClass('btn-five');	
+$('#unlike-productid-'+organizationid+'-'+productid2).addClass('btn-two');
+}
+$('#unlike-productid-'+organizationid+'-'+productid2).html('<i class="fa fa-heart"></i>Like');
+$('#unlike-productid-'+organizationid+'-'+productid2).attr('id', 'like-productid-'+organizationid+'-'+productid);
+$('#like-product-button-'+organizationid+'-'+productid2).removeClass('liked');
+var count = parseInt($('#like-product-count-'+organizationid+'-'+productid2).text());
+var dispcount = "";
+if (count-1!=0) dispcount = count-1;
+$('#like-product-count-'+organizationid+'-'+productid2).text(dispcount); 
+},
+error: function(){
+alert("failure");
+}
+}); //end ajax 
+});
+$(document).on('mouseenter', 'a[id^="unlike-productid-"]', function() {	
+$(this).text('unLike!');
+});
+$(document).on('mouseleave', 'a[id^="unlike-productid-"]', function() {	
+$(this).text('Liked');
+});
+$('.join').click(function (event){ 
+event.preventDefault();	
+$("#signin-modal").modal("show");
+$("#modal-joinForm").trigger("reset");
+$("#signin-modal-alert").empty();
+$("#signin-modal-alert").hide();
+$('a[href="#modal-join"]').parent('li').show();
+$('a[href="#modal-signin"]').parent('li').show();
+$('.nav-pills a[href=#modal-join]').tab('show');	
+$('a[href="#modal-remindpwd"]').parent('li').hide();
+});
+$('#modal-joinForm').bootstrapValidator({ 
+fields: {
+name: {	
+validators: {
+notEmpty: {
+message: 'Το Ονοματεπώνυμο είναι υποχρεωτικό'
+}
+}
+},
+username: {
+message: 'The username is not valid',
+validators: {
+notEmpty: {
+message: 'Το Όνομα Χρήστη είναι υποχρεωτικό'
+},	
+regexp: {
+regexp: /^[a-zA-Z0-9_]+$/,
+message: 'Το Όνομα Χρήστη είναι υποχρεωτικό'
+}
+}
+},
+email: {
+validators: {
+notEmpty: {
+message: 'Το email είναι υποχρεωτικό'
+},
+emailAddress: {
+message: 'Το email δεν είναι έγκυρο'
+}
+}
+},
+pwd1: {
+validators: {
+notEmpty: {
+message: 'Ο Κωδικός Πρόσβασης είναι υποχρεωτικός'
+},
+different: {
+field: 'username',
+message: 'Ο κωδικός δεν μπορεί να έιναι ίδιος με το όνομα χρήστη'
+},
+stringLength: {
+min: 6,
+message: 'Ο κωδικός θα πρέπει να αποτελείται από 6 τουλάχιστο χαρακτήρες'
+}
+}
+},
+pwd2: {
+validators: {
+notEmpty: {
+message: 'Η Επιβεβαίωση Κωδικού Πρόσβασης είναι υποχρεωτική'
+},
+identical: {
+field: 'pwd1',
+message: 'Εισάγετε τον ίδιο Κωδικό Πρόσβασης με πιο πάνω'
+}
+}
+}
+}
+}).on('success.form.bv', function(event) { 
+event.preventDefault();	
+var data = $(this).serializeArray();	
+data.push({name:"action", value:"join"});	
+$.ajax({
+url: "/dmarket/marketplc/account/user_action.jsp",
+type: "POST",
+async: true,
+data: $.param(data),
+success: function(data){ 
+if (data.indexOf("usernameError")!=-1){ 
+$("#signin-modal-alert").html('<strong>Υπάρχει ήδη χρήστης με αυτό το e-mail</strong>');
+$("#signin-modal-alert").show();	
+grecaptcha.reset();	
+}else if (data.indexOf("insertError")!=-1){
+$("#signin-modal-alert").html('<strong>Η εγγραφή σας δεν μπορεί να πραγματοποιηθεί. Ελέγξτε τα στοιχεία σας.</strong>');
+$("#signin-modal-alert").show();
+grecaptcha.reset();
+}else if (data.indexOf("activationUser")!=-1){
+$("#signin-modal").modal('hide');
+window.location.href = "/dmarket/marketplc/message.jsp?activation=true";
+}else if (data.indexOf("captchaError")!=-1){
+$("#signin-modal-alert").html('<strong>Ο κωδικός ασφαλείας δεν ήταν σωστός</strong>');
+$("#signin-modal-alert").show();	
+$('#submit-login-button').removeAttr("disabled");	
+grecaptcha.reset();
+} 
+},
+error: function(){
+alert("failure");
+}
+}); 
+});	
+$('.signin').click(function (event){ 
+event.preventDefault();	
+$("#signin-modal").modal("show");
+$("#modal-signinForm").trigger("reset");
+$("#signin-modal-alert").empty();
+$("#signin-modal-alert").hide();
+$('a[href="#modal-join"]').parent('li').show();
+$('a[href="#modal-signin"]').parent('li').show();
+$('.nav-pills a[href=#modal-signin]').tab('show');	
+$('a[href="#modal-remindpwd"]').parent('li').hide();
+});
+var loginWindowTimer;
+var facebookLoginWindow;
+$('.facebook-button').click(function (event){
+event.preventDefault();	
+var popupWidth=500;
+var popupHeight=300;
+var xPosition=($(window).width()-popupWidth)/2;
+var yPosition=($(window).height()-popupHeight)/2;
+facebookLoginWindow = window.open('/dmarket/marketplc/fcbauthorization','_blank',' scrollbars=yes,menubar=no,resizable=yes,toolbar=no,location=no,status=no,'+
+"width="+popupWidth+",height="+popupHeight+","+
+"left="+xPosition+",top="+yPosition);	
+loginWindowTimer=setInterval(onTimerCallbackToCheckLoginWindowClosure, 1000);	
+});//end facebook-sign-in
+function onTimerCallbackToCheckLoginWindowClosure()	{
+// If the window is closed, then reinit Facebook
+if (facebookLoginWindow.closed){	
+clearInterval(loginWindowTimer);	
+$.ajax( {
+url : '/dmarket/marketplc/fcbauthorization/signin',
+type : 'get',
+success : function( data ) {	
+if (data.indexOf("email-error")!=-1){ 
+$("#signin-modal-alert").html('<strong>Υπάρχει ήδη χρήστης με το e-mail σας. Παρακαλούμε εισάγετε τα στοιχεία εισόδου της αγοράς μας!</strong>');
+$("#signin-modal-alert").show();	
+$('.nav-pills a[href="#modal-signin"]').tab('show');
+}else if (data.indexOf("insert-error")!=-1){
+$("#signin-modal-alert").html('<strong>Παρουσιάστηκε κάποιο σφάλμα. Παρακαλούμε να επικοινωνήσετε μαζί μας! </strong>');
+$("#signin-modal-alert").show();	
+}else{
+$("#signin-modal").modal('hide'); 
+location.reload();	
+}
+}	
+});
+}// end if facebookLoginWindow.closed
+}
+$('#modal-signinForm').bootstrapValidator({
+fields: {
+recaptcha_response_field: {	
+validators: {
+notEmpty: {
+message: 'Ο κωδικός ασφαλείας δεν ήταν σωστός'
+}
+}
+}
+}
+}).on('success.form.bv', function(event) {	
+event.preventDefault();	
+var data = $(this).serializeArray();	
+data.push({name:"action", value:"signin"});	
+$.ajax({
+url: "/dmarket/marketplc/account/user_action.jsp",
+type: "POST",
+async: true,
+data: $.param(data),
+success: function(data){ 
+if (data.indexOf("true")!=-1){
+$("#signin-modal").modal('hide'); 
+location.reload();	
+}else{ 
+$("#signin-modal-alert").html('<strong>Τα στοιχεία του χρήστη δεν είναι έγκυρα</strong>');
+$("#signin-modal-alert").show();
+}
+},
+error: function(){
+alert("failure");
+}
+});
+});
+$('.remindpwd').click(function (event){ 
+event.preventDefault();	
+if (!$('#signin-modal').hasClass('in')) $("#signin-modal").modal("show");
+$("#modal-remindpwd").trigger("reset");
+$("#signin-modal-alert").empty();
+$("#signin-modal-alert").hide();
+$('a[href="#modal-join"]').parent('li').show();
+$('a[href="#modal-signin"]').parent('li').hide();
+$('a[href="#modal-remindpwd"]').parent('li').show();
+$('.nav-pills a[href=#modal-remindpwd]').tab('show');
+});
+$('#modal-remindpwdForm').bootstrapValidator().on('success.form.bv', function(event) {	
+event.preventDefault();	
+var data = $(this).serializeArray();	
+data.push({name:"action", value:"remindpwd"});	
+$.ajax({
+url: "/dmarket/marketplc/account/user_action.jsp",
+type: "POST",
+async: true,
+data: $.param(data),//{ username: username, password: password, action: 'signin' },
+success: function(data){ 
+if (data.indexOf("userdataError")!=-1){ 
+$("#signin-modal-alert").html('<strong>Εισαγωγή λανθασμένων αναγνωριστικών</strong>');
+$("#signin-modal-alert").show();
+}else{
+$('.signin').click();
+$("#signin-modal-alert").removeClass('alert-danger').addClass('alert-success').html('<strong>Ο κωδικός σας στάλθηκε με επιτυχία στον λογαριασμό ηλεκτρονικού ταχυδρομίου που δώσατε.</strong>');
+$("#signin-modal-alert").show();	
+}
+},
+error: function(){
+alert("failure");
+}
+});
+});
+$('#signout').click(function (event){ 
+event.preventDefault(); 
+$.ajax({
+url: "/dmarket/marketplc/account/user_action.jsp",
+type: "POST",
+data: {action: 'signout' },
+success: function(data){ 
+window.location.href = "/dmarket/marketplc/index.jsp";
+}
+});	
+});
+$("#cooperative-region-modal").on("show.bs.modal", function(e) {
+$(this).find(".modal-body").load("/dmarket/marketplc/in_region.jsp",{regionid: '', modal:'true'});
+});
+$('.dmConfirm').click(function (event){
+event.preventDefault();
+var queryStr = getQueryParams();
+queryStr = queryStr.replace('&regionid='+getParameterByName("regionid"), '');
+var loc = window.location.href ;
+var pathName = loc.substring(0, loc.lastIndexOf('?')+1);
+var featured = getParameterByName("featured");
+if ( !isEmpty(featured) && featured != 'cc' )
+window.location.href = "/dmarket/marketplc/index.jsp?redirect=true";
+else
+window.location.href= pathName+queryStr+"&redirect=true";
+});
+$('.dmClose').click(function (event){
+event.preventDefault();
+if ( !isEmpty($('#regionid').val()) ){
+$('#stateid').val('');
+}else $('#stateid').val('')
+$('#dm-modal').modal('hide');
+});
+$('#regionConfirm').click(function (event){
+event.preventDefault();
+var stateid = $("#regionFrm select[name='stateid']").val();
+var regionid = $("#regionFrm select[name='regionid']").val();
+if (!isBlank(regionid)) window.location.href = "/dmarket/marketplc/index.jsp?regionid="+regionid;
+if (!isBlank(stateid) && isBlank(regionid)) window.location.href = "/dmarket/marketplc/index.jsp?regionid="+stateid;
+// if (isBlank(stateid) && isBlank(regionid)) window.location.href = "/dmarket/marketplc/index.jsp?redirect=true";
+});
+$("#product-bundles-modal").off().on("show.bs.modal", function(e) {
+var link = $(e.relatedTarget);
+if (link.data('product')=='bundle')
+$(this).find(".modal-title").html('Δείτε επιπλέον προσφορές του προϊόντος');
+else $(this).find(".modal-title").html('Δείτε το αρχικό προϊόν της προσφοράς');
+$(this).find(".modal-body").load(link.attr("href"), {orgid: getParameterByName('orgid'), productid:getParameterByName('productid'), type:link.data('product'), origproductid:link.data('productid')});
+});
+$("#calculate-shipping-modal").off().on("show.bs.modal", function(e) {
+$('#calculate-shipping-frame').attr('src', "shipping.jsp?orgid="+$("#calculate-shipping-btn").attr("data-orgid")+"&productid="+$("#calculate-shipping-btn").attr("data-productid") );
+});
+//searchbar Start
+function generateLink(type, data) {
+if (!data || !data.id){
+return '';
+}
+if (type === 'Προϊόν') {
+var orgid = data.id.split('###')[0].replace('p-', '');
+var proid = data.id.split('###')[1];
+return '<a href="/dmarket/marketplc/product.jsp?orgid=' + orgid + '&productid=' + proid + '" style=" display: block;">' + data.text + '</a>'
+}
+if (type === 'Kατηγορία') {
+data.id = data.id.replace('c-','');
+return '<a href="/dmarket/marketplc/products.jsp?categoryid=' + data.id + '" style=" display: block;">' + data.text + '</a>'
+}
+if (type === 'Επιχείρηση') {
+data.id = data.id.replace('o-','');
+return '<a href="/dmarket/marketplc/organization.jsp?orgid=' + data.id + '" style=" display: block;">' + data.text + '</a>'
+}
+return '';
+}
+function searchbarKeyword(){
+var value = $(this).val();
+value = value.replace('&', ' ').replace(/ {2,}/g, ' ');
+$('#all-results-products , #all-results-products-mob, #all-results-categories, #all-results-categories-mob, #all-results-organizations, #all-results-organizations-mob').empty();
+$('#header-result').show();
+$('#prod-results img,#prod-results-mob img, #cat-results img, #cat-results-mob img,#org-results img, #org-results-mob img').show();
+$('#search-value, #search-value-mob').empty();
+if (value.length > 2) {
+var queryLink = "https://search.directmarket.gr/ajax2?_type=query&q=" + value;
+queryLink += "&langId=el";
+$.get(queryLink, function (result) {
+var products = result.results[0].children;
+var categories = result.results[1].children;
+var organizations = result.results[2].children;
+var rowsNum = Math.max(products.length||0, categories.length||0, organizations.length||0);
+//console.log('rows', rowsNum);
+//show input-value as search option
+$('#search-value, #search-value-mob').append('<div id="search-value-result">Αναζητήστε γενικά για "' + value + '"</div>');
+for (var i = 0; i < rowsNum - 1; i++) {
+$('#prod-results img,#prod-results-mob img').hide();
+if(products[i]){
+$('#all-results-products, #all-results-products-mob').append('<div class="products-results">' + generateLink('Προϊόν', products[i]) + '</div>');
+}
+$('#cat-results img,#cat-results-mob img').hide();
+if(categories[i]){
+$('#all-results-categories, #all-results-categories-mob').append('<div class="categories-results">' + generateLink('Kατηγορία', categories[i]) + '</div>');
+}
+$('#org-results img,#org-results-mob img').hide();
+if(organizations[i]){
+$('#all-results-organizations, #all-results-organizations-mob').append('<div class="organizations-results">' + generateLink('Επιχείρηση', organizations[i]) + '</div>');
+}
+}
+if (!products.length){
+$('#prod-results, #prod-results-mob').hide();
+}else{
+$('#prod-results, #prod-results-mob').show();
+}
+if (!categories.length){
+$('#cat-results, #cat-results-mob').hide();
+}else{
+$('#cat-results, #cat-results-mob').show();
+}
+if (!organizations.length){
+$('#org-results, #org-results-mob').hide();
+}else{
+$('#org-results, #org-results-mob').show();
+}
+if (!!organizations.length + !!categories.length + !!products.length == 3) {
+$('#prod-results, #cat-results, #org-results, #prod-results-mob, #cat-results-mob, #org-results-mob').addClass("three-col-res").removeClass("one-col-res").removeClass("two-col-res");
+}
+else if (!!organizations.length + !!categories.length + !!products.length == 2){
+$('#prod-results, #cat-results, #org-results, #prod-results-mob, #cat-results-mob, #org-results-mob').addClass("two-col-res").removeClass("one-col-res").removeClass("three-col-res");
+}
+else if(!!organizations.length + !!categories.length + !!products.length == 1){
+$('#prod-results, #cat-results, #org-results, #prod-results-mob, #cat-results-mob, #org-results-mob').addClass("one-col-res").removeClass("two-col-res").removeClass("three-col-res");
+}
+});
+$("#result-table, #result-table-mob, #result-table-in-top").removeClass("d-none");
+}
+}
+$('#ac, #ac-mob').on("focusout", function () {
+window.setTimeout(function() {
+$("#result-table, #result-table-mob, #result-table-in-top").addClass("d-none");
+$('#ac, #ac-mob').val('');
+}, 500);
+});
+$('#ac, #ac-mob').on("change paste keyup", _.debounce(searchbarKeyword, 800));
+$("#ac, #ac-mob").keyup(function(event) {
+this.value = this.value.replace('&', ' ').replace(/ {2,}/g, ' ');
+if (event.keyCode === 13) {
+$("#buttonSearch").click();
+}
+});
+//searchbar End
+$('#ageModalConfirm').click(function (event){
+event.preventDefault();
+$.cookie("ageID", "adult", { expires : 1 });
+$('#mainDiv').removeClass('blur');
+$("#age-modal").modal("hide");
+});
+$('#ageModalDeny').click(function (event){
+event.preventDefault();
+$.cookie("ageID", null);
+window.location ='/dmarket/marketplc/index.jsp' ;
+$('#mainDiv').removeClass('blur');
+$("#age-modal").modal("hide");
+});
+});//end document
+</script>
+<script type="text/javascript">
+window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρησιμοποιεί cookies για να διασφαλίσει ότι θα έχετε την καλύτερη εμπειρία στην ιστοσελίδα μας. Για να μάθετε περισσότερα κάντε κλικ	","dismiss":"Εντάξει, το κατάλαβα!","learnMore":" εδώ.","link":"/dmarket/marketplc/article.jsp?aid=7","theme":"light-bottom"};
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+<link rel="canonical" href="http://www.directmarket.gr/dmarket/marketplc/static/termsofuse.jsp" />
+<link rel="stylesheet" href="../css/static.css" type="text/css">
+</head>
+<body class="wp-theme-3">
+<!-- div top-header-->
+<header>
+<div id="gotop" class="clearfix"></div>
+<div class="wrapper">
+<div class="top-header">
+<div class="container">
+<div class="row">
+<div class="col-md-12 pt-5 clearfix" >
+<nav class="top-header-menu" style="margin-top:0px !important">
+<ul class="menu clearfix">
+<li id="shoppingCartTop" class="shopping-cart pull-right" style="z-index:2001;">
+</li>
+<li class="separator pull-right">|</li>
+<li class="aux-languages dropdown pull-right"><a href="#"><img src="/dmarket/marketplc/images/flags/flag_el.png" alt="language flag" title="change language view"> el</a>
+<ul id="auxLanguages" class="sub-menu">
+<li>
+<a href="/dmarket/marketplc/in_lang.jsp?lang=en&cururl=/dmarket/marketplc/static/termsofuse.jsp"><img src="/dmarket/marketplc/images/flags/flag_en.png" alt="language flag" title="change language view"><span class="pull-right">en</span></a>
+</li>
+</ul>
+</li>
+<li class="separator pull-right">|</li>
+<li class="pull-right hidden-xs" ><a href="/dmarket/marketplc/news.jsp">Νέα</a> </li>
+<li class="separator pull-right hidden-xs">|</li>
+<li id="signinTop" class="pull-right"><a class="signin">Είσοδος</a></li>
+<li id="joinTop" class="pull-right"><a class="join">Εγγραφή</a></li>
+</ul>
+</nav>
+</div>
+</div> 
+<div class="row">
+<div class="col-md-4 col-sm-12 clearfix">
+<a class="navbar-brand hidden-xs hidden-sm" style="" href="/dmarket/marketplc/index.jsp" title="Πανελλήνια Αγορά Προϊόντων">
+<img src="/dmarket/marketplc/images/logos/0_logo_el.png" style="max-width:262px;width:100%;height:auto !important" alt="Πανελλήνια Αγορά Προϊόντων">
+</a>
+</div>
+<div class="col-md-8 col-sm-12 clearfix">
+<div class="nav nav-justified navbar-nav pull-right">
+<form class=" navbar-search" role="form" name="searchForm" id="searchForm" action="/dmarket/marketplc/products.jsp">
+<div class="input-group" style="z-index: 1001;margin-top:6px;">
+<input id="ac" class="form-control searchKeywords" name="keywords" placeholder="Αναζητήστε Επιχειρήσεις-Προϊόντα..."/>
+<div class="d-none table-searchbar" id="result-table-in-top">
+<div>
+<div id="search-value" onclick="Search()" ></div>
+</div>
+<div style=" display: flex;">
+<div id="prod-results" class="three-col-res">
+<div class="header-result">Προϊόντα</div>
+<img src="images/loading.gif"/>
+<div id="all-results-products"></div>
+</div>
+<div id="cat-results" class="three-col-res">
+<div class="header-result">Κατηγορίες</div>
+<img src="images/loading.gif"/>
+<div id="all-results-categories"></div>
+</div>
+<div id="org-results" class="three-col-res">
+<div class="header-result">Επιχειρήσεις</div>
+<img src="images/loading.gif"/>
+<div id="all-results-organizations"></div>
+</div>
+</div>
+</div>
+<div class="input-group-btn">
+<button id="buttonSearch" type="button" class="btn btn-two" onclick="Search()">
+<span class="glyphicon glyphicon-search"></span>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--/div wrapper header-->
+<div class="top-header">
+<div class="navbar navbar-white" role="navigation">
+<div class="container" style="padding-right: 0px">
+<a class="navbar-brand hidden-lg hidden-md" style="float: left; padding-top: 0px" href="/dmarket/marketplc/index.jsp" title="Πανελλήνια Αγορά Προϊόντων">
+<img src="/dmarket/marketplc/images/logos/0_logo_el.png" id="dirlogomob" style="max-width:200px;width:100%;height:auto !important" alt="Πανελλήνια Αγορά Προϊόντων">
+</a>
+<div class="col-md-12 text-center">
+<div class="megamenu-container">
+<button class="megamenu megamenu-mob" style="outline:none; text-align: right; background-color: white; border: 0px">
+<ul class="nav navbar-nav navbar-right">
+<li class="text-left">
+<a	href="/dmarket/marketplc/category.jsp?categoryid=005"	data-hover="dropdown" data-close-others="true" >Διατροφή</a>
+<ul class="row-2" >
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.001">Αλλαντικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.004">Αλάτι</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.007">Αρτος</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.010">Αυγά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.013">Βότανα, Αρωματικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.016">Γαλακτοκομικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.019">Γλυκά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.022">Δημητριακά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.025">Ελιές, Έλαια</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.028">Έτοιμα Φαγητά, Κατεψυγμένα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.031">Ζάχαρη, Γλυκαντικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.034">Ζυμαρικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.037">Θαλασσινά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.038">Καλάθια Δώρων Τροφίμων</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.040">Καφές</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.043">Κρεατικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.046">Λαχανικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.052">Λίπη Φυτικά - Ζωϊκά</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.053">Μανιτάρια</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.054">Μαρμελάδες</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.055">Μέλι, Προϊόντα Μελιού</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.058">Μπαχαρικά - Μυρωδικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.061">Ξηροί Καρποί</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.064">Ξύδι</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.067">Ορεκτικά, Τουρσιά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.070">Όσπρια</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.073">Πιπέρι</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.076">Προϊόντα Αλευροποιίας</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.079">Ρύζι</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.082">Σάλτσες, Ντρέσινγκς</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.085">Σοκολάτα, Ροφήματα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.088">Τσάι</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.091">Τυροκομικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.092">Υπερτροφές</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.094">Φρούτα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.097">Delivery-Διανομή</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=005.105">Snacks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="text-left">
+<a	href="/dmarket/marketplc/category.jsp?categoryid=010"	data-hover="dropdown" data-close-others="true" >Ποτά</a>
+<ul class="row-2" >
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=010.001">Αναψυκτικά, Χυμοί</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=010.004">Καλάθια Ποτών</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=010.007">Κρασί</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=010.010">Μπύρα</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=010.013">Νερό</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=010.016">Οινοπνευματώδη</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=010.019">Ούζο</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=010.022">Τσίπουρο</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="text-left">
+<a	href="/dmarket/marketplc/category.jsp?categoryid=015"	data-hover="dropdown" data-close-others="true" >Υγεία - Ομορφιά</a>
+<ul class="row-2" >
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=015.001">Αρώματα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=015.004">Ιατρικές Συσκευές</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=015.007">Καλλυντικά - Περιποίηση</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=015.010">Οπτικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=015.013">Ορθοπεδικά - Αθλητιατρικά</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=015.016">Προϊόντα Αδυνατίσματος</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=015.019">Στοματική Υγιεινή</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=015.022">Συμπληρώματα Διατροφής</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=015.025">Συσκευές Περιποίησης</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=015.028">Φαρμακευτικά</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="text-left">
+<a	href="/dmarket/marketplc/category.jsp?categoryid=020"	data-hover="dropdown" data-close-others="true" >Μόδα</a>
+<ul class="row-2" >
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=020.001">Ανδρας</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=020.004">Γυναίκα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=020.007">Αξεσουάρ Ένδυσης</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=020.008">Αξεσουάρ Υπόδησης</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=020.010">Γυαλιά Ηλίου</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=020.013">Τσάντες - Πορτοφόλια</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="text-left">
+<a	href="/dmarket/marketplc/category.jsp?categoryid=025"	data-hover="dropdown" data-close-others="true" >Παιδικά</a>
+<ul class="row-2" >
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=025.001">Βόλτα Μωρού</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=025.004">Για το Σπίτι</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=025.007">Παιδικά - Βρεφικά Παιχνίδια</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=025.010">Παιδική - Βρεφική Μόδα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=025.013">Φαγητό Μωρού</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=025.016">Φροντίδα - Υγιεινή</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="text-left">
+<a	href="/dmarket/marketplc/category.jsp?categoryid=027"	data-hover="dropdown" data-close-others="true" >Δώρα</a>
+<ul class="row-2" >
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=027.000">Δώρα Εμπειρίας</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=027.001">Είδη Γάμου</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=027.004">Είδη Γραφείου</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=027.007">Είδη Δώρων</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=027.010">Είδη Καπνιστού</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=027.013">Είδη Πάρτυ</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=027.016">Εποχής Αποκριάτικα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=027.019">Εποχής Πασχαλινά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=027.022">Εποχής Χριστουγεννιάτικα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=027.025">Κοσμήματα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=027.028">Ρολόγια</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="text-left">
+<a	href="/dmarket/marketplc/category.jsp?categoryid=035"	data-hover="dropdown" data-close-others="true" >Τέχνη</a>
+<ul class="row-2" >
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=035.001">Αγάλματα, γλυπτά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=035.004">Αγιογραφίες, Βυζαντινές Εικόνες</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=035.007">Αντίκες</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=035.010">Αργυροχρυσοχοΐα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=035.013">Γυαλί, Πορσελάνη</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=035.019">Εκκλησιαστικά Είδη</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=035.022">Κεραμικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=035.025">Λαϊκή Τέχνη, Χειροτεχνίες</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=035.028">Πίνακες Ζωγραφικής</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=035.040">Χαρακτικά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=035.043">Mix Media</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="text-left">
+<a	href="/dmarket/marketplc/category.jsp?categoryid=040"	data-hover="dropdown" data-close-others="true" >Σπίτι</a>
+<ul class="row-2" >
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.001">Διακόσμηση</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.004">Διάφορα Είδη Σπιτιού</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.007">Είδη Καθαρισμού</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.010">Είδη Κουζίνας</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.013">Είδη Υγιεινής</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.014">Είδη Σκίασης & Στόρια</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.016">Επαγγελματικός Εξοπλισμός</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.019">Έπιπλα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.022">Ηλεκτρολογικά Είδη</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.028">Λευκά Είδη</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.029">Μοκέτες</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.031">Οικιακές Συσκευές</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.032">Πατώματα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.034">Συστήματα Ασφαλείας</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.037">Χαλιά</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.040">Κήπος - Εργαλεία</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.043">Petshop Αξεσουάρ</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.050">Υπηρεσίες</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=040.060">Φοιτητικό Σετ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="text-left">
+<a	href="/dmarket/marketplc/category.jsp?categoryid=045"	data-hover="dropdown" data-close-others="true" >Hobby - Αθλητισμός</a>
+<ul class="row-2" >
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.001">Camping</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.004">Αθλήματα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.007">Αθλητική Μόδα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.010">Αλλα Hobbies</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.013">Βιβλία</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.016">Καταδύσεις - Ψάρεμα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.019">Κυνήγι - Σκοποβολή</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.022">Μουσικά Όργανα - Αξεσουάρ</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.025">Μουσική</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.028">Όργανα Γυμναστικής</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.031">Παιχνίδια</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.034">Ποδηλασία</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.037">Σκι - Snowboard</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.040">Σχέδιο / Ζωγραφική</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=045.060">Χορός</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="text-left">
+<a	href="/dmarket/marketplc/category.jsp?categoryid=050"	data-hover="dropdown" data-close-others="true" >Τεχνολογία</a>
+<ul class="row-2" >
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=050.001">Υπολογιστές</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=050.004">Κινητή Τηλεφωνία</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=050.007">Σταθερή Τηλεφωνία</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=050.010">Ήχος</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=050.013">Εικόνα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=050.016">Gaming</a></li>
+</ul>
+</li>
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=050.019">Φωτογραφία - Βίντεο</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=050.022">Ηλεκτρονικές Συσκευές</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=050.025">Smartwatches</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=050.028">Gadgets</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=050.035">Υπηρεσίες</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="text-left">
+<a	href="/dmarket/marketplc/category.jsp?categoryid=055"	data-hover="dropdown" data-close-others="true" >Auto-Moto-Sea</a>
+<ul class="row-1" >
+<li>
+<ul>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=055.001">Αυτοκίνητο</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=055.004">Μοτοσυκλέτα</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=055.007">Car Audio</a></li>
+<li class="" ><a href="/dmarket/marketplc/category.jsp?categoryid=055.010">Ναυτιλιακά - Σκάφη</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="slice bg-5">
+<div class="container zero-margin">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<div class="terms" style="background-color:#ffffff;">
+<h2>Γενικοί όροι
+<br>
+<small>Τελευταία Ενημέρωση: 30/06/2015</small>
+</h2>
+<hr>
+<p>
+Η Ηλεκτρονική υπηρεσία www.DirectMarket.gr παρέχει τη δυνατότητα προβολής μέσω του Διαδικτύου προϊόντων 
+και επιχειρήσεων.  Πριν πλοηγηθείτε στις ιστοσελίδες και στο περιεχόμενο του ιστοτόπου αυτού θα πρέπει 
+να συμβουλευτείτε τους κάτωθι όρους και προϋποθέσεις που εφαρμόζονται ειδικά για τη χρήση 
+της Ηλεκτρονικής Αγοράς Προϊόντων www.DirectMarket.gr . Βεβαιωθείτε ότι συμφωνείτε με τους κάτωθι όρους 
+και προϋποθέσεις διότι η χρήση και η περιήγηση σας στον ιστότοπο αυτό συνεπάγεται την ρητή 
+και ανεπιφύλακτη συγκατάθεση και συναίνεση σας με αυτούς.
+</p>
+<p>
+Ο διαχειριστής της υπηρεσίας www.DirectMarket.gr διατηρεί το δικαίωμα να τροποποιεί μονομερώς 
+ή να ανανεώνει τους παρόντες όρους και προϋποθέσεις για τη διενέργεια συναλλαγών μέσω αυτής, 
+κατά την απόλυτη διακριτική του ευχέρεια, σύμφωνα με την ισχύουσα νομοθεσία και τα συναλλακτικά ήθη.
+</p>
+<h4>
+Το www.DirectMarket.gr είναι ένας ιστότοπος
+</h4>
+<p>
+Το www.DirectMarket.gr λειτουργεί ως ιστότοπος που επιτρέπει στους χρήστες, οι οποίοι συμμορφώνονται 
+με τις πολιτικές του www.DirectMarket.gr, να προβάλλονται, να προσφέρουν, να πωλούν 
+και να αγοράζουν ορισμένα αγαθά σε μία συγκεκριμένη τιμή. Το www.DirectMarket.gr δεν εμπλέκεται άμεσα 
+στη συναλλαγή μεταξύ των αγοραστών και των πωλητών. Ως αποτέλεσμα, το www.DirectMarket.gr 
+δεν έχει κανέναν έλεγχο πάνω στην ποιότητα, την ασφάλεια, την ηθική ή τη νομιμότητα οποιασδήποτε πτυχής 
+των στοιχείων που παρατίθενται, την αλήθεια ή την ακρίβεια των καταχωρήσεων, την ικανότητα των πωλητών 
+να πωλήσουν τα αντικείμενα ή τη δυνατότητα των αγοραστών να πληρώσουν για τα αιτούμενα προϊόντα/υπηρεσίες. 
+Το www.DirectMarket.gr δεν ελέγχει τους χρήστες ή το περιεχόμενο ή τις πληροφορίες που παρέχονται από τους χρήστες. 
+Το www.DirectMarket.gr δεν μπορεί να εξασφαλίσει ότι ένας αγοραστής ή πωλητής θα ολοκληρώσει πραγματικά μια συναλλαγή. 
+Κατά συνέπεια, το www.DirectMarket.gr δεν μεταφέρει τη νόμιμη ιδιοκτησία των αντικειμένων από τον πωλητή προς τον αγοραστή.
+</p>
+<p>
+Το www.DirectMarket.gr δεν μπορεί να εγγυηθεί την πραγματική ταυτότητα, την ηλικία, 
+και την εθνικότητα του χρήστη. Το www.DirectMarket.gr σας ενθαρρύνει να επικοινωνείτε 
+απευθείας με τους πιθανούς συναλλασσόμενους εταίρους μέσω των εργαλείων που διατίθενται στον χώρο. 
+</p>
+<p>
+Συμφωνείτε ότι το www.DirectMarket.gr είναι ένας ιστότοπος και ως εκ τούτου δεν φέρει ευθύνη 
+για οποιοδήποτε περιεχόμενο, για παράδειγμα: δεδομένα, κείμενα, πληροφορίες, ονόματα χρηστών, 
+γραφικά, εικόνες, φωτογραφίες, προφίλ, ήχου, βίντεο, στοιχεία, και συνδέσεις που δημοσιεύονται από εσάς, 
+ή άλλους χρήστες. Μπορείτε να χρησιμοποιήσετε την υπηρεσία www.DirectMarket.gr με δική σας ευθύνη.
+</p>
+<h4>
+Αποποίηση - Περιορισμός Ευθύνης
+</h4>
+<p>
+Ο διαχειριστής της παρούσας Ηλεκτρονικής Αγοράς Προϊόντων κάνει κάθε δυνατή προσπάθεια 
+να παρέχει υπηρεσίες υψηλής ποιότητας αλλά παρόλα αυτά δεν αναλαμβάνει καμία ευθύνη για τυχόν λάθη 
+σε τιμές και χαρακτηριστικά προϊόντων και δεν μπορεί να εξασφαλίσει, ότι δεν θα υπάρξουν
+διακοπές λειτουργίας της ιστοσελίδας ή «ανθρώπινα» λάθη κατά την ενημέρωση / αναγραφή της τιμής ενός προϊόντος.
+Για την ασφάλεια και την αποτελεσματικότητα των αγορών σας καλούμε εφόσον διαπιστώσετε ότι 
+κάποιο προϊόν προσφέρεται σε ασυνήθιστα χαμηλή ή υψηλή τιμή σε σχέση με την αγοραία αξία του, 
+πριν προχωρήστε στην παραγγελία του να επικοινωνήστε με τον διαχειριστή στα ανωτέρω αναγραφόμενα στοιχεία  ή 
+και απευθείας με τον αντίστοιχο Παραγωγό ή Προμηθευτή.
+</p>
+<p>
+Ο δημιουργός και διαχειριστής της παρούσας Ηλεκτρονικής Αγοράς Προϊόντων 
+δεν δεσμεύεται για την ποιότητα, την πληρότητα και την εγκυρότητα των πληροφοριών 
+που παρατίθενται στις ιστοσελίδες της, τόσο όσον αφορά τα ακριβή στοιχεία που περιέχονται σε αυτές όσο 
+και των προσφερόμενων μέσω αυτής προϊόντων και υπηρεσιών, για τα οποία ευθύνεται αποκλειστικά η κάθε επιχείρηση, 
+παραγωγός ή προμηθευτής, που συμμετέχει στην Ηλεκτρονική Αγορά Προϊόντων, 
+σύμφωνα και με την πολιτική της κάθε συμμετέχουσας εταιρίας στην Ηλεκτρονική Αγορά (Ειδικοί Όροι).
+</p>
+<p>
+Ο δημιουργός και διαχειριστής της παρούσας Ηλεκτρονικής Αγοράς Προϊόντων, 
+δεν ευθύνεται έναντι των χρηστών/αγοραστών για οποιαδήποτε ζημία τυχόν προκύψει κατά 
+ή από την εκτέλεση ή μη της παραγγελίας τους, ούτε εγγυάται για την ασφαλή, 
+προσήκουσα και ακριβόχρονη παράδοση των πωλουμένων μέσω της αγοράς προϊόντων 
+και εμπορευμάτων ή/και την τήρηση από τους πωλητές των όποιων υποχρεώσεων αναλαμβάνουν έναντι των χρηστών 
+και απορρέουν είτε συμβατικά ή και εκ του νόμου, από οποιονδήποτε λόγο και αιτία και εάν προκύψουν. 
+</p>
+<p>
+Ορισμένες κατηγορίες εμπορευμάτων ή προϊόντων δεν επιτρέπεται να διακινούνται 
+σύμφωνα με τους όρους Σύμβασης της μεταφορικής εταιρείας (courier) και την ισχύουσα νομοθεσία 
+και για το λόγο αυτό απαγορεύεται η προσφορά αυτών μέσω της Ηλεκτρονικής Αγοράς Προϊόντων.
+</p>
+<p>
+Ουδεμία εγγύηση παρέχεται για τη διαθεσιμότητα των προϊόντων. 
+Η Ηλεκτρονική Αγορά Προϊόντων καθιστά διαθέσιμο το περιεχόμενο 
+(π.χ. πληροφορίες, ονόματα, φωτογραφίες, απεικονίσεις, κ.λπ.), τα προϊόντα 
+και τις υπηρεσίες που διατίθενται μέσω του δικτυακού τόπου «όπως τα έχει δημιουργήσει, 
+καταχωρήσει και διατηρήσει ο κάθε προμηθευτής τους».
+</p>
+<p>
+Ο δημιουργός και διαχειριστής της παρούσας Ηλεκτρονικής Αγοράς Προϊόντων δεν φέρει καμία ευθύνη 
+για τυχόν απαιτήσεις νομικής ή αστικής ή/και ποινικής φύσεως, ούτε για τυχόν ζημία 
+(θετική, ειδική ή αποθετική η οποία ενδεικτικά και όχι περιοριστικά, διαζευκτικά 
+ή/και σωρευτικά συνίσταται σε απώλεια κερδών, δεδομένων, διαφυγόντα κέρδη, χρηματική ικανοποίηση κ.λπ.) 
+από επισκέπτες του δικτυακού τόπου ή τρίτους, σε οποιονδήποτε λόγο και αιτία και εάν οφείλεται, 
+ακόμα και εάν έχει σχέση με τη λειτουργία ή μη ή/και τη χρήση του δικτυακού τόπου 
+ή/και σε αδυναμία παροχής υπηρεσιών ή/και πληροφοριών που διατίθενται από αυτόν 
+ή/και από τυχόν μη επιτρεπόμενες παρεμβάσεις τρίτων σε προϊόντα ή/και υπηρεσίες 
+ή/και πληροφορίες που διατίθενται μέσω αυτού.
+</p>
+<h4>Δικαιώματα πνευματικής ιδιοκτησίας
+</h4>
+<p>
+Όλο το περιεχόμενο του ιστοτόπου της Ηλεκτρονικής Αγοράς Προϊόντων, των ιστοσελίδων της, 
+συμπεριλαμβανομένων σημάτων, εικόνων, γραφικών, φωτογραφιών, σχεδίων, κειμένων, παρεχομένων υπηρεσιών 
+και προϊόντων, με εξαίρεση τυχόν δικαιωμάτων επί του περιεχομένου που με δική τους ευθύνη καταχωρούν οι παραγωγοί 
+και προμηθευτές, αποτελούν πνευματική και βιομηχανική ιδιοκτησία της Knowledge Α.Ε.,
+ως δημιουργού και διαχειριστή της Ηλεκτρονικής Αγοράς Προϊόντων, και προστατεύονται 
+κατά τις σχετικές διατάξεις του ελληνικού δικαίου, του ευρωπαϊκού δικαίου και των διεθνών συμβάσεων.
+</p>
+<p>
+Απαγορεύεται οποιαδήποτε αντιγραφή, αναλογική / ψηφιακή εγγραφή και μηχανική αναπαραγωγή, διανομή, 
+μεταφορά, downloading, μεταποίηση, μεταπώληση, δημιουργία παράγωγης εργασίας 
+ή παραπλάνηση του κοινού σχετικά με το περιεχόμενο της Ηλεκτρονικής Αγοράς Προϊόντων 
+και τον πραγματικό πάροχο του περιεχομένου του διαδικτυακού τόπου. Τυχόν αναπαραγωγή, 
+επανέκδοση, φόρτωση, ανακοίνωση, διάδοση ή μετάδοση ή οποιαδήποτε άλλη χρήση του περιεχομένου με οποιοδήποτε τρόπο 
+ή μέσο για εμπορικούς ή άλλους σκοπούς επιτρέπεται μόνο κατόπιν προηγούμενης γραπτής άδειας του δημιουργού 
+και διαχειριστή Knowledge Α.Ε ή οποιουδήποτε άλλου νόμιμου δικαιούχου
+των ανωτέρω πνευματικών δικαιωμάτων.
+</p>
+<p>
+Τα ονόματα, εικόνες, λογότυπα και διακριτικά γνωρίσματα που αναφέρονται και διακρίνουν 
+την παρούσα Ηλεκτρονική Αγορά Προϊόντων ή/και τρίτα μέρη που έχουν εγγραφεί 
+και συμμετέχουν σε αυτή καθώς και τα προϊόντα ή τις υπηρεσίες τους, 
+είναι αποκλειστικά σήματα και διακριτικά γνωρίσματα του δημιουργού 
+και διαχειριστή της Ηλεκτρονικής Αγοράς Προϊόντων ή/και των τρίτων αυτών μερών 
+και προστατεύονται από τους ελληνικούς, κοινοτικούς και διεθνείς νόμους περί εμπορικών σημάτων 
+και βιομηχανικής και πνευματικής ιδιοκτησίας. Σε κάθε περίπτωση η εμφάνισή 
+και έκθεση τους στον ιστότοπο της Ηλεκτρονικής Αγοράς Προϊόντων  δεν θα πρέπει κατά κανένα τρόπο να εκληφθεί 
+ως μεταβίβαση ή εκχώρηση άδειας ή δικαιώματος χρήσης τους σε οποιονδήποτε τρίτο.
+</p>
+<h4>
+Ευθύνη Χρήστη
+</h4>
+<p>
+Οι συμμετέχοντες και οι χρήστες του ιστοτόπου της Ηλεκτρονικής Αγοράς Προϊόντων αποδέχονται ότι 
+δεν θα χρησιμοποιούν τα ηλεκτρονικά καταστήματα για αποστολή, ανάρτηση, δημοσίευση, 
+αποστολή με e-mail ή μετάδοση με άλλους τρόπους οποιουδήποτε περιεχομένου είναι παράνομο, 
+βλαβερό, απειλητικό, προσβλητικό, ενοχλητικό, συκοφαντικό, δυσφημιστικό, χυδαίο, άσεμνο, 
+λιβελογραφικό, αποτελεί παραβίαση του απορρήτου κάποιου άλλου, δείχνει εμπάθεια, ή εκφράζει φυλετικές, 
+εθνικές ή άλλες διακρίσεις, δύναται να προκαλέσει βλάβες σε ανήλικους με οποιονδήποτε τρόπο, 
+δεν δικαιούται να μεταδοθεί σύμφωνα με την νομοθεσία ή τις συμβατικές ή διαχειριστικές σχέσεις 
+(όπως εσωτερικές πληροφορίες, ιδιοκτησιακές και εμπιστευτικές πληροφορίες που αποκτήθηκαν 
+ή αποκαλύφθηκαν ως μέρος εργασιακών σχέσεων ή που καλύπτονται σε συμφωνίες εμπιστευτικότητας), 
+παραβιάζει οποιαδήποτε ευρεσιτεχνία, εμπορικό σήμα, εμπορικό μυστικό, πνευματικά δικαιώματα 
+ή άλλα ιδιοκτησιακά δικαιώματα τρίτων, περιέχει ιούς λογισμικού ή οποιουσδήποτε άλλους κώδικες, 
+αρχεία ή προγράμματα, που έχουν σχεδιαστεί με σκοπό την διακοπή, την πρόκληση βλάβης, 
+την καταστροφή ή τον εξοπλισμό της λειτουργίας οποιουδήποτε λογισμικού ή υλικού υπολογιστών, 
+ηθελημένα ή αθέλητα παραβαίνει την ισχύουσα ελληνική και κοινοτική νομοθεσία και των διατάξεων αυτής, 
+δύναται να παρενοχλήσει τρίτους με οποιοδήποτε τρόπο και οποιοδήποτε περιεχόμενο χρησιμοποιείται για συλλογή 
+ή αποθήκευση προσωπικών δεδομένων σχετικά με άλλους χρήστες.
+</p>
+<h4>
+Ασφάλεια
+</h4>
+<p>
+Ο δημιουργός και διαχειριστής της παρούσας Ηλεκτρονικής Αγοράς Προϊόντων αναγνωρίζει τη σημασία του θέματος 
+της ασφαλείας των Προσωπικών Δεδομένων σας καθώς και των ηλεκτρονικών σας συναλλαγών και λαμβάνει 
+όλα τα απαραίτητα μέτρα, με τις πιο σύγχρονες και προηγμένες μεθόδους, 
+ώστε να εξασφαλίζεται η μέγιστη δυνατή ασφάλεια σας. Όλες οι πληροφορίες, 
+οι οποίες σχετίζονται με τα προσωπικά σας στοιχεία και τις συναλλαγές σας, 
+είναι ασφαλείς και απόρρητες. Η ασφάλεια των ηλεκτρονικών καταστημάτων της παρούσας αγοράς επιτυγχάνεται 
+με τις ακόλουθες μεθόδους:
+</p>
+<h5>
+Αναγνώριση Χρήστη
+</h5>
+<p>
+Οι κωδικοί που χρησιμοποιούνται για την αναγνώρισή σας είναι δύο: το Όνομα Χρήστη (Username) 
+και ο Κωδικός Χρήστη (Password), οι οποίοι κάθε φορά που τους καταχωρείτε σας παρέχουν πρόσβαση 
+με απόλυτη ασφάλεια στα προσωπικά σας στοιχεία και σας δίνουν την δυνατότητα πραγματοποίησης αγορών. 
+Σας δίνετε η δυνατότητα να μεταβάλλετε τον Κωδικό Χρήστη (Password) όσο συχνά επιθυμείτε. 
+Ο μόνος που έχει πρόσβαση στα στοιχεία σας είστε εσείς μέσω των ανωτέρω κωδικών και είστε αποκλειστικά υπεύθυνοι 
+για την διατήρηση της μυστικότητάς και απόκρυψης του από τρίτα πρόσωπα. 
+Σε περίπτωση απώλειας του ή διαρροής του θα πρέπει να προβείτε στην άμεση ειδοποίηση μας, 
+αλλιώς ο δημιουργός και διαχειριστής της Ηλεκτρονικής Αγοράς Προϊόντων δεν ευθύνεται για την χρήση του 
+μυστικού κωδικού από μη εξουσιοδοτημένο πρόσωπο. Σας συνιστούμε, για λόγους ασφαλείας,
+να αλλάζετε το Password σας σε τακτά χρονικά διαστήματα και να αποφεύγετε τη χρήση των ίδιων 
+και εύκολα ανιχνεύσιμων κωδικών (π.χ. ημερομηνία γέννησης, στοιχεία από το όνομα σας, την πόλη σας κλπ). 
+Σε κάθε περίπτωση το ηλεκτρονικό κατάστημα με κανέναν τρόπο δεν αποκαλύπτει 
+ή δημοσιοποιεί τα προσωπικά σας δεδομένα και τις πληροφορίες που μας εμπιστεύεστε. 
+Τα προσωπικά δεδομένα τα οποία θέτετε στη διάθεσή μας με την εγγραφή σας ως 
+μέλος χρησιμοποιούνται αποκλειστικά για την εκτέλεση των συναλλαγών σας. 
+Όλες οι πληροφορίες κρυπτογραφούνται πλήρως και φυλάσσονται με απόλυτη ασφάλεια.
+</p>
+<h5>
+Προστασία Προσωπικών Δεδομένων
+</h5>
+<p>
+Κατά την επίσκεψή σας στις σελίδες της παρούσας ιστοσελίδας προκειμένου να παραγγείλετε προϊόντα, 
+αλλά και για να διασφαλισθεί η δυνατότητα επικοινωνίας μαζί σας ώστε να σας ενημερώνουμε για νέα προϊόντα μας, 
+είναι πιθανό να σας ζητηθεί να δηλώσετε στοιχεία που σας αφορούν (ονοματεπώνυμο, 
+στοιχεία διεύθυνσης και επικοινωνίας, ηλεκτρονική διεύθυνση email κλπ.). 
+Τα τυχόν προσωπικά δεδομένα που δηλώνετε οπουδήποτε στις σελίδες και τις υπηρεσίες του παρόντος 
+διαδικτυακού τόπου, προορίζονται αποκλειστικά και μόνο για τη διασφάλιση της λειτουργίας της αντίστοιχης υπηρεσίας 
+και δεν επιτρέπεται να χρησιμοποιηθούν από οποιονδήποτε τρίτο, χωρίς να τηρηθούν οι διατάξεις του Ν. 2472/97 
+σχετικά με την προστασία από επεξεργασία δεδομένων προσωπικού χαρακτήρα, όπως αυτός ισχύει κάθε φορά.
+</p>
+<p>
+Το κάθε ηλεκτρονικό κατάστημα των προμηθευτών που συμμετέχουν στην παρούσα Ηλεκτρονική Αγορά Προϊόντων 
+λειτουργεί σύμφωνα με την ισχύουσα ελληνική και κοινοτική νομοθεσία 
+και τηρεί με ασφάλεια τα προσωπικά σας δεδομένα για όσο χρονικό διάστημα είστε εγγεγραμμένος 
+σε κάποια υπηρεσία του τα οποία διαγράφονται μετά την με οποιοδήποτε τρόπο λήξη της συναλλακτικής σχέσης. 
+Τα προσωπικά δεδομένα που δηλώνετε στην παρούσα Ηλεκτρονική Αγορά Προϊόντων χρησιμοποιούνται αποκλειστικά 
+από τον ιστότοπο αυτό ή τις εγγεγραμμένες και συμμετέχουσες σε αυτό επιχειρήσεις, με σκοπό την υποστήριξη, 
+προώθηση και εκτέλεση της συναλλακτικής σχέσης.
+</p>
+<p>
+Τα τηρούμενα στοιχεία του αρχείου δύνανται να κοινοποιηθούν στις αρμόδιες δικαστικές, 
+αστυνομικές και άλλες διοικητικές αρχές κατόπιν νομίμου αιτήματός τους και σύμφωνα με τις κάθε φορά 
+ισχύουσες νομοθετικές διατάξεις. Ο χρήστης έχει, μέσα στα πλαίσια της νομοθεσίας περί απορρήτου των τηλεπικοινωνιών,
+τα δικαιώματα ενημέρωσης και αντίρρησης που προβλέπουν τα άρθρα 11 έως 13 του ν. 2472/1997.
+</p>
+<p>
+Η εγγραφή σας και κάθε καταχώρηση των κωδικών σας στην Ηλεκτρονική Αγορά Προϊόντων αποτελεί σαφή 
+και εκ μέρους σας δήλωση συναίνεσης κατά την έννοια του ν. 2472/1997 όπως ισχύει και των Αποφάσεων 
+και Οδηγιών της Αρχής Προστασίας Δεδομένων Προσωπικού Χαρακτήρα ως προς την χρήση, επεξεργασία, 
+και καταχώρηση των στοιχείων που καταχωρείτε για τις ανάγκες διεκπεραίωσης των συναλλαγών μέσω 
+της Ηλεκτρονικής Αγοράς Προϊόντων, καθώς και για σκοπούς ενημέρωσης και επικοινωνίας σας 
+σχετικά με την Ηλεκτρονική Αγορά Προϊόντων. Η καταχώρηση δεδομένων προσωπικού χαρακτήρα σε αρχείο 
+που θα τηρείται με αυτά από τον διαχειριστή της Ηλεκτρονικής Αγοράς Προϊόντων, 
+ως υπεύθυνο για την επεξεργασία τους μέσω αυτοματοποιημένων ή μη μέσων, γίνεται αποκλειστικά 
+και μόνο για το σκοπό της λειτουργίας της Ηλεκτρονικής Αγοράς Προϊόντων. 
+Τα στοιχεία των χρηστών που ζητούνται είναι μόνο τα απαραίτητα στοιχεία για να ταυτοποιηθούν. 
+Σε καμία περίπτωση τα προσωπικά στοιχεία των χρηστών δεν θα μεταβιβαστούν, πουληθούν ή ενοικιαστούν σε τρίτους. 
+Ο κάθε χρήστης με την εγγραφή του παρέχει τη συγκατάθεσή του προκειμένου να ενημερώνεται στο e-mail που θα δηλώσει, 
+σχετικά με τυχόν νέα, μελλοντικά γεγονότα/ εκδηλώσεις (events) κ.λπ. 
+του διαχειριστή της Ηλεκτρονικής Αγοράς Προϊόντων ή του προμηθευτή με τον οποίον συναλλάχθηκε 
+μέσω της Ηλεκτρονικής Αγοράς Προϊόντων, ο δε διαχειριστής της Ηλεκτρονικής Αγοράς Προϊόντων 
+θα δικαιούται να χρησιμοποιεί τη διεύθυνση ηλεκτρονικού ταχυδρομείου του για τον εν λόγω σκοπό. 
+Κάθε χρήστης διατηρεί το δικαίωμα χωρίς οποιαδήποτε επιβάρυνση να ζητήσει εγγράφως 
+από τον διαχειριστή της Ηλεκτρονικής Αγοράς Προϊόντων την επιβεβαίωση, 
+τη διαγραφή ή τροποποίηση των προσωπικών του δεδομένων από το ως άνω αρχείο επικοινωνώντας 
+με οποιονδήποτε τρόπο με τον διαχειριστή σε ένα από τα πιο κάτω στοιχεία επικοινωνίας:
+</p>
+<p>
+(α) φόρμα επικοινωνίας: <a href="http://www.knowledge.gr/ksa/mailfiles/contactmail.jsp?context=801">http://www.knowledge.gr/ksa/mailfiles/contactmail.jsp?context=801</a>
+</p>
+<p>
+(β) ταχυδρομική διεύθυνση: ΝΕΟ ΠΑΤΡΩΝ-ΑΘΗΝΩΝ 37, Τ. Κ. 26442 ΠΑΤΡΑ,
+</p>
+<p>
+(γ) Τηλέφωνο: +30 2610 452820,
+</p>
+<p>
+(δ) φαξ: +30 2610 453819, 
+</p>
+<p>
+(ε) e-mail: 
+<a href="mailto:info@knowledge.gr">info@knowledge.gr</a> 
+</p>
+<h4>
+Όροι Αγορών 
+</h4>
+<p>
+Η παρούσα Ηλεκτρονική Αγορά Προϊόντων αποτελεί το μέσο που διευκολύνει τη σύναψη αυτοτελών συμβάσεων πώλησης 
+μεταξύ των Παραγωγών ή Προμηθευτών, που έχουν εγγραφεί και συμμετέχουν σε αυτή ως πωλητές, 
+και των Χρηστών που εγγράφονται και διενεργούν μέσω αυτής τις αγορές τους ως χρήστες-αγοραστές. 
+Ως εκ τούτου, οι όροι πώλησης των εμπορευμάτων και προϊόντων που προσφέρονται μέσω της Ηλεκτρονικής Αγοράς Προϊόντων διαμορφώνονται 
+και αποτελούν αποκλειστική ευθύνη και υποχρέωση των εκάστοτε πωλητών έναντι των χρηστών - αγοραστών με τους οποίους συμβάλλονται. 
+Οι χρήστες - αγοραστές έχουν έναντι του κάθε πωλητή (Παραγωγού ή Προμηθευτή) όλα τα δικαιώματα που απορρέουν 
+από τις διατάξεις της ισχύουσας νομοθεσίας που αφορούν, ενδεικτικά αναφερομένων, 
+στην ευθύνη του πωλητή για πραγματικά ελαττώματα και έλλειψη συνομολογημένων ιδιοτήτων σύμφωνα με τα άρθρα 534 
+επ. του Αστικού Κώδικα, στην προστασία των καταναλωτών (Ν.2251/1994 ως ισχύει και σχετικές Υπουργικές Αποφάσεις) κ.λπ.
+</p>
+<h4>
+Δικαίωμα Υπαναχώρησης
+</h4>
+<p>
+Δικαιούστε να υπαναχωρήσετε από τη σύμβαση πώλησης εντός 14 ημερολογιακών ημερών 
+χωρίς να δώσετε οποιαδήποτε εξήγηση. Η προθεσμία υπαναχώρησης λήγει 14 ημερολογιακές ημέρες 
+από την επομένη της ημέρας, κατά περίπτωση:
+</p>
+<p>
+<ul>
+<li>
+σε περίπτωση σύμβασης πώλησης, από την επομένη της ημέρας που εσείς αποκτήσατε ή ένας τρίτος διάφορος του μεταφορέα και υποδειχθείς από εσάς απέκτησε τη φυσική κατοχή των αγαθών.
+</li>
+<li>
+σε περίπτωση σύμβασης που αφορά πολλά αγαθά παραγγελθέντα με μια παραγγελία και παραδιδόμενα χωριστά, από την επομένη της ημέρας που εσείς αποκτήσατε ή ένας τρίτος διάφορος του μεταφορέα και υποδειχθείς από εσάς απέκτησε τη φυσική κατοχή του τελευταίου αγαθού.
+</li>
+<li>
+σε περίπτωση σύμβασης που αφορά την προμήθεια ενός αγαθού αποτελούμενου από πολλές παρτίδες ή από πολλά τεμάχια, από την επομένη της ημέρας που εσείς αποκτήσατε ή ένας τρίτος διάφορος του μεταφορέα και υποδειχθείς από εσάς απέκτησε τη φυσική κατοχή της τελευταίας παρτίδας ή του τελευταίου τεμαχίου.
+</li>
+<li>
+σε περίπτωση σύμβασης τακτικής προμήθειας αγαθών για καθορισμένο χρονικό διάστημα, από την επομένη της ημέρας που εσείς αποκτήσατε ή ένας τρίτος διάφορος του μεταφορέα και υποδειχθείς από εσάς απέκτησε τη φυσική κατοχή του πρώτου αγαθού.
+</li>
+<li>
+σε περίπτωση σύμβασης υπηρεσιών ή σύμβασης παροχής νερού, φυσικού αερίου ή ηλεκτρικής ενέργειας, εάν δεν διατίθενται προς πώληση σε περιορισμένο όγκο ή σε καθορισμένη ποσότητα, παροχής τηλεθέρμανσης ή παροχής ψηφιακού περιεχομένου μη παραδιδόμενου επί υλικού μέσου, από την επομένη της ημέρας σύναψης της σύμβασης.
+</li>
+</ul>
+</p>
+<p>
+Το δικαίωμα υπαναχώρησης που προβλέπεται για τις εξ αποστάσεως 
+και εκτός εμπορικού καταστήματος συναπτόμενες συμβάσεις, 
+δεν ισχύει όσον αφορά στις ακόλουθες περιπτώσεις:
+</p>
+<p>
+<ul>
+<li>
+συμβάσεις υπηρεσιών μετά την πλήρη παροχή της υπηρεσίας, εάν η εκτέλεση άρχισε με την προηγούμενη ρητή συγκατάθεση του καταναλωτή, και με την εκ μέρους του αναγνώριση ότι θα απωλέσει το δικαίωμά του υπαναχώρησης μόλις η σύμβαση εκτελεσθεί πλήρως από τον προμηθευτή
+</li>
+<li>
+την προμήθεια αγαθών ή την παροχή υπηρεσιών η τιμή των οποίων εξαρτάται από διακυμάνσεις της χρηματαγοράς τις οποίες δεν είναι δυνατόν να ελέγξει ο προμηθευτής και οι οποίες ενδέχεται να συμβούν εντός της προθεσμίας υπαναχώρησης
+</li>
+<li>
+την προμήθεια αγαθών που κατασκευάζονται σύμφωνα με τις προδιαγραφές του καταναλωτή ή σαφώς εξατομικευμένων
+</li>
+<li>
+την προμήθεια αγαθών τα οποία μπορούν να αλλοιωθούν ή λήγουν σύντομα
+</li>
+<li>
+την προμήθεια σφραγισμένων αγαθών τα οποία δεν είναι κατάλληλα προς επιστροφή, για λόγους προστασίας της υγείας ή για λόγους υγιεινής, και τα οποία έχουν αποσφραγιστεί μετά την παράδοση
+</li>
+<li>
+την προμήθεια αγαθών τα οποία, μετά την παράδοση, λόγω της φύσης τους, είναι αναπόσπαστα αναμεμειγμένα με άλλα στοιχεία
+</li>
+<li>
+την προμήθεια οινοπνευματωδών ποτών, η τιμή των οποίων έχει συμφωνηθεί κατά τη στιγμή της σύναψης της σύμβασης πώλησης, η παράδοση των οποίων μπορεί όμως να πραγματοποιηθεί μόνο μετά από 30 ημέρες και η πραγματική τιμή των οποίων εξαρτάται από διακυμάνσεις στην αγορά, τις οποίες δεν είναι δυνατόν να ελέγξει ο προμηθευτής
+</li>
+<li>
+συμβάσεις κατά τις οποίες ο καταναλωτής έχει ζητήσει ειδικά επίσκεψη από τον προμηθευτή με σκοπό να πραγματοποιήσει επείγουσες επιδιορθώσεις ή την εκτέλεση εργασιών συντήρησης. Εάν, στην περίπτωση τέτοιας επίσκεψης, ο προμηθευτής παράσχει υπηρεσίες επιπλέον εκείνων που ζητήθηκαν συγκεκριμένα από τον καταναλωτή ή αγαθά πέρα από τα ανταλλακτικά που χρησιμοποιήθηκαν υποχρεωτικά κατά την εκτέλεση εργασιών συντήρησης ή κατά τις επιδιορθώσεις, το δικαίωμα υπαναχώρησης εφαρμόζεται στις εν λόγω πρόσθετες υπηρεσίες ή αγαθά
+</li>
+<li>
+την προμήθεια σφραγισμένων ηχητικών εγγραφών ή σφραγισμένων εγγραφών βίντεο ή σφραγισμένου λογισμικού για υπολογιστές, που αποσφραγίστηκαν μετά την παράδοση
+</li>
+<li>
+την προμήθεια εφημερίδων και παντός είδους περιοδικών, εξαιρουμένων των συνδρομητικών συμβάσεων για την προμήθεια αυτών των εντύπων
+</li>
+<li>
+συμβάσεις συναφθείσες σε δημόσιο πλειστηριασμό
+</li>
+<li>
+την παροχή στέγασης πλην για σκοπούς κατοικίας, μεταφοράς αγαθών, υπηρεσιών ενοικίασης αυτοκινήτων, εστίασης ή υπηρεσιών σχετιζόμενων με δραστηριότητες αναψυχής, εάν η σύμβαση προβλέπει συγκεκριμένη ημερομηνία ή προθεσμία εκτέλεσης
+</li>
+<li>
+την προμήθεια ψηφιακού περιεχομένου μη παρεχόμενου πάνω σε υλικό μέσο, εάν η εκτέλεση ξεκίνησε με την προηγούμενη ρητή συγκατάθεση του καταναλωτή και την επιβεβαίωση εκ μέρους του ότι χάνει έτσι το δικαίωμά του υπαναχώρησης.
+</li>
+</ul>
+</p>
+<h5>
+<i>
+Άσκηση του δικαιώματος υπαναχώρησης
+</i>
+</h5>
+<p>
+Προκειμένου να ασκήσετε το δικαίωμα υπαναχώρησης, οφείλετε να ενημερώσετε απευθείας τον πωλητή (Παραγωγό ή Προμηθευτή) για την απόφασή σας να υπαναχωρήσετε από την σύμβαση πώλησης που συνήψατε με αυτόν με μια ξεκάθαρη δήλωση (π.χ. επιστολή που θα σταλεί με ταχυδρομείο, φαξ ή ηλεκτρονικό ταχυδρομείο). Μπορείτε να χρησιμοποιήσετε το πιο κάτω υπόδειγμα εντύπου υπαναχώρησης, χωρίς τούτο να είναι υποχρεωτικό.
+</p>
+<p>
+Μπορείτε επίσης να συμπληρώσετε και να υποβάλετε ηλεκτρονικώς το υπόδειγμα εντύπου υπαναχώρησης ή οποιαδήποτε άλλη ξεκάθαρη δήλωση χρησιμοποιώντας την ειδική φόρμα 
+<u><a href="entipo-ipanaxorisis-Print.pdf" target="_blank">έντυπο υπαναχώρησης για εκτύπωση</a></u> ή 
+<u><a href="entipo-ipanaxorisis-electronic.doc" target="_blank">έντυπο υπαναχώρησης για web/e-mail</a></u>. 
+Εάν χρησιμοποιήσετε αυτήν τη δυνατότητα, θα διαβιβάσουμε το αίτημά σας άμεσα στον πωλητή (Παραγωγό ή Προμηθευτή) 
+και θα σας διαβιβάσουμε χωρίς καθυστέρηση μέσω ηλεκτρονικού ταχυδρομείου στην ηλεκτρονική διεύθυνση 
+που θα έχετε δηλώσει επιβεβαίωση λήψης της υπαναχώρησής σας.
+</p>
+<p>
+Για να τηρήσετε την προθεσμία υπαναχώρησης, είναι αρκετό να στείλετε τη δήλωσή σας περί άσκησης 
+του δικαιώματος υπαναχώρησής σας πριν λήξει η προθεσμία υπαναχώρησης.
+</p>
+<h5>
+<i>
+Συνέπειες της υπαναχώρησης
+</i>
+</h5>
+<p>
+Εάν υπαναχωρήσετε από την σύμβαση πώλησης που συνήψατε, 
+ο πωλητής υποχρεούται να σας επιστρέψει όλα τα χρήματα που έλαβε από εσάς,
+συμπεριλαμβανομένων των εξόδων παράδοσης (εξαιρουμένων των συμπληρωματικών εξόδων που οφείλονται 
+στη δική σας επιλογή να χρησιμοποιηθεί τρόπος παράδοσης άλλος 
+από τον φθηνότερο τυποποιημένο τρόπο παράδοσης που ο πωλητής προσφέρει), 
+χωρίς αδικαιολόγητη καθυστέρηση και οπωσδήποτε εντός 14 ημερολογιακών ημερών από την ημέρα 
+που ο πωλητής θα πληροφορηθεί την απόφασή σας να υπαναχωρήσετε από την μεταξύ σας σύμβαση. 
+Ο πωλητής θα εκτελέσει την ανωτέρω επιστροφή χρημάτων χρησιμοποιώντας το ίδιο μέσο πληρωμής 
+που εσείς χρησιμοποιήσατε για την αρχική συναλλαγή, εκτός κι αν εσείς έχετε συμφωνήσει ρητώς για κάτι διαφορετικό. 
+Σε κάθε περίπτωση, δεν θα σας χρεωθούν έξοδα για τέτοια επιστροφή χρημάτων.
+Ο πωλητής δικαιούται να καθυστερήσει την επιστροφή χρημάτων μέχρις ότου λάβει πίσω τα αγαθά 
+στην αρχική τους κατάσταση ή μέχρις ότου εσείς παράσχετε αποδείξεις ότι στείλατε πίσω τα αγαθά στην αρχική τους κατάσταση,
+όποιο από τα δύο συμβεί πρώτο.
+</p>
+<p>
+Εσείς οφείλετε να στείλετε πίσω τα αγαθά ή να τα παραδώσετε απευθείας στον πωλητή με τον οποίο συνήψατε 
+τη σύμβαση πώλησης χωρίς αδικαιολόγητη καθυστέρηση και οπωσδήποτε εντός 14 ημερολογιακών ημερών 
+από την ημέρα που δηλώσατε ότι υπαναχωρείτε από την μεταξύ σας σύμβαση. προθεσμία θεωρείται 
+ότι έχει τηρηθεί εάν στείλετε πίσω τα αγαθά πριν από τη λήξη της περιόδου των 14 ημερών.
+</p>
+<h5>
+<i>
+Υπόδειγμα Εντύπου Υπαναχώρησης
+</i>
+</h5>
+<p>
+- Προς [Στοιχεία πωλητή (Παραγωγού ή Προμηθευτή): όνομα/επωνυμία, γεωγραφική διεύθυνση και, εάν υπάρχει, αριθμός τηλεομοιοτυπίας και e-mail]: 
+<br>
+- Γνωστοποιώ/Γνωστοποιούμε (*) με την παρούσα ότι υπαναχωρώ/υπαναχωρούμε (*) από τη σύμβασή μου/μας (*) πώλησης των ακόλουθων αγαθών (*)/παροχής της ακόλουθης υπηρεσίας (*)
+<br> 
+- Που παραγγέλθηκε(/αν) στις (*)/που παρελήφθη(?σαν) στις (*) 
+<br>
+- Όνομα καταναλωτή(/ών) 
+<br>
+- Διεύθυνση καταναλωτή(/ών) 
+<br>
+- Υπογραφή καταναλωτή(/ών) (μόνο εάν το παρόν έντυπο κοινοποιηθεί σε χαρτί) 
+<br>
+- Ημερομηνία 
+<br>
+(*) Διαγράφεται η περιττή ένδειξη
+</p>
+<h4>Ειδικοί Όροι</h4>
+<p>
+Κάθε συνεργαζόμενη επιχείρηση που προβάλλεται στην Ηλεκτρονική Αγορά <strong>www.DirectMarket.gr</strong> 
+αποδέχεται τους ανωτέρω Γενικούς Όρους χρήσης. 
+Η ηλεκτρονική Αγορά <strong>www.DirectMarket.gr</strong> δίνει την δυνατότητα στις συνεργαζόμενες επιχειρήσεις που προβάλουν 
+ή/και πωλούν τα προϊόντα τους μέσω της <strong>www.DirectMarket.gr</strong> να διαμορφώσουν τους δικούς τους 
+<strong>Ειδικούς Όρους</strong> 
+για συγκεκριμένα θέματα (π.χ. ημέρες παράδοσης προϊόντων, αποδεκτοί τρόποι πληρωμής, διαχείριση εξόδων μεταφοράς, 
+αποδεκτές περιοχές παράδοσης κτλ), που έχουν ως στόχο να εξειδικεύσουν τους <strong>Γενικούς Όρους της Αγοράς</strong>. 
+Σε κάθε περίπτωση οι Ειδικοί Όροι που θέτει η κάθε επιχείρηση δεν μπορούν να ακυρώσουν 
+τους Γενικούς Όρους της Αγοράς και την υφιστάμενη νομοθεσία. 
+Κατά την ιεράρχηση της νομικής ισχύος των κειμένων, το κείμενο των Γενικών Όρων κατισχύει των Ειδικών Όρων.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="container footer">
+<div class="row">
+<div class="col-md-3 clearfix">
+<img src="/dmarket/marketplc/images/footer/home.png" style="float:left;padding-right:10px" alt="Ποιοί Είμαστε" /><h4>Ποιοί Είμαστε</h4>
+<ul>
+<li><a href="/dmarket/marketplc/static/about.jsp">Ποιοί Είμαστε</a></li>
+<li><a href="/dmarket/marketplc/static/ourmarket.jsp">Η αγορά μας</a></li>
+</ul>
+</div> 
+<div class="col-md-3 clearfix">
+<img src="/dmarket/marketplc/images/footer/open.png" style="float:left;padding-right:10px" alt="Λειτουργία Αγοράς" /><h4>Λειτουργία Αγοράς</h4>
+<ul>
+<li><a href="/dmarket/marketplc/static/termsofuse.jsp">Γενικοί Όροι</a></li>
+<li><a href="/dmarket/marketplc/article.jsp?aid=21590">Τρόποι Πληρωμών</a></li>
+<li><a href="/dmarket/marketplc/article.jsp?aid=21591">Παράδοση Προϊόντων</a></li>
+<li><a href="/dmarket/marketplc/article.jsp?aid=21592">Αγορές B2B</a></li>
+</ul>
+</div> 
+<div class="col-md-3 clearfix">
+<img src="/dmarket/marketplc/images/footer/how.png" style="float:left;padding-right:10px" alt="Προμηθευτές / Παραγωγοί" /><h4>Προμηθευτές / Παραγωγοί</h4>
+<ul>
+<li><a href="/dmarket/marketplc/static/openstore.jsp">Δημιουργήστε ένα κατάστημα</a></li>
+<li><a href="/dmarket/marketplc/static/xml-requirements.jsp">Διασύνδεση e-shop με την Ηλεκτρονική Αγορά</a></li>
+</ul>
+</div> 
+<div class="col-md-3 clearfix"> 
+<div class="col col-social-icons"> 
+<p>Ακολουθήστε μας&nbsp;&nbsp;
+<a href="https://www.facebook.com/directmarketgr" rel="external" title="facebook" target="_blank"><i class="fa fa-facebook-official"></i></a>
+<a href=" https://www.instagram.com/directmarket_gr/" rel="external" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+</p>
+<p style="margin-top:20px;"> Γίνονται δεκτές οι πληρωμές μέσω:<br/>
+<ul class="list-inline" style="display:list-item;margin-bottom:10px;">
+<li><span style="font-size:10pt">&bull; </span>Αντικαταβολής</li>
+<li><span style="font-size:10pt">&bull; </span>Κατάθεσης σε τράπεζα</li>
+</ul> 
+<img src="/dmarket/marketplc/images/footer/creditcardicons/visa-2@2x.png" style="max-width:50px;height:auto;"/>
+<img src="/dmarket/marketplc/images/footer/creditcardicons/mastercard@2x.png" style="max-width:50px;height:auto;"/>
+<img src="/dmarket/marketplc/images/footer/creditcardicons/maestro@2x.png" style="max-width:50px;height:auto;"/>
+<img src="/dmarket/marketplc/images/footer/creditcardicons/paypal@2x.png" style="max-width:50px;height:auto;"/> 
+</p> 
+<p style="margin-top:10px;" >
+<a href="https://paycenter.piraeusbank.gr/redirection/Content/HTML/3DSecure_el.html" target="_blank"><img src="/dmarket/marketplc/images/footer/creditcardicons/MasterCard Secure Code.jpg" style="max-width:54px;height:auto;"/></a>
+<a href="https://paycenter.piraeusbank.gr/redirection/Content/HTML/3DSecure_el.html" target="_blank"><img src="/dmarket/marketplc/images/footer/creditcardicons/Verified by Visa.jpg" style="max-width:54px;height:auto;"/></a> 
+</p>
+</div> 
+</div>	
+</div>
+<hr />
+<div class="row row-wrap">
+<div class="col-md-12">
+<div class="espa-footer text-center">
+<a href="/dmarket/marketplc/static/research.jsp" target="_blank">
+<img src="/dmarket/marketplc/images/footer/footer_espa_el.jpg" title="Espa Image" alt="Espa Image" class="img-thumbnail espaimg"/>
+</a>
+</div>
+</div>
+</div>
+<hr />
+<div class="row"> 
+<div class="col-lg-6 copyright">&copy; directmarket.gr <br/>&nbsp;&nbsp;&nbsp;&nbsp;Designed &amp; Developed by <a href="http://www.knowledge.gr" target="_blank">Knowledge</a>
+, Powered by <a href="http://www.e-boss.gr" target="_blank" >e-BOSS</a>
+</div> 
+<div class="col-lg-6 copyright">
+<ul class="list-inline">
+<li><a href="/dmarket/marketplc/article.jsp?aid=7">Γενικοί Όροι Χρήσης - Πολιτική Ασφάλειας</a></li>
+<li><a href="/dmarket/marketplc/contact.jsp" title="Εκδήλωση Ενδιαφέροντος Συμμετοχής">Εκδήλωση Ενδιαφέροντος Συμμετοχής</a></li>
+</ul>
+</div> 
+</div>
+<div class="row">
+<div class="col-lg-12 copyright"> 
+&nbsp;&nbsp;&nbsp;&nbsp;Υπό την αιγίδα της Κεντρικής Ένωσης Επιμελητηρίων Ελλάδος 
+</div>
+</div> 
+</div>
+</footer>
+</div><!--div wrapper--> 
+<div class="modal fade" id="dm-modal" style="z-index:2001 !important" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-lg" style="position: relative; display: table; overflow-y: auto; overflow-x: auto; width: auto; min-width: 400px;">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close dmClose" aria-hidden="true">&times;</button>
+<h4 class="modal-title">Επιστροφή στην Πανελλήνια Αγορά</h4>
+</div>
+<div class="modal-body">
+<h5>Διαγράφοντας το φίλτρο της Τοπικής Αγοράς πρόκειται να επιστρέψετε στην Γενική Αγορά του DirectMarket</h5>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-two dmConfirm" >Επιστροφή στην Πανελλήνια Αγορά</button>
+<button type="button" class="btn btn-three dmClose">Κλείσιμο</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="cooperative-region-modal" style="z-index:2001 !important" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-lg" >
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title">Aγορά<span style="font-size:20px;font-weight:700">ζω</span> στον τόπο μου</h4>
+</div>
+<div class="modal-body">
+</div>
+<div class="modal-footer">
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<button type="button" class="btn btn-two" id="regionConfirm">Επιλογή Τοπικής Αγοράς</button>
+<button type="button" class="btn btn-three" data-dismiss="modal" >Κλείσιμο</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="age-modal" style="z-index:2005 !important" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static">
+<div class="modal-dialog" style="position: relative; display: table; overflow-y: auto; overflow-x: auto; width: auto; min-width: 300px;">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">Επιβεβαίωση Ηλικίας</h4>
+</div>
+<div class="modal-body">Το περιεχόμενο της κατηγορίας απευθύνεται σε ενήλικες. Για να συνεχίσετε πρέπει να είστε άνω των 18 .
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-two" id="ageModalConfirm">Είμαι άνω των 18</button>
+<button type="button" class="btn btn-three" id="ageModalDeny">Δεν είμαι άνω των 18</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="calculate-shipping-modal" tabindex="-1" role="dialog" aria-labelledby="calculate-shipping-modal">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title" id="shippingModalLabel">Υπολογισμός Μεταφορικών</h4>
+</div>
+<div class="modal-body">
+<iframe id="calculate-shipping-frame" src ="" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" height="550px" width="100%">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="shops-map-modal" style="z-index:2001 !important" tabindex="-1" role="dialog">
+<div class="modal-dialog" style="width: 100% !important; height:100% " >
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title">Δείτε τις επιχειρήσεις στο χάρτη</h4> 
+</div>
+<div class="modal-body"> 
+<div class="row">
+<div id="shops-map-canvas" style="width: 100% !important; height: 700px "></div>
+</div> 
+</div> 
+</div> 
+</div> 
+</div>
+<div class="modal fade" id="ml-categories-modal" style="z-index:2001 !important" tabindex="-1" role="dialog">
+<div class="modal-dialog" style="position: relative; display: table; overflow-y: auto; overflow-x: auto; width: auto; " >
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title">Μπορεί να σας ενδιαφέρουν</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div id="machinelearningSearchModal-body" ></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="loading-modal" tabindex="-1" role="dialog" aria-labelledby="waitLabel" aria-hidden="true" style="z-index:2001 !important">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+</div>
+<div class="modal-body">
+Παρακαλώ περιμένετε
+<div class="progress progress-striped active">
+<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+<span class="sr">Αναμονή...</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="signin-modal">
+<div class="modal-dialog">
+<div class="modal-content" style="top: 50px;">
+<div class="modal-header" style="border-bottom: 0">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+</div>
+<div class="modal-body">
+<div id="signin-modal-alert" class="alert alert-danger" style="display:none"> 
+</div> 
+<div class="form-body tabs" id="modal-join-tab">
+<ul class="nav nav-pills nav-justified" role="tablist"> 
+<li class="modal-join-li"><a href="#modal-join" data-toggle="tab" ><span style="font-weight:600;font-size:16px">Εγγραφή</span></a></li>
+<li><a href="#modal-signin" data-toggle="tab"><span style="font-weight:600;font-size:16px">Είσοδος</span></a></li>
+<li><a href="#modal-remindpwd" data-toggle="tab"><span style="font-weight:600;font-size:16px">Είσοδος</span></a></li>
+</ul>
+<div class="tab-content tab-content-inverse" style="border:0 !important;padding:0 !important" id="usertab-content"> 
+<div class="tab-pane" id="modal-join">
+<div class="panel-group" id="accordionJoinId" >
+<div class="panel panel-custom">
+<div class="panel-heading" >
+<h4 class="panel-title">
+<a class="accordion-toggle chevron-none" data-toggle="collapse" data-parent="#accordionJoinId" href="#collapseOne">
+Γίνετε Αγοραστής
+<i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+</a>
+</h4>
+</div>
+<div id="collapseOne" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="row"> 
+<div class="text-center">
+<button type="button" class="facebook-button" >Σύνδεση μέσω Facebook</button> 
+</div>
+</div> 
+<div class="or"> <span>ή</span></div>	
+<form role="form" id="modal-joinForm" class="form-light padding-15">	
+<div class="form-group">
+<label style="font-size: 14px;">Ονοματεπώνυμο</label>
+<input type="text" class="form-signin-control" id="name" name="name" size="30" maxlength="100" placeholder="" >
+</div>
+<div class="form-group">
+<label style="font-size: 14px;">e-mail</label>
+<input type="text" class="form-signin-control" id="email" name="email" size="30" maxlength="100" placeholder="">
+</div> 
+<div class="form-group">
+<label style="font-size: 14px;">Κωδικός Πρόσβασης</label>
+<input type="password" class="form-signin-control" id="pwd1" name="pwd1" size="30" maxlength="10" placeholder="">
+</div>
+<div class="form-group">
+<label style="font-size: 14px;">Επιβεβαίωση Κωδικού Πρόσβασης</label>
+<input type="password" class="form-signin-control" id="pwd2" name="pwd2" size="30" maxlength="10" placeholder="">
+</div> 
+<div class="row">
+<div class="col-md-4 col-md-offset-2" id="register-recaptcha-div"> 
+</div> 
+</div>
+<div class="row" style="margin-top:20px"> 
+<div class="text-center">
+<button type="submit" id="submit-login-button" class="btn btn-lg btn-two" style="width:200px">Συνέχεια</button>
+</div> 
+</div> 
+</form>
+</div>
+</div>
+</div> 
+<div class="panel panel-custom"> 
+<div class="panel-heading">
+<h4 class="panel-title"> 
+<a class="accordion-toggle chevron-none" data-toggle="collapse" data-parent="#accordionJoinId" href="#collapseTwo"> 
+Δημιουργήστε Κατάστημα 
+<i class="indicator glyphicon glyphicon-chevron-up pull-right"></i>
+</a>
+</h4>
+</div>
+<div id="collapseTwo" class="panel-collapse collapse">
+<div class="panel-body">
+<p>
+Με την εγγραφή σας και τη δημιουργία καταστήματος, αποκτάτε ταυτόχρονα και δικαιώματα ως Αγοραστής. <br>
+Εάν έχετε επιχείρηση και θέλετε να προβληθείτε στο Markeplace Επιχειρήσεων DirectMarket, απλά ή και να πουλάτε τα προϊόντα σας ηλεκτρονικά, πατήστε πιο κάτω το κουμπί 'Εγγραφή' 
+</p>
+<div class="text-center">
+<a href="/dmarket/marketplc/user/user_reg.jsp" class="btn btn-lg btn-two" style="width:200px">Εγγραφή</a>
+</div> 
+</div>
+</div>
+</div> 
+</div>
+</div>
+<div class="tab-pane" id="modal-signin">
+<div class="row"> 
+<div class="text-center">
+<button type="button" class="facebook-button" >Σύνδεση μέσω Facebook</button>
+</div>
+</div> 
+<div class="or"> <span>ή</span></div>	
+<form role="form" id="modal-signinForm" class="form-light padding-15"> 
+<div class="form-group">
+<label style="font-size: 14px;">Όνομα Χρήστη: </label>
+<input type="text" class="form-signin-control" id="username" name="username" size="30" placeholder="" data-bv-notempty data-bv-notempty-message="Το Όνομα Χρήστη είναι υποχρεωτικό">
+</div>
+<div class="form-group">
+<label style="font-size: 14px;">Κωδικός:</label>
+<input type="password" class="form-signin-control" id="password" name="password" size="30" placeholder="" data-bv-notempty data-bv-notempty-message="Ο Κωδικός Πρόσβασης είναι υποχρεωτικός">
+</div>
+<div class="row"> 
+<div class="text-center">
+<button type="submit" class="btn btn-lg btn-two" style="width:200px">Σύνδεση</button>
+</div> 
+</div> 
+</form>
+<p class="text-center" style="padding-top:15px;">Ξεχάσατε τον κωδικό σας; <a class="remindpwd">Πατήστε εδώ για να τον ανακτήσετε.</a></p> 
+</div>
+<div class="tab-pane" id="modal-remindpwd">
+<h4>Ξεχάσατε τον κωδικό σας;</h4>
+Παρακαλώ εισάγετε το e-mail επικοινωνίας σας. Οι πληροφορίες του προφίλ σας θα σας αποσταλούν σύντομα μέσω ηλεκτρονικού ταχυδρομείου.
+<form role="form" id="modal-remindpwdForm" class="form-light padding-15"> 
+<div class="form-group">
+<label style="font-size: 14px;">E-mail</label>
+<input type="text" class="form-signin-control" id="to" name=to size="30" placeholder="" data-bv-notempty data-bv-notempty-message="Το e-mail είναι υποχρεωτικό" data-bv-emailaddress="true" data-bv-emailaddress-message="Το e-mail δεν είναι έγκυρο" >
+</div>
+<div class="row"> 
+<div class="text-center">
+<button type="submit" class="btn btn-lg btn-two" style="width:200px">Συνέχεια</button>
+</div> 
+</div> 
+</form>
+<p class="text-center" style="padding-top:15px;"><a class="signin">Δεν πειράζει, θυμήθηκα!</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+$('#gotop').gotop({
+background : '#000',
+color: '#fff', 
+rounded: false, 
+width: '45px',
+height: '45px',
+bottom : '25px',
+right : '25px',
+customHtml: '<i class="fa fa-angle-up fa-2x"></i>',
+speed: 800,
+mobileOnly: false
+});
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-670089-27', 'auto');
+ga('send', 'pageview');
+</script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+var OneSignal = window.OneSignal || [];
+OneSignal.push(function() {
+OneSignal.init({
+appId: "e733d053-036a-4801-8718-3b15ce11f697",
+});
+});
+</script>
+</body>
+</html>
