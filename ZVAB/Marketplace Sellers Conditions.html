@@ -247,7 +247,7 @@
 
 <script defer data-test-id="script-base" src="//assets.prod.abebookscdn.com/cdn/com/scripts/combined/global-base-0597ddca27.js"></script>
 
-<script defer data-test-id="script-toggle" src="//assets.prod.abebookscdn.com/cdn/com/scripts/sitenavtoggle-ea138887b3.js"></script>
+<script defer data-test-id="script-toggle" src="//assets.prod.abebookscdn.com/cdn/com/scripts/sitenavtoggle-c186d9e714.js"></script>
 
 <script defer data-test-id="script-ie" src="//assets.prod.abebookscdn.com/cdn/com/scripts/vendor/ie-polyfill.bundle-7c726acf0e.js"></script>
 
@@ -740,11 +740,17 @@ data-has-hat="false"
 
 
 
-    <div id="abe-gdpr-banner"></div>
+    
 <div id="wrapper">
-  <div id="abe-top"></div>
-  <a id="skip-main-nav-link" class="skip-link" href="#main-skip-link" data-cms-ai="0">Skip to main content</a>
-  <header data-test-id="header-locale" data-cy="header" role="banner" class="locale-com">
+
+
+  <header id="abe-top" data-test-id="header-locale" data-cy="header" role="banner" class="locale-com">
+    <div id="abe-gdpr-banner"></div>
+
+    
+       <a id="skip-main-nav-link" class="skip-link"  href="#content-main" data-cms-ai="0" >Skip to main content</a>
+    
+
     <div id="abe-header">
       <div class="top-nav">
         <div class="wrapper cf abenav-belt">
@@ -844,7 +850,9 @@ data-has-hat="false"
       </div>
     </div>
   </header>
-  <main id="main-skip-link" class="abe-content" data-cy="main" data-templateId="Page">
+
+
+  <main id="content-main" class="abe-content" data-cy="main" data-templateId="Page">
 
 
 <link data-cssvarsponyfill="true" type="text/css" media="all" class="Webpack-css" rel="stylesheet" href="https://assets.brightspot.abebooks.a2z.com/resource/00000179-3cdd-d40f-a779-bedf7f820000/styleguide/All.min.6cff8c9c582d18d437e4c3ea31bbc082.gz.css">
@@ -1026,15 +1034,20 @@ data-has-hat="false"
     
 
     
-    </main>
+    
+</main>
 </div>
+
+
 <link id="footer-css-import" rel="stylesheet" href="//assets.prod.abebookscdn.com/cdn/com/docs/CSS/global/footer-de0eb8db64.css" type="text/css" media="all">
 <script> </script>
 <footer data-cy="footer">
   <div id="footer-container">
+  
     <div>
       <a class="to-top" href="#abe-top" data-cms-ai="0">Back to top</a>
     </div>
+  
 
     <div id="site-links" class="cf">
       
@@ -1081,6 +1094,10 @@ data-has-hat="false"
                <li><a id="ft-sell-3" href="/books/buyback/" data-cms-ai="0">Book Buyback</a></li>
               
             
+              
+               <li><a id="ft-sell-4" href="/books/sell/refer-seller" data-cms-ai="0">Refer a seller</a></li>
+              
+            
           </ul>
         </div>
       
@@ -1101,19 +1118,19 @@ data-has-hat="false"
               
             
               
-               <li><a id="ft-about-4" href="/docs/Legal/privacyPolicy.shtml?cm_sp=Ftr-_-Page-_-about4" data-cms-ai="0">Privacy Policy</a></li>
+               <li><a id="ft-about-4" href="https://forums.abebooks.com/abecom/?cm_sp=Ftr-_-Page-_-about4" data-cms-ai="0">Forums</a></li>
               
             
               
-               <li><a id="ft-about-5" href="/books/digital-millennium-copyright-act.shtml?cm_sp=Ftr-_-Page-_-about5" data-cms-ai="0">Designated Agent</a></li>
+               <li><a id="ft-about-5" href="/docs/Legal/privacyPolicy.shtml?cm_sp=Ftr-_-Page-_-about5" data-cms-ai="0">Privacy Policy</a></li>
               
             
               
-               <li><a id="ft-about-7" href="https://forums.abebooks.com/abecom/?cm_sp=Ftr-_-Page-_-about7" data-cms-ai="0">Forums</a></li>
+               <li><a id="ft-about-6" href="/books/digital-millennium-copyright-act.shtml?cm_sp=Ftr-_-Page-_-about6" data-cms-ai="0">Designated Agent</a></li>
               
             
               
-               <li><a id="ft-about-6" href="/accessibility/?cm_sp=Ftr-_-Page-_-about6" data-cms-ai="0">Accessibility</a></li>
+               <li><a id="ft-about-7" href="/accessibility/?cm_sp=Ftr-_-Page-_-about7" data-cms-ai="0">Accessibility</a></li>
               
             
           </ul>
@@ -1267,7 +1284,6 @@ data-has-hat="false"
     </div>
   </div>
 </footer>
-
 
 
   <script>
