@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="/s/0-6-47/usp-api.min.js"></script>
+    <script src="/s/0-6-49/usp-api.min.js"></script>
     <meta charset="UTF-8"/>
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -38,7 +38,7 @@
 
 
 <link rel="stylesheet" type="text/css"
-          href="/s/0-6-47/site-ask-sites-terms-page.css"/>
+          href="/s/0-6-49/site-ask-sites-terms-page.css"/>
     <script>
         var App = {};
     </script>
@@ -80,7 +80,7 @@ return clientId;
     
 window.dataLayer = window.dataLayer || [];
     
-    var pageViewPayload = {"event":"dataLayer-initialized","acquisitionDivision":"dirN","adId":"","googleClient":"aj-cat","experience":"gen-organic","fullUrl":"http://www.ask.com/terms?ueid=3254b5d5-2904-42f3-bced-be69e417dbdd","taboolaSiteId":"","layout":"Default","abTestIds":"","locale":"us","oCode":"0","pageViewId":"0afd928b7f0b4e64c5fdd267458a1875","requestId":"0e37333385b0194427860f14cd8a49d2c93822f35fc14ff5efe5591649bf5d66","pageNumber":1,"product":"ask.com","queryOrigination":"","searchQuery":"","pageType":"termsPage","appName":"Archie_Askus","extensionLanguage":"en","countryISO2Code":"fr","countryISO3Code":"fra","regionName":"pac","uniqueEntryId":"3254b5d5-2904-42f3-bced-be69e417dbdd","pageTitle":"Ask.com - What's your Question?"};
+    var pageViewPayload = {"event":"dataLayer-initialized","acquisitionDivision":"dirN","adId":"","googleClient":"aj-cat","experience":"gen-organic","fullUrl":"http://www.ask.com/terms?ueid=4112591e-e8d2-499c-bef9-e337a5fee4eb","taboolaSiteId":"","layout":"Default","abTestIds":"","locale":"us","oCode":"0","pageViewId":"c557761cef6103c8fe1cd7a59a5278d9","requestId":"7143e3736a10b3231e5f74f6fa69ecab917a36c478241f2cef19ea3f01268ab2","pageNumber":1,"product":"ask.com","queryOrigination":"","searchQuery":"","pageType":"termsPage","appName":"Archie_Askus","extensionLanguage":"en","countryISO2Code":"fr","countryISO3Code":"fra","regionName":"pac","uniqueEntryId":"4112591e-e8d2-499c-bef9-e337a5fee4eb","pageTitle":"Ask.com - What's your Question?"};
     
     
 addABCustomDimensions(pageViewPayload);
@@ -97,7 +97,7 @@ addABCustomDimensions(pageViewPayload);
             "ldid": "",
             "channel": "static",
             "affiliateid": "0",
-            "sessionid": "1333808320",
+            "sessionid": "556615057",
             "acquisitiondivision": "dirN",
             "countrycode": "fr",
             "adnetwork": ""
@@ -228,7 +228,7 @@ if (isDataLayerDefined) {
 <input type="hidden" id="partnerID" name="l" value="dir">
                 <input type="hidden" id="qo" name="qo" value="serpSearchTopBox">
                 
-<input type="hidden" id="ueid-top" name="ueid" value="3254b5d5-2904-42f3-bced-be69e417dbdd">
+<input type="hidden" id="ueid-top" name="ueid" value="4112591e-e8d2-499c-bef9-e337a5fee4eb">
                 
 <input class="PartialSearchBox-input js-PartialSearchBox-input  top"
                     data-zone="header" validate="required" position=top value="" name="q" autocomplete="off" maxlength="2048" 
@@ -339,8 +339,7 @@ placeholder="Search...">
                         elementSelector: null,
                         type: "ready",
                         handler: function () {
-                            
-var searchButton = $(".js-PartialSearchBox-button", this),
+                            var searchButton = $(".js-PartialSearchBox-button", this),
                                     searchForm = $(".js-PartialSearchBox-form", this);
                             
 //Attach submit under searchButton click event.
@@ -348,7 +347,20 @@ var searchButton = $(".js-PartialSearchBox-button", this),
                                 searchForm.submit();
                             });
 
-                        }
+                            
+var header = document.querySelector(".l-header");
+                                window.onscroll = function() {
+                                    if (document.querySelector(".l-header")) {
+                                        if (window.pageYOffset > 33) {
+                                            header.style.boxShadow = "0 1px 6px 0 rgba(32,33,36,.28)";
+                                        }
+                                        else {
+                                            header.style.boxShadow = "none";
+                                        }
+                                    }   
+                                }        
+                            
+}
                     },
                     {
                         partial: "PartialSearchBox",
@@ -423,6 +435,47 @@ var searchButton = $(".js-PartialSearchBox-button", this),
             );
         })();
     }
+
+        function addStylesToBigHeader(header, svg, searchBox, acResults) {
+            header.style.position = 'absolute';
+            header.style.top = '0px';
+            header.style.boxShadow = "none";
+            header.style.transition = "none";
+            header.style.padding = "0";
+            header.style.height = "60px";
+            header.style.width = "100%";
+            svg.style.marginTop = "5px";
+            svg.style.width = "60px";
+            svg.style.height = "45px";
+            searchBox.style.height = "43px";
+            svg.style.margin = "5px 0 0 83px";
+            searchBox.classList.remove("fixedSmallHeader");
+            acResults.style.width = "620px";
+            acResults.style.top = 52 - window.pageYOffset + "px";
+        }
+
+        function addStylesToSmallHeader(header, svg, searchBox, acResults) {
+            svg.style.height = "36px";
+            svg.style.width = "50px";
+            svg.style.margin = "0 0 -5px 83px";
+            svg.style.width = "60px";
+            header.style.height = "60px";
+            header.style.padding = "0";
+            header.style.boxShadow = "0 1px 6px 0 rgba(32,33,36,.28)";
+            var topOffset = (125 - window.pageYOffset) + header.clientHeight;
+            console.log(topOffset, window.pageYOffset); 
+            if (topOffset < 1) {
+                acResults.style.top = (window.pageYOffset + header.clientHeight - 9) + 'px';
+                header.style.top = '0px';   
+            } else if (topOffset > 1 && topOffset < 62) {
+                header.style.position = 'fixed';
+                header.style.top = -(topOffset) + 'px';
+                acResults.style.top = (43 - (topOffset)) + 'px';
+            }
+            if (window.pageYOffset > 125) {
+                acResults.style.width = "620px";
+            }
+        }
 
     var _searchQuery = {
         //Keys 0 - 9
@@ -1165,7 +1218,7 @@ var searchButton = $(".js-PartialSearchBox-button", this),
         </footer>
     </div>
 </div>
-<script src="/s/0-6-47/site-ask-sites.min.js"></script>
+<script src="/s/0-6-49/site-ask-sites.min.js"></script>
 <script>
     $(document).ready(function ($) {
         var i, k, event, readyElementList;
@@ -1195,11 +1248,11 @@ var searchButton = $(".js-PartialSearchBox-button", this),
 
 
 <script>
-        var _UnifiedApiParams = {"uniqueUser":"7F645E77-3D51-49F0-AEC6-FFD1BF94576E","appId":"Archie_Askus","appVersion":"f1141fe","appDate":"2022-09-14T04:09:20Z","logPageView":false,"updateSession":false,"domain":"ask.com","url":"www.ask.com/log/browser/event","backFillRequired":false,"eventId":"C8AB9037-CAFF-44B4-BA95-76FF037B39C8","maxSession":30,"suppressCookies":false,"cookieExpirationMinutes":129600,"newSessionOnDomainChange":false,"cookieName":"uc"};
+        var _UnifiedApiParams = {"uniqueUser":"5EE36EC6-73EA-42C7-9FC2-AF1E34129361","appId":"Archie_Askus","appVersion":"31e5c2d","appDate":"2022-09-14T16:19:31Z","logPageView":false,"updateSession":false,"domain":"ask.com","url":"www.ask.com/log/browser/event","backFillRequired":false,"eventId":"4646A2BC-0AC4-4A62-AE51-CEE83C0FB56A","maxSession":30,"suppressCookies":false,"cookieExpirationMinutes":129600,"newSessionOnDomainChange":false,"cookieName":"uc"};
         _UnifiedApiParams.url = (("https:" === window.location.protocol)? "https://" : "http://" ) + _UnifiedApiParams.url;
     </script>
 
-    <script src="/s/0-6-47/unified-api.min.js"></script>
+    <script src="/s/0-6-49/unified-api.min.js"></script>
     <script>
     if(App) {
         (function () {
@@ -1213,7 +1266,7 @@ var searchButton = $(".js-PartialSearchBox-button", this),
                         window.ask = window.ask || {};
                         var ask = window.ask;
                         ask.unified = ask.unified || {};
-                        ask.unified.pageContext = {"anuaaf":"Archie","anxut":"UNIFIED","anuaci":"5.196.30.134","anuaafl":"0","anxsn":"ask-sites-7f6446687d-ljh7q","anuahm":"GET","anuadc":"use1","anuaqs":"ueid=3254b5d5-2904-42f3-bced-be69e417dbdd","anxu":"http://www.ask.com/terms?ueid=3254b5d5-2904-42f3-bced-be69e417dbdd","anuaad":"dirN","anuapbr":"","anuaan":"","anuaamt":"","anuaagc":"","anuaadid":"","ucctr":"","ucctn":"","ucs":"","ucdm":"","uccnt":"","ucpc":"","anuadtp":"desktop","anxbt":"","anxbv":"","anxpt":"","anxpv":"","anxcd":"","anxw":"","anxh":"","anxv":"f1141fe","anxd":"2022-09-14T04:09:20.877Z","anuaptp":"termsPage","anuachl":"static","anuaprdd":"search","anxa":"Archie_Askus","anxp":"ask.com","anualcl":"us","anuasv":"1","anuaapp":"{\"pageViewId\":\"0afd928b7f0b4e64c5fdd267458a1875\",\"templateId\":\"desktop\",\"propsId\":\"gen-organic\",\"archieExperience\":\"default\"}","anuapn":1,"anuaptl":"Ask.com - What's your Question?"};
+                        ask.unified.pageContext = {"anuaaf":"Archie","anxut":"UNIFIED","anuaci":"5.196.30.134","anuaafl":"0","anxsn":"ask-sites-6b7bfcd5c7-dmbq2","anuahm":"GET","anuadc":"use1","anuaqs":"ueid=4112591e-e8d2-499c-bef9-e337a5fee4eb","anxu":"http://www.ask.com/terms?ueid=4112591e-e8d2-499c-bef9-e337a5fee4eb","anuaad":"dirN","anuapbr":"","anuaan":"","anuaamt":"","anuaagc":"","anuaadid":"","ucctr":"","ucctn":"","ucs":"","ucdm":"","uccnt":"","ucpc":"","anuadtp":"desktop","anxbt":"","anxbv":"","anxpt":"","anxpv":"","anxcd":"","anxw":"","anxh":"","anxv":"31e5c2d","anxd":"2022-09-14T16:19:31.039Z","anuaptp":"termsPage","anuachl":"static","anuaprdd":"search","anxa":"Archie_Askus","anxp":"ask.com","anualcl":"us","anuasv":"1","anuaapp":"{\"pageViewId\":\"c557761cef6103c8fe1cd7a59a5278d9\",\"templateId\":\"desktop\",\"propsId\":\"gen-organic\",\"archieExperience\":\"default\"}","anuapn":1,"anuaptl":"Ask.com - What's your Question?"};
                         ask.unified.payload = {
                             pageResults: [],
                             providers: ask.unified.pendingProviders || {}
@@ -1698,7 +1751,7 @@ if (window.ss_watts && window.ss_watts_guid) {
             "hi": "1",
             "prevQuery": "",
             "isDefaultLookup": "",
-            "additionalParameters": "ueid=3254b5d5-2904-42f3-bced-be69e417dbdd",
+            "additionalParameters": "ueid=4112591e-e8d2-499c-bef9-e337a5fee4eb",
             "ssBold": "'false'",
             "clearSearchHistory": "Clear search history",
             "max": "",
