@@ -1,0 +1,584 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs-cz" xml:lang="cs-cz" >
+    <head>
+        <meta http-equiv="X-UddA-Compatible" content="IE=Edge" />
+        
+        <title>
+            Technické podmínky | Seznam Nápověda
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="alternate" href="rss.html" type="application/rss+xml" title="RSS" />
+        <link rel="stylesheet" href="/frontend/css/userweb.css" media="all" type="text/css" />
+        <link rel="shortcut icon" href="/frontend/img/favicon.ico" />
+        <script src="/frontend/js/lib/jak.js" type="text/javascript" ></script>
+        <script src="/frontend/js/widgets/lightbox.js" type="text/javascript"></script>
+        <script src="/frontend/js/widgets/window.js" type="text/javascript"></script>
+        <script src="/frontend/js/widgets/suggest2.js" type="text/javascript"></script>
+        <script src="/frontend/js/userweb.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/frontend/js/openclose.js"></script>
+        <script type="text/javascript">
+            var adv = {};
+            var contextHelp = new JAK.Help();
+            var videos = [];
+        </script>
+    </head>
+    <body id="onas-seznam-cz">
+        <div id="page">
+            <div id="head" class="page">
+                <a href="http://www.ippi.cz/klavesove-zkratky/" accesskey="1" class="blind">Klávesové zkratky na tomto webu</a>
+                <a href="#obsah" accesskey="0" class="blind" title="Na obsah stránky">Na obsah stránky</a>
+                <div id="headContent">
+                    <div class="lang">
+                        
+                    </div>
+                    <div id="headPicture">
+                        <div id="headBox">
+                            <div id="logo">
+                                <a accesskey="2" title="Hlavní strana Seznam Nápověda" href="/" >
+                                    <img src="/frontend/img/logo-napoveda-small.png" title="Přejít na úvodní stránku Seznam Nápověda" alt="Hlavní strana Seznam Nápověda" />
+                                </a>
+                            </div>
+                            <div id="pageTitle">
+                                <h1>Fulltextové vyhledávání</h1>
+                            </div>
+
+                            <div id="search">
+                                <form action="/cz/ajax/new-redirect/" method="get">
+                                    <label class="blind" for="w">Hledej</label>
+                                    <input type="text" id="w" name="w" size="65" class="shadow" autocomplete="off" accesskey="4" value="" />
+                                    <input type="submit" class="button" name="search" value="Hledej" />
+                                    <script type="text/javascript">
+                                        /* <![CDATA[ */
+                                        var opt = {
+                                         count: 10
+                                        };
+                                        var sg = new JAK.Suggest("w", "/cz/ajax/new-suggestions/", opt);
+                                        /* ]]> */
+                                    </script>
+                                </form>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <hr class="blind" />
+                </div>
+            </div>
+            <div id="body">
+                <div id="content">
+                    <div id="article" class="columnRight">
+                        <a name="obsah"></a>
+                        <h2 class="article-header">Technické podmínky</h2>
+                        <div id="article0" class="article">
+
+                            
+                                
+                                    <p>Po odeslání dotazu se zobrazí stránka s&nbsp;výsledky vyhledávání. Typicky tato stránka obsahuje více výsledků následujících druhů:</p>
+
+<ul>
+	<li><a href="organic">Přirozené výsledky</a></li>
+	<li><a href="upoutavky">Upoutávky a chytré karty</a></li>
+	<li><a href="miniaplikace">Miniaplikace a karusel</a></li>
+	<li><a href="reklama">Reklamu</a></li>
+</ul>
+
+<h2 id="organic">Přirozené výsledky</h2>
+
+<p>Jedná se o odkazy v hlavní oblasti výsledků, jejichž pozice je určována stejnou technologií nezávisle na názvu domény a jejím vztahu ke společnosti Seznam.cz. Tyto výsledky nelze žádným způsobem přímo ovlivňovat nebo koupit. Oblast přirozených výsledků je hlavní částí stránky vyhledávání a běžně se v ní zobrazuje 10 přirozených odkazů. Struktura přirozeného výsledku je popsána v&nbsp;části <a href="https://napoveda.seznam.cz/cz/fulltext-hledani-v-internetu/struktura-vysledku">struktura výsledku</a>.</p>
+
+<p>Pro řazení přirozených výsledků je klíčový proces strojového učení. Modely strojového učení využívají předem připravené příklady hodnocení stránek k&nbsp;dotazu tzv. <em>anotace</em> dle níže přiložených pravidel. Na základě modelů, které ze strojového učení vznikají, pak Seznam vyhledávání zcela automatizovaně řadí výsledky přirozeného vyhledávání.</p>
+
+<p><strong>Informace, které slouží jako hlavní parametry při vyhodnocování modelů relevance:</strong></p>
+
+<ul>
+	<li>Informace o výskytu slov z&nbsp;dotazu v&nbsp;dokumentu nebo v&nbsp;odkazech.</li>
+	<li>Grafové algoritmy nad odkazovou sítí a statistiky zpětných odkazů.</li>
+	<li>Zpětná vazba od uživatelů: počet kliků na výsledek, počet kliků na výsledky z&nbsp;webu.</li>
+	<li>Shoda jazyka dokumentu s&nbsp;jazykem dotazu.</li>
+	<li>Informace o dotazu: jazyk, slovní druhy, vzácnost jednotlivých slov (jak často se vyskytují v&nbsp;textech dokumentů), počet segmentů dotazu, které mají samostatný význam.</li>
+	<li>Informace o dokumentu: jazyk, statistiky výskytu html elementů (odstavce, nadpisy, seznamy, obrázky), protokol http/https, velikost dokumentu, velikost bezeztrátově komprimovaného dokumentu, výskyt kódů reklamních systémů.</li>
+</ul>
+
+<h2 id="upoutavky">Upoutávky a chytré karty</h2>
+
+<p>Mají přidanou informační hodnotu pro uživatele. Jejich začlenění mezi výsledky vyhledávání je prováděno plně automatizovaně, a to na základě relevance upoutávky vůči přirozeným výsledkům vyhledávání. Relevanci zařazení mezi přirozené výsledky určuje převážně uživatelská zpětná vazba v&nbsp;podobě klikání. Výsledek vyhledávání jako celek tak mnohem věrohodněji reflektuje realitu a mnohem lépe odráží potřeby uživatelů, aniž by docházelo ke zhoršení kvality při vyhledávání. Obsah upoutávek dodávají interní a partnerské služby společnosti Seznam.cz nebo veřejné databáze.</p>
+
+<p><strong>Kompletní seznam upoutávek a karet:</strong></p>
+
+<ul>
+	<li><a href="https://napoveda.seznam.cz/cz/fulltext-hledani-v-internetu/zobrazeni-dalsich-sluzeb/">Upoutávky</a></li>
+	<li><a href="https://napoveda.seznam.cz/cz/fulltext-hledani-v-internetu/chytre-karty/">Chytré karty</a></li>
+</ul>
+
+<h2 id="miniaplikace">Miniaplikace a karusel</h2>
+
+<p>Miniapliakce mají za cíl přímo odpovědět na dotaz uživatele v základních otázkách (např. kalkulačka). Karusel pomáhá s orientací a výběrem souvisejících dotazů v tématu (např. jedlé houby). Miniaplikace i karusel se zobrazují přímo pod vyhledávacím polem. Odpovídají pouze, když mají přidanou hodnotu pro uživatele./p&gt;</p>
+
+<p><strong>Kompletní seznam miniaplikací a přímých odpovědí:</strong></p>
+
+<ul>
+	<li><a href="https://napoveda.seznam.cz/cz/fulltext-hledani-v-internetu/miniaplikace/">Miniaplikace</a></li>
+	<li><a href="https://napoveda.seznam.cz/cz/fulltext-hledani-v-internetu/odpovidac/">Odpovídač</a></li>
+	<li><a href="https://napoveda.seznam.cz/cz/fulltext-hledani-v-internetu/karusely/">Karusely</a></li>
+</ul>
+
+<h2 id="reklama">Reklama</h2>
+
+<p>Jedná se o speciální pozice v rámci výsledků vyhledávání technologicky i funkčně oddělené od Přirozených výsledů vyhledávání, tak jak jsou popsány výše. Tyto výsledky jsou označeny jako <span style="font-family: 'Arial CE',Arial,'Helvetica CE',Helvetica,sans-serif; font-weight: 400; margin: 0; color: #59946b; font-size: .8em; display: inline-block; padding: .3em .5em; line-height: 1; border: 1px solid #59946b; border-radius: .2em; background: #fff;">Reklama</span>. V bočním a horním panelu se mohou zobrazit tzv.&nbsp;<em>Produktové inzeráty</em>. Detailnější informace o reklamních pozicích Sklik, způsobech jejich řazení i možnostech jejich objednání naleznete na <a href="http://napoveda.sklik.cz/">stránce nápovědy Skliku</a>.</p>
+
+<p><strong>Pravidla anotací ke stažení (formát PDF):</strong></p>
+
+<ul>
+	<li><a href="https://napoveda.seznam.cz/soubory/Fulltext/Pravidla-anotovani-relevance-verze-4.0.0_-022.01.pdf">Pravidla anotování relevance verze 4.0.0.-2022.01.pdf</a></li>
+</ul>
+                                        <div class="helpful">
+                                            <span class="item">Pomohl Vám tento článek?</span>
+                                            <a href="" class="item like">Ano</a>
+                                            <a href="" class="item notLike">Ne</a>
+                                        </div>
+                                        <script type="text/javascript">
+                                            /* <![CDATA[ */
+                                                new JAK.HelpfulArticle({
+                                                    pageId: 23891,
+                                                    helpfulEnabled: true,
+                                                    thanksVoted: true
+                                                });
+                                            /* ]]> */
+                                        </script>
+                                        <div class="clear"></div>
+<div id="contact-form">
+    <h2>Kontaktujte nás</h2> 
+    <button onclick="window.location='/cz/services/'" type="submit">Online podpora</button>
+</div>
+
+                                
+                            
+                        </div>
+                        <div id="right-column">
+                            <div id="adRightColumn">
+                                <script type="text/javascript">
+                                    /* <![CDATA[ */
+                                    adv['adRightColumn'] = {zoneId:'seznam.napoveda.skyscrapper'};
+                                    /* ]]> */
+                                </script>
+                           </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    
+<div id="menu" class="columnLeft">
+    <h2 class="blind">Menu</h2>
+    <ul class="back">
+        
+            <li><a href="/cz/">Zpět na: <strong>Hlavní stránka</strong></a></li>
+        
+    </ul>
+	<ul>
+        
+                
+                    <li><span class="label">Vyhledávání na Internetu</span></li>
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/uvod-do-vyhledavani">Úvod do vyhledávání</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/prubeh-vyhledavani">Průběh vyhledávání</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/pokrocile-vyhledavani">Pokročilé vyhledávání s použitím operátorů</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/hledani-fulltext-ochrana-vyhledavani-pred-zneuzitim">Ochrana vyhledávání před zneužitím</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/ochrana-udaju">Ochrana údajů</a></li>
+                    
+                
+        
+                
+                    
+                        <li class="active"><a href="/cz/fulltext-hledani-v-internetu/technicke-podminky" class="active folder">Technické podmínky</a></li>
+                    
+                
+        
+                
+                    <li><span class="label">Výsledky vyhledávání</span></li>
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/rozlozeni-vysledku">Rozložení výsledků</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/struktura-vysledku">Struktura výsledku</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/strukturovana-data">Strukturovaná data</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/upoutavky">Upoutávky</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/chytre-karty">Chytré karty</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/vychytavky">Vychytávky</a></li>
+                    
+                
+        
+                
+                    <li><span class="label">Vyhledávání na mobilu</span></li>
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/zobrazeni-vysledku-vyhledavani">Zobrazení výsledků vyhledávání</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/upoutavky-na-mobilu">Upoutávky na mobilu</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/chytre-karty-na-mobilu">Chytré karty na mobilu</a></li>
+                    
+                
+        
+                
+                    <li><span class="label">Další možnosti vyhledávání</span></li>
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/miniaplikace">Miniaplikace</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/odpovidac">Odpovídač</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/karusely">Karusely</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/nastaveni-polohy">Nastavení polohy</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/hledani-fulltext-dostupne-parametry-v-url-vyhledavani">Dostupné parametry v URL</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/hledani-fulltext-nastaveni-vyhledavacu-v-prohlizeci">Nastavení vyhledávačů v prohlížeči</a></li>
+                    
+                
+        
+                
+                    <li><span class="label">Komunikace s robotem</span></li>
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/seznambot">SeznamBot</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/robots-txt">Robots.txt</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/sitemap-xml">Sitemap.xml</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/indexovani-rss-kanalu-seznambotem">RSS kanály</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/presmerovani-url">Přesměrování URL</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/presmerovani-webu">Přesměrování webu</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/protokol-https">Protokol HTTPS</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/kanonicke-url">Kanonické URL</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/meta-tag-robots">Meta tag robots</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/nofollow">Nofollow</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/odstranovani-stranek">Odstraňování stránek</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/protokol-indexnow">Protokol IndexNow</a></li>
+                    
+                
+        
+                
+                    <li><span class="label">Komunikace s generátorem náhledů</span></li>
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/generator-nahledu">Generátor náhledů</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/pravidla-pro-favicony">Pravidla pro favicony</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/pravidla-pro-nahledy-stranek">Pravidla pro náhledy stránek</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/pravidla-pro-hlavni-obrazek">Pravidla pro hlavní obrázek</a></li>
+                    
+                
+        
+                
+                    <li><span class="label">Optimalizace (SEO)</span></li>
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/nez-zacnete-tvorit-web">Než začnete tvořit web</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/optimalizace-webu">Optimalizace webu</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/ceho-se-pri-optimalizaci-vyvarovat">Čeho se při optimalizaci vyvarovat</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/slovnicek">Slovníček</a></li>
+                    
+                
+        
+                
+                    <li><span class="label">Nejčastější dotazy (FAQ)</span></li>
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/nahledy-stranek-faq">Náhledy stránek</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/optimalizace-faq">Optimalizace</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/pridani-stranky-faq">Přidání stránky</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/indexovani">Indexování</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/vysledky-vyhledavani-faq">Výsledky vyhledávání</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/hledani-fulltext-zadavani-dotazu-jak-hledat-ve-fulltextovem-vyhledavani-faq-dotazy">Zadávání dotazů</a></li>
+                    
+                
+        
+                
+                    <li><span class="label">Administrace</span></li>
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/pridat-url">Přidat URL</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/kontrolni-formular">Kontrolní formulář</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/kontaktni-formular">Kontaktní formulář</a></li>
+                    
+                
+        
+                
+                    <li><span class="label">Užitečné informace</span></li>
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/blog-tymu-vyhledavani">Blog týmu Vyhledávání</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/webmaster-seznam">Seznam Webmaster</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/vyhledani-obrazku">Hledání obrázků</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/vyhledani-videi">Hledání videí</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/bleskurychle-nacteni-na-seznamu">Bleskurychlé načtení na Seznamu</a></li>
+                    
+                
+        
+                
+                    
+                        <li><a class="folder" href="/cz/fulltext-hledani-v-internetu/amp-vydavatele">O AMP pro vydavatele</a></li>
+                    
+                
+        
+	</ul>
+</div>
+
+
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="content">
+                    <p>Copyright &copy; 1996&ndash;2022 Seznam.cz, a.s.</p>
+                    <p>
+                        <a href="http://www.seznam.cz">Seznam</a>&nbsp;&ndash;
+                        <a href="">Nápověda</a>&nbsp;&ndash;
+                        <a href="/rss.html">RSS</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+            <!-- Seznam Reporter -->
+            <script type="text/javascript" src="https://h.seznam.cz/js/dot-small.js"></script>
+            <script src="https://ssp.seznam.cz/static/js/ssp.js"></script>
+
+            <script type="text/javascript">
+                DOT.cfg({service: 'napoveda'});
+                sssp.getAds();
+            </script>
+        
+    </body>
+</html>
