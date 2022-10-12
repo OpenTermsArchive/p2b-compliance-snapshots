@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="/s/0-6-55/usp-api.min.js"></script>
+    <script src="/s/0-6-56/usp-api.min.js"></script>
     <meta charset="UTF-8"/>
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -38,7 +38,7 @@
 
 
 <link rel="stylesheet" type="text/css"
-          href="/s/0-6-55/site-ask-sites-terms-page.css"/>
+          href="/s/0-6-56/site-ask-sites-terms-page.css"/>
     <script>
         var App = {};
     </script>
@@ -80,7 +80,7 @@ return clientId;
     
 window.dataLayer = window.dataLayer || [];
     
-    var pageViewPayload = {"event":"dataLayer-initialized","acquisitionDivision":"dirN","adId":"","googleClient":"aj-cat","experience":"ctrl-ask-organic-adsense","fullUrl":"http://www.ask.com/terms?ueid=7500e41a-a20e-4a6a-a10c-51f04738d9dc","taboolaSiteId":"","layout":"Default","abTestIds":"","locale":"us","oCode":"0","pageViewId":"e6ac3bff71799fead86a7d345839ad44","requestId":"3563e524e42d3c4c1372f47ab1863e1cc4a63dad5d09e87c3a797b2dc9e263e8","pageNumber":1,"product":"ask.com","queryOrigination":"","searchQuery":"","pageType":"termsPage","appName":"Archie_Askus","extensionLanguage":"en","countryISO2Code":"fr","countryISO3Code":"fra","regionName":"pac","uniqueEntryId":"7500e41a-a20e-4a6a-a10c-51f04738d9dc","pageTitle":"Ask.com - What's your Question?"};
+    var pageViewPayload = {"event":"dataLayer-initialized","acquisitionDivision":"dirN","adId":"","googleClient":"aj-cat","experience":"ctrl-ask-organic-adsense","fullUrl":"http://www.ask.com/terms?ueid=04bbcfb6-3eb2-4911-afa6-665ddff9353c","taboolaSiteId":"","layout":"Default","abTestIds":"","locale":"us","oCode":"0","pageViewId":"fb3673d6e95dd0393abe814699e1a6c2","requestId":"cfca8366b6e63e5d666d9bafa9f237ec36b93cad6487140f7e749842234b49a6","pageNumber":1,"product":"ask.com","queryOrigination":"","searchQuery":"","pageType":"termsPage","appName":"Archie_Askus","extensionLanguage":"en","countryISO2Code":"fr","countryISO3Code":"fra","regionName":"pac","uniqueEntryId":"04bbcfb6-3eb2-4911-afa6-665ddff9353c","pageTitle":"Ask.com - What's your Question?"};
     
     
 addABCustomDimensions(pageViewPayload);
@@ -97,7 +97,7 @@ addABCustomDimensions(pageViewPayload);
             "ldid": "",
             "channel": "static",
             "affiliateid": "0",
-            "sessionid": "750476109",
+            "sessionid": "1481595625",
             "acquisitiondivision": "dirN",
             "countrycode": "fr",
             "adnetwork": ""
@@ -227,7 +227,7 @@ if (isDataLayerDefined) {
 <input type="hidden" id="partnerID" name="l" value="dir">
                 <input type="hidden" id="qo" name="qo" value="serpSearchTopBox">
                 
-<input type="hidden" id="ueid-top" name="ueid" value="7500e41a-a20e-4a6a-a10c-51f04738d9dc">
+<input type="hidden" id="ueid-top" name="ueid" value="04bbcfb6-3eb2-4911-afa6-665ddff9353c">
                 
 <input class="PartialSearchBox-input js-PartialSearchBox-input  top"
                     data-zone="header" validate="required" position=top value="" name="q" autocomplete="off" maxlength="2048" 
@@ -346,32 +346,8 @@ placeholder="Search...">
                                 searchForm.submit();
                             });
 
-                            window.onscroll = function() {
-                                var header = document.querySelector(".l-header");
-                                var svg = document.querySelector(".PartialLogo-logo svg");
-                                var searchBox = document.querySelector(".PartialSearchBox");
-                                var acResults = document.querySelector(".ac_results");
-                                if (header || svg || searchBox || acResults) {
-                                    if (window.pageYOffset < 125) {
-                                        this.addStylesToBigHeader(header, svg, searchBox, acResults);
-                                    } else {
-                                        this.addStylesToSmallHeader(header, svg, searchBox, acResults);
-                                    }
-                                }
-                            }
                             
-var header = document.querySelector(".l-header");
-                                window.onscroll = function() {
-                                    if (document.querySelector(".l-header")) {
-                                        if (window.pageYOffset > 33) {
-                                            header.style.boxShadow = "0 1px 6px 0 rgba(32,33,36,.28)";
-                                        }
-                                        else {
-                                            header.style.boxShadow = "none";
-                                        }
-                                    }   
-                                }     
-                            
+
 }
                     },
                     {
@@ -448,7 +424,7 @@ var header = document.querySelector(".l-header");
         })();
     }
 
-        function addStylesToBigHeader(header, svg, searchBox, acResults) {
+        function addStylesToBigHeader(header, svg, searchBox, acResults, searchBoxInput, searchBoxButton, searchBoxButtonClose, searchBoxButtonVertical) {
             header.style.position = 'absolute';
             header.style.top = '0px';
             header.style.boxShadow = "none";
@@ -456,24 +432,40 @@ var header = document.querySelector(".l-header");
             header.style.padding = "0";
             header.style.height = "60px";
             header.style.width = "100%";
+            searchBoxInput.style.height = "41px";
+            searchBoxButton.style.height = "43px";
+            searchBoxButton.style.width = "55px";
+            searchBoxButtonClose.style.height = "43px";
+            searchBoxButtonVertical.style.height = "33px";
+            searchBoxButtonVertical.style.fontSize = "38px";
+            searchBoxButtonVertical.style.fontWeight = "100";
+            searchBoxButtonVertical.style.lineHeight = "30px";
             svg.style.marginTop = "5px";
             svg.style.width = "60px";
             svg.style.height = "45px";
             searchBox.style.height = "43px";
             svg.style.margin = "5px 0 0 83px";
             searchBox.classList.remove("fixedSmallHeader");
-            acResults.style.width = "620px";
+            acResults.style.width = "618px";
             acResults.style.top = 52 - window.pageYOffset + "px";
+            acResults.style.left = "163px";
         }
 
-        function addStylesToSmallHeader(header, svg, searchBox, acResults) {
-            svg.style.height = "36px";
-            svg.style.width = "50px";
-            svg.style.margin = "0 0 -5px 83px";
-            svg.style.width = "60px";
-            header.style.height = "60px";
+        function addStylesToSmallHeader(header, svg, searchBox, acResults, searchBoxInput, searchBoxButton, searchBoxButtonClose, searchBoxButtonVertical) {
+            svg.style.height = "30px";
+            svg.style.width = "42px";
+            svg.style.margin = "-5px 0 0 100px";
+            header.style.height = "49px";
             header.style.padding = "0";
             header.style.boxShadow = "0 1px 6px 0 rgba(32,33,36,.28)";
+            searchBoxInput.style.height = "30px";
+            searchBoxButton.style.height = "32px";
+            searchBoxButton.style.width = "42px";
+            searchBoxButtonClose.style.height = "32px";
+            searchBoxButtonVertical.style.height = "22px";
+            searchBoxButtonVertical.style.fontSize = "26px";
+            searchBoxButtonVertical.style.fontWeight = "400";
+            searchBoxButtonVertical.style.lineHeight = "20px";
             var topOffset = (125 - window.pageYOffset) + header.clientHeight;
             if (topOffset < 1) {
                 acResults.style.top = (window.pageYOffset + header.clientHeight - 9) + 'px';
@@ -481,10 +473,11 @@ var header = document.querySelector(".l-header");
             } else if (topOffset > 1 && topOffset < 62) {
                 header.style.position = 'fixed';
                 header.style.top = -(topOffset) + 'px';
-                acResults.style.top = (43 - (topOffset)) + 'px';
+                acResults.style.top = (28 - (topOffset)) + 'px';
             }
             if (window.pageYOffset > 125) {
-                acResults.style.width = "620px";
+                acResults.style.width = "618px";
+                acResults.style.left = "162px";
             }
         }
 
@@ -494,6 +487,9 @@ var header = document.querySelector(".l-header");
             searchBoxButtonClose.style.height = "40px";
             searchBoxButtonVertical.style.height = "30px";
             searchBoxButtonVertical.style.padding = "4px 0";
+            searchBoxButtonVertical.style.fontSize = "38px";
+            searchBoxButtonVertical.style.fontWeight = "100";
+            searchBoxButtonVertical.style.lineHeight = "26px";
             header.style.position = 'absolute';
             header.style.top = '0px';
             header.style.boxShadow = "none";
@@ -509,6 +505,7 @@ var header = document.querySelector(".l-header");
             searchBox.classList.remove("fixedSmallHeader");
             acResults.style.width = "620px";
             acResults.style.top = 52 - window.pageYOffset + "px";
+            acResults.style.left = "166px";
         }
 
         function addStylesToMyWaySmallHeader(header, svg, searchBox, acResults, searchBoxInput, searchBoxButton, searchBoxButtonClose, searchBoxButtonVertical) {
@@ -517,6 +514,9 @@ var header = document.querySelector(".l-header");
             searchBoxButtonClose.style.height = "35px";
             searchBoxButtonVertical.style.height = "29px";
             searchBoxButtonVertical.style.padding = "2px 0";
+            searchBoxButtonVertical.style.fontSize = "30px";
+            searchBoxButtonVertical.style.fontWeight = "400";
+            searchBoxButtonVertical.style.lineHeight = "26px";
             svg.style.height = "35px";
             svg.style.margin = "4px 53px 10px 52px";
             svg.style.width = "60px";
@@ -534,6 +534,7 @@ var header = document.querySelector(".l-header");
             }
             if (window.pageYOffset > 125) {
                 acResults.style.width = "620px";
+                acResults.style.left = "166px";
             }
         }
 
@@ -1278,7 +1279,7 @@ var header = document.querySelector(".l-header");
         </footer>
     </div>
 </div>
-<script src="/s/0-6-55/site-ask-sites.min.js"></script>
+<script src="/s/0-6-56/site-ask-sites.min.js"></script>
 <script>
     $(document).ready(function ($) {
         var i, k, event, readyElementList;
@@ -1308,11 +1309,11 @@ var header = document.querySelector(".l-header");
 
 
 <script>
-        var _UnifiedApiParams = {"uniqueUser":"0C90B708-3999-41D3-A846-673E249D7DD4","appId":"Archie_Askus","appVersion":"53e35eb","appDate":"2022-10-11T22:12:45Z","logPageView":false,"updateSession":false,"domain":"ask.com","url":"www.ask.com/log/browser/event","backFillRequired":false,"eventId":"C80B610D-F4B9-4492-94AE-52F37F7AA978","maxSession":30,"suppressCookies":false,"cookieExpirationMinutes":129600,"newSessionOnDomainChange":false,"cookieName":"uc"};
+        var _UnifiedApiParams = {"uniqueUser":"98CFCA85-B06F-4203-A928-40A3DD8BCC4B","appId":"Archie_Askus","appVersion":"5797bcf","appDate":"2022-10-12T14:18:44Z","logPageView":false,"updateSession":false,"domain":"ask.com","url":"www.ask.com/log/browser/event","backFillRequired":false,"eventId":"2040DCB9-C2CB-432C-8D4B-C46C6A340DD1","maxSession":30,"suppressCookies":false,"cookieExpirationMinutes":129600,"newSessionOnDomainChange":false,"cookieName":"uc"};
         _UnifiedApiParams.url = (("https:" === window.location.protocol)? "https://" : "http://" ) + _UnifiedApiParams.url;
     </script>
 
-    <script src="/s/0-6-55/unified-api.min.js"></script>
+    <script src="/s/0-6-56/unified-api.min.js"></script>
     <script>
     if(App) {
         (function () {
@@ -1326,7 +1327,7 @@ var header = document.querySelector(".l-header");
                         window.ask = window.ask || {};
                         var ask = window.ask;
                         ask.unified = ask.unified || {};
-                        ask.unified.pageContext = {"anuaaf":"Archie","anxut":"UNIFIED","anuaci":"5.196.30.134","anuaafl":"0","anxsn":"ask-sites-8498858f-r6brm","anuahm":"GET","anuadc":"use1","anuaqs":"ueid=7500e41a-a20e-4a6a-a10c-51f04738d9dc","anxu":"http://www.ask.com/terms?ueid=7500e41a-a20e-4a6a-a10c-51f04738d9dc","anuaad":"dirN","anuapbr":"","anuaan":"","anuaamt":"","anuaagc":"","anuaadid":"","ucctr":"","ucctn":"","ucs":"","ucdm":"","uccnt":"","ucpc":"","anuadtp":"desktop","anxbt":"","anxbv":"","anxpt":"","anxpv":"","anxcd":"","anxw":"","anxh":"","anxv":"53e35eb","anxd":"2022-10-11T22:12:45.860Z","anuaptp":"termsPage","anuachl":"static","anuaprdd":"search","anxa":"Archie_Askus","anxp":"ask.com","anualcl":"us","anuasv":"1","anuaapp":"{\"pageViewId\":\"e6ac3bff71799fead86a7d345839ad44\",\"templateId\":\"desktop\",\"propsId\":\"ctrl-ask-organic-adsense\",\"archieExperience\":\"default\"}","anuapn":1,"anuaptl":"Ask.com - What's your Question?"};
+                        ask.unified.pageContext = {"anuaaf":"Archie","anxut":"UNIFIED","anuaci":"5.196.30.134","anuaafl":"0","anxsn":"ask-sites-578db45bcf-kjx9q","anuahm":"GET","anuadc":"use1","anuaqs":"ueid=04bbcfb6-3eb2-4911-afa6-665ddff9353c","anxu":"http://www.ask.com/terms?ueid=04bbcfb6-3eb2-4911-afa6-665ddff9353c","anuaad":"dirN","anuapbr":"","anuaan":"","anuaamt":"","anuaagc":"","anuaadid":"","ucctr":"","ucctn":"","ucs":"","ucdm":"","uccnt":"","ucpc":"","anuadtp":"desktop","anxbt":"","anxbv":"","anxpt":"","anxpv":"","anxcd":"","anxw":"","anxh":"","anxv":"5797bcf","anxd":"2022-10-12T14:18:44.881Z","anuaptp":"termsPage","anuachl":"static","anuaprdd":"search","anxa":"Archie_Askus","anxp":"ask.com","anualcl":"us","anuasv":"1","anuaapp":"{\"pageViewId\":\"fb3673d6e95dd0393abe814699e1a6c2\",\"templateId\":\"desktop\",\"propsId\":\"ctrl-ask-organic-adsense\",\"archieExperience\":\"default\"}","anuapn":1,"anuaptl":"Ask.com - What's your Question?"};
                         ask.unified.payload = {
                             pageResults: [],
                             providers: ask.unified.pendingProviders || {}
@@ -1811,7 +1812,7 @@ if (window.ss_watts && window.ss_watts_guid) {
             "hi": "1",
             "prevQuery": "",
             "isDefaultLookup": "",
-            "additionalParameters": "ueid=7500e41a-a20e-4a6a-a10c-51f04738d9dc",
+            "additionalParameters": "ueid=04bbcfb6-3eb2-4911-afa6-665ddff9353c",
             "ssBold": "'false'",
             "clearSearchHistory": "Clear search history",
             "max": "",
