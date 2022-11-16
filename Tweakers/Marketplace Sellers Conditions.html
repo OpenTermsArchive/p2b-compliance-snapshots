@@ -25,7 +25,7 @@
                                             <link rel="shortcut icon" href="https://tweakers.net/favicon.ico" type="image/x-icon">
                         
             <link rel="stylesheet" href="https://tweakers.net/x/build/components.c12efcd2.css"><script>
-                var relaxedDomain='tweakers.net',tweakersConfig = {"BaseURL":"https:\/\/tweakers.net\/","TnetBaseURL":"https:\/\/tweakers.net\/","ForumBaseURL":"https:\/\/gathering.tweakers.net\/","ImgURL":"https:\/\/tweakers.net\/","sidName":"__Secure-TnetID","UserID":0,"requestId":"Twk-tc3-web4_247.8.9_2762493_63743174b00fd4.58503538","clickToLoad":false,"compare":{"initialCompareBasket":[],"defaultCompareUrl":"https:\/\/tweakers.net\/pricewatch\/compare\/0\/","compareMax":50,"timestamp":1668559220},"logMrStats":1};
+                var relaxedDomain='tweakers.net',tweakersConfig = {"BaseURL":"https:\/\/tweakers.net\/","TnetBaseURL":"https:\/\/tweakers.net\/","ForumBaseURL":"https:\/\/gathering.tweakers.net\/","ImgURL":"https:\/\/tweakers.net\/","sidName":"__Secure-TnetID","UserID":0,"requestId":"Twk-tc3-web4_247.8.9_3178901_637485da38eed1.23828279","clickToLoad":false,"compare":{"initialCompareBasket":[],"defaultCompareUrl":"https:\/\/tweakers.net\/pricewatch\/compare\/0\/","compareMax":50,"timestamp":1668580826},"logMrStats":1};
                 try{document.domain=relaxedDomain}catch(e){relaxedDomain=''}
                 document.documentElement.className='js';
             </script>
@@ -70,7 +70,7 @@
             <div class="leftSidebarToggle"></div>
             <div id="logo"><a href="https://tweakers.net/"></a></div>
             <b class="sitename">Tweakers</b>
-            <ul id="navMenu">
+            <ul id="navMenu" style="width: 590px;">
                 <li class="frontpage"><a href="https://tweakers.net/">Frontpage</a></li>
                                     
                     <li>
@@ -98,8 +98,8 @@
 
                                             </li>
                                     
-                    <li style="display: none;">
-                        <a href="https://tweakers.net/carriere/it-banen/zoeken/">Carrière</a>
+                    <li style="display: none; background: rgb(51, 51, 51);">
+                        <a href="https://tweakers.net/campagne/blackfriday">Black Friday</a>
 
                                             </li>
                                                                                 
@@ -138,14 +138,14 @@
                                                                             <li>
                                             <a href="https://tweakers.net/info/over-tweakers/">Over Tweakers</a>
                                         </li>
-                                                                    </ul>
+                                                                    <li><a href="https://tweakers.net/carriere/">Carrière</a></li></ul>
                             </div>
                                             </li>
                             </ul>
                                                 <div class="rightSidebarToggle empty">
     <span id="totalNotificationsCount" class="newNotificationsCount">0</span>
 </div>
-<ul id="userbar" class="notloggedin">
+<ul id="userbar" class="notloggedin" style="z-index: 99;">
         <li class="more last">
         <a class="trigger username" style="text-decoration:none">Account</a>
         <div>
@@ -567,19 +567,43 @@
 
 
 <!--
-Request ID: Twk-tc3-web4_247.8.9_2762493_63743174b00fd4.58503538
+Request ID: Twk-tc3-web4_247.8.9_3178901_637485da38eed1.23828279
 Env: frontpage-production
-Server time: 0,0295 s (C: 0,0217 s, Q: 4; 0,0036 s, E: 5; 0,0028 s, M: 2; 0,0008 s, A: 3; 0,0027 s)
+Server time: 0,0307 s (C: 0,0193 s, Q: 4; 0,0039 s, E: 5; 0,0031 s, M: 2; 0,0008 s, A: 3; 0,0027 s)
 Mem: 5242 KB
 
 Engines: (S) twk-tc3-web4 (5)
 -->
         
+    <script>
+window.addEventListener("DOMContentLoaded", function(){
+    let navbar = document.querySelector("#navMenu");
+    let userbar = document.querySelector("#userbar");
+
+    try{
+        userbar.style.zIndex = "99";
+        navbar.style.width = "590px";
+        let careersNav = navbar.children[6];
+        careersNav.style.background = "#333";
+        careersNav.querySelector("a").outerHTML = `<a href="https://tweakers.net/campagne/blackfriday">Black Friday</a>`;
+    } catch(error){(console.error())}
+
+    let meerBar = navbar.querySelector("li.more.last div ul");
+
+    try{
+        let newCareersLink = document.createElement("li")
+    newCareersLink.innerHTML = `<a href="https://tweakers.net/carriere/">Carrière</a>`;
+    meerBar.appendChild(newCareersLink);
+    } catch(error){(console.error())}
     
+})
+
+</script>
+
 <!-- // --><script type="text/javascript" data-sitespect="true">
 <!--
-	req_2_1668559220=new Image();
-req_2_1668559220.src='/3aY1lzuKe5d6/TMkcbDhV9pd8?7166407281347663982_1-2-'+(28621*58298+12162)+'&n=1';
+	req_2_1668580826=new Image();
+req_2_1668580826.src='/3aY1lzuKe5d6/TMkcbDhV9pd8?7166500078415264463_1-2-'+(13723*121590+1256)+'&n=1';
 //-->
 <!-- // --></script>
 
