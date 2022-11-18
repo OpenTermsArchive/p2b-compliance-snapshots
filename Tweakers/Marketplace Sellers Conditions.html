@@ -25,11 +25,11 @@
                                             <link rel="shortcut icon" href="https://tweakers.net/favicon.ico" type="image/x-icon">
                         
             <link rel="stylesheet" href="https://tweakers.net/x/build/components.c12efcd2.css"><script>
-                var relaxedDomain='tweakers.net',tweakersConfig = {"BaseURL":"https:\/\/tweakers.net\/","TnetBaseURL":"https:\/\/tweakers.net\/","ForumBaseURL":"https:\/\/gathering.tweakers.net\/","ImgURL":"https:\/\/tweakers.net\/","sidName":"__Secure-TnetID","UserID":0,"requestId":"Twk-eun-web1_247.10.2_2643634_637728d973bf55.88986067","clickToLoad":false,"compare":{"initialCompareBasket":[],"defaultCompareUrl":"https:\/\/tweakers.net\/pricewatch\/compare\/0\/","compareMax":50,"timestamp":1668753625},"logMrStats":1};
+                var relaxedDomain='tweakers.net',tweakersConfig = {"BaseURL":"https:\/\/tweakers.net\/","TnetBaseURL":"https:\/\/tweakers.net\/","ForumBaseURL":"https:\/\/gathering.tweakers.net\/","ImgURL":"https:\/\/tweakers.net\/","sidName":"__Secure-TnetID","UserID":0,"requestId":"Twk-eun-web3_247.11.1_2831813_63777d7388e518.42658003","clickToLoad":false,"compare":{"initialCompareBasket":[],"defaultCompareUrl":"https:\/\/tweakers.net\/pricewatch\/compare\/0\/","compareMax":50,"timestamp":1668775283},"logMrStats":1};
                 try{document.domain=relaxedDomain}catch(e){relaxedDomain=''}
                 document.documentElement.className='js';
             </script>
-        <link rel="stylesheet" href="https://tweakers.net/x/styles/framework/main.css?1668428329" type="text/css">
+        <link rel="stylesheet" href="https://tweakers.net/x/styles/framework/main.css?1668761923" type="text/css">
                 <link rel="stylesheet" href="https://tweakers.net/x/styles/framework/layout.css?1649163369" type="text/css">
                 <link rel="stylesheet" href="https://tweakers.net/x/styles/articles/heroimage.css?1649163369" type="text/css">
                 <link rel="stylesheet" href="https://tweakers.net/x/styles/articles/articles.css?1667477475" type="text/css">
@@ -70,7 +70,7 @@
             <div class="leftSidebarToggle"></div>
             <div id="logo"><a href="https://tweakers.net/"></a></div>
             <b class="sitename">Tweakers</b>
-            <ul id="navMenu" style="width: 590px;">
+            <ul id="navMenu">
                 <li class="frontpage"><a href="https://tweakers.net/">Frontpage</a></li>
                                     
                     <li>
@@ -98,8 +98,8 @@
 
                                             </li>
                                     
-                    <li style="display: none; background: rgb(51, 51, 51);">
-                        <a href="https://tweakers.net/campagne/blackfriday">Black Friday</a>
+                    <li class="blackFriday" style="display: none;">
+                        <a href="https://tweakers.net/reviews/10510">Black Friday</a>
 
                                             </li>
                                                                                 
@@ -107,8 +107,8 @@
                         <a href="#" class="trigger">Meer</a>
 
                                                     <div>
-                                <ul><li>
-                        <a href="https://tweakers.net/carriere/it-banen/zoeken/">Carrière</a>
+                                <ul><li class="blackFriday">
+                        <a href="https://tweakers.net/reviews/10510">Black Friday</a>
 
                                             </li>
                                                                             <li>
@@ -138,14 +138,17 @@
                                                                             <li>
                                             <a href="https://tweakers.net/info/over-tweakers/">Over Tweakers</a>
                                         </li>
-                                                                    <li><a href="https://tweakers.net/carriere/">Carrière</a></li></ul>
+                                                                            <li>
+                                            <a href="https://tweakers.net/carriere/it-banen/zoeken/">Carrière</a>
+                                        </li>
+                                                                    </ul>
                             </div>
                                             </li>
                             </ul>
                                                 <div class="rightSidebarToggle empty">
     <span id="totalNotificationsCount" class="newNotificationsCount">0</span>
 </div>
-<ul id="userbar" class="notloggedin" style="z-index: 99;">
+<ul id="userbar" class="notloggedin">
         <li class="more last">
         <a class="trigger username" style="text-decoration:none">Account</a>
         <div>
@@ -230,8 +233,8 @@
 
                                             </li>
                                     
-                    <li>
-                        <a href="https://tweakers.net/carriere/it-banen/zoeken/">Carrière</a>
+                    <li class="blackFriday">
+                        <a href="https://tweakers.net/reviews/10510">Black Friday</a>
 
                                             </li>
                                                                                 
@@ -266,6 +269,9 @@
                                         </li>
                                                                             <li>
                                             <a href="https://tweakers.net/info/over-tweakers/">Over Tweakers</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://tweakers.net/carriere/it-banen/zoeken/">Carrière</a>
                                         </li>
                                                                     </ul>
                             </div>
@@ -567,43 +573,19 @@
 
 
 <!--
-Request ID: Twk-eun-web1_247.10.2_2643634_637728d973bf55.88986067
+Request ID: Twk-eun-web3_247.11.1_2831813_63777d7388e518.42658003
 Env: frontpage-production
-Server time: 0,0249 s (C: 0,0199 s, Q: 4; 0,0018 s, E: 5; 0,0013 s, M: 2; 0,0005 s, A: 3; 0,0027 s)
-Mem: 5140 KB
+Server time: 0,0267 s (C: 0,0134 s, Q: 4; 0,0016 s, E: 5; 0,0018 s, M: 2; 0,0004 s, A: 3; 0,0026 s)
+Mem: 5251 KB
 
-Engines: (S) twk-eun-web1 (5)
+Engines: (S) twk-eun-web3 (5)
 -->
         
-    <script>
-window.addEventListener("DOMContentLoaded", function(){
-    let navbar = document.querySelector("#navMenu");
-    let userbar = document.querySelector("#userbar");
-
-    try{
-        userbar.style.zIndex = "99";
-        navbar.style.width = "590px";
-        let careersNav = navbar.children[6];
-        careersNav.style.background = "#333";
-        careersNav.querySelector("a").outerHTML = `<a href="https://tweakers.net/campagne/blackfriday">Black Friday</a>`;
-    } catch(error){(console.error())}
-
-    let meerBar = navbar.querySelector("li.more.last div ul");
-
-    try{
-        let newCareersLink = document.createElement("li")
-    newCareersLink.innerHTML = `<a href="https://tweakers.net/carriere/">Carrière</a>`;
-    meerBar.appendChild(newCareersLink);
-    } catch(error){(console.error())}
     
-})
-
-</script>
-
 <!-- // --><script type="text/javascript" data-sitespect="true">
 <!--
-	req_2_1668753625=new Image();
-req_2_1668753625.src='/3aY1lzuKe5d6/TMkcbDhV9pd8?7167242244464842520_1-2-'+(26713*62469+19228)+'&n=1';
+	req_2_1668775283=new Image();
+req_2_1668775283.src='/__ssobj/ard.png?7167335264866534024_1-2-'+(17183*97117+13872)+'&n=1';
 //-->
 <!-- // --></script>
 
