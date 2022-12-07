@@ -27,12 +27,12 @@
 <link rel="apple-touch-icon" href="https://static.skelbiu.lt/static/images/logo/touch-icon144x144.png?v=4"/>
 <link rel="icon" href="https://static.skelbiu.lt/static/images/logo/touch-icon144x144.png?v=5"/>
 
-            <link rel="stylesheet" type="text/css" href="https://static.skelbiu.lt/static/vendor/font-awesome/css/font-awesome.css?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da"/>
-            <link rel="stylesheet" type="text/css" href="https://static.skelbiu.lt/static/css/common.css?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da"/>
+            <link rel="stylesheet" type="text/css" href="https://static.skelbiu.lt/static/vendor/font-awesome/css/font-awesome.css?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667"/>
+            <link rel="stylesheet" type="text/css" href="https://static.skelbiu.lt/static/css/common.css?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667"/>
     
-                        <link rel="stylesheet" type="text/css" href="https://static.skelbiu.lt/static/css/faq.css?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da"/>
+                        <link rel="stylesheet" type="text/css" href="https://static.skelbiu.lt/static/css/faq.css?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667"/>
             
-    <link href="https://static.skelbiu.lt/static/dist/desktop/_layout/index.css?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" rel="stylesheet">    
+    <link href="https://static.skelbiu.lt/static/dist/desktop/_layout/index.css?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" rel="stylesheet">    <link href="https://static.skelbiu.lt/static/dist/desktop/pages/content.css?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" rel="stylesheet">
         <!-- OneTrust Cookies Consent Notice start for skelbiu.lt -->
     
             <script type="text/javascript" src="https://cdn.cookielaw.org/consent/71062050-0574-48df-bda8-8d1614b06318/OtAutoBlock.js" ></script>
@@ -122,390 +122,75 @@
     </div>
 </div>
 
-    <form action="/skelbimai/" id="searchForm" name="searchForm">
-        <input type="hidden" name="autocompleted" value="1" />
-
-        <div id="mainSearchArea">
-            <div id="mainSearchAreaControls">
-                <div id="addNewItemArea">
-                                                                        <a href="/naujas-skelbimas/" id="addNewItem"><i>+</i> Įdėkite skelbimą</a>
-                                                            </div>
-                <input type="text" name="keywords" placeholder="Įveskite paieškos žodį ar frazę" value="" id="searchKeyword" maxlength="50">
-                <button name="submit_bn" type="submit" id="searchButton"><i class="fa fa-search"></i></button>
-                <div id="selectboxCategory">
-                    <ul>
-                        <li data-value="0"><a class="search_select_category" href="/skelbimai/" data-category="0" data-title="Visi skelbimai">Visi skelbimai</a></li><li data-value="1"><a class="search_select_category" data-category="1" data-title="Transportas" href="/skelbimai/transportas/">Transportas</a></li><li data-value="2"><a class="search_select_category" data-category="2" data-title="Nekilnojamasis turtas" href="/skelbimai/nekilnojamasis-turtas/">Nekilnojamasis turtas</a></li><li data-value="3"><a class="search_select_category" data-category="3" data-title="Darbas, paslaugos" href="/skelbimai/paslaugos-darbas/">Darbas, paslaugos</a></li><li data-value="4"><a class="search_select_category" data-category="4" data-title="Kompiuterija" href="/skelbimai/kompiuterija/">Kompiuterija</a></li><li data-value="5"><a class="search_select_category" data-category="5" data-title="Technika" href="/skelbimai/technika/">Technika</a></li><li data-value="6"><a class="search_select_category" data-category="6" data-title="Komunikacijos" href="/skelbimai/komunikacijos/">Komunikacijos</a></li><li data-value="7"><a class="search_select_category" data-category="7" data-title="Pramogos" href="/skelbimai/pramogos/">Pramogos</a></li><li data-value="8"><a class="search_select_category" data-category="8" data-title="Buitis" href="/skelbimai/buitis/">Buitis</a></li><li data-value="4353"><a class="search_select_category" data-category="4353" data-title="Drabužiai, avalynė" href="/skelbimai/drabuziai-avalyne/">Drabužiai, avalynė</a></li><li data-value="4354"><a class="search_select_category" data-category="4354" data-title="Auginantiems vaikus" href="/skelbimai/auginantiems-vaikus/">Auginantiems vaikus</a></li><li data-value="36069"><a class="search_select_category" data-category="36069" data-title="Ukrainai | Для українців" href="/skelbimai/pagalba-ukrainai/">Ukrainai | Для українців</a></li>                    </ul>
-                    <span>Visi skelbimai</span> <i class="fa fa-caret-down"></i>
-                </div>
-                <div id="selectboxCities"><span>Visi miestai</span><i class="fa fa-caret-down"></i></div>
-            </div>
-        </div>
-        
-                <input type="hidden" name="cities" value="0" id="searchInCities"/>
-        <input type="hidden" name="distance" value="0" id="searchDistance" />
-        <input type="hidden" name="mainCity" value="0" id="searchMainCity" />
-        <input type="hidden" name="search" value="1" />
-        <input type="hidden" name="category_id" value="0" id="categoryField" />
-        <input type="hidden" name="user_type" value="0" id="user_type" />
-        <input type="hidden" name="ad_since_min" value="0" id="ad_since_min" />
-        <input type="hidden" name="ad_since_max" value="0" id="ad_since_max" />
-        <input type="hidden" name="visited_page" value="" id="visited_page" />
-                <input type="hidden" name="detailsSearch" value="0" id="detailsSearchOn" />
-    </form>
-                    <div id="container">
+    <div class="yellowLine"></div>
+            <div id="container">
                 <div id="contentArea">
-                    <div class="LineHeight20"></div>
-            <div class="LineHeight20"><h1 class="header_1">Dažniausiai užduodami klausimai</h1></div>
-    <div class="LineHeight10"></div>
-<div class="content"><head> <meta charset="UTF-8"> </head>
-<p class="gray-section">
-  <b><font size="2">Kaip galėčiau ištrinti/redaguoti savo skelbimą?</font></b>
-  <br>Jeigu skelbimą dėjote kaip registruotas vartotojas, prisijunkite prie Skelbiu.lt portalo, eikite į „Mano skelbimai“ ir ties norimu skelbimu paspauskite „Pašalinti“.
-  <br>Jeigu skelbimą įkėlėte kaip neregistruotas vartotojas, skelbimo įkėlimo dieną, el. paštu arba SMS žinute, turėjote gauti jo prisijungimo duomenis.
-  <br>Jeigu prisijungimo duomenų neturite, atsidarykite savo skelbimą Skelbiu.lt portale ir virš jo pavadinimo spauskite langelį "Tavo skelbimas?", tuomet "Redaguoti" ir "Pamiršote prisijungimus?".
-</p>
-<p class="gray-section">
-  <b><font size="2">Kokia yra skelbimo kaina?</font></b>
-  <br>Daugelio kategorijų skelbimai yra <b>NEMOKAMI PRIVATIEMS ASMENIMS</b>, parduodantiems savo asmeninius daiktus. Kai kurių kategorijų skelbimai išlieka mokami. Tai transporto priemonės ir jų dalys, nekilnojamasis turtas, paslaugos ir kt.
-  </br><b>JURIDINIAMS asmenims</b> ir FIZINIAMS ASMENIMS, kurių skelbimai susiję su KOMERCINE VEIKLA, skelbimų įdėjimas yra mokamas.
-  </br>
-  </br>Primename, kad skelbimus, apmokant SMS žinute, yra taikomas žinutės administravimo mokestis (jo dydis priklauso nuo mokamos sumos ir yra nurodomas apmokėjimo puslapyje).
-  </br>Skelbimai daugumoje kategorijų galioja 60 dienų (drabužių/avalynės kategorijoje - 90 dienų, ilgalaikės namų, butų ir kambarių nuomos kategorijose - 40 dienų, kolekcionavimo ir dovanojimo kategorijose - 30 dienų).
-  <br></font></b>
-</p>
-<p class="gray-section">
-  <b><font size="2">Kaip veikia skelbimo iškėlimas žvaigždutėmis?</font></b>
-  <br>Žvaigždutėmis skelbimas iškeliamas aukščiau sąraše – kuo daugiau žvaigždučių užsakyta skelbimui, tuo aukščiau sąraše jis bus rodomas. Jei keli skelbimai yra su vienodu žvaigždučių skaičiumi, aukščiau bus rodomas tas, kurio žvaigždutės užsakytos ilgesniam laikui. Skelbimo iškėlimą užsakyti galite prisijungę prie savo skelbimo paskyros. Vienos žvaigždutės kaina vienai parai yra 0,99 €, dvi žvaigždutės vienai parai atitinkamai kainuos 1,98 € ir t.t.
-  <br></font></b>
-</p>
-<p class="gray-section">
-  <b><font size="2">Kaip apmokėti skelbimus esant užsienyje?</b></font>
-  <br>Skelbimus apmokant SMS žinute, telefono numeris turi būti lietuviškas (kodas +370), bei mokėjimo metu būti Lietuvos teritorijoje. Jei esate užsienyje, galbūt kas nors esantis Lietuvoje galėtų SMS žinutę išsiųsti už Jus.
-  <br>Jei naudojatės lietuviško banko el. bankininkyste, Skelbiu.lt paslaugas galite apmokėti iš bet kurios šalies. Taip pat mokėjimą atlikti galite kreditine kortele arba per Paysera sistemą.
-  <br>Jeigu nei vienas iš aukščiau pateiktų variantų Jums netinka, parašykite mums el. paštu <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fa93949c95ba89919f9698938fd4968e">[email&#160;protected]</a> – atsiųsime įmonės rekvizitus, kuriais mokėjimą galima bus atlikti iš bet kurio banko.
-  <br></font></b>
-</p>
-<p class="gray-section">
-  <b><font size="2">Kas yra asmeninis Skelbiu.lt puslapis ir kaip juo naudotis?</font></b>
-  <br>Jei esate registruotas portalo vartotojas, Jums gali būti sugeneruotas (jeigu taip pažymėjote savo paskyros nustatymuose) asmeninio Skelbiu.lt puslapio adresas. Dedant skelbimą informacijos pildymo formos apačioje galite pažymėti varnelę "Rodyti šį skelbimą asmeniniame puslapyje". Tuomet skelbime bus rodoma Jūsų asmeninio puslapio nuoroda, ant kurios paspaudę kiti vartotojai atskirame puslapyje galės matyti visą Jūsų prekių/paslaugų asortimentą (skelbimus, kuriuos pasirinkote rodyti asmeniniame puslapyje).
-  <br>
-</p>
-<p class="gray-section">
-  <b><font size="2">Kaip patvirtinti tapatybę?</font></b>
-  <br>Dalies skelbimų kontaktų blokeliuose rodoma žyma „Tapatybė patvirtinta“. Tapatybė patvirtinama automatiškai, už Skelbiu.lt paslaugas apmokėjus banko pavedimu. Jeigu Jūsų tapatybė dar nėra patvirtinta, papildykite Skelbiu.lt sąskaitą banko pavedimu bent 0,1 €.
-  <br>
-</p>
-<p class="gray-section">
-  <b><font size="2">Atnaujinau savo skelbimą, tačiau ir toliau skelbimas yra rūšiuojamas pagal skelbimo įdėjimo data.</font></b>
-  <br>Jūsų skelbimas, ko gero, yra įdėtas „Nekilnojamas turtas“ arba transporto "Dalys, aksesuarai" kategorijoje. Primename kad visi skelbimai šiose kategorijose automatiškai rūšiuojami ne pagal skelbimo atnaujinimo, bet pagal skelbimo įdėjimo datą. Jei norite skelbimus matyti pagal atnaujinimo datą, tuomet skelbimų sąrašo viršuje pasirinkite tokį rūšiavimo būdą.
-  <br>
-</p>
-<p class="gray-section">
-  <b><font size="2">Išsiunčiau SMS žinutę, tačiau skelbimo galiojimas yra pasibaigęs/ iškėlimas, paryškinimas neužsakytas.</font></b>
-  <br>Ko gero išsiuntėte klaidingą SMS žinutės kodą. Susisiekite su mumis el. paštu <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2940474f46695a424c454b405c07455d">[email&#160;protected]</a> arba tel. numeriu +370 5 2190065, nurodydami iš kokio tel. numerio siuntėte SMS žinutę – aiškinsimės situaciją.
-  <br></font></b>
-</p>
-<p class="gray-section">
-  <b><font size="2">Skelbiu.lt portalas veikia netvarkingai.</font></b>
-  <br>Pirmiausiai, pabandykite ištrinti/atlaisvinti savo naršyklės cache atmintį. Tai galite padaryti naršyklės lange paspaudę mygtukų kombinaciją CTRL + F5 arba CTRL + R. Arba galite pamėginti naudoti kitą naršyklę: Mozilla, Internet Explorer, Opera ar Google Chrome. Jeigu problema nedingo, susisiekite su mumis ir galėsime suteikti išsamesnę informaciją dėl puslapio veikimo.</font></b>
-</p>
-<p class="gray-section">
-  <b><font size="2">Esu registruotas vartotojas bet pamiršau savo prisijungimo duomenis.</font></b>
-  <br>Sužinoti vartotojo vardą ir slaptažodį galite paspaudę nuorodą <a href="https://www.skelbiu.lt/priminimas/">https://www.skelbiu.lt/priminimas/</a>
-  <br>Nurodykite el. pašto adresą arba telefoną kurį įvedėte registruodamiesi ir sekite tolimesnes instrukcijas.</font></b>
-</p>
+                    
 
-<h2>SKELBIU.LT NAUDOJIMO TAISYKLĖS (REDAKCIJA 2022-11-23)</h2>
-<ul style="list-style:none;">
-<p><h3><b>1. TAISYKLIŲ TAIKYMAS IR AIŠKINIMAS</b></h3></p>
-<p>
-<b>1.1.</b> Šis dokumentas yra sutartis tarp UAB „Diginet LTU“ (juridinio asmens kodas – 126222639, PVM mokėtojo kodas – LT262226314, registruotos buveinės adresas Saltoniškių g. 9B, 08105 Vilnius, Lietuva, el. pašto adresas – <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b8d1d6ded7f8cbd3ddd4dad1cd96d4cc">[email&#160;protected]</a>, tel. nr.: +370 664 55727) (toliau – <b>SKELBIU.LT</b>) ir Jūsų (toliau – <b>Klientas</b> arba <b>Jūs</b>) dėl naudojimosi interneto svetaine www.skelbiu.lt ir (ar) SKELBIU.LT mobiliąja aplikacija, kurią galima atsiųsti iš „Apple App Store“ ir „Google Play“ (toliau – <b>Svetainė</b>).<br />
-<b>1.2.</b> Naudodamiesi Svetaine Jūs patvirtinate, kad esate susipažinęs su šios sutarties sąlygomis ir taisyklėmis (toliau – <b>Taisyklės</b>), sutinkate su Taisyklėmis ir įsipareigojate jų laikytis.<br />
-<b>1.3.</b> Naudojimasis Svetaine šių Taisyklių prasme apima visų ir bet kokių veiksmų atlikimą, Klientui prisijungus prie Svetainės naudojantis interneto ryšiu. Šių Taisyklių prasme, paslaugos apima visus ir bet kokius Kliento veiksmus, kuriuos jis gali atlikti Svetainėje, įskaitant skelbimų skelbimą, skelbiamos informacijos skaitymą, klausimų, atsiliepimų ir komentarų rašymą, tiesioginių (online) žinučių rašymą, bet kokio pobūdžio informacijos ir (ar) duomenų pateikimą, siuntimą bei gavimą, tačiau tuo neapsiribojant (toliau – <b>Paslaugos</b>). Klientas bet kokiu būdu ir forma naudodamasis Svetaine ir (ar) Paslaugomis, besąlygiškai ir neatšaukiamai įsipareigoja laikytis visų šiose Taisyklėse nustatytų reikalavimų. Jei Klientas nesutinka besąlygiškai bei neatšaukiamai prisiimti ir laikytis visų šiose Taisyklėse nustatytų įsipareigojimų, jis neturi teisės naudotis jokiomis Paslaugomis ir (ar) Svetaine.<br />
-<b>1.4.</b> Dalis Svetainėje teikiamų Paslaugų yra teikiamos Klientui už atlygį (toliau – <b>Mokamos Paslaugos</b>). Mokamos Paslaugos yra apibūdintos ir nurodytos Svetainėje, Jų kaina nurodyta konkrečios Mokamos Paslaugos užsakymo puslapyje. Toliau šiose Taisyklėse nuoroda į „Paslaugas“ apims visas Paslaugas, įskaitant ir Mokamas Paslaugas, o nuoroda į „Mokamas Paslaugas“ apims tik tas Paslaugas už kurias Klientas moka užmokestį.<br />
-<b>1.5.</b> Visi Klientai yra skirstomi į verslo ir privačius klientus ir apibrėžiami kaip nurodyta žemiau:<br />
-<b>1.5.1.</b> Verslo Klientams priskiriami fiziniai ir juridiniai asmenys, kurie, atsižvelgiant į įkeltų skelbimų kiekį, skelbimų turinį (pavyzdžiui, aprašymo, nuotraukų), kitas turimas susijusias paskyras, Paslaugomis naudojasi prekybos, verslo, amato, profesijos tikslais (pavyzdžiui, vykdo tęstinę prekybą, teikia paslaugas, parduoda veislinių gyvūnų jauniklius, vykdo ūkinę veiklą, superka daiktus ir pan.) (toliau – <b>Verslininkai</b>);<br />
-<b>1.5.2.</b> Privatiems Klientams priskiriami fiziniai ir juridiniai asmenys, kurie Paslaugomis naudojasi su savo verslu, amatu ar profesija nesusijusiais tikslais (vartojimo tikslais) (toliau – <b>Privatūs klientai</b>).<br />
-<b>1.6.</b> Be šių Taisyklių santykiams tarp Kliento ir SKELBIU.LT reguliuoti taikomos Lietuvos Respublikos teisės aktų nuostatos, specialios sąlygos ir taisyklės, pateikiamos Svetainėje bei nusistovėjusi gera verslo praktika. Vartotojų apsaugos reikalavimai netaikomi sutarčiai, kai prekes, paslaugas siūlantis asmuo nėra Verslininkas.<br />
-<b>1.7.</b> Jeigu kuri nors šių Taisyklių nuostata prieštarauja įstatymams arba dėl kokios nors priežasties tampa dalinai arba visai negaliojančia, ji nedaro negaliojančiomis likusių Taisyklių nuostatų.
-</p>
-<p><h3><b>2. BENDROSIOS SĄLYGOS</b></h3></p>
-<p>
-<b>2.1.</b> SKELBIU.LT suteikia Klientams virtualią erdvę, t. y. Svetainę, kurioje Klientai turi galimybę paskelbti savo skelbimus apie siūlomas ar ieškomas prekes ar paslaugas (toliau – <b>Skelbimai</b>), skaityti Skelbimus, ieškoti Skelbimų, rašyti po Skelbimais komentarus ir tiesiogines žinutes bei naudotis kitomis Paslaugomis.<br />
-<b>2.2.</b> Klientų keliami Skelbimai Svetainėje yra aiškiai atskirti: Privačių klientų Skelbimai yra pažymėti „Privataus asmens skelbimas“ kontaktų skiltyje, o Verslininkų skelbimai yra pažymėti „Verslo kliento skelbimas“.<br />
-<b>2.3.</b> Klientas pripažįsta ir sutinka, kad jis pats, o ne SKELBIU.LT, yra atsakingas už visą Turinį, kurį gauna, siunčia ar bet kuriais kitais būdais perduoda naudodamasis Svetaine ir (ar) Paslaugomis. Turinys šiose Taisyklėse reiškia Skelbimą, o taip pat visą ir bet kokią informaciją, įskaitant duomenis, duomenų bazes, simbolius, tekstą, fotografijas, paveikslėlius, video medžiagą, dokumentus, komentarus, žinutes, bet tuo neapsiribojant, kurią Klientas pateikia, gauna, saugo, siunčia, priima ar perduoda naudodamasis Paslaugomis ir (ar) Svetaine (toliau – <b>Turinys</b>).<br />
-<b>2.4.</b> Klientas supranta ir sutinka su tuo, jog SKELBIU.LT nekontroliuoja kitų Svetainės naudotojų, lankytojų ar trečiųjų šalių Turinio, kurį Klientas gali gauti, perskaityti ar kitaip sužinoti naudodamasis Svetaine ar Paslaugomis, todėl SKELBIU.LT nebus atsakingas dėl tokio Turinio tikslumo, vientisumo ir (ar) kokybės.<br />
-<b>2.5.</b> Klientas supranta ir sutinka su tuo, kad SKELBIU.LT turi teisę, tačiau ne pareigą, savo nuožiūra tikrinti Kliento gaunamą ir perduodamą Turinį, siekiant aptikti SKELBIU.LT nepageidaujamu ar pažeidžiančiu šias Taisykles pripažįstamą Turinį, o tokį Turinį aptikus – jį šalinti ar blokuoti tokio Turinio bet kokį perdavimą.<br />
-<b>2.6.</b> SKELBIU.LT jokiu būdu nedalyvaus pirkimo-pardavimo ar kitokiuose su Svetainėje siūlomomis prekėmis ir (ar) paslaugomis ar Skelbimais susijusiuose sandoriuose tarp Klientų (nei kaip tarpininkas, įgaliotas asmuo, atstovas ar kaip kitaip). SKELBIU.LT nebus Kliento agentu, atstovu, tarpininku ir kt.<br />
-<b>2.7.</b> Bet koks informacijos paskelbimas ir (ar) padarymas viešai prieinama Svetainėje nėra laikoma SKELBIU.LT pasiūlymu (oferta) sudaryti sandorį.<br />
-<b>2.8.</b> Kliento sudaryta Sutartis dėl Skelbimo patalpinimo Svetainėje yra terminuota, priklausomai nuo Skelbimo kategorijos: Skelbimai daugumoje kategorijų galioja 60 dienų (drabužių / avalynės kategorijoje - 90 dienų, ilgalaikės namų, butų ir kambarių nuomos kategorijose - 40 dienų, kolekcionavimo ir dovanojimo kategorijose - 30 dienų). Anksčiau nutraukti sutartį Klientas gali savo iniciatyva ištrindamas Skelbimą, tačiau pinigai už neišnaudotą Skelbimo talpinimo laiką nebus grąžinami. Daugiau informacijos skaitykite Taisyklių 6.6. punkte.<br />
-<b>2.9.</b> Visi pranešimai ir informacija tarp Kliento ir SKELBIU.LT bus siunčiama elektroninėmis priemonėmis adresais, nurodytais šiose Taisyklėse arba Svetainėje, nebent šiose Taisyklėse nurodyta kitaip.<br />
-</p>
-<p><h3><b>3. INTELEKTINĖS NUOSAVYBĖS TEISĖS</b></h3></p>
-<p>
-<b>3.1.</b> Visos intelektinės nuosavybės teisės į Svetainę ir visą jos turinį ir duomenų bazę, įskaitant autorių teises, pramoninės intelektinės nuosavybės teises, firmų vardus, <i>know-how</i>, komercines ir gamybines paslaptis, priklauso SKELBIU.LT arba SKELBIU.LT teisėtai naudojasi trečiųjų asmenų suteiktomis teisėmis.<br />
-<b>3.2.</b> Visos teisės į Svetainę ir joje esančius kūrinius yra saugomos. Joks Svetainėje esantis Turinys ar kitokia informacija negali būti atgaminamas, padaromas viešai prieinamu arba platinamas be išankstinio raštiško SKELBIU.LT sutikimo.<br />
-<b>3.3.</b> Visi prekių ženklai, kurie pateikiami Svetainėje, yra SKELBIU.LT arba SKELBIU.LT juos teisėtai naudoja, išskyrus tuos prekių ženklus, kuriuos įkėlė Svetainės naudotojai.<br />
-<b>3.4.</b> Naudodamasis Svetaine ar Paslaugomis ir teikdamas, įvesdamas ar kitaip siųsdamas Turinį Klientas neatlygintinai, neribotam laikui, neribotoje teritorijoje ir maksimalia įstatymų leidžiama apimtimi suteikia SKELBIU.LT visas turtines autorių teises, reikalingas SKELBIU.LT iš šių Taisyklių kylančioms teisėms įgyvendinti ir pareigoms vykdyti šias teises, įskaitant, tačiau neapsiribojant:<br />
-<b>3.4.1.</b> teisę bet kokia forma ar būdu atgaminti, keisti, versti, viešai skelbti ir padaryti viešai prieinamu ir platinti parduodant, nuomojant, teikiant panaudai ar kitaip perduodant nuosavybėn arba valdyti Kliento pateiktą Turinį;<br />
-<b>3.4.2.</b> teisę kurti išvestinius kūrinius iš Kliento pateikto Turinio.<br />
-<b>3.5.</b> Šalys susitaria, kad kiekvieną kartą pateikdamas bet kokį Turinį Klientas patvirtina ir garantuoja SKELBIU.LT, kad jis turi visas teises, leidimus, sutikimus ir ar licencijas atlikti tuos veiksmus su Turiniu, kuriuos Klientas atlieka, įskaitant teisę naudoti Turinyje esančius prekių ženklus ir autorių teisių objektus, skelbti Turinį, padaryti jį viešai prieinamą.
-</p>
-<p><h3><b>4. REIKALAVIMAI SKELBIMŲ TURINIUI, FORMAI BEI KITOS NAUDOJIMOSI SKELBIU.LT SĄLYGOS</b></h3></p>
-<p>
-<b>4.1.</b> Klientas įsipareigoja:<br />
-<b>4.1.1.</b> naudodamasis Svetaine ir (ar) Paslaugomis paisyti ir nepažeisti nusistovėjusių elgesio ir moralės normų, nepažeisti teisės aktų reikalavimų bei trečiųjų asmenų teisių ir teisėtų interesų, įskaitant teisės aktų, reglamentuojančių intelektinės nuosavybės apsaugą, asmens duomenų apsaugą, reklamos reguliavimą ir kitų;<br />
-<b>4.1.2.</b> neatlikti jokių veiksmų, kurie prieštarauja taikytiniems teisės aktams, gerai moralei ar pažeidžia trečiųjų asmenų teises, įskaitant, bet neapsiribojant:<br />
-<b>4.1.2.1.</b> nenaudoti Paslaugų ir (ar) Svetainės tokiu būdu, kuris gali sukelti pavojų SKELBIU.LT teikiamų paslaugų tinkamam veikimui, SKELBIU.LT serverio saugumui, vientisumui ar riboti SKELBIU.LT galimybes tinkamai teikti bet kokias paslaugas kitiems asmenims, o taip pat riboti kitų asmenų galimybę pasinaudoti bet kokiomis SKELBIU.LT teikiamomis paslaugomis;<br />
-<b>4.1.2.2.</b> nelaikyti, neskelbti, nesiųsti, neplatinti arba bet kuriuo kitu būdu neperduoti bet kokio teisės aktų draudžiamo ar ribojamo, neteisingo, klaidinančio, šmeižikiško, grasinančio, diskriminacinio, apgaulingo, pornografinio, kurstančio tautinę, etninę, rasinę, religinę neapykantą, arba neapykantą dėl religijos neišpažinimo, asmenų teises pažeidžiančio Turinio, o taip pat bet kurio kito Turinio, kuris gali pažeisti teisės aktų reikalavimus, būtų laikomas pažeidžiančiu teisės aktuose įtvirtintas normas arba skatintų elgesį, priešingą teisės aktų reikalavimams arba sukeltų bet kokią teisinę atsakomybę SKELBIU.LT;<br />
-<b>4.1.2.3.</b> neskelbti ir neplatinti nuorodų į bet kokį Turinį, kuris gali būti laikomas pažeidžiančiu taikytinų teisės aktų reikalavimus ar trečiųjų asmenų teises;<br />
-<b>4.1.2.4.</b> nesinaudoti Paslaugomis ir (ar) Svetaine veiksmams, kurie galėtų pakenkti bet kuriems asmenims, jų turtui ar teisėtiems interesams, atlikti;<br />
-<b>4.1.2.5.</b> neplatinti nepageidaujamos reklamos, kenkėjiškos programinės įrangos ir kito nepageidaujamo Turinio, taip pat nesiųsti elektroninių laiškų ir kitokių elektroninių pranešimų turint tikslą paveikti ar suprantant, kad tai paveiks kompiuterinių tinklų ar kompiuterinių tinklų savininkų turimos kompiuterinės įrangos veikimą;<br />
-<b>4.1.2.6.</b> nesiūlyti prekių ir (ar) paslaugų, kuriomis prekyba prieštarauja teisės aktams ir (ar) moralės ir etikos normoms, ir kurios nurodytos šiame nebaigtiniame sąraše [<a href="#Priedas">Draudžiamų prekių ir paslaugų sąrašas</a>];<br />
-<b>4.1.2.7.</b> nenaudoti Svetainės ir (ar) Paslaugų neteisėtiems veiksmams ar sandoriams vykdyti arba sukčiavimui;<br />
-<b>4.1.2.8.</b> nereklamuoti ir neskelbti informacijos, kurioje minimi su SKELBIU.LT tiesiogiai ar netiesiogiai konkuruojantys tretieji asmenys arba tokių asmenų prekės ir (ar) paslaugos, o taip pat nuorodos į tokius asmenis ir (ar) produktus. SKELBIU.LT konkurentais laikomi bet kokie asmenys, kurie kuria, rengia, valdo ar administruoja interneto svetaines, susijusias su įvairių prekių ir paslaugų pardavimo ir nuomos skelbimais, taip pat su tokiais tiesioginiais konkurentais susiję asmenys. SKELBIU.LT turi teisę nurodyti Klientui savo konkurentus ir tokie asmenys bus laikomi SKELBIU.LT konkurentais šio 4.1.2.8. punkto prasme nuo to momento, kai SKELBIU.LT apie juos informuos Klientą.<br />
-<b>4.1.2.9.</b> nerinkti, nekaupti, neperkelti į kitas laikmenas, nepadaryti viešai prieinamais, neskelbti bei neplatinti Svetainės vartotojų duomenų ar duomenų apie bet kokius Svetainės vartotojų veiksmus, įskaitant duomenis apie siūlomas ir (ar) ieškomas prekes ir (ar) paslaugas, jų kainas ir t.t.;<br />
-<b>4.1.3.</b> pateikti teisingą ir išsamią informaciją apie save, įskaitant tikrą savo vardą bei pavardę ar juridinio asmens rekvizitus, el. pašto adresą, taip pat nurodyti, ar Paslaugomis naudojasi kaip Verslininkas, ar kaip Privatus klientas pagal aukščiau Taisyklėse nurodytus kriterijus;<br />
-<b>4.1.4.</b> pateikti objektyvią, teisingą, neklaidinančią, visapusišką ir išsamią informaciją apie siūlomas parduoti prekes ir (ar) paslaugas, įskaitant, bet neapsiribojant, kokybę, būklę, charakteristikas, gamintoją, kainą. Tokia informacija turi būti pateikiama ir valstybine kalba;<br />
-<b>4.1.5.</b> saugoti Kliento prisijungimo vardą ir slaptažodį (jei tokie Klientui suteikti) tokiu būdu, kad jo nesužinotų tretieji asmenys, išskyrus asmenis, kuriuos Klientas įgaliojo atstovauti Klientą naudojantis Paslaugomis;<br />
-<b>4.1.6.</b> nedelsdamas pranešti SKELBIU.LT apie bet kokius Kliento pateiktos informacijos (ypač pateiktos registruojantis Svetainėje) ir (ar) duomenų pasikeitimus pakeisdamas informaciją Svetainės anketoje;<br />
-<b>4.1.7.</b> nedelsdamas el. paštu pranešti SKELBIU.LT, jei Kliento vartotojo vardas ir (ar) slaptažodis, kurie reikalingi naudotis Svetaine, buvo prarasti ar tapo žinomi tretiesiems asmenims;<br />
-<b>4.1.8.</b> viename Skelbime reklamuoti ir (ar) skelbti ne daugiau kaip vieną prekę ir (ar) paslaugą, taip pat nereklamuoti ir (ar) neskelbti kelių tą pačią prekę ir (ar) paslaugą reklamuojančių Skelbimų;<br />
-<b>4.1.9.</b> Skelbimus skelbti jų turinį atitinkančiose teminėse srityse;<br />
-<b>4.1.10.</b> skelbiamame Skelbime teksto nerašyti didžiosiomis raidėmis;<br />
-<b>4.1.11.</b> neskelbti beprasmių Skelbimų ar Skelbimų su beprasmėmis simbolių ir (ar) žodžių sekomis;<br />
-<b>4.1.12.</b> viename skelbime reklamuoti vieną prekę / paslaugą, ne kelias;<br />
-<b>4.1.13.</b> kontaktinę informaciją, prekių ir (ar) paslaugų aprašymus nurodyti išimtinai tik tam skirtose vietose. Skelbimo pavadinime nenaudoti internetinių svetainių adresų ir (ar) įmonių pavadinimų;<br />
-<b>4.1.14.</b> užtikrinti, kad skelbimuose pateikiamose nuotraukose yra nurodyti tikrieji skelbimų tekste reklamuojami objektai, išskyrus atvejus, kai parduodamas naujas neišpakuotas daiktas. Taip pat užtikrinti, kad nuotraukos yra aiškios, be papildomų apipavidalinimų, grafinių elementų;<br />
-<b>4.1.15.</b> Skelbimo nuotraukose nedėti jokių maketų, reklamų, įvairios tekstinės informacijos ir kt., išskyrus nedidelį Kliento logotipą ar vandens ženklą. „Siūlo darbą“ kategorijoje, galima dėti įmonės logotipą;<br />
-<b>4.1.16.</b> atsiskaityti su SKELBIU.LT už teikiamas Mokamas paslaugas šių Taisyklių 6 straipsnyje numatyta tvarka.<br />
-<b>4.2.</b> Naudodamasis bet kuria Paslauga Klientas patvirtina, kad jis:<br />
-<b>4.2.1.</b> yra veiksnus asmuo ir (ar) teisėtai atstovaujantis juridiniam asmeniui ir (ar) kitiems tretiesiems asmenims, kurių vardu veikia, turintis visus įgaliojimus ir teises vykdyti sandorius, siūlomus Svetainėje;<br />
-<b>4.2.2.</b> tinkamai vykdys savo pareigas, nurodytas Taisyklių 4.1.1. – 4.1.16. punktuose;<br />
-<b>4.2.3.</b> supranta, kad Klientui gali kilti pareiga savo lėšomis sumokėti mokesčius, susijusius su naudojimusi Paslaugomis ir (ar) pajamomis, gautomis naudojantis Paslaugomis (pvz. gyventojų pajamų mokestį, PVM ir kt.);<br />
-<b>4.2.4.</b> supranta ir sutinka, kad Klientui sutikus su šiomis Taisyklėmis tarp Kliento ir SKELBIU.LT sukuriami tik tokie teisiniai santykiai, kuriuos tiesiogiai ir aiškiai numato šios Taisyklės;<br />
-<b>4.2.5.</b> supranta ir sutinka, kad tuo atveju jei vartotojo vardas ir slaptažodis, kurie reikalingi norint naudotis Svetaine, taps žinomi tretiesiems asmenims, tokie tretieji asmenys gali prisiimti įsipareigojimus, kurie taps privalomais Klientui ir įsipareigoja tokius įsipareigojimus prisiimti ir tinkamai vykdyti, o SKELBIU.LT neturi pareigos jokiu kitu būdu, išskyrus vartotojo vardo ir slaptažodžio patikrinimą, tikrinti vartotojo tapatybės;<br />
-<b>4.2.6.</b> supranta ir sutinka, kad SKELBIU.LT tvarkytų ir valdytų Kliento asmens duomenis vadovaudamasi Lietuvos Respublikos teisės aktais bei Taisyklių 7 straipsniu;<br />
-<b>4.2.7.</b> supranta ir sutinka, kad Kliento įkelti Skelbimai ir Turinys, išskyrus kontaktinius duomenis, gali būti rodomi ne tik Svetainėje, bet ir kituose SKELBIU.LT partnerių reklamos šaltiniuose (pavyzdžiui, www.autoplius.lt, www.aruodas.lt), jeigu yra papildomai užsakoma tokia Paslauga.<br />
-<b>4.3.</b> Greta patvirtinimų, pateiktų taisyklių 4.2.1 – 4.2.7 punktuose, Klientai, kuriems yra nuo 7 iki 18 metų patvirtina, kad jis arba ji:<br />
-<b>4.3.1.</b> prieš siūlydamas prekę ar paslaugą yra gavęs įstatyminių atstovų (pvz. tėvų) sutikimą siūlyti prekę ar paslaugą, sudaryti sandorį ir vykdyti iš jo kylančius įsipareigojimus;<br />
-<b>4.3.2.</b> gerai suvokia visas Taisyklių nuostatas ir supranta, kad Svetainės ir Paslaugų naudojimas gali sukelti teisinę pareigą įsigyti ar parduoti prekę ar paslaugą.
-</p>
-<p><h3><b>5. SKELBIU.LT TEISĖS IR PAREIGOS</b></h3></p>
-<p>
-<b>5.1.</b> SKELBIU.LT turi teisę:<br />
-<b>5.1.1.</b> laikinai apriboti visos ar dalies Kliento Turinio pasiekiamumą, taip pat apriboti ar laikinai nutraukti visų ar dalies Paslaugų teikimą:<br />
-<b>5.1.1.1.</b> jeigu Klientas nevykdo ar netinkamai vykdo šiose Taisyklėse prisiimtus įsipareigojimus ar nesilaiko nustatytų draudimų ar apribojimų;<br />
-<b>5.1.1.2.</b> jeigu, SKELBIU.LT nuomone, to reikalauja atliekami techninės priežiūros ir (ar) Svetainės atnaujinimo darbai;<br />
-<b>5.1.1.3.</b> jeigu to pareikalauja kompetentingos valdžios institucijos arba tai yra reikalinga Lietuvos Respublikos įstatymų bei kitų teisės aktų numatytais atvejais;<br />
-<b>5.1.1.4.</b> jeigu tai yra reikalinga, siekiant apginti SKELBIU.LT ar trečiųjų asmenų teises ir teisėtus interesus;<br />
-<b>5.1.1.5.</b> jeigu SKELBIU.LT įtaria, kad Klientas naudodamasis Paslaugomis sukėlė ar gali sukelti grėsmę kitų Svetainės Klientų saugumui;<br />
-<b>5.1.1.6.</b> jeigu Klientas naudodamasis Paslaugomis, Svetaine ir (ar) keldamas Skelbimus daro žalą SKELBIU.LT, įskaitant, bet neapsiribojant SKELBIU.LT geram vardui ir (ar) reputacijai;<br />
-<b>5.1.1.7.</b> kitais Taisyklėse nurodytais atvejais;<br />
-<b>5.1.2.</b> bet kada apriboti Kliento galimybę skelbi Skelbimus ir (ar) kitą Turinį, įskaitant komentarus ir (ar) tiesiogines žinutes bei savo nuožiūra pašalinti iš Svetainės Skelbimus ar bet kokį kitą Turinį, įskaitant Kliento paliktus komentarus ir (ar) tiesiogines žinutes, jei, SKELBIU.LT nuomone, jie pažeidžia šių Taisyklių nuostatas, taikomus teisės aktus arba yra priešingi gerai moralei;<br />
-<b>5.1.3.</b> keisti Skelbimus ir bet kokį kitą Turinį, įskaitant, bet neapsiribojant Kliento statuso pakeitimą iš Privataus kliento į Verslininką, jei Klientas klaidingai pasirinko Kliento statusą ar pateikė klaidingą informaciją ir (ar) pažeidė šių Taisyklių nuostatas;<br />
-<b>5.1.4.</b> SKELBIU.LT turi teisę bet kada Svetainės ribose savo nuožiūra pakeisti ar pertvarkyti Skelbimus, perkelti juos į kitas temines sritis nekeisdama Kliento informacijos, tam, kad Svetaine būtų patogiau naudotis;<br />
-<b>5.1.5.</b> SKELBIU.LT turi teisę (bet ne pareigą) bet kada stebėti Kliento veiksmus Svetainėje, įskaitant Kliento Skelbimų ir (ar) tiesioginių žinučių bei komentarų stebėjimą. Naudodama teisėtas priemones SKELBIU.LT turi teisę tirti bet kokius Taisyklių pažeidimus;<br />
-<b>5.1.6.</b> SKELBIU.LT turi teisę savo nuožiūra panaikinti Kliento paskyrą, jei Klientas yra gavęs ne mažiau nei du neigiamus kito Kliento atsiliepimus ar komentarus. Klientui gavus trečiąjį neigiamą komentarą ar atsiliepimą iš kito Kliento, SKELBIU.LT panaikins Kliento paskyrą. Taip pat SKELBIU.LT turi teisę savo nuožiūra panaikinti Kliento paskyrą, jei Klientas yra pažeidęs Taisykles daugiau nei 3 kartus. Klientas turi teisę pateikti skundą dėl sprendimo panaikinti paskyrą atsiųsdamas el. laišką adresu <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="721b1c141d320119171e101b075c1e065c">[email&#160;protected]</a> SKELBIU.LT sprendimas yra galutinis;<br />
-<b>5.1.7.</b> SKELBIU.LT turi teisę be perspėjimo panaikinti Kliento paskyrą, jei prie jos nebuvo prisijungta daugiau kaip 2 (du) metus ir paskyros likutis yra iki 1,45 Eur;<br />
-<b>5.1.8.</b> SKELBIU.LT turi teisę be perspėjimo panaikinti Kliento paskyrą, jei prie jos nebuvo prisijungta daugiau kaip 5 (penkerius) metus, jeigu paskyros likutis yra virš 1,45 Eur;<br />
-<b>5.1.9.</b> SKELBIU.LT turi teisę gauti užmokestį už suteikiamas Paslaugas pagal Svetainėje nurodytas kainas. Tam tikslui, Klientui pareikalavus, SKELBIU.LT pateiks Klientui sąskaitą;<br />
-<b>5.1.10.</b> Klientui pažeidus jo įsipareigojimus, nurodytus Taisyklių 4.1.1. – 4.1.16. punktuose, SKELBIU.LT turi teisę reikalauti Kliento sumokėti sutartinę baudą, lygią 29 Eur;<br />
-<b>5.1.11.</b> be atskiro pranešimo Klientui pasitelkti trečiuosius asmenis bet kokiems veiksmams, susijusiems su šiomis Taisyklėmis, atlikti, taip pat tretiesiems asmenims perleisti savo teises bei pareigas, kylančias iš šių Taisyklių ar dalį jų.<br />
-<b>5.1.12.</b> be atskiro pranešimo Klientui pašalinti Kliento įkeltas nuotraukas, kuriose yra matomas daugiau nei vienas SKELBIU.LT vandens ženklas.<br />
-<b>5.2.</b> Apie sankcijas, kurios bus pritaikytos už Taisyklių pažeidimą, Klientas informuojamas registracijos metu nurodytu el. paštu. Taisyklių pažeidimo atveju, papildomos užsakytos Paslaugos yra anuliuojamos ir pinigai nėra gražinami.<br />
-<b>5.3.</b> Verslininkas bus įspėjamas nurodytu kontaktiniu el. paštu ne anksčiau nei prieš 30 dienų apie SKELBIU.LT sprendimą nutraukti Paslaugų teikimą ir kartu informuojamas apie tokio sprendimo motyvus. Šis pranešimo terminas nėra taikomas tuo atveju, jeigu Verslininkas keletą kartų sistemingai pažeidė Taisykles ir dėl to yra nutraukiamas Paslaugų teikimas. Tokiu atveju, Verslininką dėl tokio sprendimo motyvų SKELBIU.LT informuoja el. paštu nepagrįstai nedelsdamas.<br />
-<b>5.4.</b> Šalys susitaria, kad SKELBIU.LT turi teisę bet kada nutraukti Svetainės veiklą.
-</p>
-<p><h3><b>6. MOKAMOS PASLAUGOS</b></h3></p>
-<p>
-<b>6.1.</b> Mokamos Paslaugos bei jų naudojimosi tvarka yra apibūdinta ir nurodyta Svetainėje, o jų kaina nurodyta kiekvienos konkrečios Mokamos Paslaugos užsakymo puslapyje.<br />
-<b>6.2.</b> Klientas supranta ir sutinka, kad Mokamos Paslaugos gali būti teikiamos tik po to, kai Klientas sumoka SKELBIU.LT už Mokamas Paslaugas Svetainėje nurodyta tvarka. SKELBIU.LT turi teisę bet kada vienašališkai pakeisti užmokesčio už bet kurias Mokamas Paslaugas dydį bei mokėjimo tvarką.<br />
-<b>6.3.</b> Apribojus ar sustabdžius Kliento galimybę naudotis Mokamomis Paslaugomis ar Klientui negavus ar laiku negavus Mokamų Paslaugų dėl kitų priežasčių nei Kliento įvykdytas šių Taisyklių pažeidimas bei atvejį, nurodytą šių Taisyklių 5.1.6 punkte, SKELBIU.LT, Kliento prašymu, įsipareigoja pratęsti Mokamų Paslaugų teikimą Klientui tam laikotarpiui, kurį nebuvo teikiamos Mokamos Paslaugos, arba neatlygintinai suteikti Mokamas Paslaugas analogiškas nesuteiktoms Mokamoms Paslaugoms (jei Mokamos Paslaugos nėra tęstinio pobūdžio).<br />
-<b>6.4.</b> Užmokestis už Skelbimus ir Turinį, kurie buvo panaikinti ir (ar) pašalinti dėl to, jog Klientas pažeidė šių Taisyklių nuostatas, negrąžinamas.<br />
-<b>6.5.</b> SKELBIU.LT turi teisę Svetainės būtinų profilaktinių darbų metu apriboti ar nutraukti Paslaugų teikimą Klientams protingam terminui. Tokiu atveju Klientas, besinaudojantis Mokamomis Paslaugomis, yra informuojamas apie profilaktinių darbų pradžią pranešimu (priklausomai nuo to, kokiomis Paslaugomis naudojasi Klientas – elektroniniu paštu ir (ar) kitokiu pranešimu) ne vėliau kaip prieš 24 val., iki darbų pradžios. Tokiu atveju SKELBIU.LT gali, tačiau neprivalo, pratęsti Mokamų Paslaugų teikimą Klientui tam laikotarpiui, kurį nebuvo teikiamos Mokamos Paslaugos, arba neatlygintinai suteikti Mokamas Paslaugas, analogiškas nesuteiktoms Mokamoms Paslaugoms (jei Mokamos Paslaugos nėra tęstinio pobūdžio).<br />
-<b>6.6.</b> Vienas Mokamos Paslaugos užsakymas Klientui suteikia teisę įdėti vieną Skelbimą, nebent prie konkrečios Paslaugos yra nurodyta kitaip. Pasirinkęs Mokamą Paslaugą konkrečiam laikotarpiui (pavyzdžiui, 30 dienų, 60 dienų ar pan.), Klientas įsipareigoja šia Paslauga naudotis ne trumpiau nei Mokamos Paslaugos visas galiojimo laikotarpis (toliau – <b>Minimalus laikotarpis</b>). Jei Skelbimo sandoris įvyksta anksčiau, nei pasibaigia Minimalus laikotarpis (pavyzdžiui, prekė parduodama ar pan.), arba jei Klientas pats panaikina Skelbimą, arba jei Skelbimas panaikinamas dėl Kliento kaltės, pinigai už nepanaudotą Minimalų laikotarpį Klientui nėra grąžinami ir nėra perkeliami kitam Skelbimui apmokėti. Įvykus Skelbimo sandoriui Klientas privalo pašalinti Skelbimą, kad neklaidintų kitų Svetainės lankytojų.<br />
-<b>6.7.</b> Klientui perkėlus Skelbimą iš aktyvaus į pasyvų, taip pat sustabdžius Skelbimo rodymą dėl Kliento kaltės, Skelbimo nerodymo laikotarpis yra įskaitomas į Minimalų laikotarpį ir Minimalus laikotarpis neperkeliamas bei neprailginamas laikotarpiui, kurį Skelbimas nebuvo rodomas viešai Svetainėje.<br />
-<b>6.8.</b> Įvykus Skelbimo sandoriui (turto pardavimas, nuoma ar pan.), Minimalaus laikotarpio likutis nėra perkeliamas kitam Skelbimui ir Klientas negali skelbti naujo (kito) Skelbimo vietoje seno Skelbimo. Jei Klientas Mokamą Paslaugą pritaikė (ketina pritaikyti) kitam Skelbimui, SKELBIU.LT turi teisę panaikinti šį Skelbimą ir perspėti Klientą arba reikalauti už tokį Skelbimą apmokėti kaip už naujai paskelbtą Skelbimą. Toks Skelbimas imamas rodyti tik už jį tinkamai apmokėjus. Klientui nesutikus apmokėti, Skelbimas yra panaikinamas.<br />
-<b>6.9.</b> Jei sutartis dėl Paslaugų teikimo dėl Kliento kaltės ar jo iniciatyva yra nutraukiama nepraėjus Minimaliam laikotarpiui, Klientas privalo sumokėti SKELBIU.LT kompensaciją, lygią konkrečios Kliento užsakytos Mokamos Paslaugos mokesčio daliai nuo atsisakymo dienos iki Minimalaus laikotarpio pabaigos. Ši kompensacija išskaičiuojama iš Kliento sumokėtos Mokamos Paslaugos kainos.
-</p>
-<p><h3><b>7. ASMENS DUOMENYS</b></h3></p>
-<p>
-<b>7.1.</b> Registracijos metu ar vėliau naudojantis Svetaine Kliento pateiktus ar SKELBIU.LT kitais būdais surinktus asmens duomenis SKELBIU.LT tvarko, t. y. renka, naudoja, saugo, perduoda, tik teisėtai, skaidriai ir sąžiningai, iš anksto nustatytais tikslais, ir tik tokia apimtimi, kuri reikalinga tikslams pasiekti. Kliento asmens duomenis SKELBIU.LT tvarko vadovaujantis šiose Taisyklėse, taip pat SKELBIU.LT <a target="_blank" href="/privatumo-politika.html">Privatumo politikos</a> nustatyta tvarka.<br />
-<b>7.2.</b> SKELBIU.LT užtikrina Klientų, kaip duomenų subjektų, teises pagal Bendrąjį asmens duomenų apsaugos reglamentą, Lietuvos Respublikos asmens duomenų teisinės apsaugos įstatymą ir kitus asmens duomenų tvarkymą reglamentuojančius norminius teisės aktus. Klientų, kaip asmens duomenų subjektų, teisės ir jų įgyvendinimo tvarka nustatyta SKELBIU.LT <a target="_blank" href="/privatumo-politika.html">Privatumo politikoje</a>.<br />
-</p>
-<p><h3><b>8. INFORMACIJOS APSAUGOS PRIEMONĖS</b></h3></p>
-<p>
-<b>8.1.</b> SKELBIU.LT Kliento asmens duomenis tvarko tokiu būdu, kad taikant atitinkamas technines ar organizacines priemones būtų užtikrintas tinkamas asmens duomenų saugumas, įskaitant apsaugą nuo duomenų tvarkymo be leidimo arba neteisėto duomenų tvarkymo ir nuo netyčinio praradimo, sunaikinimo ar sugadinimo.<br />
-<b>8.2.</b> SKELBIU.LT primena, jog Klientas yra pats atsakingas už prisijungimo duomenų slaptumą. SKELBIU.LT prašo būti atsargiam naudojant ir saugant prisijungimo duomenis. Klientas turėtų atsijungti nuo naršyklės baigęs darbą tam, kad būtų tikras, jog niekas neprieis prie Kliento elektroninio pašto, asmeninės informacijos, ypač tais atvejais, kai Klientas naudojasi viešai prieinamu kompiuteriu (pavyzdžiui, interneto kavinėje, bibliotekoje).
-</p>
-<p><h3><b>9. ATSAKOMYBĖS RIBOJIMAS</b></h3></p>
-<p>
-<b>9.1.</b> Klientas sutinka, kad SKELBIU.LT nėra ir nebus atsakingas už Svetainės ir (ar) Paslaugų veikimo sutrikimus, kilusius ne dėl SKELBIU.LT kaltės, ir dėl to Kliento ar trečiųjų asmenų patirtus nuostolius ar žalą.<br />
-<b>9.2.</b> SKELBIU.LT nebus atsakingas už daiktų ir (ar) paslaugų, parduodamų ar įsigyjamų naudojantis Svetaine ir (ar) Paslaugomis, kokybę, kiekį ir (ar) komplektiškumą.<br />
-<b>9.3.</b> Klientas supranta ir sutinka su tuo, kad Svetainė ir (ar) Paslaugos veikia taip, kokios yra (angl. <i>service as-is</i>) principu ir todėl yra pateikiamos be jokių patvirtinimų ar garantijų iš SKELBIU.LT pusės dėl to, jog Svetainė veiks ir Paslaugos bus teikiamos tinkamai ir laiku, be sutrikimų, kokybiškai, pilna apimtimi arba kad tai nesukels jokių neigiamų pasekmių Klientui ar tretiesiems asmenims. SKELBIU.LT nėra ir nebus atsakingas už Svetainėse esančios informacijos neteisėtumą, neatitikimus, netikslumą ar klaidingumą (išskyrus tą informaciją, kurią pateikia pats SKELBIU.LT) ir iš to kilusias neigiamas pasekmes Klientui ar tretiesiems asmenimis.<br />
-<b>9.4.</b> SKELBIU.LT neatsako už jokią žalą ir (ar) nuostolius, kuriuos gali patirti Klientas naudodamasis Svetaine ir (ar) Paslaugomis bei siųsdamas, patalpindamas ir bet kuriais kitais būdais perduodamas ar padarydamas viešai prieinamu bet kokią informaciją, įskaitant ir komentarus ir (ar) tiesiogines žinutes.<br />
-<b>9.5.</b> Klientas supranta ir sutinka, kad SKELBIU.LT, atsižvelgiant į šių Taisyklių 9.1. punktą bei 9.3. punktą, niekada ir dėl jokių priežasčių nebus atsakingas už visus ir bet kuriuos savo veiksmus arba neveikimą susijusį su Kliento naudojimusi Svetaine ir (ar) Paslaugomis ir šių Taisyklių laikymusi. Klientas prisiima visą atsakomybę dėl bet kokio pobūdžio žalos ar nuostolių atlyginimo, kurie jam ar tretiesiems asmenims gali atsirasti bet kokiu būdu Klientui naudojantis Svetaine ar Paslaugomis, ar jose esančia informacija.<br />
-<b>9.6.</b> Klientas įsipareigoja užtikrinti, kad SKELBIU.LT niekada nekiltų jokia teisinė atsakomybė, pareiga apmokėti, atlyginti ar kitaip kompensuoti bet kokius nuostolius, žalą ar kitokias išlaidas, atsiradusias dėl to, kad Klientas naudojosi Svetaine ir (ar) Paslaugomis.<br />
-<b>9.7.</b> Klientas supranta ir sutinka su tuo, jog SKELBIU.LT nėra ir nebus atsakingas už dėl trečiųjų asmenų, įskaitant, bet tuo neapsiribojant, internetinio, mobilaus ryšio teikėjų, elektroninio pašto paslaugos teikėjo ar kt., kaltės Klientui nesuteiktas ar laiku nesuteiktas Paslaugas. Klientui negalint naudotis Mokamomis Paslaugomis dėl trečiųjų asmenų kaltės, užmokestis už Mokamas Paslaugas Klientui nėra grąžinamas.<br />
-<b>9.8.</b> SKELBIU.LT atsakomybė Klientui ar tretiesiems asmenims, kylanti iš šių Taisyklių, yra ribojama – 29 Eur suma.
-</p>
-<p><h3><b>10. TAISYKLIŲ KEITIMAS</b></h3></p>
-<p>
-<b>10.1.</b> SKELBIU.LT pasilieka teisę bet kada savo išimtine nuožiūra keisti, taisyti ar papildyti šias Taisykles dėl bet kokių teisėtų, pavyzdžiui, teisinių, norminių ar saugumo priežasčių, atsižvelgdamas į galiojančių teisės aktų nustatytus reikalavimus.<br />
-<b>10.2.</b> Pakeistos Taisyklės bus pateiktos patvarioje laikmenoje Verslininkui susipažinti el. paštu, kurį Verslininkas pateikė registruodamasis Svetainėje likus ne mažiau kaip 15 dienų iki numatytos pakeistų Taisyklių įsigaliojimo dienos. Taisyklės taip pat bus pateiktos Klientui susipažinti naudojantis Svetaine. Laikoma, kad SKELBIU.LT ir Klientas faktiškai susitarė dėl pakeistų Taisyklių taikymo, jeigu:<br />
-<b>10.2.1.</b> Klientas nepateiks prieštaravimo dėl Taisyklių pakeitimų iki numatytos pakeistų Taisyklių įsigaliojimo dienos ir toliau naudosis Svetaine; ir <br />
-<b>10.2.2.</b> Klientas buvo aiškiai informuotas apie pakeitimus.<br />
-<b>10.3.</b> Jeigu Klientas nesutinka su pakeistomis ir (ar) papildytomis Taisyklėmis, jis praranda teisę naudotis Svetaine ir (ar) Paslaugomis.<br />
-<b>10.4.</b> Verslininkas turi teisę nutraukti sudarytą sutartį su SKELBIU.LT dėl keičiamų Taisyklių, jeigu praneša apie sutarties nutraukimą SKELBIU.LT iki pakeistų Taisyklių įsigaliojimo momento. Toks sutarties nutraukimas įsigalioja per 15 dienų nuo pranešimo apie keičiamas Taisykles gavimo. Šio termino Verslininkas gali atsisakyti rašytiniu pareiškimu arba savo veiksmas išreikšdamas tokį norą.<br />
-<b>10.5.</b> Jeigu Verslininkas, nepraėjus 15 dienų terminui dėl sutarties nutraukimo, toliau naudodamasis Paslaugomis ar Svetaine, įskaitant, bet neapsiribojant Paslaugų pratęsimu, naujų Paslaugų užsakymu, Skelbimų redagavimu ir (ar) atnaujinimu, po to, kai įsigalios Taisyklių pakeitimai, patvirtina, kad jis susipažino su tokiais pakeitimais ir visiškai su jais sutinka.<br />
-<b>10.6.</b> Iki Taisyklių pakeitimo Klientų užsakytos Paslaugos teikiamos tokia tvarka ir terminais, kaip buvo nustatyta tuo metu galiojusiose Taisyklėse.<br />
-<b>10.7.</b> SKELBIU.LT taip pat turi teisę iš anksto nepranešdamas Klientui vienašališkai pakeisti ir atnaujinti šių Taisyklių 4.1.2.6 punkte nurodytą prekių ir (ar) paslaugų, kurių prekyba prieštarauja teisės aktams ir (ar) moralės ir etikos normoms, sąrašą.
-</p>
-<p><h3><b>11. PASLAUGŲ PAKEITIMAI</b></h3></p>
-<p>
-<b>11.1.</b> Klientas sutinka, jog SKELBIU.LT bet kuriuo metu gali toliau plėtoti Svetainę bei siūlomų Paslaugų spektrą siekdamas užtikrinti tinkamą Paslaugų teikimą ar dėl kitų su tuo susijusių priežasčių (pavyzdžiui, pasikeitus techniniams reikalavimams ar saugos aspektams), taip pat siekdamas užtikrinti teikiamų Paslaugų kokybę, pasiūlą bei prisitaikyti prie Klientų poreikių. Todėl SKELBIU.LT gali vienašališkai keisti teikiamas Paslaugas ir (ar) jų apmokestinimą, tokiu atveju Klientas neturės galimybės toliau naudotis nepakeistomis Paslaugomis po pakeitimų įsigaliojimo. <br />
-<b>11.2.</b> Dėl tokių Paslaugų pakeitimų Privatus klientas nepatirs jokių papildomų išlaidų. Apie Paslaugų pakeitimus ir Privataus kliento teisę atsisakyti sutarties dėl Mokamų Paslaugų SKELBIU.LT Privatų klientą informuos el. paštu 30 dienų prieš įsigaliojant pakeitimams, pateikdamas informaciją susipažinimui apie planuojamus Paslaugų pakeitimus.<br />
-<b>11.3.</b> Privatus klientas turės teisę atsisakyti sutarties dėl Mokamų Paslaugų teikimo per 30 dienų nuo pranešimo apie pakeitimus gavimo arba nuo pakeitimų taikymo momento (priklausomai nuo to, kas įvyko vėliau), jei Paslaugų pakeitimas turės neigiamos įtakos Privataus kliento prieigai prie Mokamų Paslaugų bei naudojimuisi jomis, išskyrus atvejus, kai toks neigiamas poveikis yra nedidelis.<br />
-<b>11.4.</b> Jeigu aiškiai nenurodyta kitaip, Klientas sutinka, kad apie bet kokius Paslaugų pakeitimus jam bus pranešta prieš 30 dienų nuo jų taikymo pradžios el. paštu, kurį Klientas pateikė SKELBIU.LT registruodamasis Svetainėje.<br />
-<b>11.5.</b> Klientas aiškiai sutinka ne rečiau kaip kartą per mėnesį tikrinti savo el. paštą, kurį pateikė SKELBIU.LT registruodamas savo paskyrą.
-</p>
-<p><h3><b>12. PRIVATAUS KLIENTO TEISĖS MOKAMŲ PASLAUGŲ NETEIKIMO METU ARBA NETINKAMOS KOKYBĖS PASLAUGŲ TEIKIMO ATVEJU</b></h3></p>
-<p>
-<b>12.1.</b> Privatus klientas turi teisę pareikšti reikalavimą SKELBIU.LT pradėti teikti Mokamas Paslaugas, jeigu SKELBIU.LT nevykdo savo pareigos pradėti teikti Privataus kliento įsigytas Mokamas Paslaugas nedelsiant po sutarties sudarymo, nebent tarp šalių yra sulygta kitaip. Jeigu pateikus tokį reikalavimą SKELBIU.LT neteikia Mokamų Paslaugų nedelsdama ar per sutarties šalių aiškiai sutartą papildomą terminą, Privatus klientas turi teisę vienašališkai nutraukti sutartį dėl Mokamų Paslaugų teikimo.<br />
-<b>12.2.</b> Jeigu yra suteiktos netinkamos kokybės Mokamos paslaugos, Privatus klientas turi teisę reikalauti ištaisyti Mokamų paslaugų trūkumus, sumažinti kainą arba vienašališkai nutraukti sutartį.<br />
-<b>12.3.</b> Privatus klientas turi teisę į Mokamos Paslaugos trūkumų ištaisymą, išskyrus atvejus, kai to neįmanoma padaryti, arba jeigu dėl to SKELBIU.LT patirtų neproporcingų išlaidų, atsižvelgiant į visas aplinkybes, įskaitant:<br />
-<b>12.3.1.</b> Mokamos Paslaugos vertę, jeigu nebūtų trūkumų;<br />
-<b>12.3.2.</b> trūkumų reikšmingumą.<br />
-<b>12.4.</b> Privatus klientas turi teisę į Mokamos Paslaugos kainos sumažinimą arba teisę į vienašališką sutarties nutraukimą bet kuriuo iš šių atvejų:<br />
-<b>12.4.1.</b> SKELBIU.LT neįmanoma ištaisyti Mokamos Paslaugos trūkumų arba dėl to SKELBIU.LT patirtų neproporcingų išlaidų atsižvelgiant į visas aplinkybes;<br />
-<b>12.4.2.</b> SKELBIU.LT neištaisė Mokamos Paslaugos trūkumų per protingą terminą, nemokamai ir nesukeldama Privačiam klientui didelių nepatogumų, atsižvelgiant į Mokamos Paslaugos pobūdį, dėl kurio ji buvo reikalinga Privačiam klientui;<br />
-<b>12.4.3.</b> Mokamos Paslaugos trūkumų atsirado po to, kai SKELBIU.LT bandė užtikrinti tinkamą Mokamos Paslaugos kokybę;<br />
-<b>12.4.4.</b> trūkumas yra esminis;<br />
-<b>12.4.5.</b> SKELBIU.LT pareiškė arba iš aplinkybių tapo aišku, kad ji per protingą terminą neištaisys Mokamos Paslaugos trūkumų arba tai sukels didelių nepatogumų Privačiam klientui.<br />
-<b>12.5.</b> Privatus klientas turi teisę nutraukti sutartį tik tuo atveju, kai Mokamos Paslaugos trūkumas nėra nedidelis.<br />
-<b>12.6.</b> Privatus klientas savo teisę nutraukti sutartį įgyvendina pateikdamas SKELBIU.LT pareiškimą, kuriame yra išreiškiamas jo sprendimas nutraukti sutartį dėl Mokamų Paslaugų teikimo dėl netinkamos kokybės. Nutraukus sutartį, SKELBIU.LT Privačiam klientui ne vėliau kaip per 14 dienų grąžina visas jo sumokėtas sumas už laikotarpį, kurį buvo teikiamos netinkamos kokybės Mokamos Paslaugos, tokiu pačiu mokėjimo būdu, kokį naudojo Privatus klientas mokėdamas už Mokamas Paslaugas.
-</p>
-<p><h3><b>13. REITINGO NUSTATYMAS</b></h3></p>
-<p>
-<b>13.1.</b> SKELBIU.LT Skelbimų paieškos algoritmas atsižvelgia į toliau išvardintus veiksnius generuojant Skelbimų paieškos rezultatus. Jis sukurtas taip, kad Klientai rastų aktualius Skelbimus, ir gali kiekvienam Klientui būti suasmenintas atsižvelgiant į tokius veiksnius kaip, pavyzdžiui, Kliento pasirinktas paieškos rezultatų rodymo filtras.<br />
-<b>13.2.</b> Rikiuojant Skelbimų paieškos rezultatus, SKELBIU.LT remiasi toliau pateikiamais parametrais (svarbos tvarka):<br />
-<b>13.2.1.</b> Didesnį užsakytų žvaigždučių skaičių turintys skelbimai rodomi aukščiau. Žvaigždutes Skelbimui gali užsisakyti visi Klientai. Jei žvaigždučių kiekis vienodas, aukščiau rodomas Skelbimas, kurio žvaigždutės buvo užsakytos ilgesniam laikui. Daugiau informacijos kaip veikia Skelbimo iškėlimas žvaigždutėmis galite rasti „<a href="https://www.skelbiu.lt/pagalba.html" target="_blank">Dažniausiai užduodami klausimai</a>“.<br />
-<b>13.2.2.</b> Jeigu žvaigždučių Skelbimai neturi, tuomet jų tarpusavio rikiavimo kriterijus nurodomas sąrašo viršuje. Galimi kriterijai: (i) Naujausi viršuje, (ii) Atnaujinti viršuje, (iii) Pigiausi viršuje, (iv) Brangiausi viršuje. Automatiškai Svetainėje yra taikomas rikiavimas pagal Skelbimų atnaujinimo datą t. y. aukščiau rodomi tie Skelbimai, kurie buvo atnaujinti vėliau. Kategorijos, kuriose Skelbimai rikiuojami pagal Skelbimo įdėjimo datą, o ne atnaujinimo: (i) Nekilnojamasis turtas (išskyrus Medžiagos, įranga; Statybos paslaugos; Kita) ir (ii) Auto dalys. Lankytojui pakeitus rikiavimo kriterijų, Skelbimų sąrašas atitinkamai perdėliojamas ignoruojant Skelbimų žvaigždučių kiekį.<br />
-<b>13.2.3.</b> Atlikus tekstinę paiešką pagal raktažodį, Skelbimai tarpusavyje rikiuojami pagal tai, kiek jie atitinka paiešką, pvz., ar raktažodis buvo rastas Skelbimo antraštėje, ar Skelbimo kategorijos pavadinime, ar aprašyme, kiek kartų jis pasikartoja ir pan. Jei tarp rezultatų yra Skelbimų su žvaigždutėmis, tuomet jie rodomi aukščiau pagal 13.2.1. punkto tvarką. Lankytojai gali pasikeisti rikiavimo kriterijų, tuomet Skelbimų sąrašas atitinkamai perdėliojamas ignoruojant Skelbimų žvaigždučių kiekį.<br />
-<b>13.3.</b> Dalis Skelbimų yra importuojami į SKELBIU.LT iš kitų portalų (SKELBIU.LT, Autoplius.lt, CVbankas.lt), kai Klientas perka „2in1“ paslaugą: įkelia skelbimą į pvz., Autoplius.lt ir skelbimas automatiškai yra įkeliamas ir į SKELBIU.LT. Tokie perkelti skelbimai automatiškai yra rodomi žemiau negu Klientų tiesiogiai SKELBIU.LT paskelbti Skelbimai. Jeigu Klientas pats pasirenka rikiavimo kriterijų, tuomet sąrašas atitinkamai perdėliojamas ignoruojant Skelbimų importavimo faktą.<br />
-<b>13.4.</b> Visi Klientai gali pirkti žvaigždutes, atnaujinti savo Skelbimus arba juos įvesti iš naujo taip siekiant iškelti Skelbimus į paieškos rezultatų pradžią.
-</p>
-<p><h3><b>14. TEISĖ ATSISAKYTI SUTARTIES</b></h3></p>
-<p>
-<b>14.1.</b> Privatus klientas patvirtina, kad sutinka, jog apmokėjus Skelbimo patalpinimą SKELBIU.LT bei įsigijus kitas papildomas Paslaugas, jos yra laikomos pradėtomis teikti iš karto ir jų teikimas negali būti atšauktas, todėl Privatus klientas sutinka, jog jam netaikoma 14 dienų nuotolinės sutarties atsisakymo teisė. Todėl Privatus klientas, prieš užsakydamas ir apmokėdamas Paslaugas, privalo įsivertinti jų poreikį. Privačiam klientui pašalinus Skelbimą, padarius jį nematomu (pasyviu), pinigai už papildomai užsakytą Paslaugą nėra grąžinami ir jos galiojimo terminas nėra pratęsiamas ar perkeliamas kitam Skelbimui.<br />
-<b>14.2.</b> Jeigu sutartis dėl Kliento kaltės ar jo iniciatyva yra nutraukiama nepraėjus Minimaliam laikotarpiui, Klientas privalo sumokėti SKELBIU.LT kompensaciją, lygią konkrečios Kliento Mokamos Paslaugos mokesčio daliai nuo atsisakymo dienos iki Minimalaus laikotarpio pabaigos. Ši kompensacija išskaičiuojama iš Kliento sumokėtos Mokamos Paslaugos kainos. Ši nuostata nėra taikoma tuo atveju, jeigu Privatus klientas nutraukia sutartį dėl pasikeitusio Mokamų Paslaugų teikimo, jų neteikimo ar netinkamos kokybės pagal sutarties nutraukimo tvarką, išdėstytą Taisyklių 11 ir 12 skyriuose.
-</p>
-<p><h3><b>15. DUOMENŲ NAUDOJIMAS</b></h3></p>
-<p>
-<b>15.1.</b> Registracijos metu ar vėliau naudojantis SKELBIU.LT Kliento pateiktus ar SKELBIU.LT kitais būdais surinktus asmens ir kitus duomenis (toliau – <b>Duomenys</b>) SKELBIU.LT tvarko, t. y. renka, naudoja, saugo, perduoda, tik teisėtai, skaidriai ir sąžiningai, iš anksto nustatytais tikslais, ir tik tokia apimtimi, kuri reikalinga tikslams pasiekti. Kliento Duomenis SKELBIU.LT tvarko vadovaujantis šiose Taisyklėse, taip pat SKELBIU.LT <a target="_blank" href="/privatumo-politika.html">Privatumo politikos</a> nustatyta tvarka.<br />
-<b>15.2.</b> Duomenys tvarkomi siekiant tinkamai suteikti Paslaugas Klientams (patalpinti Skelbimus, užsakyti tam tikrą Paslaugą ir pan.). Kliento Duomenys taip pat yra tvarkomi jo registravimo bei Skelbimų duomenų bazės administravimo Svetainės sistemoje tikslu bei tiesioginės rinkodaros ir reklaminių akcijų (tiesioginės rinkodaros žaidimų, viktorinų, konkursų) vykdymo tikslais. SKELBIU.LT renka ir saugo Duomenis elektroniniu būdu, Klientas gali matyti visus savo pateiktus Duomenis prisijungus prie savo paskyros tol, kol ji egzistuoja. Ištrynus paskyrą, Klientai netenka prieigos prie įkeltų Duomenų ir Turinio.<br />
-<b>15.3.</b> SKELBIU.LT garantuoja, kad Duomenys nebus parduodami, teikiami ar kitaip be teisėto pagrindo perduodami tretiesiems asmenims, taip pat naudojami kitiems tikslams, nei jie buvo surinkti. SKELBIU.LT neperduoda Duomenų niekaip kitaip, kaip tik vadovaudamasis <a target="_blank" href="/privatumo-politika.html">Privatumo politika</a> ar taikytinais teisės aktais.
-</p>
-<p><h3><b>16. GARANTIJA</b></h3></p>
-<p>
-<b>16.1.</b> SKELBIU.LT Privačiam klientui primena apie galiojančią skaitmeninio turinio ir skaitmeninių paslaugų kokybės garantiją pagal įstatymą.
-</p>
-<p><h3><b>17. ATSILIEPIMAI</b></h3></p>
-<p>
-<b>17.1.</b> Svetainėje galima palikti atsiliepimus apie parduodamus objektus Skelbimuose.<br />
-<b>17.2.</b> Atsiliepimų autentiškumas Svetainėje yra užtikrinamas.
-</p>
-<p><h3><b>18. MEDIACIJA</b></h3></p>
-<p>
-<b>18.1.</b> Jeigu Verslininkas arba SKELBIU.LT bet kuriuo metu išreiškia pageidavimą, kad kilęs ginčas būtų sprendžiamas mediacijos būdu, SKELBIU.LT bendradarbiauja su šiais mediatoriais, apie kuriuos plačiau galima pasiskaityti <a target="_blank" href="https://www.teismai.lt/lt/visuomenei-ir-ziniasklaidai/teismai-ir-teisejai/teiseju-biografijos/1693/c780">čia</a> ir <a target="_blank" href="https://www.teismai.lt/lt/teismai-ir-teisejai/teisejai/teiseju-biografijos/1693/c195">čia</a>, tačiau SKELBIU.LT ir Verslininkas gali bendrai susitarti ir dėl kito mediatoriaus, jeigu tam yra poreikis.
-</p>
-<p><h3><b>19. TAIKYTINA TEISĖ IR GINČŲ SPRENDIMAS</b></h3></p>
-<p>
-<b>19.1.</b> Taisyklėms yra taikoma Lietuvos Respublikos teises.<br />
-<b>19.2.</b> Visi tarp SKELBIU.LT ir Kliento kilę nesutarimai dėl šių Taisyklių vykdymo yra sprendžiami derybų keliu. Šalims neišsprendus ginčo derybų būdu toks ginčas galutinai sprendžiamas Lietuvos Respublikos įstatymų nustatyta tvarka teismuose Lietuvos Respublikos įstatymų nustatyta tvarka.<br />
-<b>19.3.</b> SKELBIU.LT turi savo vidinę nemokamą Verslininkų skundų nagrinėjimo sistemą (toliau – <b>Sistema</b>). Norėdamas pasinaudoti šia Sistema, Verslininkas gali pateikti skundą pasinaudodamas skiltimi „Verslininkų skundų pateikimas“ ir pasirinkdamas skundo temą. Verslininkas turi pateikti kaip įmanoma daugiau informacijos apie skundo pagrindą. SKELBIU.LT atsako Verslininkui patvirtindamas apie gautą skundą ir, dėdamas visas komerciškai pagrįstas pastangas, atsižvelgdamas į skundo kompleksiškumą ir svarbą, kuo greičiau jį išnagrinėja. Išnagrinėjus skundą, atsakymas pateikiamas skundą pateikusiam Verslininkui jo nurodytais kontaktais.<br />
-<b>19.4.</b> Naudodamiesi šia Sistema, Verslininkai gali pateikti skundą:<br />
-<b>19.4.1.</b> kilus įtarimams, kad SKELBIU.LT nesilaikė Europos Parlamento ir Tarybos Reglamente 2019/1150 nustatytų pareigų, dėl ko buvo pažeisti Verslininko interesai;<br />
-<b>19.4.2.</b> tiesiogiai su Paslaugų teikimu susijusiais techniniais klausimais, kurie daro poveikį Verslininkui;<br />
-<b>19.4.3.</b> dėl priemonių, kurių ėmėsi SKELBIU.LT, arba SKELBIU.LT elgesio, tiesiogiai susijusio su Paslaugų teikimu ir darančių poveikį Verslininkui.<br />
-<b>19.5.</b> Privatus klientas prašymą ir (ar) skundą dėl SKELBIU.LT Svetainės veiklos ir paslaugų pirmiausia raštu privalo pateikti portalui SKELBIU.LT ir nurodyti savo reikalavimus. Tokius raštus prašome siųsti adresu <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e38a8d858ca39088868f818a96cd8f97cd">[email&#160;protected]</a> Nesutikdamas su SKELBIU.LT atsakymu, Klientas gali kreiptis į Valstybinę vartotojų teisių apsaugos tarnybą, adresas Vilniaus g. 25, LT-01402 Vilnius, interneto svetainė <a target="_blank" href="https://www.vvtat.lt/">www.vvtat.lt</a>, ar užpildyti prašymo formą Elektroninėje vartotojų ginčų sprendimo platformoje, adresu <a target="_blank" href="http://ec.europa.eu/odr/">http://ec.europa.eu/odr/</a>. Teisminiai ginčai yra nagrinėjami teisės aktų nustatyta tvarka.
-</p>
-<p><a name="Priedas"></a></p><br />
-<p><h3><b>Draudžiama dėti Skelbimus, kurie susiję su toliau nurodytų objektų pardavimu ir (ar) pirkimu:</b></h3></p>
-<ul class="pl15">
-<li> akivaizdžiai pornografinio turinio medžiagą arba nuotraukas;</li>
-<li> medžiagą arba nuotraukas kurstančias tautinę, etninę, rasinę, religinę neapykantą, arba neapykantą dėl religijos neišpažinimo;</li>
-<li> trečiųjų asmenų teises, įskaitant teisės į atvaizdą, privatumą, pažeidžiančio turinio medžiagą;</li>
-<li> autorių arba intelektinės nuosavybės teises pažeidžiančius muzikos kūrinius, filmus, programinę įrangą bei kitas prekes;</li>
-<li> pavojingas grynąsias chemines medžiagas, galinčias sukelti pavojų gyvybei, sveikatai arba aplinkai (pvz. sieros rūgštį, karbidą);</li>
-<li> narkotines ir psichotropines medžiagas, ypač narkotikus, taip pat kitas medžiagas naudojamas kaip narkotikų pakaitalai (pakaitines medžiagas), neatsižvelgiant į minėtų medžiagų laikymo ir prekybos jomis teisėtumą;</li>
-<li> su tabako gaminiais susijusius gaminius, įskaitant elektronines cigaretes ir elektroninių cigarečių pildykles, rūkomuosius žolinius gaminius;</li>
-<li>dantų balinimo priemones, kurių sudėtyje yra daugiau nei 0,1% vandenilio peroksido;</li>
-<li> bet kokius vaistus, įskaitant „viagra“, „cialis“ ir kt.;</li>
-<li> maisto papildus, kurie nėra notifikuoti Valstybinės maisto ir veterinarijos tarnybos. Notifikuotų papildų sąrašas pateiktas adresu <a href="http://www.vet.lt/maisto-papildai/">http://www.vet.lt/maisto-papildai/</a>;</li>
-<li> žmogaus arba gyvūnų organus;</li>
-<li> pajus, akcijas, obligacijas bei kitus vertybinius popierius, skolinius reikalavimus, investicinių fondų vienetus, draudimo polisus ir produktus bei bet kokius kitus investicijų arba piniginio indėlio forma siūlomus finansinius instrumentus, išskyrus išimtinai kolekcinės vertės materialius vertybinius popierius, jei tokiai prekybai pagal teisės aktus yra reikalingas atitinkamas leidimas ar licencija, ir toks leidimas ar licencija nėra gauti ir (ar)ba jei tokio skelbimo paskelbimas prieštarauja teisės aktams reglamentuojantiems finansinių priemonių reklamą; </li>
-<li> programinės įrangos, kuriai suteikta NFR (neskirta parduoti) licencija, bandomąsias, nemokamas, laikinai nemokamas bei pasibaigusio autorinių teisių galiojimo versijas;</li>
-<li> programinę įrangą arba medžiagą, pritaikytą vykdyti teisės aktus arba visuotinai priimtas padorumo normas pažeidžiančią veiklą, įskaitant: </li>
-<ul>
-<li> kompiuterio virusų arba kitų kenksmingų elementų turinčią programinę įrangą;</li>
-<li> programinę įrangą ir įrenginius leidžiančius rinkti su kompiuterio naudotoju susijusią informaciją jam nežinant;</li>
-<li> stalinių ir nešiojamųjų kompiuterių, kietųjų diskų bei kitų atminties laikmenų ir automobilinių radijo imtuvų blokavimui bei slaptažodžių šalinimui skirtą programinę įrangą ir įrenginius, taip pat su blokavimu bei blokavimo šalinimu susijusią informaciją, instrukcijas bei paslaugas;</li>
-<li> programinę įrangą nuskaitančią elektroninio pašto adresus tinklapiuose bei įgalinančią vykdyti masinį pranešimų siuntimą interneto portalų bei momentinių žinučių ir pokalbių internetu naudotojams ir pan., negavus jų sutikimo;</li>
-</ul>
-<li> serijos numerius parduodamus atskirai be originalios programinės įrangos;</li>
-<li> instrukcijas bei tinklapių ir FTP tarnybinių stočių adresus (nuorodas), kuriuose pateikta informacija:</li>
-<ul>
-<li> leidžia arba palengvina pavojingų medžiagų gamybą arba įsigijimą;</li>
-<li> pažeidžia galiojančius teisės aktus arba yra slapta;</li>
-<li> leidžia arba palengvina galiojančių teisės aktų pažeidimą;</li>
-</ul>
-<li> nemokamų interneto portalų paskyras, įskaitant: </li>
-<ul>
-<li> momentinių žinučių ir pokalbių internetu paskyras (pvz. Gadu-Gadu, Tlen, Skype, Jabber, AQQ, ICQ); </li>
-<li> nemokamo elektroninio pašto paskyras (elektroninio pašto adresus);</li>
-<li> nemokamuose interneto portaluose sukurtas paskyras bei kvietimus naudotis šių portalų paslaugomis bei sukurti juose paskyras;</li>
-</ul>
-<li> partnerystės ir lojalumo programų paskyras bei su minėtomis programomis susijusiais paslaugas;</li>
-<li> asmens duomenis arba elektroninio pašto adresų sąrašus;</li>
-<li> išankstinio apmokėjimo korteles;</li>
-<li> paslaugas ir medžiagą, susijusią su dalyvavimu vadinamosiose finansų piramidėse, t.y. naujų narių pritraukimo principu kuriamose finansų struktūrose, kuriose pagrindinis (arba vienintelis) pelno šaltinis yra naujų narių mokamas registravimo mokestis;</li>
-<li> biržos investicijų sistemas, loterijų ir lažybų sistemas bei paslaugas susijusias su dalyvavimu loterijose bei lažybose, išskyrus oficialius knygos formatu išleistus leidinius, kuriems suteiktas ISBN numeris; </li>
-<li> žvejybos įrankius ir įrangą, kurių laikymą riboja teisės aktų nuostatos;</li>
-<li> ginklus ir šaudmenis, kurių laikymui arba prekybai būtina gauti atitinkamą leidimą arba juos registruoti bei dujinius granatsvaidžius ir pipirinių dujų purkštuvus, neatsižvelgiant į minėtų priemonių laikymo ir prekybos jomis teisėtumą, visus A ir B kategorijoms priskiriamus ginklus;</li>
-<li> registracijos liudijimus ir korteles siūlomas atskirai nuo transporto priemonių, kurioms jos išduotos;</li>
-<li> el. pašto paslaugas: t.y. masinio elektroninio susirašinėjimo aptarnavimo paslaugas; </li>
-<li> paslaugas ir medžiagą, skatinančias siųsti papildomai apmokestintas trumpąsias žinutes (vadinamasis „SMS Premium“);</li>
-<li> uždarbį internetu partnerystės sistemose (pvz. darbą spaudinėjant nuorodas);</li>
-<li> fluorintomis šiltnamio efektą sukeliančiomis dujomis užpildytą vienkartinę tarą;</li>
-<li> kitas prekes ir (ar) paslaugas, kurių prekyba yra uždrausta ar ribojama, joms reikalingos atitinkamos licencijos ar leidimai, kurių Klientas neturi, arba tokios licencijos ir leidimai nesuteikia teisės tokias prekes ir (ar) paslaugas parduoti elektroninėmis ryšio priemonėmis, įskaitant internete;</li>
-<li> taip pat bet kokias kitas prekes ir (ar) paslaugas, kai jų prekybą, įskaitant internete, draudžia teisės aktai.</li>
-</ul>
-<p>Pažymėtina, kad šis sąrašas nėra baigtinis, todėl Klientas siūlydamas įsigyti ir (ar) parduoti prekes ir (ar) paslaugas, kai prekyba jomis galimai pažeidžia teisės aktų reikalavimus, veikia išimtinai savo rizika, ir SKELBIU.LT jokiomis aplinkybėmis nebus atsakinga už tokių Skelbimų Turinį.</p></div>
+<div class="container help">
+            <div class="content-note-block">
+            <div class="note"><h3>Dėl skelbimuose reklamuojamų prekių ar paslaugų prašome skambinti skelbimuose nurodytais tel. Nr.<br />Numeriai rodomi tik registruotiems Skelbiu.lt vartotojams.</h3></div>
+        </div>
+    
+            <div class="page-title">Skelbiu.lt pagalba</div>
+    
+    <div class="content"><p class="working-hours">Klientų aptarnavimo skyriaus darbo laikas:<br/>I-V 8:20-17:00<br/>VI - VII nedirbame</p>
+        <p class="phone-number"><a href="tel:+37068055000">+370 680 55000</a></p>
+        <p class="phone-number-note">(skambučio tarifas skaičiuojamas pagal jūsų operatoriaus nustatytus įkainius)</p>
+        <p class="email-address"><a href="/cdn-cgi/l/email-protection#274e49414867544c424b454e52094b53"><span class="__cf_email__" data-cfemail="472e29212807342c222b252e32692b33">[email&#160;protected]</span></a></p></div>
+
+    </div>
+
                 </div>
                 <div class="LineHeight20"></div>
             </div>
-                    <div id="footerAreaSmall" class="otp">
-            <div id="footerDataSmall">
-                                    <div id="footerHelpLine">Skelbiu.lt pagalba: +370 680 55000</div>
-                    <div id="footerWorkTime">Darbo laikas: I-V 08:20 - 17:00</div>
-                            </div>
-            <div id="footerMenuSmall" class="otp">
-                <ul>
-                    <li><a href='/pagalba.html' rel="nofollow">Naudojimo taisyklės / D.U.K.</a></li>
-                    <li><a href='/kontaktai.html' rel="nofollow">Kontaktai</a></li>
-                    <li><a href='/sitemap.html'>Svetainės struktūra</a></li>
-                </ul>
-            </div>
-
-            <div id="ourSites" class="otp">
-                <a class="link-bcg" href="https://balticclassifieds.com" target="_blank"></a>
-            </div>
-            <div class="cl"></div>
-
         </div>
-    
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+<footer>
+    <div class="skelbiu-content">
+                    <div class="contacts-block">
+                <div class="skelbiu-help">Skelbiu.lt pagalba: +370 680 55000</div>
+                <div class="working-time">Darbo laikas: I-V 08:20 - 17:00</div>
+            </div>
+        
+        <div class="links-block">
+            <a href="/duk.html" class="skelbiu-link duk">D.U.K.</a>
+            <a href="/naudojimo-taisykles.html" class="skelbiu-link terms">Naudojimo taisyklės</a>
+            <a href="/privatumo-politika.html" class="skelbiu-link privacy">Privatumo politika</a>
+            <a href="/kontaktai.html" class="skelbiu-link contacts">Kontaktai</a>
+
+                            <a href="/sitemap.html" class="skelbiu-link structure">Svetainės struktūra</a>
+                    </div>
+    </div>
+    <div class="bcg-content">
+        <div class="bcg-block">
+            <div class="bcg-logo"><img src="https://static.skelbiu.lt/static/images/svg/BCG.svg" alt="BCG Logo"></div>
+            <div class="bcg-projects">
+                <a href="https://www.skelbiu.lt" class="bcg-project" target="_blank" title="Skelbimai: lankomiausias Lietuvoje pardavimo, nuomos ir kitų skelbimų portalas">Skelbiu.lt</a>
+                <a href="https://www.cvbankas.lt" class="bcg-project" target="_blank" title="Darbo skelbimai">CVbankas.lt</a>
+                <a href="https://www.auto24.ee" class="bcg-project" target="_blank" title="Uued ja kasutatud sõidukid">Auto24.ee</a>
+                <a href="https://www.kuldnebors.ee" class="bcg-project" target="_blank" title="Töö ja koolitus, sõidukid, autod, kinnisvara ja muud kuulutused">KuldneBörs.ee</a>
+                <a href="https://www.getapro.lv" class="bcg-project" target="_blank" title="Ērts online-serviss, lai meklētu pārbaudītus speciālistus jebkuriem sadzīves un profesionāliem pakalpojuma veidiem">Getapro.lv</a>
+                <a href="https://www.autoplius.lt" class="bcg-project" target="_blank" title="Automobilių skelbimai, automobiliai ir motociklai kiekvienam">Autoplius.lt</a>
+                <a href="https://www.paslaugos.lt" class="bcg-project" target="_blank" title="Paslaugos: Įmonės, Meistrai, Specialistai, Freelanceriai, Profesionalai">Paslaugos.lt</a>
+                <a href="https://www.kv.ee" class="bcg-project" target="_blank" title="Kinnisvara pakkumised - korterid majad maad äripinnad.">KV.ee</a>
+                <a href="https://www.city24.ee" class="bcg-project" target="_blank" title="Kinnisvara - korterid majad äripinnad maa ost müük rent üür">City24.ee</a>
+                <a href="https://www.getapro.ee" class="bcg-project" target="_blank" title="Mugav veebiteenus usaldusväärsete spetsialistide leidmiseks kõigi majapidamis- ja eriteenuste jaoks">Getapro.ee</a>
+                <a href="https://www.aruodas.lt" class="bcg-project" target="_blank" title="Nekilnojamo turto skelbimai">Aruodas.lt</a>
+                <a href="https://www.kainos.lt" class="bcg-project" target="_blank" title="Kainų palyginimo portalas">Kainos.lt</a>
+                <a href="https://www.osta.ee/" class="bcg-project" target="_blank" title="Oksjonid, e-poed ja Eesti Disain - rohkelt eripakkumisi">Osta.ee</a>
+                <a href="https://www.city24.lv" class="bcg-project" target="_blank" title="Nekustamo īpašumu portāls – dzīvokļi, mājas, zemes, komercplatības- pārdod un izīrē">City24.lv</a>
+            </div>
+        </div>
+        <div class="copyrights">2003 - 2022 © UAB „Diginet LTU“</div>
+    </div>
+</footer>
+
+
 
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type='text/javascript'>
@@ -519,23 +204,19 @@
              height=1 border=0 style="position: absolute;"/>
     </noscript>
 
-            </div>
-    </div>
-    <div class="clear"></div>
-</div>
+    
 
-
-    <script src="https://static.skelbiu.lt/static/vendor/jquery/index.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" type="text/javascript"></script>
-    <script src="https://static.skelbiu.lt/static/vendor/devbridge-autocomplete/dist/jquery.autocomplete.min.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" type="text/javascript"></script>
-    <script src="https://static.skelbiu.lt/static/js/header/autocomplete.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" type="text/javascript"></script>
-    <script src="https://static.skelbiu.lt/static/js/fancybox.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" type="text/javascript"></script>
-    <script src="https://static.skelbiu.lt/static/js/lazyload.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" type="text/javascript"></script>
-    <script src="https://static.skelbiu.lt/static/js/main.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" type="text/javascript"></script>
-    <script src="https://static.skelbiu.lt/static/js/tinybox.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" type="text/javascript"></script>
-    <script src="https://static.skelbiu.lt/static/js/Skelbiu/NamespaceBuilder.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" type="text/javascript"></script>
-    <script src="https://static.skelbiu.lt/static/js/Skelbiu/Ajax.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" type="text/javascript"></script>
-    <script src="https://static.skelbiu.lt/static/js/Skelbiu/API/Utility/Error.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" type="text/javascript"></script>
-    <script src="https://static.skelbiu.lt/static/js/show_ads.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da" type="text/javascript"></script>
+    <script src="https://static.skelbiu.lt/static/vendor/jquery/index.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" type="text/javascript"></script>
+    <script src="https://static.skelbiu.lt/static/vendor/devbridge-autocomplete/dist/jquery.autocomplete.min.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" type="text/javascript"></script>
+    <script src="https://static.skelbiu.lt/static/js/header/autocomplete.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" type="text/javascript"></script>
+    <script src="https://static.skelbiu.lt/static/js/fancybox.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" type="text/javascript"></script>
+    <script src="https://static.skelbiu.lt/static/js/lazyload.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" type="text/javascript"></script>
+    <script src="https://static.skelbiu.lt/static/js/main.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" type="text/javascript"></script>
+    <script src="https://static.skelbiu.lt/static/js/tinybox.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" type="text/javascript"></script>
+    <script src="https://static.skelbiu.lt/static/js/Skelbiu/NamespaceBuilder.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" type="text/javascript"></script>
+    <script src="https://static.skelbiu.lt/static/js/Skelbiu/Ajax.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" type="text/javascript"></script>
+    <script src="https://static.skelbiu.lt/static/js/Skelbiu/API/Utility/Error.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" type="text/javascript"></script>
+    <script src="https://static.skelbiu.lt/static/js/show_ads.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667" type="text/javascript"></script>
 
 
 <script type="text/javascript">
@@ -557,7 +238,8 @@
     //--><!]]>
 </script>
 
-<script src="https://static.skelbiu.lt/static/dist/desktop/_layout/index.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da"  ></script><script type='text/javascript'>
+<script src="https://static.skelbiu.lt/static/dist/desktop/_layout/index.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667"  ></script><script src="https://static.skelbiu.lt/static/dist/desktop/pages/content.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667"  ></script>
+<script type='text/javascript'>
     window.addEventListener('load', function () {
         if (typeof headerAutocomplete != "undefined") {
             headerAutocomplete.setCategoryHint("Ieškoma kategorijoje");
@@ -604,8 +286,8 @@
 
         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
-        <script src="https://static.skelbiu.lt/static/js/notifications/app.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da"></script>
-        <script type="text/javascript" src="https://static.skelbiu.lt/static/js/notifications/chat.js?v=SK-SK-JOB1-11659-f8cc1c3bedaf4d49c91bea4b04c5c2da"></script>
+        <script src="https://static.skelbiu.lt/static/js/notifications/app.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667"></script>
+        <script type="text/javascript" src="https://static.skelbiu.lt/static/js/notifications/chat.js?v=SK-SK-JOB1-11662-5dc1ba2cee39c838e9708ab79342c667"></script>
     
     
 </body>
