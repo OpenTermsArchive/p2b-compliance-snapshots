@@ -251,9 +251,6 @@ $('#reports').on('hidden.bs.collapse', function() {
 $(".chevron_toggleable").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
 });
 //Carousels
-$('.carousel-4').carousel({
-interval: false 
-});
 $('#accordionJoinId').accordionChevrons();
 $("#organizationCarousel").owlCarousel({
 autoPlay: 4000,
@@ -330,28 +327,50 @@ async: true,
 data: { organizationid: organizationid, productid: productid, action: 'unlike' },
 success: function(data){	
 productid2 = jqSelector(productid);
-if (!$('#unlike-productid-'+organizationid+'-'+productid2).hasClass("btn-product-like")){
-$('#unlike-productid-'+organizationid+'-'+productid2).removeClass('btn-five');	
-$('#unlike-productid-'+organizationid+'-'+productid2).addClass('btn-two');
-}
-$('#unlike-productid-'+organizationid+'-'+productid2).html('<i class="fa fa-heart"></i>Like');
+$('#unlike-productid-'+organizationid+'-'+productid2).removeClass('liked');
+$('#unlike-productid-'+organizationid+'-'+productid2).attr('title', 'Like');
 $('#unlike-productid-'+organizationid+'-'+productid2).attr('id', 'like-productid-'+organizationid+'-'+productid);
-$('#like-product-button-'+organizationid+'-'+productid2).removeClass('liked');
-var count = parseInt($('#like-product-count-'+organizationid+'-'+productid2).text());
-var dispcount = "";
-if (count-1!=0) dispcount = count-1;
-$('#like-product-count-'+organizationid+'-'+productid2).text(dispcount); 
 },
 error: function(){
 alert("failure");
 }
 }); //end ajax 
 });
-$(document).on('mouseenter', 'a[id^="unlike-productid-"]', function() {	
-$(this).text('unLike!');
+$(document).on('mouseenter', 'a[id^="unlike-productid-"]', function() {
+$(this).attr('title', 'unLike');
 });
-$(document).on('mouseleave', 'a[id^="unlike-productid-"]', function() {	
-$(this).text('Liked');
+$(document).on('mouseleave', 'a[id^="unlike-productid-"]', function() {
+$(this).attr('title', 'Like');
+});
+$(document).on('click','a[id^="cart-add-item-button-"]', function(event){
+var res = $(this).attr('id').substring(('cart-add-item-button-').length);
+var organizationid = res.substring(0, res.indexOf('-'));
+var productid = res.substring(organizationid.length+1);
+$.ajax({
+url: "/dmarket/marketplc/products_cartcheck_load.jsp",
+type: "POST",
+async: true,
+data: { organizationid: organizationid, productid: productid },
+success: function(data){
+switch(data.trim()) {
+case "0":
+$("#shoppingCartTop").load("/dmarket/marketplc/cart/cart_top_load.jsp #shoppingCartTop > *", {action:'add', orgid:organizationid, pid:productid, price:0, optionid: '0'});
+$("#cart-add-item-button-"+organizationid+"-"+productid).html('<i class="fa fa-shopping-cart"></i> Προστέθηκε');
+break;
+case "1":
+window.location.href = "/dmarket/marketplc/product.jsp?orgid="+organizationid+"&productid="+productid+"&ncart=1"
+break;
+case "2":
+window.location.href = "/dmarket/marketplc/product.jsp?orgid="+organizationid+"&productid="+productid+"&ncart=2"
+break;
+case "3":
+window.location.href = "/dmarket/marketplc/product.jsp?orgid="+organizationid+"&productid="+productid+"&ncart=3"
+}
+},
+error: function(){
+alert("failure");
+}
+}); //end ajax
 });
 $('.join').click(function (event){ 
 event.preventDefault();	
@@ -627,9 +646,13 @@ if (!data || !data.id){
 return '';
 }
 if (type === 'Προϊόν') {
+if (data.count==1) {
 var orgid = data.id.split('###')[0].replace('p-', '');
 var proid = data.id.split('###')[1];
 return '<a href="/dmarket/marketplc/product.jsp?orgid=' + orgid + '&productid=' + proid + '" style=" display: block;">' + data.text + '</a>'
+}else{
+return '<a href="/dmarket/marketplc/preproducts.jsp?keywords=' + data.text + '" style=" display: block;">' + data.text + '</a>'
+}
 }
 if (type === 'Kατηγορία') {
 data.id = data.id.replace('c-','');
@@ -654,10 +677,31 @@ queryLink += "&langId=el";
 $.get(queryLink, function (result) {
 var products = result.results[0].children;
 var categories = result.results[1].children;
+if (categories.length>3) categories.splice(0, 2);
 var organizations = result.results[2].children;
+if (organizations.length>2) organizations.splice(0, 1);
 var rowsNum = Math.max(products.length||0, categories.length||0, organizations.length||0);
 //console.log('rows', rowsNum);
 //show input-value as search option
+//********eliminate same titles ************
+var dist_products = [];
+for(var i in products) {
+dist_products.push(products[i].text)
+}
+var count_producttitle = {};
+dist_products.forEach(function(val){
+if (!count_producttitle[val]) count_producttitle[val] = 1;
+else count_producttitle[val]++;
+});
+//console.log(count_producttitle)
+for(var i in products) {
+var cnt = count_producttitle[products[i].text]
+if (cnt >1) products.splice(i, cnt-1); // At position i, remove cnt-1 items:
+products[i].count = cnt;//add new property of how many occurences
+}
+//console.log(products)
+//******** /eliminate same titles ************
+if (products.length>5) products.splice(0, 4);
 $('#search-value, #search-value-mob').append('<div id="search-value-result">Αναζητήστε γενικά για "' + value + '"</div>');
 for (var i = 0; i < rowsNum - 1; i++) {
 $('#prod-results img,#prod-results-mob img').hide();
@@ -688,7 +732,7 @@ $('#org-results, #org-results-mob').hide();
 }else{
 $('#org-results, #org-results-mob').show();
 }
-if (!!organizations.length + !!categories.length + !!products.length == 3) {
+/* if (!!organizations.length + !!categories.length + !!products.length == 3) {
 $('#prod-results, #cat-results, #org-results, #prod-results-mob, #cat-results-mob, #org-results-mob').addClass("three-col-res").removeClass("one-col-res").removeClass("two-col-res");
 }
 else if (!!organizations.length + !!categories.length + !!products.length == 2){
@@ -696,7 +740,7 @@ $('#prod-results, #cat-results, #org-results, #prod-results-mob, #cat-results-mo
 }
 else if(!!organizations.length + !!categories.length + !!products.length == 1){
 $('#prod-results, #cat-results, #org-results, #prod-results-mob, #cat-results-mob, #org-results-mob').addClass("one-col-res").removeClass("two-col-res").removeClass("three-col-res");
-}
+}*/
 });
 $("#result-table, #result-table-mob, #result-table-in-top").removeClass("d-none");
 }
@@ -782,20 +826,15 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 <div>
 <div id="search-value" onclick="Search()" ></div>
 </div>
-<div style=" display: flex;">
-<div id="prod-results" class="three-col-res">
-<div class="header-result">Προϊόντα</div>
+<div>
+<div id="prod-results" class="one-col-res">
 <img src="images/loading.gif"/>
 <div id="all-results-products"></div>
 </div>
-<div id="cat-results" class="three-col-res">
-<div class="header-result">Κατηγορίες</div>
-<img src="images/loading.gif"/>
+<div id="cat-results" class="one-col-res">
 <div id="all-results-categories"></div>
 </div>
-<div id="org-results" class="three-col-res">
-<div class="header-result">Επιχειρήσεις</div>
-<img src="images/loading.gif"/>
+<div id="org-results" class="one-col-res">
 <div id="all-results-organizations"></div>
 </div>
 </div>
@@ -815,7 +854,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 <!--/div wrapper header-->
 <div class="top-header">
 <div class="navbar navbar-white" role="navigation">
-<div class="container" style="padding-right: 0px">
+<div class="container-80" style="padding-right:0px;">
 <a class="navbar-brand hidden-lg hidden-md" style="float: left; padding-top: 0px" href="/dmarket/marketplc/index.jsp" title="Πανελλήνια Αγορά Προϊόντων">
 <img src="/dmarket/marketplc/images/logos/0_logo_el.png" id="dirlogomob" style="max-width:200px;width:100%;height:auto !important" alt="Πανελλήνια Αγορά Προϊόντων">
 </a>
@@ -824,7 +863,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 <button class="megamenu megamenu-mob" style="outline:none; text-align: right; background-color: white; border: 0px">
 <ul class="nav navbar-nav navbar-right">
 <li class="text-left">
-<a	href="/dmarket/marketplc/category.jsp?categoryid=040"	data-hover="dropdown" data-close-others="true" >Σπίτι</a>
+<a	href="/dmarket/marketplc/category.jsp?categoryid=040"	data-hover="dropdown" data-close-others="true"><i class="fa fa-home pr-5"></i> Σπίτι</a>
 <ul class="row-2" >
 <li>
 <ul>
@@ -856,7 +895,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 </ul>
 </li>
 <li class="text-left">
-<a	href="/dmarket/marketplc/category.jsp?categoryid=020"	data-hover="dropdown" data-close-others="true" >Μόδα</a>
+<a	href="/dmarket/marketplc/category.jsp?categoryid=020"	data-hover="dropdown" data-close-others="true"><i class="fa fa-star pr-5"></i> Μόδα</a>
 <ul class="row-2" >
 <li>
 <ul>
@@ -875,7 +914,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 </ul>
 </li>
 <li class="text-left">
-<a	href="/dmarket/marketplc/category.jsp?categoryid=045"	data-hover="dropdown" data-close-others="true" >Hobby - Αθλητισμός</a>
+<a	href="/dmarket/marketplc/category.jsp?categoryid=045"	data-hover="dropdown" data-close-others="true"><i class="fa fa-futbol-o pr-5"></i> Hobby - Αθλητισμός</a>
 <ul class="row-2" >
 <li>
 <ul>
@@ -903,7 +942,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 </ul>
 </li>
 <li class="text-left">
-<a	href="/dmarket/marketplc/category.jsp?categoryid=050"	data-hover="dropdown" data-close-others="true" >Τεχνολογία</a>
+<a	href="/dmarket/marketplc/category.jsp?categoryid=050"	data-hover="dropdown" data-close-others="true"><i class="fa fa-desktop pr-5"></i> Τεχνολογία</a>
 <ul class="row-2" >
 <li>
 <ul>
@@ -927,7 +966,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 </ul>
 </li>
 <li class="text-left">
-<a	href="/dmarket/marketplc/category.jsp?categoryid=015"	data-hover="dropdown" data-close-others="true" >Υγεία - Ομορφιά</a>
+<a	href="/dmarket/marketplc/category.jsp?categoryid=015"	data-hover="dropdown" data-close-others="true"><i class="fa fa-heart pr-5"></i> Υγεία - Ομορφιά</a>
 <ul class="row-2" >
 <li>
 <ul>
@@ -950,7 +989,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 </ul>
 </li>
 <li class="text-left">
-<a	href="/dmarket/marketplc/category.jsp?categoryid=055"	data-hover="dropdown" data-close-others="true" >Auto-Moto-Sea</a>
+<a	href="/dmarket/marketplc/category.jsp?categoryid=055"	data-hover="dropdown" data-close-others="true"><i class="fa fa-motorcycle pr-5"></i> Auto-Moto-Sea</a>
 <ul class="row-1" >
 <li>
 <ul>
@@ -963,7 +1002,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 </ul>
 </li>
 <li class="text-left">
-<a	href="/dmarket/marketplc/category.jsp?categoryid=027"	data-hover="dropdown" data-close-others="true" >Δώρα</a>
+<a	href="/dmarket/marketplc/category.jsp?categoryid=027"	data-hover="dropdown" data-close-others="true"><i class="fa fa-gift pr-5"></i> Δώρα</a>
 <ul class="row-2" >
 <li>
 <ul>
@@ -987,7 +1026,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 </ul>
 </li>
 <li class="text-left">
-<a	href="/dmarket/marketplc/category.jsp?categoryid=025"	data-hover="dropdown" data-close-others="true" >Παιδικά</a>
+<a	href="/dmarket/marketplc/category.jsp?categoryid=025"	data-hover="dropdown" data-close-others="true"><i class="fa fa-child pr-5"></i> Παιδικά</a>
 <ul class="row-2" >
 <li>
 <ul>
@@ -1006,7 +1045,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 </ul>
 </li>
 <li class="text-left">
-<a	href="/dmarket/marketplc/category.jsp?categoryid=005"	data-hover="dropdown" data-close-others="true" >Διατροφή</a>
+<a	href="/dmarket/marketplc/category.jsp?categoryid=005"	data-hover="dropdown" data-close-others="true"><i class="fa fa-cutlery pr-5"></i> Διατροφή</a>
 <ul class="row-2" >
 <li>
 <ul>
@@ -1056,7 +1095,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 </ul>
 </li>
 <li class="text-left">
-<a	href="/dmarket/marketplc/category.jsp?categoryid=010"	data-hover="dropdown" data-close-others="true" >Ποτά</a>
+<a	href="/dmarket/marketplc/category.jsp?categoryid=010"	data-hover="dropdown" data-close-others="true"><i class="fa fa-glass pr-5"></i> Ποτά</a>
 <ul class="row-2" >
 <li>
 <ul>
@@ -1077,7 +1116,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 </ul>
 </li>
 <li class="text-left">
-<a	href="/dmarket/marketplc/category.jsp?categoryid=035"	data-hover="dropdown" data-close-others="true" >Τέχνη</a>
+<a	href="/dmarket/marketplc/category.jsp?categoryid=035"	data-hover="dropdown" data-close-others="true"><i class="fa fa-paint-brush pr-5"></i> Τέχνη</a>
 <ul class="row-2" >
 <li>
 <ul>
@@ -1100,6 +1139,7 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 </li>
 </ul>
 </li>
+<li><a class="btn-link" data-remote="false" data-toggle="modal" data-target="#cooperative-region-modal"><img alt="local markets" src="/dmarket/marketplc/images/localmarket.png" class="img-responsive" style="width:140px"></a></li>
 </ul>
 </button>
 </div>
@@ -1646,6 +1686,12 @@ window.cookieconsent_options = {"message":"Αυτή η ιστοσελίδα χρ
 <button type="button" class="btn btn-two" id="regionConfirm">Επιλογή Τοπικής Αγοράς</button>
 <button type="button" class="btn btn-three" data-dismiss="modal" >Κλείσιμο</button>
 </div>
+</div>
+<div class="pull-left pt-10-">
+<h5><a href="/dmarket/marketplc/static/faqs.jsp#heading2">αγορά<span style="font-size: 18px !important;"><strong>ζω</strong></span> στον τόπο μου, μάθε περισσότερα... </a></h5>
+</div>
+<div class="pull-left">
+<h5><a href="/dmarket/marketplc/static/faqs.jsp#heading7">είμαι Τοπική Επιχείρηση, μάθε περισσότερα... </a></h5>
 </div>
 </div>
 </div>
