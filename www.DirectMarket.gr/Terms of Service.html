@@ -677,11 +677,9 @@ queryLink += "&langId=el";
 $.get(queryLink, function (result) {
 var products = result.results[0].children;
 var categories = result.results[1].children;
-if (categories.length>3) categories.splice(0, 2);
+if (categories.length>3) categories.splice(-1, 2);
 var organizations = result.results[2].children;
-if (organizations.length>2) organizations.splice(0, 1);
-var rowsNum = Math.max(products.length||0, categories.length||0, organizations.length||0);
-//console.log('rows', rowsNum);
+if (organizations.length>2) organizations.splice(-1, 1);
 //show input-value as search option
 //********eliminate same titles ************
 var dist_products = [];
@@ -696,12 +694,14 @@ else count_producttitle[val]++;
 //console.log(count_producttitle)
 for(var i in products) {
 var cnt = count_producttitle[products[i].text]
-if (cnt >1) products.splice(i, cnt-1); // At position i, remove cnt-1 items:
 products[i].count = cnt;//add new property of how many occurences
+if (cnt >1) products.splice(i, cnt-1); // At position i, remove cnt-1 items:
 }
 //console.log(products)
 //******** /eliminate same titles ************
-if (products.length>5) products.splice(0, 4);
+if (products.length>=(10-categories.length-organizations.length) ) products.splice(-1, categories.length+organizations.length);
+var rowsNum = Math.max(products.length||0, categories.length||0, organizations.length||0);
+// console.log('rows', rowsNum);
 $('#search-value, #search-value-mob').append('<div id="search-value-result">Αναζητήστε γενικά για "' + value + '"</div>');
 for (var i = 0; i < rowsNum - 1; i++) {
 $('#prod-results img,#prod-results-mob img').hide();
