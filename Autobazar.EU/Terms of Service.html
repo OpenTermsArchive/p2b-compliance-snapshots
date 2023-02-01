@@ -118,11 +118,11 @@ li{padding: 5px !important}
         loadScript("https://www.autobazar.eu/js/privacy/rsz.js")
     }
 
-    function includeHotjar() {
-        if (typeof window.hotjar === 'object' && window.hotjar.enable === true) {
-            loadScript("https://www.autobazar.eu/js/privacy/hotjar.js")
-        }
-    }
+    //function includeHotjar() {
+    //    if (typeof window.hotjar === 'object' && window.hotjar.enable === true) {
+    //        loadScript("https://www.autobazar.eu/js/privacy/hotjar.js")
+    //    }
+    //}
 
     //function includeFacebookPixel() {
     //    if (typeof window.facebookPixel === 'undefined') {
@@ -209,10 +209,6 @@ li{padding: 5px !important}
                     if (success && (tcData.eventStatus === 'tcloaded' || tcData.eventStatus === 'useractioncomplete')) {
                         __tcfapi('getCustomVendorConsents', 2, function (vendorConsents, success) {
                             if (success) {
-                                // hotjar
-                                if (vendorConsents.grants["5ee7add94c24944fdb5c5ac6"].vendorGrant === true) {
-                                    includeHotjar();
-                                }
 
                                 // google analytics
                                 var grantGoogleAnalytics;
@@ -286,7 +282,6 @@ li{padding: 5px !important}
                     includeGoogleOptimize();
                     includeGoogleDoubleclick();
                     includeGoogleRemarketing();
-                    includeHotjar();
                     includeAzetTracker();
                     includeGemius();
                     includeRsz();
