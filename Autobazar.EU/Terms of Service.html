@@ -89,7 +89,6 @@ li{padding: 5px !important}
     }
 
     function includeGoogleTagManager() {
-        console.log('pridaný tag manager');
                 loadScript("https://www.autobazar.eu/js/privacy/google/tag-manager.js")
     }
 
@@ -124,14 +123,14 @@ li{padding: 5px !important}
         //    loadScript("https://www.autobazar.eu/js/privacy/hotjar.js")
         //}
 
-        //var hotjarIncluded;
-        //if (typeof (Event) === 'function') {
-        //    hotjarIncluded = new Event('hotjarIncluded');
-        //} else {
-        //    hotjarIncluded = document.createEvent('Event');
-        //    hotjarIncluded.initEvent('hotjarIncluded', true, true);
-        //}
-        //document.dispatchEvent(hotjarIncluded);
+        var hotjarIncluded;
+        if (typeof (Event) === 'function') {
+            hotjarIncluded = new Event('hotjarIncluded');
+        } else {
+            hotjarIncluded = document.createEvent('Event');
+            hotjarIncluded.initEvent('hotjarIncluded', true, true);
+        }
+        document.dispatchEvent(hotjarIncluded);
     }
 
     //function includeFacebookPixel() {
@@ -259,7 +258,6 @@ li{padding: 5px !important}
                                     || vendorConsents.grants["5ecc95435cf6286f3b5872a2"].vendorGrant === true
                                     || vendorConsents.grants["5eb2856cbb0c9a4439bfe303"].vendorGrant === true
                                 ) {
-                                    console.log('pridaný tag manager schválené');
                                     includeGoogleTagManager();
                                 }
 
@@ -276,7 +274,6 @@ li{padding: 5px !important}
                                 if (vendorConsents.grants["5ee7add94c24944fdb5c5ac6"].vendorGrant === true) {
                                     includeHotjar();
                                 }
-                                console.log('zvládlo to');
                             }
                         });
 
