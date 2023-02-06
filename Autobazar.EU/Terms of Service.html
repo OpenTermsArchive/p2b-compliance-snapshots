@@ -89,6 +89,7 @@ li{padding: 5px !important}
     }
 
     function includeGoogleTagManager() {
+        console.log('pridaný tag manager');
                 loadScript("https://www.autobazar.eu/js/privacy/google/tag-manager.js")
     }
 
@@ -118,11 +119,20 @@ li{padding: 5px !important}
         loadScript("https://www.autobazar.eu/js/privacy/rsz.js")
     }
 
-    //function includeHotjar() {
-    //    if (typeof window.hotjar === 'object' && window.hotjar.enable === true) {
-    //        loadScript("https://www.autobazar.eu/js/privacy/hotjar.js")
-    //    }
-    //}
+    function includeHotjar() {
+        //if (typeof window.hotjar === 'object' && window.hotjar.enable === true) {
+        //    loadScript("https://www.autobazar.eu/js/privacy/hotjar.js")
+        //}
+
+        //var hotjarIncluded;
+        //if (typeof (Event) === 'function') {
+        //    hotjarIncluded = new Event('hotjarIncluded');
+        //} else {
+        //    hotjarIncluded = document.createEvent('Event');
+        //    hotjarIncluded.initEvent('hotjarIncluded', true, true);
+        //}
+        //document.dispatchEvent(hotjarIncluded);
+    }
 
     //function includeFacebookPixel() {
     //    if (typeof window.facebookPixel === 'undefined') {
@@ -211,19 +221,21 @@ li{padding: 5px !important}
                             if (success) {
 
                                 // google analytics
-                                var grantGoogleAnalytics;
-                                if (typeof (Event) === 'function') {
-                                    grantGoogleAnalytics = new Event('grantGoogleAnalytics');
-                                } else {
-                                    grantGoogleAnalytics = document.createEvent('Event');
-                                    grantGoogleAnalytics.initEvent('grantGoogleAnalytics', true, true);
+                                if (vendorConsents.grants["5e542b3a4cd8884eb41b5a72"].vendorGrant === true) {
+                                    var grantGoogleAnalytics;
+                                    if (typeof (Event) === 'function') {
+                                        grantGoogleAnalytics = new Event('grantGoogleAnalytics');
+                                    } else {
+                                        grantGoogleAnalytics = document.createEvent('Event');
+                                        grantGoogleAnalytics.initEvent('grantGoogleAnalytics', true, true);
+                                    }
+
+                                    // google analytics
+                                    window.google = window.google || {};
+                                    window.google.grant = vendorConsents.grants["5e542b3a4cd8884eb41b5a72"].vendorGrant === true;
+
+                                    document.dispatchEvent(grantGoogleAnalytics);
                                 }
-
-                                // google analytics
-                                window.google = window.google || {};
-                                window.google.grant = vendorConsents.grants["5e542b3a4cd8884eb41b5a72"].vendorGrant === true;
-
-                                document.dispatchEvent(grantGoogleAnalytics);
 
                                 // google analytics remarketing
                                 if (vendorConsents.grants["5ef20f14bcc0cb09c5bf7117"].vendorGrant === true) {
@@ -247,6 +259,7 @@ li{padding: 5px !important}
                                     || vendorConsents.grants["5ecc95435cf6286f3b5872a2"].vendorGrant === true
                                     || vendorConsents.grants["5eb2856cbb0c9a4439bfe303"].vendorGrant === true
                                 ) {
+                                    console.log('pridaný tag manager schválené');
                                     includeGoogleTagManager();
                                 }
 
@@ -259,6 +272,11 @@ li{padding: 5px !important}
                                 if (vendorConsents.grants["5e542b3a4cd8884eb41b5a71"].vendorGrant === true) {
                                     //includeGoogleAdSense();
                                 }
+
+                                if (vendorConsents.grants["5ee7add94c24944fdb5c5ac6"].vendorGrant === true) {
+                                    includeHotjar();
+                                }
+                                console.log('zvládlo to');
                             }
                         });
 
@@ -286,6 +304,7 @@ li{padding: 5px !important}
                     includeGemius();
                     includeRsz();
                     includeFacebookAll();
+                    includeHotjar();
                 }
             });
 
