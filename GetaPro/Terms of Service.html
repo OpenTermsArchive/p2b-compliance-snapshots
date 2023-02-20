@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto:400,600,700,800|Open+Sans:400,600,700,800&subset=cyrillic,latin-ext&display=swap" crossorigin="anonymous">
         <link rel="preload" href="/bundles/scripts?v=7UAxVuXSOQ0QEb9x6tKsG9XOc-bvXx2eCbHqnuxiEXI1" as="script">
-    <link href="/main/css?v=ypLBAmX-RdqmTooGOIEliirwu0w1W_4SPw6DH-iUsi41" rel="stylesheet"/>
+    <link href="/main/css?v=ArEh08ZMxJRVVROLV1PMXv6drwYRZx83KPM7APrhhjo1" rel="stylesheet"/>
 
 
 
@@ -142,7 +142,18 @@
 
 
                     <div class="pull-right" style="display:inline-flex;">
-                        <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i class='icon-menu-1'></i></a>
+                    <a class="btn responsive-menu burger-menu-icon" data-toggle="collapse" data-target=".navbar-collapse"
+                       style="padding-top: 6px;"
+                       onclick="function toggleBurger(x) { x.classList.toggle('change') };toggleBurger(this)">
+                        <svg viewBox="0 0 100 80" width="40" height="28">
+                            <rect y="14" width="70" height="9" x="15" style="fill: rgb(255,255,255);"></rect>
+                            <rect y="37" width="70" height="9" x="15" style="fill: rgb(255,255,255);"></rect>
+                            <rect y="60" width="70" height="9" x="15" style="fill: rgb(255,255,255);"></rect>
+                        </svg>
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </a>
                     </div>
                 </div><!-- /.container -->
 
@@ -186,7 +197,7 @@
 
                         
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="/account/registertradesman" id="registerLink">Kļūt par izpildītāju</a></li>
+        <li><a href="/account/registertradesman">Kļūt par izpildītāju</a></li>
         <li><a href="/account/login" id="loginLink">Ienākt</a></li>
     </ul>
 
@@ -220,7 +231,7 @@
 <li>"Serviss" - jebkura procedūra vai pakalpojums, nodro&scaron;ināts Vietnes Lietotājiem, kas iekļauj, bet neaprobežojas ar informāciju, pakalpojumiem un produktiem, piedāvātiem Vietnē, telefoniski vai ar e-pasta palīdzību.</li>
 <li>"Izpildītājs" - jebkura fiziskā vai juridiskā persona, piereģistrēta Vietnē ar mērķi piedāvāt savus pakalpojumus un saņemt Pasūtījumus no Pasūtītājiem.</li>
 <li>&ldquo;Rēķins&rdquo; ir elektronisks rēķins par izpildītāja pakalpojumiem Pasūtījuma izpildei, ko Izpildītājs ģenerējis Vietnē.</li>
-<li>"Pakalpojumu snieg&scaron;anas līgums" &ndash; jebkura vieno&scaron;anās, panākta starp Izpildītāju un Pasūtītāju par to pakalpojumu snieg&scaron;anu, kuri tiks izpildīti nākotnē. Pakalpojumu snieg&scaron;anas līgums var būt noslēgts telefoniski, izmantojot īsziņas (SMS), caur e-pastu, ar rakstisko iesniegumu vai līgumu.</li>
+<li>"Vienošanās par pakalpojumu sniegšanu" &ndash; jebkura vienošanās, panākta starp Izpildītāju un Pasūtītāju par pakalpojumiem, kuri tiks veikti. Vienošanās par pakalpojumu sniegšanu var būt panākta mutiski, telefoniski, izmantojot īsziņas (SMS), caur e-pasta saraksti, ar rakstisku iesniegumu vai līgumu.</li>
 <li>"Saturs" - jebkuras publikācijas, ziņojumi, teksti, faili, grafiskie attēli, fotogrāfijas, videomateriāli, skaņu ieraksti un citi datu materiāli.</li>
 <li>"Lietotāja vārds" - Lietotāja e-pasta adrese, kuru viņ&scaron; izvēlējās reģistrējoties un izmanto to, lietojot Vietni. Vienam un tam pa&scaron;am Lietotājam aizliegts reģistrēt un izmantot vairākus Lietotāja vārdus</li>
 <li>"Parole" - ar Lietotāju izvēlēta simbolu, burtu un ciparu kombinācija, kas kopā ar Lietotāja vārdu nodro&scaron;ina viņa identifikāciju, lietojot Vietni.</li>
@@ -236,8 +247,8 @@
 <p>Uzņēmums patur aiz sevis tiesības pievienot, dzēst un mainīt kategoriju, pakalpojumu, darba veidu, preču nosaukumus pēc saviem ieskatiem un bez iepriek&scaron;ēja brīdinājuma Portāla Lietotājiem.</p>
 <h3>Informācijas precizitāte</h3>
 <p>Kaut Uzņēmums pieliek maksimālas piepūles, lai informācija Vietnē būtu precīza un pareiza, tomēr GetaPro nevar garantēt pilnu informācijas ticamību Vietnē un neatbild par jebkādām grūtībām un/vai zaudējumiem, kas radu&scaron;ies Satura kļūdu dēļ.</p>
-<p>Izmantojot GetaPro Servisu, Lietotājs atzīst, ka GetaPro nerīkojas kā darbuzņēmējs vai aģents, un nav atbildīgs par Izpildītāju veikto darbu kvalitāti un rezultātu. Pasūtītājs pats atbildīgs par pienācīga Izpildītāja izvēli un nosacījumu saskaņo&scaron;anu jebkādiem darbiem, kurus Izpildītājs apņemas veikt. GetaPro nebūs iesaistīts un nenesīs atbildību par Pakalpojumu snieg&scaron;anas līguma nosacījumiem starp Pasūtītāju un Izpildītāju.</p>
-<p>Uzņēmums iesaka: pirms slēgt Pakalpojumu snieg&scaron;anas līgumu ar Izpildītāju, katram Pasūtītājam jāsaņem Izpildītāja kvalifikācijas un citu nepiecie&scaron;amo dokumentu apstiprinājums. Getapro nenes atbildību par problēmām vai zaudējumiem, kas radu&scaron;ies Lietotājam, informācijas nesaņem&scaron;anas un/vai informācijas pārbaudes dēļ.</p>
+<p>Izmantojot GetaPro Servisu, Lietotājs atzīst, ka GetaPro nedarbojas kā darbuzņēmējs vai aģents, un nav atbildīgs par Izpildītāju veikto darbu kvalitāti un rezultātu. Pasūtītājs ir pats atbildīgs par piemērota Izpildītāja izvēli un vienošanos par jebkura darba nosacījumiem, kurus Izpildītājs apņemas veikt. GetaPro nebūs iesaistīts un neuzņemsies atbildību nevienā Vienošanās par pakalpojumu sniegšanu starp Pasūtītāju un Izpildītāju.</p>
+<p>Uzņēmums iesaka jebkuram Pasūtītājam pirms noslēgt Vienošanos par pakalpojumu sniegšanu ar jebkuru Izpildītāju, saņemt no viņa kvalifikācijas apliecinājumu un jebkuru citu nepieciešamo dokumentu. Ja Lietotājam ir radušas problēmas vai zaudējumi šīs informācijas nesaņemšanas vai pārbaudes dēļ, GetaPro atbildību neuzņemsies.</p>
 <h3>Saturs</h3>
 <p>Lietotāji garantē, ka Vietnes un Servisa izmanto&scaron;ana tiks veikta tikai likumīgiem mērķiem un tādā veidā, lai netiktu pārkāptas citu Lietotāju tiesības, kā arī netiktu ierobežota un/vai aizkavēta Servisa izmanto&scaron;ana ar kādu citu. Ziņojumiem, profilu saturam, darbu aprakstiem un citiem Vietnē izvietotiem materiāliem jābūt pieņemami ētikas un morāles normu ziņā.</p>
 <p>Pasūtījumi, Izpildītāju profili, apraksti, atsauksmes un cits saturs nedrīkst:</p>
@@ -263,7 +274,7 @@
 <p>Lai kļūtu par Pasūtītāju vai Izpildītāju, Lietotājam nepiecie&scaron;ams piereģistrēties (izveidot kontu). Izpildītājām arī jāaizpilda visi lauki &ldquo;Mani dati&rdquo; izvēlnē, lai izveidotu personīgo profilu un galīgo uzskaites ierakstu.</p>
 <p>Biznesa Pasūtītājam jānorāda tās juridiskās personas reģistrācijas numurs, kuras vārdā viņ&scaron; veido Biznesa pasūtījumu, kā arī bankas konta numurs no kura tiks veikts maksājums par pakalpojumiem. Biznesa izpildītājam jānorāda juridiskās personas reģistrācijas numurs vai fiziskās personas personas kods, kuras vārda tiek veikta saimnieciskā darbība un sniedz savus pakalpojumus Vietnē, kā arī bankas konta numurs uz kuru tiks veikts maksājums par izpildītiem Biznesa pasūtījumiem.</p>
 <p>Lietotāji ir atbildīgi par sava profila saturu, kā arī par tā informācijas precizitāti un likumību.</p>
-<p>Visi izpildītāji tiks vērtēti ar Pasūtītāju atsauksmju palīdzību tikai, ja pēc ieinteresētības izteikšanas ir notikusi vienošanās par Pakalpojumu sniegšanu dažiem vai visiem darbiem.</p>
+<p>Visi izpildītāji tiks vērtēti ar Pasūtītāju atsauksmju palīdzību, ja pēc ieinteresētības izrādīšanas ir panākta Vienošanās par pakalpojumu sniegšanu dažiem vai visiem darbiem.</p>
 <p>Izpildītāji saprot, ka GetaPro nav atbildīgs par atsauksmju Saturu, ko bija atstāju&scaron;i Pasūtītāji, vai arī par jebkādiem kaitējumiem, kas radīti ar &scaron;o Saturu. Pasūtītājs, kas atstāja komentāru, nes tie&scaron;o atbildību par tā saturu, precizitāti un likumību.</p>
 <p>Lietotājs saprot un apstiprina, ka var saņemt atteikumu konta reģistrē&scaron;anai, pasūtījumu izveidei, pasūtījumu piedāvājumu apstiprinā&scaron;anai, piekļuvei Vietnei un turpmākai Servisa izmanto&scaron;anai sekojo&scaron;os gadījumos:</p>
 <ul class="circled">
@@ -581,7 +592,7 @@ var google_remarketing_only = true;
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,600,700,800|Open+Sans:400,600,700,800&subset=cyrillic,latin-ext&display=swap" rel="stylesheet" crossorigin="anonymous">
     <link href="/bundles/fonts?v=th_G0JzlzpyPSipbGWzX9FKRFcfxJcuMynjXzhhHKiU1" rel="stylesheet"/>
 
-    <link href="/bundles/css?v=YPce5LWRryoAx2ZRtyxTuu5wULKB1b6WYReXSKSI6KM1" rel="stylesheet" data-skrollr-stylesheet />
+    <link href="/bundles/css?v=vwxQAB-1ZrFnvH2DZavm-TFvl1UWy9iQndmcp1ZfsiQ1" rel="stylesheet" data-skrollr-stylesheet />
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script>
