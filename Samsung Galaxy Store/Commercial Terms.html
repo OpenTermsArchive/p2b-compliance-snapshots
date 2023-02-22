@@ -44,11 +44,11 @@
 
   <style type="text/css" media="all">
   /*<![CDATA[*/
-  @import "https://img.samsungapps.com/seller/en_US/css2/base.css?ver=1676424804000";
-  @import "https://img.samsungapps.com/seller/en_US/css2/board.css?ver=1676424804000";
-  @import "https://img.samsungapps.com/seller/en_US/css2/guide.css?ver=1676424804000";
-  @import "https://img.samsungapps.com/seller/en_US/css2/layer.css?ver=1676424804000";
-  @import "https://img.samsungapps.com/seller/en_US/css2/main.css?ver=1676424804000";
+  @import "https://img.samsungapps.com/seller/en_US/css2/base.css?ver=1676968110000";
+  @import "https://img.samsungapps.com/seller/en_US/css2/board.css?ver=1676968110000";
+  @import "https://img.samsungapps.com/seller/en_US/css2/guide.css?ver=1676968110000";
+  @import "https://img.samsungapps.com/seller/en_US/css2/layer.css?ver=1676968110000";
+  @import "https://img.samsungapps.com/seller/en_US/css2/main.css?ver=1676968110000";
   /*]]>*/
   </style>
 
@@ -69,8 +69,8 @@
     };    
     
   </script>
-	<script src="https://img.samsungapps.com/seller/en_US/js/seller.js?ver=1676424804000" type="text/javascript" language="JavaScript"></script>
-	<script type="text/javascript" src="https://img.samsungapps.com/seller/en_US/js/common.js?ver=1676424804000"></script>
+	<script src="https://img.samsungapps.com/seller/en_US/js/seller.js?ver=1676968110000" type="text/javascript" language="JavaScript"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/en_US/js/common.js?ver=1676968110000"></script>
 	<!-- import CryptoJS start -->
     <script src="https://img.samsungapps.com/seller/js/vendors/crypto-js-4.0.0.js"></script>
     <!-- import CryptoJS end -->
@@ -3439,6 +3439,39 @@ function selectChannel(type){
 		tar_layer.attr("style","display:block; position:fixed; z-index: 10001; left:50%; top:50%; width:" + mar_left + "px; margin-top:-" + mar_top/2 + "px; margin-left:-" + mar_left/2 + "px;");	
 	}
 
+        function lp_dim_box () {
+                var screenW = $j(document).width();
+                var screenH = $j(document).height();
+                $j('body').css({
+                        'width':screenW,
+                        'height':screenH
+                }).addClass('dimm');
+                $j('#jQdimLayer').show();
+        }
+
+        function lp_dim_hide () {
+                $j('body').css({
+                        'width':'',
+                        'height':''
+                }).removeClass('dimm');
+                $j('#jQdimLayer').css("z-index","999");
+                $j('#jQdimLayer').hide();
+        }
+
+        function open_layerpopup_dim (layer)  {
+                var tar_layer = jQuery("#" + layer);
+                var mar_top = tar_layer.outerHeight();
+                var mar_left = tar_layer.outerWidth();
+                tar_layer.attr("style","display:block; position:fixed; left:50%; top:50%; width:" + mar_left + "px; margin-top:-" + mar_top/2 + "px; margin-left:-" + mar_left/2 + "px;");
+                lp_dim_box ();
+        }
+
+        function close_layerpopup_dim (layer)  {
+                var tar_layer = jQuery("#" + layer);
+                tar_layer.attr("style","display:none;");
+                lp_dim_hide();
+        }
+
 	function mktDisagreePopup() {
 		close_popup('sellerMarketingAgreementYn');
 		open_layerpopup("sellerMarketingDisagree");
@@ -3534,7 +3567,7 @@ function selectChannel(type){
 	}
 
 	</script>
-
+    <div><div id="jQdimLayer" class="dimmed_box" style="z-index: 190; height: 100%; display: none;"></div></div>
 </body>
 
 </html>
