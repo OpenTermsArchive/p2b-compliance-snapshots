@@ -118,11 +118,13 @@ li{padding: 5px !important}
         loadScript("https://www.autobazar.eu/js/privacy/rsz.js")
     }
 
+    window.isNeedToTakeHotjarFromTagManager = false;
     function includeHotjar() {
         //if (typeof window.hotjar === 'object' && window.hotjar.enable === true) {
         //    loadScript("https://www.autobazar.eu/js/privacy/hotjar.js")
         //}
 
+        window.isNeedToTakeHotjarFromTagManager = true;
         var hotjarIncluded;
         if (typeof (Event) === 'function') {
             hotjarIncluded = new Event('hotjarIncluded');
