@@ -135,6 +135,32 @@ li{padding: 5px !important}
         document.dispatchEvent(hotjarIncluded);
     }
 
+    window.isNeedToTakeOnesignalFromTagManager = false;
+    function includeOnesignal() {
+        window.isNeedToTakeOnesignalFromTagManager = true;
+        var onesignalIncluded;
+        if (typeof (Event) === 'function') {
+            onesignalIncluded = new Event('onesignalIncluded');
+        } else {
+            onesignalIncluded = document.createEvent('Event');
+            onesignalIncluded.initEvent('onesignalIncluded', true, true);
+        }
+        document.dispatchEvent(onesignalIncluded);
+    }
+
+    window.isNeedToTakeRtbFromTagManager = false;
+    function includeRtb() {
+        window.isNeedToTakeRtbFromTagManager = true;
+        var rtbIncluded;
+        if (typeof (Event) === 'function') {
+            rtbIncluded = new Event('rtbIncluded');
+        } else {
+            rtbIncluded = document.createEvent('Event');
+            rtbIncluded.initEvent('rtbIncluded', true, true);
+        }
+        document.dispatchEvent(rtbIncluded);
+    }
+
     //function includeFacebookPixel() {
     //    if (typeof window.facebookPixel === 'undefined') {
     //        loadScript("https://www.autobazar.///js/privacy/facebook/pixel.js")
@@ -276,6 +302,15 @@ li{padding: 5px !important}
                                 if (vendorConsents.grants["5ee7add94c24944fdb5c5ac6"].vendorGrant === true) {
                                     includeHotjar();
                                 }
+
+                                if (vendorConsents.grants["5fd9cd02a22863836872cdee"].vendorGrant === true) {
+                                    includeOnesignal();
+                                }
+
+                                if (vendorConsents.grants["5ee15bc6b8e05c164c398ae3"].vendorGrant === true) {
+                                    includeRtb();
+                                }
+
                             }
                         });
 
@@ -304,6 +339,8 @@ li{padding: 5px !important}
                     includeRsz();
                     includeFacebookAll();
                     includeHotjar();
+                    includeOnesignal();
+                    includeRtb();
                 }
             });
 
