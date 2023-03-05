@@ -7,7 +7,7 @@
     <meta name="robots" content="index, follow">
     <meta name="referrer" content="no-referrer-when-downgrade">
 
-    <link href="https://di8gcicl2eawz.cloudfront.net/css/vd-style.css?1650617795" rel="preload" as="style">
+    <link href="https://di8gcicl2eawz.cloudfront.net/css/vd-style.css?1674489648" rel="preload" as="style">
 
 
             
@@ -69,7 +69,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
     
-    <link href="https://di8gcicl2eawz.cloudfront.net/css/vd-style.css?1650617795" media="all" rel="stylesheet" type="text/css">
+    <link href="https://di8gcicl2eawz.cloudfront.net/css/vd-style.css?1674489648" media="all" rel="stylesheet" type="text/css">
     
     <link rel="apple-touch-icon" sizes="48x48" href="https://res.cloudinary.com/videdressing/image/upload/v1633010561/static/logos/apple-touch-icon-v2-48x48.png">
 <link rel="apple-touch-icon" sizes="96x96" href="https://res.cloudinary.com/videdressing/image/upload/v1633010561/static/logos/apple-touch-icon-v2-96x96.png">
@@ -2353,9 +2353,9 @@
     </div>
 </div>    
     
-    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/vendor/vd-vendors.min.js?1650617795"></script>
-    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/vd-app/vd-app.min.js?1650617795"></script>
-    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/vd-app/locales/fr.min.js?1650617795"></script>
+    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/vendor/vd-vendors.min.js?1674489648"></script>
+    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/vd-app/vd-app.min.js?1674489648"></script>
+    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/vd-app/locales/fr.min.js?1674489648"></script>
     <script>
         App.setConfig({
             platform: 'main',
@@ -2377,9 +2377,9 @@
             algolia : {"api_key":"cbd87ec0a9be2108b27786c8caf08efb","app_id":"VVH89R3L1X"}
         };
     </script>
-    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/vd-app/vd-modules.min.js?1650617795"></script>
-    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/vendor/algoliasearch.min.js?1650617795"></script>
-    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/search-bar.vue.js?1650617795"></script>
+    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/vd-app/vd-modules.min.js?1674489648"></script>
+    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/vendor/algoliasearch.min.js?1674489648"></script>
+    <script type="text/javascript" src="https://di8gcicl2eawz.cloudfront.net/js/search-bar.vue.js?1674489648"></script>
     
     <script type="text/javascript">
         // The first half of the Regex (MSIE \d) is for detecting Internet Explorer 10 and below.
