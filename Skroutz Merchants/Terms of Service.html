@@ -18,7 +18,7 @@
       sentry_reporting_url: "https://3b3d114cc4d740a4bdd6f48924e3ef2a@sentry.skroutz.gr/10"
     };
   </script>
-  <script src="//www.skroutz.gr/assets/webpack/raven_initializer-92d442ef9371734d5f45dab9bf6b160397366cc1.js" defer="defer"></script>
+  <script src="//www.skroutz.gr/assets/webpack/raven_initializer-0501156347b628b23b9fa0ca5273dd4a3eb99ff3.js" defer="defer"></script>
 
     <script type="text/javascript">
   var SKR = {
@@ -91,7 +91,7 @@
 </script>
 
 
-    <script src="//www.skroutz.gr/assets/webpack/merchants/application-92d442ef9371734d5f45dab9bf6b160397366cc1.js"></script>
+    <script src="//www.skroutz.gr/assets/webpack/merchants/application-0501156347b628b23b9fa0ca5273dd4a3eb99ff3.js"></script>
   </head>
 
   <body class="terms">
@@ -109,9 +109,37 @@
 </a>
     <div class="actions-wrapper">
       
+<div class="language-picker"
+     data-controller="toggle ui--language-picker"
+     data-toggle-toggle-class="language-picker-open"
+     data-ui--language-picker-toggle-class="language-picker-open"
+     data-action="click@window->ui--language-picker#outsideClick"
+     data-usage="panel">
+
+  <button type="button"
+          class="language-picker-toggle"
+          data-action="toggle#classToggle">
+    <span class="i i-language language-picker-globe"></span>
+    <span class="language-picker-current">
+      el
+    </span>
+    <span class="i language-picker-arrow i-arrow-drop-down">
+    </span>
+  </button>
+
+  <ul class="language-picker-language-list">
+    <li class="language-picker-language selected">
+      <a href="/merchants/terms?lang=el&amp;store_lang=true">Ελληνικά (EL)</a>
+    </li>
+    <li class="language-picker-language">
+      <a href="/merchants/terms?lang=en&amp;store_lang=true">English (EN)</a>
+    </li>
+  </ul>
+</div>
+
 
         <a class="js-login-button login_button" href="#">Είσοδος συνεργατών</a>
-        <form class="js-login-box login_box" action="/merchants/users/login" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="khThehO_fp7W2yE-jaqw4I8tYuK2SrYRwmSapzp8KbCEhT9G0RBxztU9s97-k9hN_8aMQjAQ80Q4kwzGBU8EYg" autocomplete="off" />
+        <form class="js-login-box login_box" action="/merchants/users/login" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="N9Fso0zrUHgiWEo40x6jyl2qOINi2NynWcY2xISQ9o6EZU5qJ5H8aZ29v39PNpAo8aYxh5wpVRbnL4vXLtIvrg" autocomplete="off" />
           <label for="email">Username ή e-mail:</label>
           <input id="email" type="text" name="user[username]" />
 
