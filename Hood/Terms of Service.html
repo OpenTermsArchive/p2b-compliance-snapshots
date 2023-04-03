@@ -152,6 +152,23 @@ deferredPrompt = e;
 <img id="headerPaypalLogo" class="pull-right" src="/interface/lgo_payPal.svg" width="60">
 </div>
 </div>
+<div class="iTableCellNav1" style="position:relative;border-left:1px solid #e6e6e6;white-space: nowrap;">
+<script>
+function langSel(lang)
+{
+langName = 'en'
+if (lang==1)
+{langName = 'de'}
+document.forms[0].action = securebaseurl + '/' + tool_contact + '#googtrans(de|' + langName + ')';
+ActionSubmit('act_languages_select:languageID=' + lang);
+}
+</script>
+<a href="#" class="dropdown-toggle" style="font-size:12px;" data-toggle="dropdown" role="button" aria-expanded="false"><img src="/interface/dsp_world.svg" alt="Sprache" style="height:23px;"><span class="caret"></span><div class="iWhiteBar"><div></div></div></a>
+<ul class="dropdown-menu iDropdown-menu-hood" role="language" style="z-index:9999; background-color:white;white-space: nowrap;">
+<li><a href="javascript:langSel(2)">English</a></li>
+<li><a href="javascript:langSel(1)"><strong>Deutsch</strong></a></li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -173,7 +190,7 @@ $( ".iBurgerTrigger" ).toggleClass('iActive');
 $( "#borderBurgerIcon" ).toggle();
 if (menuLoaded == 0) {
 $.ajax({
-url: "../interface1/categories/categoryMenu_dropdown.htm",
+url: "../interface/categories/categoryMenu_dropdown.htm",
 cache: true
 })
 .done(function( html ) {
@@ -479,7 +496,7 @@ Merkzettel <span class="iArrowFollowRight pull-right "></span>  <span class="pul
 <tr>
 <td style="vertical-align: top;"><strong>Widerrufsbelehrung </strong>
 <p><strong>Widerrufsrecht</strong></p>
-<p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses. Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Hood Media GmbH, Antoniterstr. 19, 50667 Köln, Telefon: +49 (0)221-99990606, E-Mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8de4e0fdffe8fefef8e0cde5e2e2e9a3e9e8">[email&#160;protected]</a>) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.</p>
+<p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses. Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Hood Media GmbH, Antoniterstr. 19, 50667 Köln, Telefon: +49 (0)221-99990606, E-Mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="71181c0103140202041c31191e1e155f1514">[email&#160;protected]</a>) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.</p>
 <p><strong>Folgen des Widerrufs</strong></p>
 <p>Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Lieferkosten (mit Ausnahme der zusätzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als die von uns angebotene, günstigste Standardlieferung gewählt haben), unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet. Haben Sie verlangt, dass die Dienstleistung während der Widerrufsfrist beginnen soll, so haben Sie uns einen angemessenen Betrag zu zahlen, der dem Anteil der bis zu dem Zeitpunkt, zu dem Sie uns von der Ausübung des Widerrufsrechts hinsichtlich dieses Vertrags unterrichten, bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im Vertrag vorgesehenen Dienstleistungen entspricht.</p>
 <p><strong>Muster-Widerrufsformular</strong></p>
