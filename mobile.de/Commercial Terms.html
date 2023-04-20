@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="de" data-theme="light"><head>
+<!DOCTYPE html><html lang="de"><head>
         <meta charset="utf-8">
         <title>mobile.de – Gebrauchtwagen und Neuwagen – Deutschlands größter Fahrzeugmarkt</title>
         <meta name="description" content="Finden Sie Autos als Neu- und Gebrauchtwagen sowie Wohnmobile, Motorräder und Nutzfahrzeuge bei: mobile.de – Deutschlands größter Fahrzeugmarkt">
@@ -16,11 +16,11 @@
             development: "undefined"
         },
         lang: "de",
-        theme: "light",
+        theme: "system",
         user: {
-            vi: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjaWQiOiI2YWYzYTc1YS01OTI0LTQxOTgtOGUwNi01MWRmMWE4NDViZjciLCJhdWQiOltdLCJpYXQiOjE2ODE5NzI4NjMsImRudCI6dHJ1ZX0.EOXkZIARP_fmnKFWLJRfzywEv5xLcxX-WByY6MsyjXY",
+            vi: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjaWQiOiJlM2FjZjU4Mi01ZTFiLTRkYmUtOThjMS1iNjk4NGFjZDUwNjYiLCJhdWQiOltdLCJpYXQiOjE2ODE5OTQ1MDcsImRudCI6dHJ1ZX0.3OHt2ryleEDoc12vuBFTNdCmXI6oyXrzO2av1mduZkk",
             isKnownUser: "false",
-            clientId: "6af3a75a-5924-4198-8e06-51df1a845bf7" || null,
+            clientId: "e3acf582-5e1b-4dbe-98c1-b6984acd5066" || null,
             userId: "" || null,
         },
         abTests: {},
@@ -34,7 +34,7 @@
         .page-header { display: none }
         </style>
         <link rel="stylesheet" href="/service/assets/agbProfessional-styles.css">
-    <script>bazadebezolkohpepadr="1271815550"</script><script type="text/javascript" src="https://www.mobile.de/akam/13/4bce5e3d" defer=""></script><style>:root {
+    <script>bazadebezolkohpepadr="1271815550"</script><script type="text/javascript" src="https://www.mobile.de/akam/13/4bce5e3a" defer=""></script><style>:root {
   --base-space: 18px;
 
   --space-XXS: calc(var(--base-space) / 6);
@@ -31314,6 +31314,35 @@ input:checked + .slider--HG4Vj:before {
   --UIEffects-HoverShadow: 0px 1px 4px rgba(255, 255, 255, 0.33);
   --UIEffects-FocusGlow: 0px 0px 1px 4px var(--color-petrol-700);
 }
+:root {
+  --z-index-level-1: 1;
+  --z-index-level-2: 5001000;
+  --z-index-level-3: 6000000;
+  --z-index-level-4: 6000500;
+
+  --shadow-level-1: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-level-2: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  --shadow-level-2-rotated: 0px -3px 6px rgba(0, 0, 0, 0.5);
+
+  --shadow-level-3: 0px 3px 13px rgba(0, 0, 0, 0.6);
+}
+:root {
+  --z-index-main-content: var(--z-index-level-1);
+
+  /* backdrop */
+  --z-index-backdrop-level-2: calc(var(--z-index-level-2) - 1);
+  --z-index-backdrop-level-3: calc(var(--z-index-level-3) - 1);
+  --z-index-backdrop-level-4: calc(var(--z-index-level-4) - 1);
+
+  /* form */
+  --z-index-combo-box-input: calc(var(--z-index-main-content) + 1);
+  --z-index-select-dropdown-icon: calc(var(--z-index-main-content) + 2);
+  --z-index-autosuggest-suggestion-list: calc(var(--z-index-main-content) + 3);
+
+  /* header */
+  --z-index-header-menu-dropdown: calc(var(--z-index-main-content) + 10);
+  --z-index-header-menu-dropdown-gap: calc(var(--z-index-main-content) + 11);
+}
 .button--1Ijk7 {
   -webkit-transition: all 50ms ease-out;
   -o-transition: all 50ms ease-out;
@@ -31325,6 +31354,7 @@ input:checked + .slider--HG4Vj:before {
   color: rgb(30, 31, 36);
   color: var(--color-content-lead);
   cursor: pointer;
+  isolation: isolate;
 }
 .button--1Ijk7:not(:first-of-type) {
   margin-left: -1px;
@@ -31359,9 +31389,12 @@ input:checked + .slider--HG4Vj:before {
   background-color: var(--FormFieldActive-background);
   cursor: default;
   z-index: 1;
+  z-index: var(--z-index-main-content);
 }
 /* Hover state */
 .button--1Ijk7:hover {
+  z-index: 1;
+  z-index: var(--z-index-main-content);
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.33);
           box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.33);
   -webkit-box-shadow: var(--UIEffects-HoverShadow);
@@ -31377,6 +31410,8 @@ input:checked + .slider--HG4Vj:before {
 }
 /* Focus state */
 .button--1Ijk7:focus {
+  z-index: calc(1 + 1);
+  z-index: calc(var(--z-index-main-content) + 1);
   outline: none;
   border-color: rgb(6, 101, 120);
   border-color: var(--color-focus-border);
@@ -59823,11 +59858,11 @@ mobile.de wird die ordentliche Kündigung begründen, wobei sich die möglichen 
 </ol>
 </div></div></div></section>
         </div>
-        <div id="footer"><footer class="reducedFooter--kigNF"><div class="wrapper--YblIu"><ul class="list--t9Xc8 linkList--LK4xI"><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">Impressum</span></li><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">Careers (English)</span></li><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">AGB</span></li><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">Datenschutz</span></li><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">Datenschutzeinstellungen</span></li><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">Kontakt</span></li></ul><div class="toolbar--ANLXC"><div class="meta--yadxA neutral-400--VlN0i">eBay und eBay Logos sind eingetragene Marken der eBay Inc.</div><div class="selections--1KHEZ"><div class="selection--76oPl"><div class="BaseInput-container--YqvQe"><div class="Select-wrapper--p78KW"><select class="Select--mNpJi copy--DNXB5 BaseInput--small--chBUK Select--dark--eMF2E Select--small--6GV0t" data-testid="footer-language-switch"><option value="de">Deutsch</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="nl">Nederlands</option><option value="pl">Polski</option><option value="ro">Românesc</option><option value="ru">Русский</option><option value="cz">Čeština</option><option value="tr">Türk</option></select><svg class="Select__dropdown--2XT5o Select__dropdown--small--ZXLBA Select__dropdown--dark--3TIOY SvgIcon--sdOa3" viewBox="0 0 33 34" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12 14h10l-5 5-5-5z" fill="currentColor"></path></svg></div></div></div><div class=""></div></div></div></div></footer></div>
+        <div id="footer"><footer class="reducedFooter--kigNF"><div class="wrapper--YblIu"><ul class="list--t9Xc8 linkList--LK4xI"><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">Impressum</span></li><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">Careers (English)</span></li><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">AGB</span></li><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">Datenschutz</span></li><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">Datenschutzeinstellungen</span></li><li class="copy--DNXB5"><span class="Link--dH522 Link--unstyled--D8zc1 Link--color-neutral-400--J90Jj">Kontakt</span></li></ul><div class="toolbar--ANLXC"><div class="meta--yadxA neutral-400--VlN0i">eBay und eBay Logos sind eingetragene Marken der eBay Inc.</div><div class="selections--1KHEZ"><div class="selection--76oPl"><div class="BaseInput-container--YqvQe"><div class="Select-wrapper--p78KW"><select class="Select--mNpJi copy--DNXB5 BaseInput--small--chBUK Select--dark--eMF2E Select--small--6GV0t" data-testid="footer-language-switch"><option value="de">Deutsch</option><option value="en">English</option><option value="es">Español</option><option value="fr">Français</option><option value="nl">Nederlands</option><option value="pl">Polski</option><option value="ro">Românesc</option><option value="ru">Русский</option><option value="cz">Čeština</option><option value="tr">Türk</option></select><svg class="Select__dropdown--2XT5o Select__dropdown--small--ZXLBA Select__dropdown--dark--3TIOY SvgIcon--sdOa3" viewBox="0 0 33 34" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12 14h10l-5 5-5-5z" fill="currentColor"></path></svg></div></div></div><div class="selection--76oPl"><div class="BaseInput-container--YqvQe"><div class="Select-wrapper--p78KW"><select class="Select--mNpJi copy--DNXB5 BaseInput--small--chBUK Select--dark--eMF2E Select--small--6GV0t" data-testid="display-theme-switch"><option value="dark">Dunkle Darstellung</option><option value="light">Helle Darstellung</option><option value="system" selected="">System-Darstellung</option></select><svg class="Select__dropdown--2XT5o Select__dropdown--small--ZXLBA Select__dropdown--dark--3TIOY SvgIcon--sdOa3" viewBox="0 0 33 34" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12 14h10l-5 5-5-5z" fill="currentColor"></path></svg></div></div></div></div></div></div></footer></div>
         <script src="/service/assets/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         
-    <noscript><img src="https://www.mobile.de/akam/13/pixel_4bce5e3d?a=dD0yNDliYTJkYzlmMjhhYjlhZjQ4ODA3OWY4Mjc5Y2JjZGI1NjgyYTI3JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript" src="/GhtYGo6oJMe5gixHWdCLIBJIHJs/aS1pwbrD9p5r/Ty5sDFsCOg/M0ABK01c/VQU"></script>
+    <noscript><img src="https://www.mobile.de/akam/13/pixel_4bce5e3a?a=dD0yNDliYTJkYzlmMjhhYjlhZjQ4ODA3OWY4Mjc5Y2JjZGI1NjgyYTI3JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript" src="/GhtYGo6oJMe5gixHWdCLIBJIHJs/aS1pwbrD9p5r/Ty5sDFsCOg/M0ABK01c/VQU"></script>
 <script src="https://static.classistatic.de/consent-statics/js/1602541709cmp-api.js" defer="defer"></script><style data-styled="true" data-styled-version="5.3.5">.iBneUr{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:8px 0;background:var(--consent-modal-ButtonPrimary-background-color);border:1px solid var(--consent-modal-ButtonPrimary-border-color);border-radius:5px;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;font-style:normal;font-weight:600;font-size:14px;line-height:20px;text-align:center;color:var(--consent-modal-ButtonPrimary-color);cursor:pointer;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
 .iBneUr:hover{box-shadow:var(--consent-modal-hover-shadow);background:var(--consent-modal-ButtonPrimary-hover-background-color);border-color:var(--consent-modal-ButtonPrimary-hover-border-color);}/*!sc*/
 data-styled.g1[id="sc-bczRLJ"]{content:"iBneUr,"}/*!sc*/
