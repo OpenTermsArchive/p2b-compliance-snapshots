@@ -72,6 +72,15 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
 			}();
 			drift.SNIPPET_VERSION = '0.3.1';
 			drift.load('mmw35gtsch9s');
+			drift.on("scheduling:meetingBooked", function(data) {
+				conversionTracker();
+			});
+
+			function conversionTracker() {
+				var img = document.createElement("img");
+				img.setAttribute("src", "https://px.ads.linkedin.com/collect/?pid=396036&conversionId=12201148&fmt=gif");
+				document.body.appendChild(img);
+			}
 		</script>
 		<!-- End of Async Drift Code -->
 		
