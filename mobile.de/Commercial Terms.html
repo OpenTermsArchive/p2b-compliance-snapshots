@@ -18,9 +18,9 @@
         lang: "de",
         theme: "system",
         user: {
-            vi: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjaWQiOiJlZDg4YjZkZS1lOTg0LTRjNTYtOGM4OS1hN2ExNDg0ZTU0YWUiLCJhdWQiOltdLCJpYXQiOjE2ODMwOTYwNTAsImRudCI6dHJ1ZX0.FB5uLjnaQMNTTvoAw6XlqAGlUba2pc3nfdzl9lYdwtw",
+            vi: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjaWQiOiI0ZGVhNDk3Ny05ZmVlLTRkZWMtYjU1My04OTgwYjcxNGJkMTYiLCJhdWQiOltdLCJpYXQiOjE2ODMxMTc2NzgsImRudCI6dHJ1ZX0.yGKY5s2N-YQzlmP2fl-i88Y_acH3PpUP5MPeG7jSdhk",
             isKnownUser: "false",
-            clientId: "ed88b6de-e984-4c56-8c89-a7a1484e54ae" || null,
+            clientId: "4dea4977-9fee-4dec-b553-8980b714bd16" || null,
             userId: "" || null,
         },
         abTests: {},
@@ -34,7 +34,7 @@
         .page-header { display: none }
         </style>
         <link rel="stylesheet" href="/service/assets/agbProfessional-styles.css">
-    <script>bazadebezolkohpepadr="1271815550"</script><script type="text/javascript" src="https://www.mobile.de/akam/13/4bce5f44" defer=""></script><style>:root {
+    <script>bazadebezolkohpepadr="1271815550"</script><script type="text/javascript" src="https://www.mobile.de/akam/13/4bce5f45" defer=""></script><style>:root {
   --base-space: 18px;
 
   --space-XXS: calc(var(--base-space) / 6);
@@ -54369,7 +54369,7 @@ input:checked + .slider--HG4Vj:before {
 :root {
   --badge-label-height: 24px;
   --badge-space-top: 24px;
-  --badge-angle: 32deg;
+  --badge-angle: 30deg;
 
   --cos58: 0.529;
   --sin58: 0.848;
@@ -54386,7 +54386,7 @@ input:checked + .slider--HG4Vj:before {
   z-index: calc(1 + 1);
   z-index: calc(var(--z-index-main-content) + 1);
   top: -1px;
-  left: 0;
+  left: -1px;
 
   overflow: hidden;
 
@@ -54403,11 +54403,11 @@ input:checked + .slider--HG4Vj:before {
 
 .CornerBadge__label--Hcpl2 {
   -webkit-transform: translateY(24px)
-    rotate(calc(-1 * 32deg));
+    rotate(calc(-1 * 30deg));
       -ms-transform: translateY(24px)
-    rotate(calc(-1 * 32deg));
+    rotate(calc(-1 * 30deg));
           transform: translateY(24px)
-    rotate(calc(-1 * 32deg));
+    rotate(calc(-1 * 30deg));
   -webkit-transform: translateY(var(--badge-space-top))
     rotate(calc(-1 * var(--badge-angle)));
       -ms-transform: translateY(var(--badge-space-top))
@@ -54420,13 +54420,13 @@ input:checked + .slider--HG4Vj:before {
 
   overflow: hidden;
 
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 2px rgba(10, 14, 26, 0.28);
 
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 2px rgba(10, 14, 26, 0.28);
 
-  -webkit-box-shadow: 0 1px 2px var(--color-transparent-grey-30);
+  -webkit-box-shadow: 0 1px 2px var(--color-overlay);
 
-          box-shadow: 0 1px 2px var(--color-transparent-grey-30);
+          box-shadow: 0 1px 2px var(--color-overlay);
   width: calc(calc(
     24px + (24px / 0.848)
   ) / 0.529);
@@ -54443,11 +54443,45 @@ input:checked + .slider--HG4Vj:before {
   letter-spacing: 1px;
 }
 
+.CornerBadge__ribbon--3tuWd {
+  top: -3px;
+  left: -3px;
+}
+
+.CornerBadge__ribbon--3tuWd::before,
+.CornerBadge__ribbon--3tuWd::after {
+  position: absolute;
+  z-index: -10;
+  content: "";
+  display: block;
+  border-style: solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+
+.CornerBadge__ribbon--3tuWd::before {
+  top: 0;
+  right: 0.5px;
+  border-width: 2px 10px 0 0;
+}
+
+.CornerBadge__ribbon--3tuWd::after {
+  bottom: 4px;
+  left: 0;
+  border-width: 8px 2px 0 0;
+}
+
 .CornerBadge--accent--qvVIB {
   background: rgb(9, 150, 179);
   background: var(--color-accent);
   color: rgb(255, 255, 255);
   color: var(--color-white);
+}
+
+.CornerBadge__ribbon--accent--LUh\+A::before,
+.CornerBadge__ribbon--accent--LUh\+A::after {
+  border-color: rgb(9, 150, 179);
+  border-color: var(--color-accent);
 }
 
 .CornerBadge--action--XdBYI {
@@ -54457,11 +54491,23 @@ input:checked + .slider--HG4Vj:before {
   color: var(--color-white);
 }
 
+.CornerBadge__ribbon--action--t7c0L::before,
+.CornerBadge__ribbon--action--t7c0L::after {
+  border-color: rgb(255, 102, 0);
+  border-color: var(--color-action);
+}
+
 .CornerBadge--success--tTuh2 {
   background: rgb(91, 179, 36);
   background: var(--color-success);
   color: rgb(255, 255, 255);
   color: var(--color-white);
+}
+
+.CornerBadge__ribbon--success--AJpca::before,
+.CornerBadge__ribbon--success--AJpca::after {
+  border-color: rgb(91, 179, 36);
+  border-color: var(--color-success);
 }
 
 .CornerBadge--warning--v\+y2l {
@@ -54471,11 +54517,23 @@ input:checked + .slider--HG4Vj:before {
   color: var(--color-black);
 }
 
+.CornerBadge__ribbon--warning--kRQps::before,
+.CornerBadge__ribbon--warning--kRQps::after {
+  border-color: rgb(255, 213, 0);
+  border-color: var(--color-warning);
+}
+
 .CornerBadge--error--uwsGe {
   background: rgb(242, 25, 61);
   background: var(--color-error);
   color: rgb(255, 255, 255);
   color: var(--color-white);
+}
+
+.CornerBadge__ribbon--error--UcRYB::before,
+.CornerBadge__ribbon--error--UcRYB::after {
+  border-color: rgb(242, 25, 61);
+  border-color: var(--color-error);
 }
 
 .CornerBadge--orange--0P5zW {
@@ -54485,11 +54543,23 @@ input:checked + .slider--HG4Vj:before {
   color: var(--color-white);
 }
 
+.CornerBadge__ribbon--orange--A\+VU5::before,
+.CornerBadge__ribbon--orange--A\+VU5::after {
+  border-color: rgb(255, 102, 0);
+  border-color: var(--color-orange);
+}
+
 .CornerBadge--petrol--p\+32m {
   background: rgb(9, 150, 179);
   background: var(--color-petrol);
   color: rgb(255, 255, 255);
   color: var(--color-white);
+}
+
+.CornerBadge__ribbon--petrol--q4hol::before,
+.CornerBadge__ribbon--petrol--q4hol::after {
+  border-color: rgb(9, 150, 179);
+  border-color: var(--color-petrol);
 }
 
 .CornerBadge--petrol-dark--\+p6Op {
@@ -54499,11 +54569,23 @@ input:checked + .slider--HG4Vj:before {
   color: var(--color-white);
 }
 
+.CornerBadge__ribbon--petrol-dark--guejf::before,
+.CornerBadge__ribbon--petrol-dark--guejf::after {
+  border-color: rgb(6, 101, 120);
+  border-color: var(--color-petrol-dark);
+}
+
 .CornerBadge--petrol-light--U9Iwv {
   background: rgb(232, 247, 250);
   background: var(--color-petrol-light);
   color: rgb(102, 102, 102);
   color: var(--color-grey-60);
+}
+
+.CornerBadge__ribbon--petrol-light--0ZYd6::before,
+.CornerBadge__ribbon--petrol-light--0ZYd6::after {
+  border-color: rgb(232, 247, 250);
+  border-color: var(--color-petrol-light);
 }
 
 .CornerBadge--black--\+SzrH {
@@ -54513,11 +54595,23 @@ input:checked + .slider--HG4Vj:before {
   color: var(--color-white);
 }
 
+.CornerBadge__ribbon--black--77SCM::before,
+.CornerBadge__ribbon--black--77SCM::after {
+  border-color: rgb(0, 0, 0);
+  border-color: var(--color-black);
+}
+
 .CornerBadge--green--f1xf4 {
   background: rgb(122, 191, 29);
   background: var(--color-green);
   color: rgb(255, 255, 255);
   color: var(--color-white);
+}
+
+.CornerBadge__ribbon--green--gDDYx::before,
+.CornerBadge__ribbon--green--gDDYx::after {
+  border-color: rgb(122, 191, 29);
+  border-color: var(--color-green);
 }
 
 .CornerBadge--red--uT3UY {
@@ -54527,11 +54621,23 @@ input:checked + .slider--HG4Vj:before {
   color: var(--color-white);
 }
 
+.CornerBadge__ribbon--red--oXcd3::before,
+.CornerBadge__ribbon--red--oXcd3::after {
+  border-color: rgb(242, 25, 58);
+  border-color: var(--color-red);
+}
+
 .CornerBadge--yellow--JtnfG {
   background: rgb(255, 247, 26);
   background: var(--color-yellow);
   color: rgb(0, 0, 0);
   color: var(--color-black);
+}
+
+.CornerBadge__ribbon--yellow--MVEY8::before,
+.CornerBadge__ribbon--yellow--MVEY8::after {
+  border-color: rgb(255, 247, 26);
+  border-color: var(--color-yellow);
 }
 
 .CornerBadge--grey-80--zoxHw {
@@ -54541,11 +54647,23 @@ input:checked + .slider--HG4Vj:before {
   color: var(--color-white);
 }
 
+.CornerBadge__ribbon--grey-80--hyrny::before,
+.CornerBadge__ribbon--grey-80--hyrny::after {
+  border-color: rgb(51, 51, 51);
+  border-color: var(--color-grey-80);
+}
+
 .CornerBadge--grey-60--x0tSL {
   background: rgb(102, 102, 102);
   background: var(--color-grey-60);
   color: rgb(255, 255, 255);
   color: var(--color-white);
+}
+
+.CornerBadge__ribbon--grey-60--B0-V-::before,
+.CornerBadge__ribbon--grey-60--B0-V-::after {
+  border-color: rgb(102, 102, 102);
+  border-color: var(--color-grey-60);
 }
 
 .CornerBadge--grey-30--p8WAw {
@@ -54555,11 +54673,23 @@ input:checked + .slider--HG4Vj:before {
   color: var(--color-black);
 }
 
+.CornerBadge__ribbon--grey-30--YrKhc::before,
+.CornerBadge__ribbon--grey-30--YrKhc::after {
+  border-color: rgb(178, 178, 178);
+  border-color: var(--color-grey-30);
+}
+
 .CornerBadge--grey-15--LxZB1 {
   background: rgb(217, 217, 217);
   background: var(--color-grey-15);
   color: rgb(0, 0, 0);
   color: var(--color-black);
+}
+
+.CornerBadge__ribbon--grey-15--iy1S6::before,
+.CornerBadge__ribbon--grey-15--iy1S6::after {
+  border-color: rgb(217, 217, 217);
+  border-color: var(--color-grey-15);
 }
 
 .CornerBadge--grey-7--Ty\+Od {
@@ -54569,11 +54699,23 @@ input:checked + .slider--HG4Vj:before {
   color: var(--color-black);
 }
 
+.CornerBadge__ribbon--grey-7--R7Tbe::before,
+.CornerBadge__ribbon--grey-7--R7Tbe::after {
+  border-color: rgb(237, 237, 237);
+  border-color: var(--color-grey-7);
+}
+
 .CornerBadge--grey-3--1LPgx {
   background: rgb(247, 247, 247);
   background: var(--color-grey-3);
   color: rgb(0, 0, 0);
   color: var(--color-black);
+}
+
+.CornerBadge__ribbon--grey-3--cDJ25::before,
+.CornerBadge__ribbon--grey-3--cDJ25::after {
+  border-color: rgb(247, 247, 247);
+  border-color: var(--color-grey-3);
 }
 </style><style>:root {
   --base-space: 18px;
@@ -60628,7 +60770,7 @@ mobile.de wird die ordentliche Kündigung begründen, wobei sich die möglichen 
         <script src="/service/assets/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         
-    <noscript><img src="https://www.mobile.de/akam/13/pixel_4bce5f44?a=dD0yNDliYTJkYzlmMjhhYjlhZjQ4ODA3OWY4Mjc5Y2JjZGI1NjgyYTI3JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript" src="/trY1xKZotWn2m9AqLQ/EYOrNwNSEO/Zxs-fQE/YT/4QFA92ISs"></script>
+    <noscript><img src="https://www.mobile.de/akam/13/pixel_4bce5f45?a=dD0yNDliYTJkYzlmMjhhYjlhZjQ4ODA3OWY4Mjc5Y2JjZGI1NjgyYTI3JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript><script type="text/javascript" src="/trY1xKZotWn2m9AqLQ/EYOrNwNSEO/Zxs-fQE/YT/4QFA92ISs"></script>
 <script src="https://static.classistatic.de/consent-statics/js/1602541709cmp-api.js" defer="defer"></script><style data-styled="true" data-styled-version="5.3.5">.iBneUr{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:8px 0;background:var(--consent-modal-ButtonPrimary-background-color);border:1px solid var(--consent-modal-ButtonPrimary-border-color);border-radius:5px;-webkit-flex:1;-ms-flex:1;flex:1;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;font-style:normal;font-weight:600;font-size:14px;line-height:20px;text-align:center;color:var(--consent-modal-ButtonPrimary-color);cursor:pointer;-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
 .iBneUr:hover{box-shadow:var(--consent-modal-hover-shadow);background:var(--consent-modal-ButtonPrimary-hover-background-color);border-color:var(--consent-modal-ButtonPrimary-hover-border-color);}/*!sc*/
 data-styled.g1[id="sc-bczRLJ"]{content:"iBneUr,"}/*!sc*/
