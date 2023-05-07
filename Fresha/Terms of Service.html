@@ -38,7 +38,7 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 <link rel="stylesheet" href="https://terms.fresha.com/hs-fs/hub/8467430/hub_generated/template_assets/44255963923/1666601300429/TC_theme/css/main.css">
 <link rel="stylesheet" href="https://terms.fresha.com/hs-fs/hub/8467430/hub_generated/template_assets/44256077587/1665747300846/TC_theme/css/theme-overrides.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Lato:400,700&amp;display=swap">
-<link rel="stylesheet" href="https://cdn2.hubspot.net/hub/-1/hub_generated/module_assets/-2712622/1682695859007/module_-2712622_Site_Search_Input.min.css">
+<link rel="stylesheet" href="https://cdn2.hubspot.net/hub/-1/hub_generated/module_assets/-2712622/1683404308558/module_-2712622_Site_Search_Input.min.css">
 <link rel="stylesheet" href="https://terms.fresha.com/hs-fs/hub/8467430/hub_generated/module_assets/65216011923/1665998031843/module_65216011923_top_navigation.min.css">
 <link rel="stylesheet" href="https://terms.fresha.com/hs-fs/hub/8467430/hub_generated/module_assets/65216011861/1644332039737/module_65216011861_terms_of_use_content.min.css">
     
@@ -1164,51 +1164,15 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
     </div>
     <script src="/hs/hsstatic/jquery-libs/static-1.1/jquery/jquery-1.7.1.js"></script>
 <script>hsjQuery = window['jQuery'];</script>
-<script>
-(function () {
-    window.addEventListener('load', function () {
-        setTimeout(function () {
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/_hcms/perf', true /*async*/);
-            xhr.setRequestHeader("Content-type", "application/json");
-            xhr.onreadystatechange = function () {
-                // do nothing.
-            };
-            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            function populateNetworkInfo(name, connection, info) {
-                if (name in connection) {
-                    info[name] = connection[name];
-                }
-            }
-            var networkInfo = {};
-            if (connection) {
-                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
-                    populateNetworkInfo(name, connection, networkInfo);
-                });
-            }
-            var perfData = {
-                url: location.href,
-                portal: 8467430,
-                content: 65855553040,
-                group: -1,
-                connection: networkInfo,
-                timing: performance.timing
-            };
-            xhr.send(JSON.stringify(perfData));
-        }, 3000);  // Execute this 3 seconds after onload.
-    });
-})();
-</script>
-
 <!-- HubSpot performance collection script -->
-<script defer src="https://static.hsappstatic.net/content-cwv-embed/static-1.179/embed.js"></script>
+<script defer src="https://static.hsappstatic.net/content-cwv-embed/static-1.194/embed.js"></script>
 <script src="https://terms.fresha.com/hs-fs/hub/8467430/hub_generated/template_assets/44255992381/1665747308542/TC_theme/js/main.min.js"></script>
 <script>
 var hsVars = hsVars || {}; hsVars['language'] = 'en';
 </script>
 
 <script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
-<script src="https://cdn2.hubspot.net/hub/-1/hub_generated/module_assets/-2712622/1682695857860/module_-2712622_Site_Search_Input.min.js"></script>
+<script src="https://cdn2.hubspot.net/hub/-1/hub_generated/module_assets/-2712622/1683404307903/module_-2712622_Site_Search_Input.min.js"></script>
 <script src="https://terms.fresha.com/hs-fs/hub/8467430/hub_generated/module_assets/65216011923/1665998031114/module_65216011923_top_navigation.min.js"></script>
 <script src="https://terms.fresha.com/hs-fs/hub/8467430/hub_generated/module_assets/65216011861/1644332039660/module_65216011861_terms_of_use_content.min.js"></script>
 
@@ -1236,7 +1200,7 @@ _hsq.push(["setContentMetadata", {
 
 <script type="text/javascript">
 var hsVars = {
-    ticks: 1682872891661,
+    ticks: 1683475535593,
     page_id: 65855553040,
     
     content_group_id: 0,
