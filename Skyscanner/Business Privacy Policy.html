@@ -41,7 +41,7 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 <meta property="og:url" content="https://www.partners.skyscanner.net/privacy-policy">
 <meta name="twitter:card" content="summary">
 <meta http-equiv="content-language" content="en">
-<link rel="stylesheet" href="//cdn2.hubspot.net/hub/7052064/hub_generated/template_assets/1682695863380/hubspot/hubspot_default/shared/responsive/layout.min.css">
+<link rel="stylesheet" href="//cdn2.hubspot.net/hub/7052064/hub_generated/template_assets/1683295410902/hubspot/hubspot_default/shared/responsive/layout.min.css">
 
 
 <link rel="stylesheet" href="https://www.partners.skyscanner.net/hs-fs/hub/3051472/hub_generated/template_assets/19866389890/1647868918203/Skyscanner_November2019_Theme/Coded_Files/Skyscanner_November2019-style.min.css">
@@ -401,42 +401,8 @@ a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-b
 </div><!--end footer wrapper -->
 
     
-<script>
-(function () {
-    window.addEventListener('load', function () {
-        setTimeout(function () {
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/_hcms/perf', true /*async*/);
-            xhr.setRequestHeader("Content-type", "application/json");
-            xhr.onreadystatechange = function () {
-                // do nothing.
-            };
-            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-            function populateNetworkInfo(name, connection, info) {
-                if (name in connection) {
-                    info[name] = connection[name];
-                }
-            }
-            var networkInfo = {};
-            if (connection) {
-                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
-                    populateNetworkInfo(name, connection, networkInfo);
-                });
-            }
-            var perfData = {
-                url: location.href,
-                portal: 3051472,
-                content: 63211098261,
-                group: -1,
-                connection: networkInfo,
-                timing: performance.timing
-            };
-            xhr.send(JSON.stringify(perfData));
-        }, 3000);  // Execute this 3 seconds after onload.
-    });
-})();
-</script>
-
+<!-- HubSpot performance collection script -->
+<script defer src="https://static.hsappstatic.net/content-cwv-embed/static-1.194/embed.js"></script>
 <script src="https://www.partners.skyscanner.net/hs-fs/hub/3051472/hub_generated/template_assets/19866614039/1581414009163/Skyscanner_November2019_Theme/Coded_Files/Skyscanner_November2019-main.min.js"></script>
 <script>
 var hsVars = hsVars || {}; hsVars['language'] = 'en';
@@ -469,7 +435,7 @@ _hsq.push(["setContentMetadata", {
 
 <script type="text/javascript">
 var hsVars = {
-    ticks: 1682817276296,
+    ticks: 1683421184391,
     page_id: 63211098261,
     
     content_group_id: 0,
