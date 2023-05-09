@@ -34,12 +34,30 @@ li{padding: 5px !important}
 <link rel='alternate' hreflang='en' href='https://www.autobazar.eu/uk/terms.php' />
 <link rel='alternate' hreflang='hu' href='https://www.autobazar.eu/hu/terms.php' />
 <link rel='alternate' hreflang='sk' href='https://www.autobazar.eu/sk/terms.php' />
-<meta name="google-site-verification" content="StfbBCSQAGpVjST5Fg_jGoXGvpJSEqKp7LAL7X8lIBE"/>
+<script>
+            setPageData = {
+                    'content_type': 'informational',
+                    'page_brand': 'autobazar.eu',
+                    'page_country_code': 'SK',
+                    'page_language': 'uk',
+                    'is_loggedin': 'undefined',
+                };
+        </script><meta name="google-site-verification" content="StfbBCSQAGpVjST5Fg_jGoXGvpJSEqKp7LAL7X8lIBE"/>
 <style>
     .async-hide {
         opacity: 0 !important
     }
 </style>
+
+
+<script>
+    if (typeof setPageData !== 'undefined' && setPageData) {
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push(setPageData);
+    }
+</script>
+
+
 <script type="text/javascript">
     window.google = window.google || {};
     window.google.remarketing = false;
@@ -89,6 +107,7 @@ li{padding: 5px !important}
     }
 
     function includeGoogleTagManager() {
+
                 loadScript("https://www.autobazar.eu/js/privacy/google/tag-manager.js")
     }
 
