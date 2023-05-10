@@ -2,43 +2,41 @@
 <html lang="fr-FR">
 <head>
     <meta charset="UTF-8">
-    <script>dataLayer = [];</script>
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WN2SZ68');
-    </script>
 
-    <!-- Anti-flicker snippet (recommended)  -->
-    <style>.async-hide { opacity: 0 !important} </style>
-    <script>
-        (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-            h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-            (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-        })(window,document.documentElement,'async-hide','dataLayer',4000,
-            {'GTM-WN2SZ68':true});
-    </script>
+    <!-- Didomi -->
+<script type="text/javascript">window.gdprAppliesGlobally=true;(function(){function a(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var n=document.createElement("iframe");n.style.display="none";n.name=e;n.title=e;t.insertBefore(n,t.firstChild)}
+    else{setTimeout(function(){a(e)},5)}}}function e(n,r,o,c,s){function e(e,t,n,a){if(typeof n!=="function"){return}if(!window[r]){window[r]=[]}var i=false;if(s){i=s(e,t,n)}if(!i){window[r].push({command:e,parameter:t,callback:n,version:a})}}e.stub=true;function t(a){if(!window[n]||window[n].stub!==true){return}if(!a.data){return}
+        var i=typeof a.data==="string";var e;try{e=i?JSON.parse(a.data):a.data}catch(t){return}if(e[o]){var r=e[o];window[n](r.command,r.parameter,function(e,t){var n={};n[c]={returnValue:e,success:t,callId:r.callId};a.source.postMessage(i?JSON.stringify(n):n,"*")},r.version)}}
+        if(typeof window[n]!=="function"){window[n]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");a("__tcfapiLocator");(function(e){
+        var t=document.createElement("script");t.id="spcloader";t.type="text/javascript";t.async=true;t.src="https://sdk.privacy-center.org/"+e+"/loader.js?target="+document.location.hostname;t.charset="utf-8";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)})("3beb83b3-b225-49c6-924d-90c480c7bab6")})();</script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WN2SZ68');</script>
+<!-- End Google Tag Manager -->
+
+<!-- anti-flicker snippet (recommended)  -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+        h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+        {'GTM-WN2SZ68':true});</script>
+
+<style>.async-hide {opacity: 0 !important}</style>
 
     <base href="https://www.allovoisins.com/">
 
-        <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium-webfont.woff2?8d230ee22241eb7fe2e7b6c5b02b6353" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium_italic-webfont.woff2?8d230ee22241eb7fe2e7b6c5b02b6353" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold-webfont.woff2?8d230ee22241eb7fe2e7b6c5b02b6353" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold_italic-webfont.woff2?8d230ee22241eb7fe2e7b6c5b02b6353" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold-webfont.woff2?8d230ee22241eb7fe2e7b6c5b02b6353" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold_italic-webfont.woff2?8d230ee22241eb7fe2e7b6c5b02b6353" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_extrabold-webfont.woff2?8d230ee22241eb7fe2e7b6c5b02b6353" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/icons/icomoon.ttf?8d230ee22241eb7fe2e7b6c5b02b6353" as="font" type="font/ttf" crossorigin>
+        <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium-webfont.woff2?30d4a95afc66c79f51dce21b675ba0c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium_italic-webfont.woff2?30d4a95afc66c79f51dce21b675ba0c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold-webfont.woff2?30d4a95afc66c79f51dce21b675ba0c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold_italic-webfont.woff2?30d4a95afc66c79f51dce21b675ba0c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold-webfont.woff2?30d4a95afc66c79f51dce21b675ba0c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold_italic-webfont.woff2?30d4a95afc66c79f51dce21b675ba0c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_extrabold-webfont.woff2?30d4a95afc66c79f51dce21b675ba0c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/icons/icomoon.ttf?30d4a95afc66c79f51dce21b675ba0c7" as="font" type="font/ttf" crossorigin>
 
     <title>Conditions Générales de Vente et d'Utilisation</title>
 	<meta property="fb:app_id" content="510588998981501">
@@ -65,7 +63,7 @@
 	<meta name="google-signin-scope" content="profile email">
 	<meta name="google-signin-client_id" content="709712733747-j1fld3bsesnhq3jndil9ep8g606hkhij.apps.googleusercontent.com">
     
-    <link rel="canonical" href="https://www.allovoisins.com/page/conditions-generales-de-vente-et-d-utilisation" /><link rel="shortcut icon" type="image/x-icon" href="https://static.allovoisins.com/favicon.ico?8d230ee22241eb7fe2e7b6c5b02b6353" /><link rel="shortcut icon" type="image/png" href="https://static.allovoisins.com/favicon.png"/><link rel="apple-touch-icon" href="https://static.allovoisins.com/images/apple_touch_icone.png"><link rel='stylesheet' href='https://static.allovoisins.com/dist/css/all.min.3449c9e5e332f1dbb81505cd739fbf3f.css?8d230ee22241eb7fe2e7b6c5b02b6353'>
+    <link rel="canonical" href="https://www.allovoisins.com/page/conditions-generales-de-vente-et-d-utilisation" /><link rel="shortcut icon" type="image/x-icon" href="https://static.allovoisins.com/favicon.ico?30d4a95afc66c79f51dce21b675ba0c7" /><link rel="shortcut icon" type="image/png" href="https://static.allovoisins.com/favicon.png"/><link rel="apple-touch-icon" href="https://static.allovoisins.com/images/apple_touch_icone.png"><link rel='stylesheet' href='https://static.allovoisins.com/dist/css/all.min.3449c9e5e332f1dbb81505cd739fbf3f.css?30d4a95afc66c79f51dce21b675ba0c7'>
     <script>
                 if (typeof window.data == "undefined") {
             window.data = {};
@@ -102,42 +100,31 @@
         window.ip = "5.196.30.134";window.geoloc_type = "";
     </script>
 
-            <script async src="https://static.allovoisins.com/dist/js/pages_disconnected.js?8d230ee22241eb7fe2e7b6c5b02b6353"></script>
+            <script async src="https://static.allovoisins.com/dist/js/pages_disconnected.js?30d4a95afc66c79f51dce21b675ba0c7"></script>
     
-            <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+            <script type="didomi/javascript" data-vendor="didomi:google">
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function () {
+        googletag.pubads().enableSingleRequest();
+        googletag.pubads().collapseEmptyDivs();
+        googletag.enableServices();
+    });
+</script>
+<script type="didomi/javascript" data-vendor="didomi:google" async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
     
-    <script>
-        window.googletag = window.googletag || {cmd: []};
-        googletag.cmd.push(function() {
-            googletag.pubads().enableSingleRequest();
-            googletag.pubads().collapseEmptyDivs();
-            googletag.enableServices();
-        });
-    </script>
-
     
     <script src="https://kit.fontawesome.com/6ca443607f.js" crossorigin="anonymous"></script>
 
         
 </head>
 <body class="not_logged is_loading page_page">
-<input type="hidden" name="csrf_token" value="77959c851b91681ecfb2f33c2a33631e"/>
-<noscript>
-    <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="GTM"
-             src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/973474929/?value=0&amp;guid=ON&amp;script=0"/>
-    </div>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WN2SZ68" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-</noscript>
-
-
+<input type="hidden" name="csrf_token" value="6450876b576135188e94b13ad42cad09"/>
 
 
 <div class="ily-main-container">
     <div id="menubar" class="menubar">
     <div class="menubar--container pd-hz-xl">
-        <div id="menubar__logo" class="menubar__logo">
+        <div id="menubar__logo" class="menubar__logo inactive">
             <a href="https://www.allovoisins.com/" title="AlloVoisins - Marketplace de prestations de services et de location de matériel">
                                     <img
                         src="https://static.allovoisins.com/assets/logos/part/logo-allovoisins-baseline.svg"
@@ -808,7 +795,7 @@ font-style : italic;
     }
 
 </style>
-<script type="text/javascript" src="https://static.allovoisins.com/js/modals/modal.js?8d230ee22241eb7fe2e7b6c5b02b6353"></script>
+<script type="text/javascript" src="https://static.allovoisins.com/js/modals/modal.js?30d4a95afc66c79f51dce21b675ba0c7"></script>
 
 <div id="modal_credit" class="modal_credit">
     <div class="modal_box">
@@ -3508,7 +3495,7 @@ ul{
 </div>
 
 <script>
-        var csrft = "77959c851b91681ecfb2f33c2a33631e";
+        var csrft = "6450876b576135188e94b13ad42cad09";
 </script>
 
     <footer id="footer" class="footer bg-neutral-00 mg-vt-xxl separator-inherit">
@@ -3700,7 +3687,7 @@ ul{
                             </li>
                             <li id="footer-link-legal" class="footer_linksItem">
                                 <button class="footer_linksLink link"
-                                        onclick="googlefc.showRevocationMessage()">
+                                        onclick="javascript:Didomi.preferences.show()">
                                     Cookies
                                 </button>
                             </li>
@@ -3739,7 +3726,7 @@ ul{
             </div>
         </div>
         <span class="num-version">
-        Version 15.7.2    </span>
+        Version 15.8.0    </span>
 </footer>
 
 
@@ -3798,26 +3785,24 @@ ul{
     var _paq = window._paq = window._paq || [];
 
     _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+</script>
+
+
+<script>
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src='https://analytics.allovoisins.com/js/container_ZGr4oBws.js'; s.parentNode.insertBefore(g,s);
-
-    </script>
+</script>
 
 <script id="script-gmap" defer src="https://maps.google.com/maps/api/js?key=AIzaSyDT3Z8X-CRATL0Pu81j8T28eDzjfFzIJqE"></script><script defer src="https://www.google.com/recaptcha/api.js?hl=fr" async></script>
 
 
-<script>
+<script type="didomi/javascript" data-vendor="didomi:google">
     var google_conversion_id = 973474929;
     var google_custom_params = window.google_tag_params;
     var google_remarketing_only = true;
 </script>
-<script defer src="//www.googleadservices.com/pagead/conversion_async.js"></script>
-
-<script>
-    var gaProperty = 'UA-48313445-1';
-</script>
-
-<script>
+<script type="didomi/javascript" data-vendor="didomi:google" defer src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+<script type="didomi/javascript" data-vendor="c:googleana-4TXnJigR">
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
@@ -3830,143 +3815,11 @@ ul{
         m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     //creation de l'objet pour utiliser les fonctions
-    ga('create', gaProperty, 'auto');
+    ga('create', 'UA-48313445-1', 'auto');
     ga('require', 'displayfeatures');
     ga('require', 'GTM-N64J82S');
-
-    //Potentiel AB-test server-side ('$experimentId.$variationId')
-    
     ga('send', 'pageview');
 </script>
-
-<!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LE8TL3NMMR"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LE8TL3NMMR');
-</script>
-
-<script>
-
-    /* --------------------------------------------------------- Désactivation de cookie - CNIL - préconisé par GA developpers --------------------------------------------------- */
-
-    //Coupe le traking si l'utilisateur a déjà  répondu non avec un cookie
-    var disableStr = 'ga-disable-' + gaProperty;
-    if (document.cookie.indexOf(disableStr + '=true') > -1) {
-        window[disableStr] = true;
-    }
-
-    //Effacement des cookies
-    function delCookie(name) {
-        var path = ";path=" + "/";
-        var hostname = document.location.hostname;
-        if (hostname.indexOf("www.") === 0)
-            hostname = hostname.substring(4);
-        var domain = ";domain=" + "." + hostname;
-        var expiration = "Thu, 01-Jan-1970 00:00:01 GMT";
-        document.cookie = name + "=" + path + domain + ";expires=" + expiration;
-    }
-
-    //Récupère et boucle sur tous les types de cookies utilisés par Google Analytics
-    function deleteAnalyticsCookies() {
-        var cookieNames = ["__utma", "__utmb", "__utmc", "__utmt", "__utmv", "__utmz", "_ga", "_gat"];
-        for (var i = 0; i < cookieNames.length; i++)
-            delCookie(cookieNames[i])
-    }
-
-    //Supprime tous les cookie ga récupérés - met en disable Google analytics - set un cookie de "non acceptation" - et met une variable dans window
-    function gaOptout() { // Opt-out function + ajout des cookies pour ne pas redemander
-        deleteAnalyticsCookies();
-        document.cookie = disableStr + '=true;' + getCookieExpireDate() + ' ; path=/';
-        document.cookie = 'hasConsent=nocookies;' + getCookieExpireDate() + ' ; path=/';
-        window[disableStr] = true;
-        alert('Nous avons pris en compte votre choix');
-    }
-
-    /* -------------------------------------------------------- Information de l'utilisateur de la présence de cookie - CNIL --------------------------------------------------- */
-    //Retourne la durée d'expiration d'un cookie = date du jour + 13 mois (durée légale de la CNIL pour un cookie)
-    function getCookieExpireDate() {
-        var date = new Date();
-        date.setTime(date.getTime() + 33696000000); // Le nombre de millisecondes que font 13 mois
-        var expires = "; expires=" + date.toGMTString();
-        return expires;
-    }
-
-    //Set un cookie avec un nom, valeur et durée en heures
-    function setCookie(cname, cvalue, exhours) {
-        var path = ";path=" + "/";
-        var hostname = document.location.hostname;
-        if (hostname.indexOf("www.") === 0)
-            hostname = hostname.substring(4);
-        var domain = ";domain=" + "." + hostname;
-        var d = new Date();
-        d.setTime(d.getTime() + (exhours * 60 * 60 * 1000));
-        var expires = "expires=" + d.toUTCString();
-        document.cookie = cname + "=" + cvalue + path + domain + ";" + expires;
-    }
-
-    //Récupére un cookie à partir de son nom
-    function getCookie(NameOfCookie) {
-        if (document.cookie.length > 0) {
-            begin = document.cookie.indexOf(NameOfCookie + "=");
-            if (begin != -1) {
-                begin += NameOfCookie.length + 1;
-                end = document.cookie.indexOf(";", begin);
-                if (end == -1) end = document.cookie.length;
-                return unescape(document.cookie.substring(begin, end));
-            }
-        }
-        return null;
-    }
-
-    //Vérifie si on a déjà obtenu demandé le consentement de la personne qui visite le site.
-    function consent_true_no_expired() {
-        var hasConsent = getCookie('hasConsent');
-        if (!hasConsent) { //on y passe si on a pas le cookie hasContent (null donc 1ère visite)
-            return false;
-        } else {
-            return true; //cookies acceptés ou refusés, mais choix fait
-        }
-    }
-
-    //Ferme le bandeau de cookie
-        (function() {
-        let waitForJQuery = setInterval(() => {
-            if (typeof $ != 'undefined') {
-                clearInterval(waitForJQuery);
-                $('#cookie_close').click(function () {
-                    $('#cookie_banner').hide();
-                });
-            }
-        }, 10);
-    })();
-
-        /* --------------------------- track des membres sur analytics --------------------------------------------------- */
-    //checker si un utilisateur qui s'est connecté déjà 1 fois, revient sur le site (connecté ou pas), et compter le nombre de visite (connecté ou pas)
-    //le member_cookie sert à détecter si c'est un utilisateur (mis en place lorsque l'on se connecte la première fois)
-    //le temporary_cookie sert à empêcher l'envoi de l'event analytics si on est sur la même session (durée 1 heure)
-    var consent = getCookie('hasConsent');
-
-    if (consent != 'nocookies') {
-        var member_cookie = getCookie('member_cookie');
-        var temporary_cookie = getCookie('temporary_cookie');
-
-        if (member_cookie == 'true') {
-
-            if (temporary_cookie == 'true') {
-                //event déjà envoyé
-            } else {
-                //event analytics
-                ga('send', 'event', 'member', 'member', 'member');
-                //pose temporary_cookie
-                setCookie('temporary_cookie', 'true', 1);
-            }
-
-        }
-    }
-    </script>
 
 <script>
     (function() {
