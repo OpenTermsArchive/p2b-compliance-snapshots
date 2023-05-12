@@ -41,11 +41,11 @@ var ue_csm = window,
 pec:0,ts:0,erl:[],ter:[],buffer:[],mxe:50,startTimer:function(){a.ts++;setInterval(function(){d.ue&&a.pec<a.ec&&d.uex("at");a.pec=a.ec},1E4)}};l.skipTrace=1;h.skipTrace=1;h.isStub=1;d.ueLogError=h;d.ue_err=a;e.onerror=l})(ue_csm,window);
 
 
-var ue_id = 'JRD003JB8REGNZCSVNCM',
+var ue_id = '73CCQTNWC1BCAGN9MR9M',
     ue_url = '/uedata/uedata',
     ue_navtiming = 1,
     ue_mid = 'A1F83G8C2ARO7P',
-    ue_sid = '260-4555389-8301927',
+    ue_sid = '260-4699121-5633168',
     ue_sn = 'kdp-eu.amazon.com',
     ue_furl = 'fls-eu.amazon.co.uk',
     ue_surl = 'https://unagi-eu.amazon.com/1/events/com.amazon.csm.nexusclient.prod',
@@ -54,7 +54,7 @@ var ue_id = 'JRD003JB8REGNZCSVNCM',
     ue_urt = 3,
     ue_rpl_ns = 'cel-rpl',
     ue_ddq = 1,
-    ue_fpf = '//fls-eu.amazon.co.uk/1/batch/1/OP/A1F83G8C2ARO7P:260-4555389-8301927:JRD003JB8REGNZCSVNCM$uedata=s:',
+    ue_fpf = '//fls-eu.amazon.co.uk/1/batch/1/OP/A1F83G8C2ARO7P:260-4699121-5633168:73CCQTNWC1BCAGN9MR9M$uedata=s:',
     ue_sbuimp = 1,
     ue_ibft = 0,
     ue_sswmts = 0,
@@ -82,6 +82,8 @@ Y="detachEvent",da={cf:"criticalFeature",af:"aboveTheFold",fn:"functional",fp:"f
 $&&aa&&O($,aa,"cdn")}d.uei=Z;d.ueh=R;d.ues=e;d.uet=y;d.uex=S;a.reset=O;a.pause=function(d){a.paused=d};Z()})(ue_csm,ue_csm.window,ue_csm.document);
 
 
+ue.stub(ue,"event");ue.stub(ue,"onSushiUnload");ue.stub(ue,"onSushiFlush");
+
 ue.stub(ue,"log");ue.stub(ue,"onunload");ue.stub(ue,"onflush");
 (function(b){var a=b.ue,g=1===b.ue_no_counters;a.cv={};a.cv.scopes={};a.cv.buffer=[];a.count=function(b,f,c){var e={},d=a.cv,h=c&&0===c.c;e.counter=b;e.value=f;e.t=a.d();c&&c.scope&&(d=a.cv.scopes[c.scope]=a.cv.scopes[c.scope]||{},e.scope=c.scope);if(void 0===f)return d[b];d[b]=f;d=0;c&&c.bf&&(d=1);g||(ue_csm.ue_sclog||!a.clog||0!==d||h?a.log&&a.log(e,"csmcount",{c:1,bf:d}):a.clog(e,"csmcount",{bf:d}));a.cv.buffer.push({c:b,v:f})};a.count("baselineCounter2",1);a&&a.event&&(a.event({requestId:b.ue_id||
 "rid",server:b.ue_sn||"sn",obfuscatedMarketplaceId:b.ue_mid||"mid"},"csm","csm.CSMBaselineEvent.4"),a.count("nexusBaselineCounter",1,{bf:1}))})(ue_csm);
@@ -93,8 +95,8 @@ var ue_hoe = +new Date();
 window.ueinit = window.ue_ihb;
 </script>
 
-<!-- am7egmtjh2 -->
-<script>window.ue && ue.count && ue.count('CSMLibrarySize', 9817)</script>
+<!-- 6rtq862zvs0j7lu66lhnt -->
+<script>window.ue && ue.count && ue.count('CSMLibrarySize', 9905)</script>
       
 
       
@@ -536,6 +538,10 @@ d.push(h)}a.ext=d}}}));a.ue&&a.ue.isl?c():a.ue&&ue.attach&&ue.attach("load",q)})
 
 
 
+(function(a,b){function h(){return b.getEntriesByType("resource").filter(function(f){return 0!==f.responseEnd&&f.responseEnd-(a.ue._t0-b.timing.navigationStart)<a.ue._ld}).map(function(a){for(var d,b={},e,c=0;c<g.length;c++)d=g[c],e=a[d],void 0!==e&&(b[d]="number"===typeof e?Math.round(e):e);return b})}function k(){var b={pageType:a.ue_pty||null,subPageType:a.ue_spty||null,pageTypeId:a.ue_pti||null};b.resourceData=h();var d=!1;a.ue.count&&0===b.resourceData.length?a.ue.count(c+".noResources",1):a.ue.event&&
+(d=a.ue.event(b,l,m,n),a.ue.count&&(d?a.ue.count(c+".loggingSuccessful",1):a.ue.count(c+".loggingFailed",1)))}if(b&&b.getEntriesByType&&Array.prototype.map&&Array.prototype.filter&&a.ue&&a.ue.event&&a.ue.attach){var c="csm.resourceWatcher.timingHitLogger",l="csm",m="csm.ResourceTimingHit.2",n={sd:1},g="name entryType startTime duration initiatorType nextHopProtocol workerStart redirectStart redirectEnd fetchStart domainLookupStart domainLookupEnd connectStart connectEnd secureConnectionStart requestStart responseStart responseEnd transferSize encodedBodySize decodedBodySize".split(" ");
+a.ue.attach("load",k)}else a.ue.count&&ue.count("csm.resourceWatcher.dependenciesNotMet",1)})(ue_csm||{},window.performance);
+
 
 var ue_wtc_c = 3;
 ue_csm.ue.exec(function(b,e){function l(){for(var a=0;a<f.length;a++)a:for(var d=s.replace(A,f[a])+g[f[a]]+t,c=arguments,b=0;b<c.length;b++)try{c[b].send(d);break a}catch(e){}g={};f=[];n=0;k=p}function u(){B?l(q):l(C,q)}function v(a,m,c){r++;if(r>w)d.count&&1==r-w&&(d.count("WeblabTriggerThresholdReached",1),b.ue_int&&console.error("Number of max call reached. Data will no longer be send"));else{var h=c||{};h&&-1<h.constructor.toString().indexOf(D)&&a&&-1<a.constructor.toString().indexOf(x)&&m&&-1<
@@ -617,10 +623,10 @@ a=d[b]=(d[b]||0)+1,a>h&&(m=b,h=a))}g(m,"_cdn_mp")}d.ue&&"function"===typeof d.ue
 </div>
 
 <noscript>
-    <img height="1" width="1" style='display:none;visibility:hidden;' src='//fls-eu.amazon.co.uk/1/batch/1/OP/A1F83G8C2ARO7P:260-4555389-8301927:JRD003JB8REGNZCSVNCM$uedata=s:%2Fuedata%2Fuedata%3Fnoscript%26id%3DJRD003JB8REGNZCSVNCM:0' alt=""/>
+    <img height="1" width="1" style='display:none;visibility:hidden;' src='//fls-eu.amazon.co.uk/1/batch/1/OP/A1F83G8C2ARO7P:260-4699121-5633168:73CCQTNWC1BCAGN9MR9M$uedata=s:%2Fuedata%2Fuedata%3Fnoscript%26id%3D73CCQTNWC1BCAGN9MR9M:0' alt=""/>
 </noscript>
 
-<script>window.ue && ue.count && ue.count('CSMLibrarySize', 80557)</script>
+<script>window.ue && ue.count && ue.count('CSMLibrarySize', 81791)</script>
       
 
       
