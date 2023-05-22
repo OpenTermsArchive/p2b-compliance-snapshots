@@ -86,7 +86,31 @@ function tealiumTrackPageType() {}
 googletag.cmd = googletag.cmd || [];
 googletag.placement = googletag.placement || [];
 
-</script>
+(function() {
+    var gads = document.createElement('script');
+    gads.async = true; 
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') + '//pagead2.googlesyndication.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+})();
+googletag.cmd.push(function() {
+	googletag.placement.leaderboard = googletag.defineSlot('/5512429/daft/df_search_top', [[920, 90],[728, 90],[970, 250]], 'dfp-leaderboard').addService(googletag.pubads());
+	googletag.placement.mid_leaderboard = googletag.defineSlot('/5512429/daft/df_search_mid', [[728, 90], [786, 155], 'fluid'], 'dfp-mid_leaderboard').addService(googletag.pubads());
+	googletag.placement.skyscraper = googletag.defineSlot('/5512429/daft/df_search_side', [[160, 600],[120, 600]], 'dfp-skyscraper').addService(googletag.pubads());
+	googletag.placement.mpu = googletag.defineSlot('/5512429/daft/df_searchform_side', [[300, 250],[300, 600]], 'dfp-mpu').addService(googletag.pubads());
+	googletag.placement.halfbanner = googletag.defineSlot('/5512429/daft/df_native_photobrowser_bottom', [234,60], 'dfp-halfbanner').addService(googletag.pubads());
+	googletag.pubads().setTargeting('tiling', '6');
+	googletag.pubads().setTargeting('furnished', 'available');
+	googletag.pubads().setTargeting('page', 'default');
+	googletag.enableServices();
+});
+</script><script>
+                        googletag.cmd.push(function () {
+                            googletag.pubads().setPrivacySettings({limitedAds: true})
+                        })
+                    </script>
 <script type="text/javascript">var identityEnabled = 1;</script>
 </head>
 <body class=''  >
@@ -118,7 +142,7 @@ googletag.placement = googletag.placement || [];
 <div id="heading-container">
     <div class="headerrow">
         <a href="/" id="logo">
-            <img src="https://c1.dmstatic.com/1040/frontend/images/logo@2x.png" height="41" width="129" alt="Daft.ie">
+            <img src="https://c1.dmstatic.com/ad03aff49d544627f3dc1/frontend/images/logo@2x.png" height="41" width="129" alt="Daft.ie">
         </a>
         <div class="top-nav hidden-xs">
 
@@ -252,9 +276,9 @@ googletag.placement = googletag.placement || [];
                 </span>
                     </span>
         <span class="right">
-            <strong>54,851</strong> properties online
+            <strong>54,924</strong> properties online
             <span class="light">
-                (83 in the last 24 hours)
+                (242 in the last 24 hours)
             </span>
         </span>
     </div>
