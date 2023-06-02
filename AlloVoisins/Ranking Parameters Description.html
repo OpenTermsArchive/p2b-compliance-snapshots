@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
 
-    <script>
-    ga = function() {console.debug('ga');};
-    hj = function() {console.debug('hj');};
-    gtag = function() {console.debug('gtag');};
-</script>
-
-<!-- Didomi -->
+    <!-- Didomi -->
 <script type="text/javascript">window.gdprAppliesGlobally=true;(function(){function a(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var n=document.createElement("iframe");n.style.display="none";n.name=e;n.title=e;t.insertBefore(n,t.firstChild)}
     else{setTimeout(function(){a(e)},5)}}}function e(n,r,o,c,s){function e(e,t,n,a){if(typeof n!=="function"){return}if(!window[r]){window[r]=[]}var i=false;if(s){i=s(e,t,n)}if(!i){window[r].push({command:e,parameter:t,callback:n,version:a})}}e.stub=true;function t(a){if(!window[n]||window[n].stub!==true){return}if(!a.data){return}
         var i=typeof a.data==="string";var e;try{e=i?JSON.parse(a.data):a.data}catch(t){return}if(e[o]){var r=e[o];window[n](r.command,r.parameter,function(e,t){var n={};n[c]={returnValue:e,success:t,callId:r.callId};a.source.postMessage(i?JSON.stringify(n):n,"*")},r.version)}}
         if(typeof window[n]!=="function"){window[n]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");a("__tcfapiLocator");(function(e){
         var t=document.createElement("script");t.id="spcloader";t.type="text/javascript";t.async=true;t.src="https://sdk.privacy-center.org/"+e+"/loader.js?target="+document.location.hostname;t.charset="utf-8";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)})("3beb83b3-b225-49c6-924d-90c480c7bab6")})();</script>
+
+<script>
+    window.didomiOnReady = window.didomiOnReady || [];
+    window.didomiOnReady.push(function (Didomi) {
+        if (Didomi.isConsentRequired()) {
+            Didomi.getObservableOnUserConsentStatusForVendor('c:googleana-4TXnJigR')
+                .subscribe(function (consentStatusForVendor) {
+                    if (consentStatusForVendor === false &&typeof ga !== "function") {
+                        var t=document.createElement("script");t.innerHTML = "ga = function() {console.debug('ga');};gtag = function() {console.debug('gtag');};";document.body.appendChild(t);
+                    }
+                });
+            Didomi.getObservableOnUserConsentStatusForVendor('c:hotjar')
+                .subscribe(function (consentStatusForVendor) {
+                    if (consentStatusForVendor === false && typeof hj !== "function") {
+                        var t=document.createElement("script");t.innerHTML = "hj = function() {console.debug('hj');};";document.body.appendChild(t);
+                    }
+                });
+        }
+    });
+
+</script>
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -35,14 +50,14 @@
 
     <base href="https://www.allovoisins.com/">
 
-        <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium-webfont.woff2?e2a0e50a8d1798cf1aa0d3ff60477925" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium_italic-webfont.woff2?e2a0e50a8d1798cf1aa0d3ff60477925" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold-webfont.woff2?e2a0e50a8d1798cf1aa0d3ff60477925" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold_italic-webfont.woff2?e2a0e50a8d1798cf1aa0d3ff60477925" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold-webfont.woff2?e2a0e50a8d1798cf1aa0d3ff60477925" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold_italic-webfont.woff2?e2a0e50a8d1798cf1aa0d3ff60477925" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_extrabold-webfont.woff2?e2a0e50a8d1798cf1aa0d3ff60477925" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/icons/icomoon.ttf?e2a0e50a8d1798cf1aa0d3ff60477925" as="font" type="font/ttf" crossorigin>
+        <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium-webfont.woff2?ce2797aeb7585f83fe2fcdcb7deec2c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium_italic-webfont.woff2?ce2797aeb7585f83fe2fcdcb7deec2c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold-webfont.woff2?ce2797aeb7585f83fe2fcdcb7deec2c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold_italic-webfont.woff2?ce2797aeb7585f83fe2fcdcb7deec2c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold-webfont.woff2?ce2797aeb7585f83fe2fcdcb7deec2c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold_italic-webfont.woff2?ce2797aeb7585f83fe2fcdcb7deec2c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_extrabold-webfont.woff2?ce2797aeb7585f83fe2fcdcb7deec2c7" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/icons/icomoon.ttf?ce2797aeb7585f83fe2fcdcb7deec2c7" as="font" type="font/ttf" crossorigin>
 
     <title>Référencement, classement des annonces et contrôle des avis</title>
 	<meta property="fb:app_id" content="510588998981501">
@@ -69,7 +84,7 @@
 	<meta name="google-signin-scope" content="profile email">
 	<meta name="google-signin-client_id" content="709712733747-j1fld3bsesnhq3jndil9ep8g606hkhij.apps.googleusercontent.com">
     
-    <link rel="canonical" href="https://www.allovoisins.com/page/referencement" /><link rel="shortcut icon" type="image/x-icon" href="https://static.allovoisins.com/favicon.ico?e2a0e50a8d1798cf1aa0d3ff60477925" /><link rel="shortcut icon" type="image/png" href="https://static.allovoisins.com/favicon.png"/><link rel="apple-touch-icon" href="https://static.allovoisins.com/images/apple_touch_icone.png"><link rel='stylesheet' href='https://static.allovoisins.com/dist/css/all.min.3449c9e5e332f1dbb81505cd739fbf3f.css?e2a0e50a8d1798cf1aa0d3ff60477925'>
+    <link rel="canonical" href="https://www.allovoisins.com/page/referencement" /><link rel="shortcut icon" type="image/x-icon" href="https://static.allovoisins.com/favicon.ico?ce2797aeb7585f83fe2fcdcb7deec2c7" /><link rel="shortcut icon" type="image/png" href="https://static.allovoisins.com/favicon.png"/><link rel="apple-touch-icon" href="https://static.allovoisins.com/images/apple_touch_icone.png"><link rel='stylesheet' href='https://static.allovoisins.com/dist/css/all.min.3449c9e5e332f1dbb81505cd739fbf3f.css?ce2797aeb7585f83fe2fcdcb7deec2c7'>
     <script>
                 if (typeof window.data == "undefined") {
             window.data = {};
@@ -106,7 +121,7 @@
         window.ip = "5.196.30.134";window.geoloc_type = "";
     </script>
 
-            <script async src="https://static.allovoisins.com/dist/js/pages_disconnected.js?e2a0e50a8d1798cf1aa0d3ff60477925"></script>
+            <script async src="https://static.allovoisins.com/dist/js/pages_disconnected.js?ce2797aeb7585f83fe2fcdcb7deec2c7"></script>
     
             <script type="didomi/javascript" data-vendor="didomi:google">
     window.googletag = window.googletag || {cmd: []};
@@ -124,7 +139,7 @@
         
 </head>
 <body class="not_logged is_loading page_page">
-<input type="hidden" name="csrf_token" value="87a10108337a35baa6aebd43dfac17a7"/>
+<input type="hidden" name="csrf_token" value="83867a9fdfde08483e42a6cbe7d3fc6d"/>
 
 
 <div class="ily-main-container">
@@ -802,7 +817,7 @@ font-style : italic;
     }
 
 </style>
-<script type="text/javascript" src="https://static.allovoisins.com/js/modals/modal.js?e2a0e50a8d1798cf1aa0d3ff60477925"></script>
+<script type="text/javascript" src="https://static.allovoisins.com/js/modals/modal.js?ce2797aeb7585f83fe2fcdcb7deec2c7"></script>
 
 <div id="modal_credit" class="modal_credit">
     <div class="modal_box">
@@ -1028,7 +1043,7 @@ font-style : italic;
 </div>
 
 <script>
-        var csrft = "87a10108337a35baa6aebd43dfac17a7";
+        var csrft = "83867a9fdfde08483e42a6cbe7d3fc6d";
 </script>
 
     <footer id="footer" class="footer bg-neutral-00 mg-vt-xxl separator-inherit">
@@ -1259,7 +1274,7 @@ font-style : italic;
             </div>
         </div>
         <span class="num-version">
-        Version 16.1.2    </span>
+        Version 16.1.3    </span>
 </footer>
 
 
