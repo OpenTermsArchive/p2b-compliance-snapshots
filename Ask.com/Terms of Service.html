@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="/s/0-6-84/usp-api.min.js"></script>
+    <script src="/s/0-6-85/usp-api.min.js"></script>
     <meta charset="UTF-8"/>
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -38,7 +38,7 @@
 
 
 <link rel="stylesheet" type="text/css"
-          href="/s/0-6-84/site-ask-sites-terms-page.css"/>
+          href="/s/0-6-85/site-ask-sites-terms-page.css"/>
     <script>
         var App = {};
     </script>
@@ -80,7 +80,7 @@ return clientId;
     
 window.dataLayer = window.dataLayer || [];
     
-    var pageViewPayload = {"event":"dataLayer-initialized","acquisitionDivision":"dirN","adId":"","experience":"ctrl-ask-organic-adsense","fullUrl":"http://www.ask.com/terms?ueid=238571ad-6ff0-4cc0-937d-1282e58a2df3","taboolaSiteId":"","layout":"Default","abTestIds":"","locale":"us","oCode":"","pageViewId":"9C376D8D-4133-4BCB-BFF4-9222DBAD59D2","requestId":"1903ca557f2557b8bfd6fec8a3e64ece7b3eb873d79189bab2b4ebc72df5734b","pageNumber":1,"product":"ask.com","queryOrigination":"","searchQuery":"","pageType":"termsPage","appName":"Archie_Askus","extensionLanguage":"en","countryISO2Code":"fr","countryISO3Code":"fra","regionName":"cvl","uniqueEntryId":"238571ad-6ff0-4cc0-937d-1282e58a2df3","pageTitle":"Ask.com - What's your Question?","fallbackType":"trafficTypeConfig"};
+    var pageViewPayload = {"event":"dataLayer-initialized","acquisitionDivision":"dirN","adId":"","experience":"ctrl-ask-organic-adsense","fullUrl":"http://www.ask.com/terms?ueid=28ef51a6-d121-4f98-9754-cab543479fa2","taboolaSiteId":"","layout":"Default","abTestIds":"","locale":"us","oCode":"","pageViewId":"31CF1D3C-929C-4211-9E9B-9291522E314A","requestId":"23a6ba65da70ecff4a5c643affa57e70c82faaa5f48de9574e52e84903fac70a","pageNumber":1,"product":"ask.com","queryOrigination":"","searchQuery":"","pageType":"termsPage","appName":"Archie_Askus","extensionLanguage":"en","countryISO2Code":"fr","countryISO3Code":"fra","regionName":"cvl","uniqueEntryId":"28ef51a6-d121-4f98-9754-cab543479fa2","pageTitle":"Ask.com - What's your Question?","fallbackType":"trafficTypeConfig"};
     
     
 addABCustomDimensions(pageViewPayload);
@@ -222,13 +222,15 @@ if (isDataLayerDefined) {
 <input type="hidden" id="partnerID" name="l" value="dir">
                 <input type="hidden" id="qo" name="qo" value="serpSearchTopBox">
                 
-<input type="hidden" id="ueid-top" name="ueid" value="238571ad-6ff0-4cc0-937d-1282e58a2df3">
+<input type="hidden" id="ueid-top" name="ueid" value="28ef51a6-d121-4f98-9754-cab543479fa2">
                 
 <input class="PartialSearchBox-input js-PartialSearchBox-input  top"
                     data-zone="header" validate="required" position=top value="" name="q" autocomplete="off" maxlength="2048" 
 placeholder="Search...">
                     
-</form>
+<span class="tab-button">Tab</span>
+                    <div class="suggestion-tab"></div>
+            </form>
             
 
 
@@ -1319,7 +1321,7 @@ placeholder="Search...">
         </footer>
     </div>
 </div>
-<script src="/s/0-6-84/site-ask-sites.min.js"></script>
+<script src="/s/0-6-85/site-ask-sites.min.js"></script>
 <script>
     $(document).ready(function ($) {
         var i, k, event, readyElementList;
@@ -1367,6 +1369,7 @@ placeholder="Search...">
             "ldomain": "/",
             "twoColumn": "",
             "enableAutocompleteOnFocus": "",
+            "enableAutoCompleteOnTab": "",
             "showAcMagnifier": "",
             "showRsMagnifier": "",
             "enableAAAutocompleteAPI": "true",
@@ -1378,7 +1381,7 @@ placeholder="Search...">
             "tag": "wfp",
             "hi": "1",
             "prevQuery": "",
-            "additionalParameters": "ueid=238571ad-6ff0-4cc0-937d-1282e58a2df3",
+            "additionalParameters": "ueid=28ef51a6-d121-4f98-9754-cab543479fa2",
             "ssBold": "'false'",
             "clearSearchHistory": "Clear search history",
             "max": "",
@@ -1439,6 +1442,7 @@ placeholder="Search...">
 
 
 
+
 var observer = new MutationObserver(function(mutations) {
                                 let elementTarget = $((mutations[0].target)).hasClass("bottom") ? ":last" : ":first";
                                 let partialSearchBoxInput = ".PartialSearchBox-input"+elementTarget;
@@ -1469,6 +1473,49 @@ var observer = new MutationObserver(function(mutations) {
 
                         
 
+
+
+
+
+
+ 
+                            function getRelatedSearchResults() {
+                                const rsContent = document.querySelector('.PartialRelatedSearch-content .PartialRelatedSearch-list'),
+                                rsChildNodes = rsContent ? rsContent.children : [],
+                                rsList = [],
+                                rsItems = [];
+
+                                for (let i = 0; i < rsChildNodes.length; i++) {
+                                    const rsItem = rsChildNodes[i].cloneNode(true);
+                                    rsList.push(rsItem);
+                                    if (rsList.length === 4) {
+                                        break;
+                                    }
+                                }
+                                
+                                rsList.forEach((item) => {
+                                    const itemLinkText = item.getElementsByClassName("PartialRelatedSearch-item-link-text");
+                                    itemLinkText[0].innerHTML = itemLinkText[0].innerText;
+
+                                    
+rsItems.push(item);
+                                });
+
+                                return rsItems;
+                            }
+
+                            function logRsClickImpressionOnSearchBox(window) {
+                                window.dataLayer = window.dataLayer || [];
+                                window.dataLayer.push({
+                                    'event': 'related-search-click',
+                                    'ordinal': 2,
+                                    'providerSource': 'rogers',
+                                    'resultType': 'searchSuggestionRS',
+                                    'zone': 'top'
+                                });
+                            }
+
+                        
 
 }
 
