@@ -23,8 +23,8 @@
     <link rel="preconnect" href="https://code.jquery.com/" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto:400,600,700,800|Open+Sans:400,600,700,800&subset=cyrillic,latin-ext&display=swap" crossorigin="anonymous">
-        <link rel="preload" href="/bundles/scripts?v=zOv0aQbPwgLMfSMjKMdowlN5Q15D8n0Co7R_Vfw_YO41" as="script">
-    <link href="/main/css?v=aSWhqnkllAeykuDIBtwSVqHYWLYDgaDbF3M7HYjruIU1" rel="stylesheet"/>
+        <link rel="preload" href="/bundles/scripts?v=0Lesyv6txvOlWBbvyLrD8_azKCFYbFLADQNZqBdz9WU1" as="script">
+    <link href="/main/css?v=Vl9pjBsRxaRKpWw31IfSTJGGmoJcsbrqQq65OZIfA6Y1" rel="stylesheet"/>
 
 
 
@@ -85,7 +85,7 @@
     </script>
     <!-- End Google Tag Manager -->
         <!-- OneTrust Cookies Consent Notice start for getapro.lv -->
-        <script defer src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="c04f5a17-a484-4510-838b-1aabedda36ea"></script>
+        <script defer src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="c04f5a17-a484-4510-838b-1aabedda36ea-test"></script>
         <script type="text/javascript">
             function OptanonWrapper() { }
         </script>
@@ -199,7 +199,7 @@
     <ul class="nav navbar-nav navbar-right">
         
         <li class="hidden-xs"><a href="/account/registertradesman">Kļūt par izpildītāju</a></li>
-        <li><a href="/account/login" id="loginLink">Ienākt</a></li>
+        <li><a href="#loginModal" data-toggle="modal">Ienākt</a></li>
     </ul>
 
                     </div><!-- /.container -->
@@ -208,7 +208,84 @@
         </div><!-- /.navbar -->
     </header>
 
-    <!-- ============================================================= HEADER : END ============================================================= -->
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-auto">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-cancel-1"></i></span></button>
+                <h3 class="modal-title">Ienākt caur e-pastu</h3>
+            </div>
+
+            <div class="modal-body with-padding">
+                <form method="post" action="/account/loginmodal" data-target="form" class="forms">
+                    <div class="form-group">
+                        <input class="form-control trim-input" name="Email" placeholder="E-pasts" type="text" />
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" name="Password" placeholder="Parole" type="password" />
+                    </div>
+                    <div class="login-act">
+                        <div class="text-xs">
+                            <a href="/account/forgotpassword">Aizmirsāt paroli?</a>
+                        </div>
+                        <div>
+                            <label>
+                                <input id="RememberMe" name="RememberMe" type="checkbox" value="true" checked />
+                                <span class="remember-me-text">Atcerēties?</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-default btn-full-width">Ienākt</button>
+                    </div>
+                    <input type="hidden" id="returnUrl" name="returnUrl">
+                </form>
+
+                <h5 class="sidelines text-center mt-10"><span>Ienākt caur</span></h5>
+
+                
+<form action="/account/externallogin" id="ExternalLoginForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="qLbQptMvfxoeF3sZBaqL2Wvhc6id7NITLNTVHXBXEiwqdepGFspnv-aE7k2Hzvzj9YsTexFklU5yejKMjkYW80UYU_MVZGTcjCu8teUL55E1" />    <input type="hidden" value="" name="provider" id="provider-input" />
+    <a href="#facebook-login" class="btn btn-full-width btn-fb mb-0" value="Facebook" name="provider" onclick="fbLogin();">
+        <i class="gicon-fb"></i>
+        Facebook
+    </a>
+    <a href="#google-login" class="btn btn-full-width btn-google" value="Google" name="provider" onclick="googleLogin();">
+        <i class="gicon-google"></i>
+        Google
+    </a>
+    <div id="appleid-signin" data-type="sign in" data-color="white" data-height="44"></div>
+    <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+    <script type="text/javascript">
+      AppleID.auth.init({
+        clientId: 'com.getapro.webviewapp.live',
+        scope: 'name email',
+        redirectURI: 'https://getapro.lv/account/loginapple',
+        state: 'Initial user authentication request',
+        usePopup : false
+      });
+    </script>
+</form>
+<script>
+  function fbLogin() {
+    $("#provider-input").val('Facebook');
+    $('#ExternalLoginForm').submit();
+  }
+  function googleLogin() {
+    $("#provider-input").val('Google');
+    $('#ExternalLoginForm').submit();
+  }
+</script>
+
+
+                <hr class="thin" />
+Vēl neesat reģistrējies?                <a href="/account/registertradesman" class="text-strong">Kļūt par izpildītāju</a>
+            </div>
+        </div>
+    </div>
+</div>    <!-- ============================================================= HEADER : END ============================================================= -->
     <!-- ============================================================= MAIN ============================================================= -->
 
     <main>
@@ -582,9 +659,9 @@ var google_remarketing_only = true;
         }
 </script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,600,700,800|Open+Sans:400,600,700,800&subset=cyrillic,latin-ext&display=swap" rel="stylesheet" crossorigin="anonymous">
-    <link href="/bundles/fonts?v=th_G0JzlzpyPSipbGWzX9FKRFcfxJcuMynjXzhhHKiU1" rel="stylesheet"/>
+    <link href="/bundles/fonts?v=u0W5XuFMXjq6bZLgNLR9UwfdtGUEnEXLnCrJ4cK6Cvw1" rel="stylesheet"/>
 
-    <link href="/bundles/css?v=LQUHnExOqoSGx5enHM16ZSBj_M2QVNcmSyl_EWWRqm41" rel="stylesheet" data-skrollr-stylesheet />
+    <link href="/bundles/css?v=rVpy7Il-SPtYcBN3yzFkrFpNQD1-oCyLVRwdWBSSWKk1" rel="stylesheet" data-skrollr-stylesheet />
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script>
@@ -609,7 +686,7 @@ var google_remarketing_only = true;
             }
         };
     </script>
-<script src="/bundles/scripts?v=zOv0aQbPwgLMfSMjKMdowlN5Q15D8n0Co7R_Vfw_YO41"></script>
+<script src="/bundles/scripts?v=0Lesyv6txvOlWBbvyLrD8_azKCFYbFLADQNZqBdz9WU1"></script>
 
 
     <div id="notifications-pane" class="popover"></div>
