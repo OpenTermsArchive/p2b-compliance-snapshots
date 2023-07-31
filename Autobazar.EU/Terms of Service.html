@@ -49,6 +49,14 @@ li{padding: 5px !important}
     }
 </style>
 
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/onesignalsdkworker.js');
+        });
+    }
+</script>
+
 
 <script>
     if (typeof setPageData !== 'undefined' && setPageData) {
