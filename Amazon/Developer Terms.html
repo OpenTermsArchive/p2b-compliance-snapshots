@@ -50,7 +50,7 @@
         
         
         <link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/I/11EIQ5IGqaL._RC|01ZTHTZObnL.css,41wZkyTaWoL.css,31Y8m1dzTdL.css,013z33uKh2L.css,017DsKjNQJL.css,0131vqwP5UL.css,41EWOOlBJ9L.css,11TIuySqr6L.css,01ElnPiDxWL.css,11bGSgD5pDL.css,01Dm5eKVxwL.css,01IdKcBuAdL.css,01y-XAlI+2L.css,21N4kUH7pxL.css,01oDR3IULNL.css,41CYNGpGlrL.css,01XPHJk60-L.css,114y0SIP+yL.css,21aPhFy+riL.css,11gneA3MtJL.css,21fecG8pUzL.css,01ulGzBW88L.css,01CFUgsA-YL.css,31C80IiXalL.css,11qour3ND0L.css,11gKCCKQV+L.css,11061HxnEvL.css,11oHt2HYxnL.css,013RDhw9hoL.css,11JQtnL-6eL.css,116v6uYvN6L.css,11jtXRmppwL.css,01QrWuRrZ-L.css,21zuRztKjtL.css,11QyqG8yiqL.css,11K24eOJg4L.css,11F2+OBzLyL.css,01890+Vwk8L.css,11Y05DTEL6L.css,01cbS3UK11L.css,21F85am0yFL.css,01giMEP+djL.css_.css?AUIClients/AmazonUI#us.not-trident" />
-<link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/I/714GIIqZzkL.css?AUIClients/DeXWebsiteAUIAssets" />
+<link rel="stylesheet" href="https://images-na.ssl-images-amazon.com/images/I/713EQs+lJTL.css?AUIClients/DeXWebsiteAUIAssets" />
 
 
         
@@ -166,17 +166,10 @@
 
         <script src="https://m.media-amazon.com/images/G/01/envImprovement/js/jquery/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
         <script src="https://ds6yc8t7pnx74.cloudfront.net/content/dam/developer-portal/analytics/prod/launch-EN968f8a7401fc4ccea43ced61e7b0c2bb.min.js" async></script>
+        <script src="https://d3om7fhh4x0u22.cloudfront.net/CoveoJsSearch.min.js"></script>
+        <link rel="stylesheet" href="https://d3om7fhh4x0u22.cloudfront.net/CoveoFullSearch.min.css" />
 
-        <script src="https://dwrl96u0lgux5.cloudfront.net/CoveoJsSearch.min.js"></script>
         
-        <link rel="stylesheet" href="https://dwrl96u0lgux5.cloudfront.net/CoveoFullSearch.min.css" />
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const organizationId = "amazoncomproduction9q1by2xb";
-            const apiKey = "xx42d66989-6d5b-4bd4-bc36-d3b3a04aa40f";
-            Coveo.SearchEndpoint.configureCloudV2Endpoint(organizationId, apiKey);
-          })
-        </script>
         
 <script type="text/javascript">
 (function() {
@@ -235,15 +228,41 @@
 
 
 
+
+
+
 <div class="dphSearchBarWrap">
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        Coveo.initSearchbox(
-          document.getElementById("dphSearchBox"),
-          "/search"
-        );
-        $('#dphSearchBox .magic-box input').attr('placeholder', 'Search...');
-      })
+        document.addEventListener("DOMContentLoaded", function () {
+            const organizationId = "amazoncomproduction9q1by2xb";
+            const apiKey = "xxfb0d3e24-3cfa-474a-84d3-077e3cc6c548";
+            Coveo.SearchEndpoint.configureCloudV2Endpoint(organizationId, apiKey);
+            Coveo.initSearchbox(
+                document.getElementById("dphSearchBox"),
+                "/search"
+            );
+            Coveo.$$(dphSearchBox).on(Coveo.StandaloneSearchInterfaceEvents.beforeRedirect, function(e, args){
+                const query = Coveo.$$(document.querySelector('.CoveoSearchbox .magic-box-input'));
+                const searchPageUri = args.searchPageUri + '#q=' + encodeURIComponent(query.text()) + "&t=Appstore";
+                window.location.href = searchPageUri;
+                args.cancel = true; // cancels the current page to redirection
+            });
+            $('#dphSearchBox .magic-box input').attr('placeholder', 'Search...');
+
+            if (false) {
+                var searchInterface = document.getElementById('dphSearchBox');
+                Coveo.$$(searchInterface).on('populateOmniboxSuggestions', function(e, args){
+                    const suggestions = args.suggestions[0].then((s) => {
+                        s.forEach((el) => {
+                            el.html = '<svg focusable="false" enable-background="new 0 0 20 20" viewBox="0 0 20 20" xmlns="ghttp://www.w3.org/2000/sv" ' +
+                                'role="img" aria-label="Search" class="coveo-search-button-svg"><title>Search</title><g fill="currentColor">' +
+                                '<path class="coveo-magnifier-circle-svg" d="m8.368 16.736c-4.614 0-8.368-3.754-8.368-8.368s3.754-8.368 8.368-8.368 8.368 3.754 8.368 8.368-3.754 8.368-8.368 8.368m0-14.161c-3.195 0-5.793 2.599-5.793 5.793s2.599 5.793 5.793 5.793 5.793-2.599 5.793-5.793-2.599-5.793-5.793-5.793"></path>' +
+                                '<path d="m18.713 20c-.329 0-.659-.126-.91-.377l-4.552-4.551c-.503-.503-.503-1.318 0-1.82.503-.503 1.318-.503 1.82 0l4.552 4.551c.503.503.503 1.318 0 1.82-.252.251-.581.377-.91.377"></path></g></svg>'+'&nbsp&nbsp'+ el.html
+                        })
+                    });
+                });
+            }
+        })
     </script>
     <div class="dphSearchIconWrap">
         <button id="searchButton" class="dphButton dphButtonSearch">
@@ -257,7 +276,6 @@
     <div class="dphSearch active">
         <div class="dphSearchWrap">
             <div id="dphSearchBox" class="CoveoSearchInterface" data-excerpt-length="120"
-                 data-pipeline="AppstoreAllContent"
                  data-enable-duplicate-filtering="true" data-allow-queries-without-keywords="false">
                 <div class="CoveoAnalytics" data-anonymous="true" data-search-hub="dex-header-search"></div>
                 <div class="coveo-search-section">
@@ -266,25 +284,28 @@
                         "language": "English"
                     }
                     </script>
-                    <div class="CoveoSearchbox" data-enable-omnibox="true" data-enable-query-syntax="true"
-                         data-search-as-you-type-delay="300" data-enable-query-suggest-addon='false'>
-                        <div class="CoveoOmniboxResultList" data-layout="list">
-                            <div class="coveo-show-if-results">
-                                <script class="result-template" type="text/html">
-                                    <div>
-                                        <div class="co-highlight">
-                                            <div><a class='CoveoResultLink'></a></div>
-                                            <div class='CoveoExcerpt'></div>
+                    
+                    
+                        <div class="CoveoSearchbox c-weblab-treatment" data-enable-omnibox="true" data-enable-query-syntax="true"
+                             data-search-as-you-type-delay="300" data-enable-query-suggest-addon='false'>
+                            <div class="CoveoOmniboxResultList" data-layout="list">
+                                <div class="coveo-show-if-results">
+                                    <script class="result-template" type="text/html">
+                                        <div>
+                                            <div class="co-highlight">
+                                                <div><a class='CoveoResultLink'></a></div>
+                                                <div class='CoveoExcerpt'></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </script>
-                            </div>
-                            <div class="coveo-show-if-no-results">
-                                <p>No results found</p>
-                                <div class="co-empty">Try a different or more specific query</div>
+                                    </script>
+                                </div>
+                                <div class="coveo-show-if-no-results">
+                                    <p>No results found</p>
+                                    <div class="co-empty">Try a different or more specific query</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -686,7 +707,7 @@ var ta={getItem:function(a){try{return f.localStorage.getItem(a)}catch(b){}},set
 localStorage:k.localStorage&&ta,toggleResponsiveGrid:za,responsiveGridEnabled:Aa}});m(/UCBrowser/i)||k.localStorage&&C(n,ta.getItem("a-font-class"));r.declare("a-event-revised-handling",!1);try{var y=navigator.serviceWorker}catch(a){F("sw:nav_err")}y&&(x(y,"message",function(a){a&&a.data&&v(a.data.k,a.data.v)}),y.controller&&y.controller.postMessage("MSG-RDY"));var D=[];(function(a){var b=a.reg,c=a.unreg;y&&y.getRegistrations?(O.when("A").execute(function(a){na(a,c,"unregister")}),x(f,"load",function(){O.when("A").execute(function(a){na(a,
 b,"register");ma()})})):(b&&b.browser&&D.push("sw:browser:register:unsupported"),c&&c.browser&&D.push("sw:browser:unregister:unsupported"),ma())})({reg:{},unreg:{}});r.declare("a-fix-event-off",!1);v("pagejs:pkgExecTime",w()-N)})(window,document,Date);
   (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/61XKxrBtDVL._RC|11Y+5x+kkTL.js,51106gSDnJL.js,11yKORv-GTL.js,11giXtZCwVL.js,01+z+uIeJ-L.js,01VRMV3FBdL.js,21SDJtBU-PL.js,012FVc3131L.js,11rRjDLdAVL.js,51H19hJRYrL.js,11kWu3cNjYL.js,11tMohjWmVL.js,11OREnu1epL.js,11wcWdhrnDL.js,21ssiLNIZvL.js,0190vxtlzcL.js,51+N26vFcBL.js,01JYHc2oIlL.js,31R9m8rig5L.js,01ezj5Rkz1L.js,11+RxVdhNcL.js,31o2NGTXThL.js,01rpauTep4L.js,01KFkXJxMTL.js_.js?AUIClients/AmazonUI');
-  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/61l6cX3PFeL.js?AUIClients/DeXWebsiteAUIAssets');
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/61Hh1Y310rL.js?AUIClients/DeXWebsiteAUIAssets');
 </script>
 
 
