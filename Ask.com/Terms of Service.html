@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="/s/0-6-91/usp-api.min.js"></script>
+    <script src="/s/0-6-92/usp-api.min.js"></script>
     <meta charset="UTF-8"/>
     <meta name="referrer" content="no-referrer-when-downgrade" />
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -38,7 +38,7 @@
 
 
 <link rel="stylesheet" type="text/css"
-          href="/s/0-6-91/site-ask-sites-terms-page.css"/>
+          href="/s/0-6-92/site-ask-sites-terms-page.css"/>
     <script>
         var App = {};
     </script>
@@ -67,39 +67,45 @@ return clientId;
 
 <script>
     if(typeof window.getUrlParamVal !== "function"){
-        window.getUrlParamVal = function(param) {
-  if (typeof URLSearchParams === "function" && location.search) {
-    var urlParams = new URLSearchParams(location.search);
-    return urlParams.get(param);
-  }
-  return "";
+        if(typeof window.getUrlParamVal !== "function"){
+    window.getUrlParamVal = function(param) {
+      if (typeof URLSearchParams === "function" && location.search) {
+        var urlParams = new URLSearchParams(location.search);
+        return urlParams.get(param);
+      }
+      return "";
+    }
 }
-        
-window.getUtmContent = function(param) {
-  var utmContent = getUrlParamVal("utm_content");
-  if(utmContent) {
-    try{
-      var decodedParam = decodeURIComponent(utmContent).replace(/params:/g, "");
-      var urlParams = new URLSearchParams(decodedParam);
-      return urlParams.get(param);
-    }catch(e){
-      console.error("Error decoding utm_content: " + e.message);
-    };
-  }
-  return "";
+
+if(typeof window.getUtmContent !== "function"){ 
+    window.getUtmContent = function(param) {
+      var utmContent = getUrlParamVal("utm_content");
+      if(utmContent) {
+        try{
+          var decodedParam = decodeURIComponent(utmContent).replace(/params:/g, "");
+          var urlParams = new URLSearchParams(decodedParam);
+          return urlParams.get(param);
+        }catch(e){
+          console.error("Error decoding utm_content: " + e.message);
+        };
+      }
+      return "";
+    }
 }
-    
-window.generateUUID = function() {
-    let dt = new Date().getTime(),
-    uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
-        /[xy]/g,
-        function (c) {
-        var r = (dt + Math.random() * 16) % 16 | 0;
-        dt = Math.floor(dt / 16);
-        return (c == 'x' ? r : (r & 0x3) | 0x8).toString(16);
-        }
-    );
-    return uuid.toUpperCase();
+
+if(typeof window.generateUUID !== "function"){
+    window.generateUUID = function() {
+        let dt = new Date().getTime(),
+        uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
+            /[xy]/g,
+            function (c) {
+            var r = (dt + Math.random() * 16) % 16 | 0;
+            dt = Math.floor(dt / 16);
+            return (c == 'x' ? r : (r & 0x3) | 0x8).toString(16);
+            }
+        );
+        return uuid.toUpperCase();
+    }
 }
 }
 
@@ -116,7 +122,7 @@ window.generateUUID = function() {
 
     window.dataLayer = window.dataLayer || [];
     
-    var pageViewPayload = {"event":"dataLayer-initialized","acquisitionDivision":"dirN","adId":"","experience":"ctrl-ask-organic-adsense","fullUrl":"http://www.ask.com/terms?ueid=daac1ee1-5361-41fa-aaa9-cc8a63ead15f","taboolaSiteId":"","layout":"Default","abTestIds":"","locale":"us","oCode":"","pageViewId":"C43C0FDE-74A5-4989-A68C-5888BE849714","requestId":"4bdb3e8e9ff21c7fbf3f3fdbbb009eaa075d25917a6c04afbca2429a4a7f7eb0","pageNumber":1,"product":"ask.com","queryOrigination":"","searchQuery":"","pageType":"termsPage","appName":"Archie_Askus","extensionLanguage":"en","countryISO2Code":"fr","countryISO3Code":"fra","regionName":"cvl","uniqueEntryId":"daac1ee1-5361-41fa-aaa9-cc8a63ead15f","pageTitle":"Ask.com - What's your Question?","fallbackType":"trafficTypeConfig"};
+    var pageViewPayload = {"event":"dataLayer-initialized","acquisitionDivision":"dirN","adId":"","experience":"ctrl-ask-organic-adsense","fullUrl":"http://www.ask.com/terms?ueid=f5ff9897-8f6b-4aef-aa4b-d69f7a9ea7e4","taboolaSiteId":"","layout":"Default","abTestIds":"","locale":"us","oCode":"","pageViewId":"4E5D7720-D145-44CE-AAC0-B97B9784AD66","requestId":"7cb52ead1a0017b68750467a13c5e7d0468792eb5ff623798caa41a4887c9061","pageNumber":1,"product":"ask.com","queryOrigination":"","searchQuery":"","pageType":"termsPage","appName":"Archie_Askus","extensionLanguage":"en","countryISO2Code":"fr","countryISO3Code":"fra","regionName":"cvl","uniqueEntryId":"f5ff9897-8f6b-4aef-aa4b-d69f7a9ea7e4","pageTitle":"Ask.com - What's your Question?","fallbackType":"trafficTypeConfig"};
     
     
 
@@ -259,7 +265,7 @@ if (isDataLayerDefined) {
 <input type="hidden" id="partnerID" name="l" value="dir">
                 <input type="hidden" id="qo" name="qo" value="serpSearchTopBox">
                 
-<input type="hidden" id="ueid-top" name="ueid" value="daac1ee1-5361-41fa-aaa9-cc8a63ead15f">
+<input type="hidden" id="ueid-top" name="ueid" value="f5ff9897-8f6b-4aef-aa4b-d69f7a9ea7e4">
                 
 <input class="PartialSearchBox-input js-PartialSearchBox-input  top"
                     data-zone="header" validate="required" position=top value="" name="q" autocomplete="off" maxlength="2048" 
@@ -1358,7 +1364,7 @@ placeholder="Search...">
         </footer>
     </div>
 </div>
-<script src="/s/0-6-91/site-ask-sites.min.js"></script>
+<script src="/s/0-6-92/site-ask-sites.min.js"></script>
 <script>
     $(document).ready(function ($) {
         var i, k, event, readyElementList;
@@ -1419,7 +1425,7 @@ placeholder="Search...">
             "tag": "wfp",
             "hi": "1",
             "prevQuery": "",
-            "additionalParameters": "ueid=daac1ee1-5361-41fa-aaa9-cc8a63ead15f",
+            "additionalParameters": "ueid=f5ff9897-8f6b-4aef-aa4b-d69f7a9ea7e4",
             "ssBold": "'false'",
             "clearSearchHistory": "Clear search history",
             "max": "",
