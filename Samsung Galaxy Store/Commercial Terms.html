@@ -44,11 +44,11 @@
 
   <style type="text/css" media="all">
   /*<![CDATA[*/
-  @import "https://img.samsungapps.com/seller/en_US/css2/base.css?ver=1691487864000";
-  @import "https://img.samsungapps.com/seller/en_US/css2/board.css?ver=1691487864000";
-  @import "https://img.samsungapps.com/seller/en_US/css2/guide.css?ver=1691487864000";
-  @import "https://img.samsungapps.com/seller/en_US/css2/layer.css?ver=1691487864000";
-  @import "https://img.samsungapps.com/seller/en_US/css2/main.css?ver=1691487864000";
+  @import "https://img.samsungapps.com/seller/en_US/css2/base.css?ver=1693299980000";
+  @import "https://img.samsungapps.com/seller/en_US/css2/board.css?ver=1693299980000";
+  @import "https://img.samsungapps.com/seller/en_US/css2/guide.css?ver=1693299980000";
+  @import "https://img.samsungapps.com/seller/en_US/css2/layer.css?ver=1693299980000";
+  @import "https://img.samsungapps.com/seller/en_US/css2/main.css?ver=1693299980000";
   /*]]>*/
   </style>
 
@@ -69,8 +69,8 @@
     };    
     
   </script>
-	<script src="https://img.samsungapps.com/seller/en_US/js/seller.js?ver=1691487864000" type="text/javascript" language="JavaScript"></script>
-	<script type="text/javascript" src="https://img.samsungapps.com/seller/en_US/js/common.js?ver=1691487864000"></script>
+	<script src="https://img.samsungapps.com/seller/en_US/js/seller.js?ver=1693299980000" type="text/javascript" language="JavaScript"></script>
+	<script type="text/javascript" src="https://img.samsungapps.com/seller/en_US/js/common.js?ver=1693299980000"></script>
 	<!-- import CryptoJS start -->
     <script src="https://img.samsungapps.com/seller/js/vendors/crypto-js-4.0.0.js"></script>
     <!-- import CryptoJS end -->
@@ -2788,6 +2788,37 @@ function selectChannel(type){
 	</div>
 </div>
 
+<div id="checkThemeAddNewPopup" class="layerPopup dv_boxin" style="display: none; z-index: 10001; width: 412px; position: absolute; left: 776.5px; top: 329.5px;">
+	<div class="lineBoxLT">
+	<div class="lineBoxRT">
+	<div class="lineBoxLB">
+	<div class="lineBoxRB">
+	
+	<div class="popGuide">
+		<p class="caution">Notice</p>
+		<div>
+			
+			<p>
+				Without submitting the Themes Seller Pledge, you cannot register Themes apps. For details, please check the notice.
+			</p>
+			
+			
+		
+		</div><br />
+		<p class="popBtnArea">
+			<a href="https://seller.samsungapps.com/notice/getNoticeDetail.as?csNoticeID=0000007854" class="btnGray"><span>View more</span></a>
+			<a href="#" onClick="close_popup('checkThemeAddNewPopup');" class="btnGray"><span>Close</span></a>
+		</p>
+	</div>
+	
+	<p class="popClose"><a href="#" onclick="close_popup('checkThemeAddNewPopup');" class="popup"><img src="https://img.samsungapps.com/seller/en_US/images/common/poplayer/btn_close.gif" alt="close"></a></p>
+	
+	</div>
+	</div>
+	</div>
+	</div>
+</div>
+
 	<script type="text/javascript">
 	init_a();
 	var watchFaceCookie = getCookie('popupYN');
@@ -3364,7 +3395,7 @@ function selectChannel(type){
       $j('.dft_lang_box > a').click(function(event) {
         var languageCode = $j(this).siblings().find('select').val();
         var href = $j(this).attr('href');
-        if(href == "#") {
+        if(href == "#1") {
         	 open_layerpopup("checkAndroidAddNewPopup");
         } else {
         	event.preventDefault();
@@ -3377,9 +3408,13 @@ function selectChannel(type){
       $j('.dft_lang_box02 > a').click(function(event) {
           var languageCode = $j(this).siblings().find('select').val();
           var href = $j(this).attr('href');
-          event.preventDefault();
-          $j('#newApplicationPopupLayer').hide();
-          window.location.href = href + "&defaultLanguage=" + languageCode;
+          if(href == "#2") {
+          	open_layerpopup("checkThemeAddNewPopup");
+          } else {
+        	  event.preventDefault();
+              $j('#newApplicationPopupLayer').hide();
+              window.location.href = href + "&defaultLanguage=" + languageCode;  
+          }
       });
 
       $j('.btn_add_app_close').click(function() {
