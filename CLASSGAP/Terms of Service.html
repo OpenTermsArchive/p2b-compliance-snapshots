@@ -19,8 +19,8 @@
 
         <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
     <link href="https://d2d74a7s2nfnwy.cloudfront.net/" rel="preconnect" crossorigin>
-    <link href="https://d2d74a7s2nfnwy.cloudfront.net/c/com.desktop.min.css?v=988" type="text/css" rel="stylesheet" media='screen' />
-                <link href="https://d2d74a7s2nfnwy.cloudfront.net/c/policy.min.css?v=988" rel="stylesheet" type="text/css" />
+    <link href="https://d2d74a7s2nfnwy.cloudfront.net/c/com.desktop.min.css?v=989" type="text/css" rel="stylesheet" media='screen' />
+                <link href="https://d2d74a7s2nfnwy.cloudfront.net/c/policy.min.css?v=989" rel="stylesheet" type="text/css" />
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                     <link rel="canonical" href="https://www.classgap.com/en/info/terms" />
@@ -71,6 +71,81 @@
 
                         <nav class="log" id="login-registration-buttons-header">
                             <ul id="nav-main">
+                                <li class="language_currency-li">
+                                    <a class="current_language-currency" data-lang="en">English, USD $
+                                        <span class="down-arrow"></span>
+                                    </a>
+
+    <div class="dropdown-langcurr">
+        <div class="div_language">
+            Language
+            <select class="select_lang">
+                        <option data-ga="lang es" >Español</option>
+                        <option data-ga="lang en" selected>English</option>
+                        <option data-ga="lang en-gb" >English (UK)</option>
+                        <option data-ga="lang fr" >Français</option>
+                        <option data-ga="lang it" >Italiano</option>
+                        <option data-ga="lang de" >Deutsch</option>
+                        <option data-ga="lang es-ar" >Español (Argentina)</option>
+                        <option data-ga="lang es-cl" >Español (Chile)</option>
+                        <option data-ga="lang es-co" >Español (Colombia)</option>
+                        <option data-ga="lang es-mx" >Español (México)</option>
+                        <option data-ga="lang es-pe" >Español (Perú)</option>
+            </select>
+        </div>
+        <div class="div_currency">
+            Currency
+            <select class="select_curr">
+                        <option data-ga="curr 1" >€ EUR</option>
+                        <option data-ga="curr 2" >£ GBP</option>
+                        <option data-ga="curr 3" selected>$ USD</option>
+                        <option data-ga="curr 9" >S/ PEN</option>
+                        <option data-ga="curr 5" >$ MXN</option>
+                        <option data-ga="curr 6" >$ COP</option>
+                        <option data-ga="curr 7" >$ CLP</option>
+                        <option data-ga="curr 8" >$ ARS</option>
+            </select>
+        </div>
+    </div>
+    <style>
+        .dropdown-langcurr {
+            position: relative;
+            display: none;
+            z-index: 51;
+            padding: 24px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.06);
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #2A3F55;
+        }
+
+            .dropdown-langcurr.fade-in {
+                display: block;
+            }
+
+        .div_currency {
+            margin-top: 16px;
+        }
+
+        .div_language, .div_currency {
+            display: grid;
+            gap: 8px;
+        }
+
+            .div_language .select_lang, .div_currency .select_curr {
+                padding: 8px;
+                border: 1px solid #D3D9DE;
+                border-radius: 8px;
+                min-width: 168px;
+                font-size: 16px;
+                background-color: #FFFFFF;
+                color: #2A3F55;
+            }
+    </style>
+
+                                </li>
                                 <li class="li-to-replace" style="width: 100px">&nbsp;</li>
                                 <li class="li-to-replace" style="width: 100px">&nbsp;</li>
                             </ul>
@@ -340,6 +415,60 @@
                                 <li class="menu-separator"><b><a href="/en/blog/">Blog</a></b></li>
 
                         <li><a href="/en/info/faq" rel="noindex,nofollow">Help</a></li>
+                        <li>
+
+    <div class="select_langcurr">
+        <select class="select_lang">
+                    <option data-ga="lang es" >Español</option>
+                    <option data-ga="lang en" selected>English</option>
+                    <option data-ga="lang en-gb" >English (UK)</option>
+                    <option data-ga="lang fr" >Français</option>
+                    <option data-ga="lang it" >Italiano</option>
+                    <option data-ga="lang de" >Deutsch</option>
+                    <option data-ga="lang es-ar" >Español (Argentina)</option>
+                    <option data-ga="lang es-cl" >Español (Chile)</option>
+                    <option data-ga="lang es-co" >Español (Colombia)</option>
+                    <option data-ga="lang es-mx" >Español (México)</option>
+                    <option data-ga="lang es-pe" >Español (Perú)</option>
+        </select>
+
+        <select class="select_curr">
+                    <option data-ga="curr 1" >€ EUR</option>
+                    <option data-ga="curr 2" >£ GBP</option>
+                    <option data-ga="curr 3" selected>$ USD</option>
+                    <option data-ga="curr 9" >S/ PEN</option>
+                    <option data-ga="curr 5" >$ MXN</option>
+                    <option data-ga="curr 6" >$ COP</option>
+                    <option data-ga="curr 7" >$ CLP</option>
+                    <option data-ga="curr 8" >$ ARS</option>
+        </select>
+    </div>
+    <style>
+        .select_langcurr {
+            display: flex;
+            gap: 24px;
+            margin-top: 16px;
+        }
+
+            .select_langcurr .select_lang, .select_langcurr .select_curr {
+                font-size: 16px;
+                padding: 8px;
+                border: 1px solid #D3D9DE;
+                border-radius: 4px;
+                background-color: #FFFFFF;
+                color: #2A3F55;
+            }
+
+            .select_langcurr .select_lang {
+                width: 168px;
+            }
+
+            .select_langcurr .select_curr {
+                width: 104px;
+            }
+    </style>
+
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -1080,86 +1209,6 @@
                                     <a href="/en/blog/">Blog</a>
                 <a href="/en/sitemap">Site map</a>
             </div>
-            <div class="footer-links">
-                <div class="select-config select-language">
-                    <b>Language</b>
-                    <li class="drop-up">
-                        <a class="dropbtn" data-lang="en">
-                            English
-                            <span class="icon-cg_rd_narrow_arrowdown">
-                                <img height="6" width="10" data-forceload="1" data-src="https://d2d74a7s2nfnwy.cloudfront.net/i/restyling/home/fletxa-abaix-blanca-fina.svg" alt="arrow" />
-                            </span>
-                        </a>
-                        <ul class="drop-up-content">
-                                    <li>
-                                        <span data-ga="lang es">Español</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="lang en">English</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="lang en-gb">English (UK)</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="lang fr">Français</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="lang it">Italiano</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="lang de">Deutsch</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="lang es-ar">Español (Argentina)</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="lang es-cl">Español (Chile)</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="lang es-co">Español (Colombia)</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="lang es-mx">Español (México)</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="lang es-pe">Español (Perú)</span>
-                                    </li>
-                        </ul>
-                    </li>
-                </div>
-                <div class="select-config">
-                    <b>Currency</b>
-                    <li class="drop-up">
-                        <a class="acronim dropbtn">
-                            $ USD
-                            <span class="icon-cg_rd_narrow_arrowdown"><img height="6" width="10" data-forceload="1" data-src="https://d2d74a7s2nfnwy.cloudfront.net/i/restyling/home/fletxa-abaix-blanca-fina.svg" alt="arrow" /></span>
-                        </a>
-                        <ul class="drop-up-content">
-                                    <li>
-                                        <span data-ga="curr 1">€ EUR</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="curr 2">£ GBP</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="curr 9">S/ PEN</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="curr 5">$ MXN</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="curr 6">$ COP</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="curr 7">$ CLP</span>
-                                    </li>
-                                    <li>
-                                        <span data-ga="curr 8">$ ARS</span>
-                                    </li>
-                        </ul>
-                    </li>
-                </div>
-            </div>
         </div>
 
         <div class="row last-row">
@@ -1250,14 +1299,14 @@
     <input type="hidden" id="hid-myurl" value="https://www.classgap.com/my/" />
     <input type="hidden" id="hid-lang" value="en" />
     <input type="hidden" id="hid-curr" value="3" />
-    <input type="hidden" id="hid-vjs" value="1010" />
+    <input type="hidden" id="hid-vjs" value="1011" />
     <input type="hidden" id="hid-cdnurl" value="https://d2d74a7s2nfnwy.cloudfront.net/" />
     <input type="hidden" id="hid-chiurl" value="https://dbwf8q1mv0cee.cloudfront.net/chi/" />
     <input type="hidden" id="hid-weburl" value="https://www.classgap.com/" />
     <input type="hidden" id="hgas" data-cfg="cfg" />
 
-    <script defer src="https://d2d74a7s2nfnwy.cloudfront.net/s/jquery.min.js?v=1010"></script>
-            <script defer src="https://d2d74a7s2nfnwy.cloudfront.net/s/com.min.js?v=1010"></script>
+    <script defer src="https://d2d74a7s2nfnwy.cloudfront.net/s/jquery.min.js?v=1011"></script>
+            <script defer src="https://d2d74a7s2nfnwy.cloudfront.net/s/com.min.js?v=1011"></script>
 
     <script>
         // Define dataLayer and the gtag function.
