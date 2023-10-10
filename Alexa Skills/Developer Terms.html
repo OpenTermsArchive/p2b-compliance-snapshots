@@ -230,7 +230,6 @@
 
 
 
-
 <div class="dphSearchBarWrap">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -243,25 +242,29 @@
             );
             Coveo.$$(dphSearchBox).on(Coveo.StandaloneSearchInterfaceEvents.beforeRedirect, function(e, args){
                 const query = Coveo.$$(document.querySelector('.CoveoSearchbox .magic-box-input'));
-                const searchPageUri = args.searchPageUri + '#q=' + encodeURIComponent(query.text()) + "&t=Appstore";
+                let searchPageUri = args.searchPageUri;
+                if(query.text() === 'Clear') {
+                    searchPageUri = args.searchPageUri + "#t=Appstore";
+                }
+                else {
+                    searchPageUri = args.searchPageUri + '#q=' + encodeURIComponent(query.text()) + "&t=Appstore";
+                }
                 window.location.href = searchPageUri;
                 args.cancel = true; // cancels the current page to redirection
             });
             $('#dphSearchBox .magic-box input').attr('placeholder', 'Search...');
 
-            if (false) {
-                var searchInterface = document.getElementById('dphSearchBox');
-                Coveo.$$(searchInterface).on('populateOmniboxSuggestions', function(e, args){
-                    const suggestions = args.suggestions[0].then((s) => {
-                        s.forEach((el) => {
-                            el.html = '<svg focusable="false" enable-background="new 0 0 20 20" viewBox="0 0 20 20" xmlns="ghttp://www.w3.org/2000/sv" ' +
-                                'role="img" aria-label="Search" class="coveo-search-button-svg"><title>Search</title><g fill="currentColor">' +
-                                '<path class="coveo-magnifier-circle-svg" d="m8.368 16.736c-4.614 0-8.368-3.754-8.368-8.368s3.754-8.368 8.368-8.368 8.368 3.754 8.368 8.368-3.754 8.368-8.368 8.368m0-14.161c-3.195 0-5.793 2.599-5.793 5.793s2.599 5.793 5.793 5.793 5.793-2.599 5.793-5.793-2.599-5.793-5.793-5.793"></path>' +
-                                '<path d="m18.713 20c-.329 0-.659-.126-.91-.377l-4.552-4.551c-.503-.503-.503-1.318 0-1.82.503-.503 1.318-.503 1.82 0l4.552 4.551c.503.503.503 1.318 0 1.82-.252.251-.581.377-.91.377"></path></g></svg>'+'&nbsp&nbsp'+ el.html
-                        })
-                    });
+            var searchInterface = document.getElementById('dphSearchBox');
+            Coveo.$$(searchInterface).on('populateOmniboxSuggestions', function(e, args){
+                const suggestions = args.suggestions[0].then((s) => {
+                    s.forEach((el) => {
+                        el.html = '<svg focusable="false" enable-background="new 0 0 20 20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" ' +
+                            'role="img" aria-label="Search" class="coveo-search-button-svg"><title>Search</title><g fill="currentColor">' +
+                            '<path class="coveo-magnifier-circle-svg" d="m8.368 16.736c-4.614 0-8.368-3.754-8.368-8.368s3.754-8.368 8.368-8.368 8.368 3.754 8.368 8.368-3.754 8.368-8.368 8.368m0-14.161c-3.195 0-5.793 2.599-5.793 5.793s2.599 5.793 5.793 5.793 5.793-2.599 5.793-5.793-2.599-5.793-5.793-5.793"></path>' +
+                            '<path d="m18.713 20c-.329 0-.659-.126-.91-.377l-4.552-4.551c-.503-.503-.503-1.318 0-1.82.503-.503 1.318-.503 1.82 0l4.552 4.551c.503.503.503 1.318 0 1.82-.252.251-.581.377-.91.377"></path></g></svg>&nbsp;&nbsp;'+ el.html
+                    })
                 });
-            }
+            });
         })
     </script>
     <div class="dphSearchIconWrap">
@@ -284,28 +287,22 @@
                         "language": "English"
                     }
                     </script>
-                    
-                    
-                        <div class="CoveoSearchbox c-weblab-treatment" data-enable-omnibox="true" data-enable-query-syntax="true"
-                             data-search-as-you-type-delay="300" data-enable-query-suggest-addon='false'>
-                            <div class="CoveoOmniboxResultList" data-layout="list">
-                                <div class="coveo-show-if-results">
-                                    <script class="result-template" type="text/html">
-                                        <div>
-                                            <div class="co-highlight">
-                                                <div><a class='CoveoResultLink'></a></div>
-                                                <div class='CoveoExcerpt'></div>
-                                            </div>
+
+                    <div class="CoveoSearchbox" data-enable-omnibox="true" data-enable-query-syntax="true"
+                         data-search-as-you-type-delay="300" data-enable-query-suggest-addon='true' id="standaloneSearchbox">
+                        <div class="CoveoOmniboxResultList" data-layout="list">
+                            <div class="coveo-show-if-results">
+                                <script class="result-template" type="text/html">
+                                    <div>
+                                        <div class="co-highlight">
+                                            <div><a class='CoveoResultLink'></a></div>
+                                            <div class='CoveoExcerpt'></div>
                                         </div>
-                                    </script>
-                                </div>
-                                <div class="coveo-show-if-no-results">
-                                    <p>No results found</p>
-                                    <div class="co-empty">Try a different or more specific query</div>
-                                </div>
+                                    </div>
+                                </script>
                             </div>
                         </div>
-                    
+                    </div>
                 </div>
             </div>
         </div>
