@@ -47,6 +47,7 @@
 	<link rel="preload" href="/assets/fonts/opensans-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="/assets/fonts/spinnaker-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="/assets/fonts/opensans-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/assets/fonts/barqo_-_sans_semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="/assets/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="/assets/fonts/poppins-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="/assets/fonts/poppins-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
@@ -57,20 +58,28 @@
     <link rel="alternate" hreflang="x-default" href="https://barqo.co/en/terms-conditions" />
     <link rel="alternate" hreflang="en" href="https://barqo.co/en/terms-conditions" />
 	<!-- Google Tag Manager -->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	<script async>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-WGL829');</script>
 	<!-- End Google Tag Manager -->
 	
-<link rel="stylesheet" href="https://barqo.co/assets/css/style.css?ts=1694696783" />
-<link rel="stylesheet" href="https://barqo.co/assets/intercom-hidden.css?ts=1694696784" /></head>
+<link rel="stylesheet" href="https://barqo.co/assets/css/style.css?ts=1697209477" fetchpriority="high" />
+<link rel="stylesheet" href="https://barqo.co/assets/intercom-hidden.css?ts=1697209478" fetchpriority="high" /></head>
 <body class="has-mobile-navbar  with-message-bar ">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGL829"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<style>
+body{margin-bottom:100px}
+#cookiebar{color:#fff;background:rgba(0,0,0,.5);font-size:12px;left:0;margin:0;padding:5px 10px;text-align:center;width:100%;border-top:1px solid #f5f5f5;z-index:999;position:fixed;bottom:0;line-height:30px}#cookiebar p{line-height:25px;max-width:1024px;margin:0 auto;padding:0}#cookiebar .acceptLink{background-color:green;color:#fff;border:1px solid #fff;border-radius:3px;margin:5px auto;display:inline-block;padding:3px 10px;font-weight:700;text-decoration:none}#cookiebar .acceptLink:hover{background-color:#fff;color:green}#cookiebar > p > a {color: #fff;}
+</style>
+
+<script>
+	function consentOk(a){a.preventDefault();var e=31556926000;var o=new Date,r=o.getTime();o.setTime(r+e);var e=o.toUTCString();document.cookie="CookieConsent=True; expires="+e+"; path=/",document.querySelector("#cookiebar").remove(),document.removeEventListener("scroll",consentOk);var n=document.querySelector(".parallax");n&&n.removeEventListener("scroll",consentOk)}function getCookie(e){var o,r=document.cookie.match(RegExp("(?:^|;\\s*)"+(o=e).replace(/([.*+?\^$(){}|\[\]\/\\])/g,"\\$1")+"=([^;]*)"));return r?r[1]:null}function showConsentBar(){document.querySelector("body").innerHTML+='<div id="cookiebar"><p>By continuing to use our site, you agree that we use your personal data to personalise ads and use cookies for personalised and non-personalised advertising in accordance with our  <a href="https://barqo.co/en/privacy-policy">Privacy policy</a> <a class="acceptLink" href="#" onclick="consentOk(event);" rel="nofollow">Agreed</a></p></div>',document.addEventListener("scroll",consentOk);var e=document.querySelector(".parallax");e&&e.addEventListener("scroll",consentOk)}"True"!=getCookie("CookieConsent")&&showConsentBar();
+</script>
 <div id="message_bar">
 	<a href="https://barqo.co/en/advice" target="_blank" rel="noopener noreferrer">Receive professional advice from our experts for your boat holiday here!</a>
 	<div id="close_message_bar">
@@ -607,7 +616,7 @@ Cancellation policies may be superseded by the safety cancellations, Guest Refun
 			<div class="row">
 				<div class="col col-3">
 					<div class="holder">
-						<h4>Company</h4>
+						<h3>Company</h3>
 						<ul>
 							<li><a href="https://barqo.co/en/about-us">About us</a></li>
 							<li><a href="https://barqo.co/en/paymentpolicy">Payment Policy</a></li>
@@ -618,7 +627,7 @@ Cancellation policies may be superseded by the safety cancellations, Guest Refun
 				</div>
 				<div class="col col-3">
 					<div class="holder">
-						<h4>Community</h4>
+						<h3>Community</h3>
 						<ul>
 							<li><a href="https://barqo.co/blog/">Blog</a></li>
 							<li id="review-aggregate" itemscope="" itemtype="http://schema.org/Product">
@@ -642,28 +651,17 @@ Cancellation policies may be superseded by the safety cancellations, Guest Refun
 										<i class="fa fa-star-o"></i>
 									</span>
 									<p>
-										<span class="votes" itemprop="reviewCount">28162</span>
+										<span class="votes" itemprop="reviewCount">28214</span>
 										<a href="https://barqo.co/en/reviews">reviews</a>
 									</p>
 								</div>
-							</li>
-							<li style="padding-top: 20px;">
-								<!-- TrustBox script -->
-								<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-								<!-- End TrustBox script -->
-
-								<!-- TrustBox widget - Mini -->
-								<div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="590b25c70000ff0005a1cc45" data-style-height="24px" data-style-width="100%" data-theme="light">
-									<a href="https://nl.trustpilot.com/review/barqo.co" target="_blank" rel="noopener">Trustpilot</a>
-								</div>
-								<!-- End TrustBox widget -->
 							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="col col-3">
 					<div class="holder">
-						<h4>Support</h4>
+						<h3>Support</h3>
 						<ul>
 							<li><a href="https://barqo.co/en/help">Frequently asked questions</a></li>
 							<li><a href="https://barqo.co/en/insurance">Insurance</a></li>
@@ -674,7 +672,7 @@ Cancellation policies may be superseded by the safety cancellations, Guest Refun
 				</div>
 				<div class="col col-3">
 					<div class="holder">
-						<h4>Destinations</h4>
+						<h3>Destinations</h3>
 						<ul>
 							<li>
 								<a href="https://barqo.co/en/search/europe/netherlands/north-holland/amsterdam">
@@ -705,9 +703,21 @@ Cancellation policies may be superseded by the safety cancellations, Guest Refun
 				</div>
 			</div>
 		</nav>
+		<div class="trustpilot center">
+			<!-- TrustBox script -->
+			<script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" defer></script>
+			<!-- End TrustBox script -->
+
+			<!-- TrustBox widget - Mini -->
+			<div class="trustpilot-widget" data-locale="en-US" data-template-id="5419b6a8b0d04a076446a9ad" data-businessunit-id="590b25c70000ff0005a1cc45" data-style-height="24px" data-style-width="100%" data-theme="light">
+				<a href="https://nl.trustpilot.com/review/barqo.co" target="_blank" rel="noopener">Trustpilot</a>
+			</div>
+			<!-- End TrustBox widget -->
+		</div>
 	</div>
+	
 	<div class="more">
-		<img class="logo-footer" src="/assets/images/logo.png" alt="Barqo" title="Barqo"/>
+		<img class="logo-footer" src="/assets/images/logo.png" alt="Barqo" title="Barqo" loading="lazy" />
 		<div class="copyrights">
 			<ul>
 				<li><a href="https://barqo.co/en/about-us">About us</a></li>
@@ -750,69 +760,26 @@ Cancellation policies may be superseded by the safety cancellations, Guest Refun
 
 
 <a href="https://barqo.co/en/help" target="_blank" class="help-link">
-	<i class="icon fa fa-life-ring" aria-hidden="true"></i>
+	<i class="icon fa fa-life-ring" aria-hidden="true"></i><span class="hidden">Help</span>
 </a>
 
-<script src="https://barqo.co/assets/js/jquery/jquery.v1.11.2.min.js?ts=1694696784"></script>
-<script src="https://barqo.co/assets/js/jquery/jquery-ui.v1.11.4.min.js?ts=1694696784"></script>
-<script src="https://barqo.co/assets/js/bootstrap.min.js?ts=1694696784"></script>
+<script src="https://barqo.co/assets/js/jquery/jquery.v1.11.2.min.js?ts=1697209478"></script>
+<script src="https://barqo.co/assets/js/jquery/jquery-ui.v1.11.4.min.js?ts=1697209478"></script>
+<script src="https://barqo.co/assets/js/bootstrap.min.js?ts=1697209478"></script>
 
-<script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
-<script type="text/javascript">var suggestion1 = "Amsterdam";var suggestion2 = "Friesland, Netherlands";var suggestion3 = "Loosdrecht, Netherlands";var suggestion4 = "Kaag, Leiden, Netherlands";var suggestion5 = "Haarlem, Netherlands ";var suggestion6 = "Rotterdam, Netherlands ";</script><script>var current_url = "https://barqo.co/en/terms-conditions"; var home_url = "https://barqo.co/en/";</script><script src="https://maps.googleapis.com/maps/api/js?v=3&amp;libraries=places&amp;language=en&amp;key=AIzaSyBDbeDGrLVkqscu9OQJF58wMQkxiH-SLxM&amp;callback=Function.prototype"></script>
-<script src="https://barqo.co/assets/js/site.js?ts=1694696785"></script>
-<script src="https://barqo.co/assets/translations/en.js?h=711f76b1df52afe295490a562f1bb309"></script>
-<script src="https://barqo.co/assets/regions/en.js?h=50447cadde29cd675b5c580ed3313faf"></script>
+<script defer src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+<script type="text/javascript">var suggestion1 = "Amsterdam";var suggestion2 = "Friesland, Netherlands";var suggestion3 = "Loosdrecht, Netherlands";var suggestion4 = "Kaag, Leiden, Netherlands";var suggestion5 = "Haarlem, Netherlands ";var suggestion6 = "Rotterdam, Netherlands ";</script><script>var current_url = "https://barqo.co/en/terms-conditions"; var home_url = "https://barqo.co/en/";</script><script defer src="https://maps.googleapis.com/maps/api/js?v=3&amp;libraries=places&amp;language=en&amp;key=AIzaSyBDbeDGrLVkqscu9OQJF58wMQkxiH-SLxM&amp;callback=Function.prototype"></script>
+<script src="https://barqo.co/assets/js/site.js?ts=1697209479"></script>
+<script src="https://barqo.co/assets/translations/en.js?h=b3ea880658043b674400bbf341d2dcb1"></script>
+<script src="https://barqo.co/assets/regions/en.js?h=ae05308d60b92e787fa33ab332ebfd04"></script>
 <script src="https://barqo.co/assets/js/react/data.js"></script>
-<script src="https://barqo.co/assets/js/react/common.js?ts=1694696784"></script>
-<script src="https://barqo.co/assets/js/react/menu.js?ts=1694696784"></script>
-<script type="application/ld+json">{"@context": "http://schema.org", "@type": "Product", "name": "Barqo", "url": "https://barqo.co/", "aggregateRating": {"@type": "AggregateRating", "name": "Barqo", "worstRating": "1", "bestRating": "5", "ratingValue": "4.6/5", "reviewCount": "28162"}}</script>
+<script src="https://barqo.co/assets/js/react/common.js?ts=1697209478"></script>
+<script src="https://barqo.co/assets/js/react/menu.js?ts=1697209478"></script><script type="application/ld+json">{"@context": "http://schema.org", "@type": "Product", "name": "Barqo", "url": "https://barqo.co/", "aggregateRating": {"@type": "AggregateRating", "name": "Barqo", "worstRating": "1", "bestRating": "5", "ratingValue": "4.6/5", "reviewCount": "28214"}}</script>
 <!-- Start Ad360 Event Pixel Snippet -->
 <script>
     !function(e,t,n,i,p,s,a,c,o){e[p]||((a=e[p]=function(){a.process?a.process.apply(a,arguments):a.queue.push(arguments)}).queue=[],a.t=1*new Date,(c=t.createElement(n)).async=1,c.src="//cdn.ad360.media/js/ad360pixelevent.min.js?t="+864e5*Math.ceil(new Date/864e5),(o=t.getElementsByTagName(n)[0]).parentNode.insertBefore(c,o))}(window,document,"script",0,"ad360"),
     ad360("init","327a3c03-9f9d-45a0-8e05-688d8d9fd370"),ad360("event","366334fa-1266-452c-90b3-d02539105494", {someData: 1, otherData: 'cool'});
 </script>
 <!-- End Ad360 Event Pixel Snippet -->
-<style>
-body{margin-bottom:100px}
-#cookiebar{color:#fff;background:rgba(0,0,0,.5);font-size:12px;left:0;margin:0;padding:5px 10px;text-align:center;width:100%;border-top:1px solid #f5f5f5;z-index:999;position:fixed;bottom:0;line-height:30px}#cookiebar p{line-height:25px;max-width:1024px;margin:0 auto;padding:0}#cookiebar .acceptLink{background-color:green;color:#fff;border:1px solid #fff;border-radius:3px;margin:5px auto;display:inline-block;padding:3px 10px;font-weight:700;text-decoration:none}#cookiebar .acceptLink:hover{background-color:#fff;color:green}#cookiebar > p > a {color: #fff;}
-</style>
-<script>
-	function consentOk() {
-		//zet cookie waarin de consent is gegeven
-		var cookieName  = "CookieConsent"; 
-		var cookieValue = "True";
-		var cookiePath  = "/";
-		var expirationTime = 31556926;    //1 jaar in seconden
-		expirationTime = expirationTime * 1000;  
-		var date = new Date();    
-		var dateTimeNow = date.getTime();  
-		date.setTime(dateTimeNow + expirationTime); 
-		var expirationTime = date.toUTCString(); 
-		document.cookie = cookieName+"="+cookieValue+"; expires="+expirationTime+"; path="+cookiePath; 
-
-		$('#cookiebar').remove();
-	}
-
-	function getCookie(name) {
-		function escape(s) { return s.replace(/([.*+?\^$(){}|\[\]\/\\])/g, '\\$1'); }
-		var match = document.cookie.match(RegExp('(?:^|;\\s*)' + escape(name) + '=([^;]*)'));
-		return match ? match[1] : null;
-	}
-
-	$(document).ready(function() {
-		var cookieConsentValue = getCookie('CookieConsent');
-		if (cookieConsentValue != "True") {
-			showConsentBar();
-			document.addEventListener("scroll", function consent(event) {
-				consentOk();
-				document.removeEventListener("scroll", consent)
-			});
-		}
-	});
-  
-	function showConsentBar() {
-		$("body").append('<div id="cookiebar"><p>By continuing to use our site, you agree that we use your personal data to personalise ads and use cookies for personalised and non-personalised advertising in accordance with our  <a href="https://barqo.co/en/privacy-policy">Privacy policy</a> <a class="acceptLink" href="javascript:void(0);" onclick="consentOk();">Agreed</a></p></div>');
-	}
-</script>
 </body>
 </html>
