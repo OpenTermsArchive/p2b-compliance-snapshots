@@ -9,27 +9,6 @@
         var i=typeof a.data==="string";var e;try{e=i?JSON.parse(a.data):a.data}catch(t){return}if(e[o]){var r=e[o];window[n](r.command,r.parameter,function(e,t){var n={};n[c]={returnValue:e,success:t,callId:r.callId};a.source.postMessage(i?JSON.stringify(n):n,"*")},r.version)}}
         if(typeof window[n]!=="function"){window[n]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");a("__tcfapiLocator");(function(e){
         var t=document.createElement("script");t.id="spcloader";t.type="text/javascript";t.async=true;t.src="https://sdk.privacy-center.org/"+e+"/loader.js?target="+document.location.hostname;t.charset="utf-8";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)})("3beb83b3-b225-49c6-924d-90c480c7bab6")})();</script>
-
-<script>
-    window.didomiOnReady = window.didomiOnReady || [];
-    window.didomiOnReady.push(function (Didomi) {
-        if (Didomi.isConsentRequired()) {
-            Didomi.getObservableOnUserConsentStatusForVendor('c:googleana-4TXnJigR')
-                .subscribe(function (consentStatusForVendor) {
-                    if (consentStatusForVendor === false &&typeof ga !== "function") {
-                        var t=document.createElement("script");t.innerHTML = "ga = function() {console.debug('ga');};gtag = function() {console.debug('gtag');};";document.body.appendChild(t);
-                    }
-                });
-            Didomi.getObservableOnUserConsentStatusForVendor('c:hotjar')
-                .subscribe(function (consentStatusForVendor) {
-                    if (consentStatusForVendor === false && typeof hj !== "function") {
-                        var t=document.createElement("script");t.innerHTML = "hj = function() {console.debug('hj');};";document.body.appendChild(t);
-                    }
-                });
-        }
-    });
-
-</script>
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -50,14 +29,14 @@
 
     <base href="https://www.allovoisins.com/">
 
-        <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium-webfont.woff2?073dd33a56df1e2d52e6e3b6df8014c3" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium_italic-webfont.woff2?073dd33a56df1e2d52e6e3b6df8014c3" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold-webfont.woff2?073dd33a56df1e2d52e6e3b6df8014c3" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold_italic-webfont.woff2?073dd33a56df1e2d52e6e3b6df8014c3" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold-webfont.woff2?073dd33a56df1e2d52e6e3b6df8014c3" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold_italic-webfont.woff2?073dd33a56df1e2d52e6e3b6df8014c3" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_extrabold-webfont.woff2?073dd33a56df1e2d52e6e3b6df8014c3" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/icons/icomoon.ttf?073dd33a56df1e2d52e6e3b6df8014c3" as="font" type="font/ttf" crossorigin>
+        <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium-webfont.woff2?d7a6243bd839313706f005d721ef1ea5" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium_italic-webfont.woff2?d7a6243bd839313706f005d721ef1ea5" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold-webfont.woff2?d7a6243bd839313706f005d721ef1ea5" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold_italic-webfont.woff2?d7a6243bd839313706f005d721ef1ea5" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold-webfont.woff2?d7a6243bd839313706f005d721ef1ea5" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold_italic-webfont.woff2?d7a6243bd839313706f005d721ef1ea5" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_extrabold-webfont.woff2?d7a6243bd839313706f005d721ef1ea5" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/icons/icomoon.ttf?d7a6243bd839313706f005d721ef1ea5" as="font" type="font/ttf" crossorigin>
 
     <title>Référencement, classement des annonces et contrôle des avis</title>
 	<meta property="fb:app_id" content="510588998981501">
@@ -84,7 +63,7 @@
 	<meta name="google-signin-scope" content="profile email">
 	<meta name="google-signin-client_id" content="709712733747-j1fld3bsesnhq3jndil9ep8g606hkhij.apps.googleusercontent.com">
     
-    <link rel="canonical" href="https://www.allovoisins.com/page/referencement" /><link rel="shortcut icon" type="image/x-icon" href="https://static.allovoisins.com/favicon.ico?073dd33a56df1e2d52e6e3b6df8014c3" /><link rel="shortcut icon" type="image/png" href="https://static.allovoisins.com/favicon.png"/><link rel="apple-touch-icon" href="https://static.allovoisins.com/images/apple_touch_icone.png"><link rel='stylesheet' href='https://static.allovoisins.com/dist/css/all.min.3449c9e5e332f1dbb81505cd739fbf3f.css?073dd33a56df1e2d52e6e3b6df8014c3'>
+    <link rel="canonical" href="https://www.allovoisins.com/page/referencement" /><link rel="shortcut icon" type="image/x-icon" href="https://static.allovoisins.com/favicon.ico?d7a6243bd839313706f005d721ef1ea5" /><link rel="shortcut icon" type="image/png" href="https://static.allovoisins.com/favicon.png"/><link rel="apple-touch-icon" href="https://static.allovoisins.com/images/apple_touch_icone.png"><link rel='stylesheet' href='https://static.allovoisins.com/dist/css/all.min.3449c9e5e332f1dbb81505cd739fbf3f.css?d7a6243bd839313706f005d721ef1ea5'>
     <script>
                 if (typeof window.data == "undefined") {
             window.data = {};
@@ -124,7 +103,7 @@
         window.ip = "5.196.30.134";window.geoloc_type = "";
     </script>
 
-            <script async src="https://static.allovoisins.com/dist/js/pages_disconnected.js?073dd33a56df1e2d52e6e3b6df8014c3"></script>
+            <script async src="https://static.allovoisins.com/dist/js/pages_disconnected.js?d7a6243bd839313706f005d721ef1ea5"></script>
     
             <script type="didomi/javascript" data-vendor="didomi:google">
     window.googletag = window.googletag || {cmd: []};
@@ -138,11 +117,9 @@
     
     
     <script src="https://kit.fontawesome.com/6ca443607f.js" crossorigin="anonymous"></script>
-
-        
 </head>
 <body class="not_logged is_loading page_page">
-<input type="hidden" name="csrf_token" value="880a4a8258f836a9894665fdcee4ea46"/>
+<input type="hidden" name="csrf_token" value="e70ac42d459ea445d75620f56c6f82fa"/>
 
 
 <div class="ily-main-container">
@@ -162,7 +139,7 @@
         <nav class="menubar__navWrapper">
             <ul class="menubar__navList">
                                     <li id="menubar-burger-sign-up" class="menubar__navItem mg-left-xl">
-                                                    <button class="menubar__navLink signin_tracked_ga"
+                                                    <button class="menubar__navLink"
                                 data-mtm-track
                                 data-mtm-category="inscription"
                                 data-mtm-action="clic"
@@ -171,7 +148,7 @@
                             </button>
                                             </li>
                     <li id="menubar-burger-sign-in" class="menubar__navItem">
-                        <button class="menubar__navLink connect_tracked_ga"
+                        <button class="menubar__navLink"
                                 data-mtm-track
                                 data-mtm-category="connexion"
                                 data-mtm-action="clic"
@@ -196,7 +173,7 @@
             <ul class="menubar__navListMobile pd-xl">
                                     <li class="menubar__navItem"><a class="pd-vt-s" href="https://www.allovoisins.com/">Accueil</a></li>
                                                     <li class="menubar__navItem">
-                        <button class="signin_tracked_ga pd-vt-s text-left pointer"
+                        <button class="pd-vt-s text-left pointer"
                                 data-mtm-track
                                 data-mtm-category="inscription"
                                 data-mtm-action="clic"
@@ -206,7 +183,7 @@
                         </button>
                     </li>
                     <li class="menubar__navItem">
-                        <button class="connect_tracked_ga pd-vt-s text-left pointer"
+                        <button class="pd-vt-s text-left pointer"
                                 data-mtm-track
                                 data-mtm-category="connexion"
                                 data-mtm-action="clic"
@@ -828,7 +805,7 @@ font-style : italic;
     }
 
 </style>
-<script type="text/javascript" src="https://static.allovoisins.com/js/modals/modal.js?073dd33a56df1e2d52e6e3b6df8014c3"></script>
+<script type="text/javascript" src="https://static.allovoisins.com/js/modals/modal.js?d7a6243bd839313706f005d721ef1ea5"></script>
 
 <div id="modal_credit" class="modal_credit">
     <div class="modal_box">
@@ -1057,7 +1034,7 @@ font-style : italic;
 </div>
 
 <script>
-        var csrft = "880a4a8258f836a9894665fdcee4ea46";
+        var csrft = "e70ac42d459ea445d75620f56c6f82fa";
 </script>
 
     <footer id="footer" class="footer bg-neutral-00 pd-vt-xxl separator-inherit">
@@ -1105,32 +1082,28 @@ font-style : italic;
                     </span>
                         <ul class="footer_linksList">
 
-                            <li class="footer_linksItem" data-ga-categ="autres"
-                                data-ga-question="arrive-pas-faire-verifier-mobile">
+                            <li class="footer_linksItem">
                                 <button class="footer_linksLink link"
                                         data-link="https://support.allovoisins.com/hc/fr/articles/360000740354">
                                     Je n'arrive pas à faire vérifier mon mobile
                                 </button>
                             </li>
 
-                            <li class="footer_linksItem" data-ga-categ="premiers-pas"
-                                data-ga-question="connecter-a-mon-compte">
+                            <li class="footer_linksItem">
                                 <button class="footer_linksLink link"
                                         data-link="https://support.allovoisins.com/hc/fr/articles/4408022026002-Pourquoi-je-n-arrive-pas-%C3%A0-me-connecter-">
                                     Je n'arrive pas à me connecter à mon compte
                                 </button>
                             </li>
 
-                            <li class="footer_linksItem" data-ga-categ="premiers-pas"
-                                data-ga-question="comment-inscrire-depuis-web">
+                            <li class="footer_linksItem">
                                 <button class="footer_linksLink link"
                                         data-link="https://support.allovoisins.com/hc/fr/articles/4408023019666-Comment-s-inscrire-sur-AlloVoisins">
                                     Je n'arrive pas à m'inscrire depuis le site web
                                 </button>
                             </li>
 
-                            <li class="footer_linksItem" data-ga-categ="premiers-pas"
-                                data-ga-question="comment-modifier-mdp">
+                            <li class="footer_linksItem">
                                 <button class="footer_linksLink link"
                                         data-link="https://support.allovoisins.com/hc/fr/articles/4408023958034-Comment-faire-si-j-ai-perdu-mon-mot-de-passe">
                                     Comment réinitialiser / modifier mon mot de passe
@@ -1147,29 +1120,25 @@ font-style : italic;
                                     Qui sommes-nous ?
                                 </a>
                             </li>
-                            <li id="footer-link-how-it-works" class="footer_linksItem" data-ga-categ="premiers-pas"
-                                data-ga-question="comment-ca-marche">
+                            <li id="footer-link-how-it-works" class="footer_linksItem">
                                 <a class="footer_linksLink link" href="https://www.allovoisins.com/comment-ca-marche"
                                    style="padding-left: 6px;">
                                     Comment ça marche ?
                                 </a>
                             </li>
-                            <li id="footer-link-allopro" class="footer_linksItem" data-ga-categ="allopro"
-                                data-ga-question="allopro">
+                            <li id="footer-link-allopro" class="footer_linksItem">
                                 <a class="footer_linksLink link" href="https://www.allovoisins.com/pros"
                                    style="padding-left: 6px;">
                                     AlloVoisins Pro
                                 </a>
                             </li>
-                            <li id="footer-link-near-you" class="footer_linksItem" data-ga-categ="near_you"
-                                data-ga-question="near_you">
+                            <li id="footer-link-near-you" class="footer_linksItem">
                                 <a class="footer_linksLink link" href="https://www.allovoisins.com/near_you"
                                    style="padding-left: 6px;">
                                     Toutes les demandes
                                 </a>
                             </li>
-                            <li id="footer-link-proposer-services" class="footer_linksItem"
-                                data-ga-categ="proposer-services" data-ga-question="proposer-services">
+                            <li id="footer-link-proposer-services" class="footer_linksItem">
                                 <button class="footer_linksLink link"
                                         data-link="https://www.allovoisins.com/proposer-mes-services-objets">
                                     Proposer mes services
@@ -1271,13 +1240,13 @@ font-style : italic;
                         <span class="footer__linksListTitle">Nos applications</span>
                         <ul class="footer_linksList">
                             <li id="footer-link-ios" class="footer_linksItem">
-                                <button class="footer_linksLink appStore_tracked_ga link"
+                                <button class="footer_linksLink link"
                                         data-link="https://apps.apple.com/fr/app/allovoisins/id631402465">
                                     Télécharger l’application iOS
                                 </button>
                             </li>
                             <li id="footer-link-android" class="footer_linksItem">
-                                <button class="footer_linksLink googlePlay_tracked_ga link"
+                                <button class="footer_linksLink link"
                                         data-link="https://play.google.com/store/apps/details?id=ziapps.ilokyou">
                                     Télécharger l’application Android
                                 </button>
@@ -1288,7 +1257,7 @@ font-style : italic;
             </div>
         </div>
         <span class="num-version">
-        Version 17.3.0    </span>
+        Version 17.3.10    </span>
 </footer>
 
 
@@ -1344,8 +1313,7 @@ font-style : italic;
 
 <script>
     var _mtm = window._mtm = window._mtm || [];
-    var _paq = window._paq = window._paq || [];
-
+    var _paq = window._paq = window._paq || []; 
     _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
 </script>
 
@@ -1379,43 +1347,7 @@ font-style : italic;
     var google_remarketing_only = true;
 </script>
 <script type="didomi/javascript" data-vendor="didomi:google" defer src="//www.googleadservices.com/pagead/conversion_async.js"></script>
-<script type="didomi/javascript" data-vendor="c:googleana-4TXnJigR">
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    //creation de l'objet pour utiliser les fonctions
-    ga('create', 'UA-48313445-1', 'auto');
-    ga('require', 'displayfeatures');
-    ga('require', 'GTM-N64J82S');
-    ga('send', 'pageview');
-</script>
 
-<script>
-    if (document.readyState !== "loading") {
-        runOnStart();
-    } else {
-        document.addEventListener("DOMContentLoaded", () => {
-            runOnStart()
-        });
-    }
-
-    function runOnStart() {
-        let foot_links_faq = document.querySelector('.foot_links_faq')
-        if (foot_links_faq) {
-            foot_links_faq.addEventListener("click", function() {
-                ga('send', 'event', 'FOOTER', $(this).attr('data-ga-categ'), $(this).attr('data-ga-question'));
-            });
-        }
-    }
-</script>
     
     <div class="oldbrowser av-modal" style="display:none">
         <div class="content">
