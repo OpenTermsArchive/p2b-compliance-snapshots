@@ -37,7 +37,7 @@
 
                 
                     app.boot.push({"name":"HelpNav","values":[]});
-                    app.boot.push({"name":"ProcessApiCalls","values":{"apiQueueCacheKey":"api:0:15a6d5791f2c3d429d7da2c3de640269","matchedRoute":"fw3k2.ctl_show_static_page._execute"}});
+                    app.boot.push({"name":"ProcessApiCalls","values":{"apiQueueCacheKey":"api:0:8ed762ccac152b8dbd53dc5970f9b3b5","matchedRoute":"fw3k2.ctl_show_static_page._execute"}});
                     app.boot.push({"name":"LocationMapsService","values":{"locationMapsServiceName":"Mireo","locationMapsServiceSettings":{"mapStyle":"mireo-maps-style"}}});
                     app.boot.push({"name":"PaginationBaseData","values":{"adjustedCanonicalUrl":""}});
                     app.boot.push({"name":"MobileDeeplink","values":{"deeplinkProviderUrl":"https:\/\/bolha.page.link","androidAppIdentifier":"net.trikoder.android.bolha","iosAppIdentifierName":"net.trikoder.iphone.bolha","iosAppId":1540081488}});
@@ -183,8 +183,8 @@
 </script>
 
         
-    <link rel="stylesheet" href="https://static.bolha.com/dist/67601fae6a20ca8ccbaf1ab608393fa7_b83fc9f4be.css" />
-                                                        <link rel="stylesheet" href="https://static.bolha.com/dist/67601fae6a20ca8ccbaf1ab608393fa7_7cb4061ae9.css" />
+    <link rel="stylesheet" href="https://static.bolha.com/dist/ef722ac13ee5cf5a4fd4569ca349ffd1_b83fc9f4be.css" />
+                                                        <link rel="stylesheet" href="https://static.bolha.com/dist/ef722ac13ee5cf5a4fd4569ca349ffd1_7cb4061ae9.css" />
                 
         <script >(()=>{"use strict";window.app??={},window.app.initialErrors??=[];(()=>{const t=document.documentElement;if(window.CSS?.supports?.("(font:-apple-system-body) and (-webkit-touch-callout:none) and (-webkit-tap-highlight-color:hotpink)")){const t=document.querySelector('meta[name="viewport"]');null!==t&&(t.content=`${t.content},user-scalable=no`)}try{document.querySelector(":focus-visible")}catch(o){t.classList.add("no-focusvisible")}t.classList.remove("no-js"),t.classList.add("js")})()})();</script>
                                                 
@@ -472,62 +472,113 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 <!-- brez skrbi end -->
 <br>
-<!-- header pasica start -->
+
 <style>
-  .header__container {
-    text-decoration: none;
-  }
-
-  .header__image {
-    max-width: 100%;
-    display: block;
-  }
-
-  .header__picture--desktop,
-  .header__picture--mobile {
+  #slider--mobile {
+    max-width: 320px;
+    max-height: 350px;
+    object-fit: contain;
+    margin-inline: auto;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 4px;
-  }
-
-  .header__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .header__picture--mobile {
     display: block;
   }
-  .header__picture--desktop {
+  #slider--desktop {
     display: none;
   }
 
-  @media (min-width: 690px) {
-    .header__picture--mobile {
+  @media (min-width: 728px) {
+    #slider--desktop {
+      max-width: 700px;
+      max-height: 115px;
+      object-fit: contain;
+      margin-inline: auto;
+      overflow: hidden;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 4px;
+      display: block;
+    }
+    #slider--mobile {
       display: none;
     }
-    .header__picture--desktop {
-      display: block;
+  }
+
+  #slider--desktop figure,
+  #slider--mobile figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 15s slider infinite;
+  }
+
+  #slider--desktop figure img,
+  #slider--mobile figure img {
+    width: 20%;
+    float: left;
+  }
+
+  @keyframes slider {
+    0% {
+      left: 0;
+    }
+    25% {
+      left: 0;
+    }
+    50% {
+      left: -100%;
+    }
+    75% {
+      left: -100%;
+    }
+
+    100% {
+      left: 0%;
     }
   }
 </style>
-<a
-  href="https://www.bolha.com/index.php?ctl=show_static_page&alias=katalogi&open=Vesele+praz+nike%2C+polne+d+i+%C5%A1+e+%C4%8D+ih+dobrot%21"
-  target="_blank"
-  class="header__container"
->
-  <div class="header__content">
-    <img
-      class="header__image header__picture--mobile"
-      src="https://www.bolha.com/3d/banneri/headerpasica/interna_katalogi20231109/mobile.png"
-      alt="Pomlad visokih popustov Mimovrste"
-    />
-    <img
-      class="header__image header__picture--desktop"
-      src="https://www.bolha.com/3d/banneri/headerpasica/interna_katalogi20231109/desktop.png"
-      alt="Pomlad visokih popustov Mimovrste"
-    />
-  </div>
-</a>
-<!-- header pasica end -->
+
+<div id="slider--desktop">
+  <figure>
+    <a
+      href="https://www.bolha.com/index.php?ctl=show_static_page&alias=katalogi&open=Vesele+praz+nike%2C+polne+d+i+%C5%A1+e+%C4%8D+ih+dobrot%21"
+      target="_blank"
+    >
+      <img
+        src="https://www.bolha.com/3d/banneri/headerpasica/interna_katalogi20231109/desktop.png"
+        alt="pasica Tedi"
+    /></a>
+    <a
+      href="https://www.bolha.com/index.php?ctl=show_static_page&alias=katalogi&open=Nakupovalni+dnevi+Black+Friday"
+      target="_blank"
+    >
+      <img
+        src="https://www.bolha.com/3d/banneri/headerpasica/interna_katalogi20231110/desktop.png"
+        alt="pasica Kik"
+    /></a>
+  </figure>
+</div>
+<div id="slider--mobile">
+  <figure>
+    <a
+      href="https://www.bolha.com/index.php?ctl=show_static_page&alias=katalogi&open=Vesele+praz+nike%2C+polne+d+i+%C5%A1+e+%C4%8D+ih+dobrot%21"
+      target="_blank"
+    >
+      <img
+        src="https://www.bolha.com/3d/banneri/headerpasica/interna_katalogi20231109/mobile.png"
+        alt="pasica Tedi"
+    /></a>
+    <a
+      href="https://www.bolha.com/index.php?ctl=show_static_page&alias=katalogi&open=Nakupovalni+dnevi+Black+Friday"
+      target="_blank"
+    >
+      <img
+        src="https://www.bolha.com/3d/banneri/headerpasica/interna_katalogi20231110/mobile.png"
+        alt="pasica Kik"
+    /></a>
+  </figure>
+</div>
 
         </div>
     
@@ -852,11 +903,11 @@ h1{
 <script type="didomi/javascript" data-vendor="c:xiti-CzN7zA4y"  async src="https://tag.aticdn.net/piano-analytics.js"></script>
 
         
-    <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/67601fae6a20ca8ccbaf1ab608393fa7_3d5690e23c.js"></script>
+    <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/ef722ac13ee5cf5a4fd4569ca349ffd1_52958bec9e.js"></script>
         <script >"use strict";(self.webpackChunk_bolha_0_app=self.webpackChunk_bolha_0_app||[]).push([[131],{810:(a,e,s)=>{var _=s(23);window.is_b2c_user||s.e(132).then(s.bind(s,995)),(0,_.default)()}},a=>{var e;e=810,a(a.s=e)}]);</script>
-                                                            <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/67601fae6a20ca8ccbaf1ab608393fa7_5218acfa78.js"></script>
+                                                            <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/ef722ac13ee5cf5a4fd4569ca349ffd1_5218acfa78.js"></script>
                 
-    <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/67601fae6a20ca8ccbaf1ab608393fa7_veze_c749f2ff69.js"></script>
+    <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/ef722ac13ee5cf5a4fd4569ca349ffd1_veze_c749f2ff69.js"></script>
 
     
             
