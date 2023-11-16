@@ -124,6 +124,13 @@
     addSize([768, 0], [[300, 250]]). //tablet
     addSize([320, 0], [[300, 250]]). //mobile
        build();
+googletag.defineSlot('/22656567737/bazaraki_listings_desktop', ['fluid'], 'div-gpt-ad-1700148706978-0').addService(googletag.pubads());
+googletag.defineSlot('/22656567737/bazaraki_left_column_listings', [300, 600], 'div-gpt-ad-1700151795839-0').addService(googletag.pubads());
+googletag.defineSlot('/22656567737/bazaraki_left_column_listings/2', [300, 600], 'div-gpt-ad-1700156896450-0').addService(googletag.pubads());
+googletag.defineSlot('/22656567737/bazaraki_left_column_listings/3', [300, 600], 'div-gpt-ad-1700157352295-0').addService(googletag.pubads());
+googletag.defineSlot('/22656567737/bazaraki_left_column_listings', [300, 600], 'div-gpt-ad-1700157566381-0').addService(googletag.pubads());
+    googletag.defineSlot('/22656567737/bazaraki-media-video-desktop-listings', [4, 1], 'div-gpt-ad-1700158249441-0').addService(googletag.companionAds()).addService(googletag.pubads());
+
     var maindiv1 = googletag.defineSlot('/22656567737/bazaraki.com/main_page', [[300, 250], [728, 90], 'fluid'], 'div-gpt-ad-1640170867431-1').defineSizeMapping(main).addService(googletag.pubads());
     var maindiv2 = googletag.defineSlot('/22656567737/bazaraki.com/main_page', [[300, 250], [728, 90], 'fluid'], 'div-gpt-ad-1640170867431-2').defineSizeMapping(main).addService(googletag.pubads());
     var rsbdiv = googletag.defineSlot('/22656567737/bazaraki.com/sidebar', [[300, 600], [300, 300], [300, 250], [240, 400]], 'div-gpt-ad-1640172020790-0').defineSizeMapping(rsb).addService(googletag.pubads());
@@ -131,7 +138,9 @@
     var inLdiv2 = googletag.defineSlot('/22656567737/bazaraki.com/in_list', [[600, 205], 'fluid', [300, 250], [336, 280]], 'div-gpt-ad-1640170860611-2').defineSizeMapping(inList).addService(googletag.pubads());
         var inGdiv = googletag.defineSlot('/22656567737/bazaraki.com/in_galery', ['fluid', [600, 130]], 'div-gpt-ad-1640170854301-0').defineSizeMapping(inGalery).addService(googletag.pubads());
         var addiv = googletag.defineSlot('/22656567737/bazaraki.com/above_ad//', [300, 250], 'div-gpt-ad-1640170846098-0').defineSizeMapping(aboveAd).addService(googletag.pubads()); 
-        var simdiv = googletag.defineSlot('/22656567737/bazaraki.com/similar_all', [300, 250], 'div-gpt-ad-1640170879854-0').defineSizeMapping(similar).addService(googletag.pubads());  googletag.pubads().enableSingleRequest(); 
+        var simdiv = googletag.defineSlot('/22656567737/bazaraki.com/similar_all', [300, 250], 'div-gpt-ad-1640170879854-0').defineSizeMapping(similar).addService(googletag.pubads());  
+    googletag.pubads().enableVideoAds();
+    googletag.companionAds().setRefreshUnfilledSlots(true);
 googletag.pubads().setCentering(true); 
 googletag.pubads().collapseEmptyDivs(); 
 googletag.enableServices();
