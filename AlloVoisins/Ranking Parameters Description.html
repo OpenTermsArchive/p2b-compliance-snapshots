@@ -29,14 +29,14 @@
 
     <base href="https://www.allovoisins.com/">
 
-        <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium-webfont.woff2?5f7edee6ed64b0c6ba6af2b4ae318eaa" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium_italic-webfont.woff2?5f7edee6ed64b0c6ba6af2b4ae318eaa" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold-webfont.woff2?5f7edee6ed64b0c6ba6af2b4ae318eaa" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold_italic-webfont.woff2?5f7edee6ed64b0c6ba6af2b4ae318eaa" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold-webfont.woff2?5f7edee6ed64b0c6ba6af2b4ae318eaa" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold_italic-webfont.woff2?5f7edee6ed64b0c6ba6af2b4ae318eaa" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_extrabold-webfont.woff2?5f7edee6ed64b0c6ba6af2b4ae318eaa" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://static.allovoisins.com/fonts/icons/icomoon.ttf?5f7edee6ed64b0c6ba6af2b4ae318eaa" as="font" type="font/ttf" crossorigin>
+        <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium-webfont.woff2?e4e4dba8f5f1d2791866087793ba3cb4" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_medium_italic-webfont.woff2?e4e4dba8f5f1d2791866087793ba3cb4" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold-webfont.woff2?e4e4dba8f5f1d2791866087793ba3cb4" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_demibold_italic-webfont.woff2?e4e4dba8f5f1d2791866087793ba3cb4" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold-webfont.woff2?e4e4dba8f5f1d2791866087793ba3cb4" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_bold_italic-webfont.woff2?e4e4dba8f5f1d2791866087793ba3cb4" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/tt_chocolates/tt_chocolates_extrabold-webfont.woff2?e4e4dba8f5f1d2791866087793ba3cb4" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://static.allovoisins.com/fonts/icons/icomoon.ttf?e4e4dba8f5f1d2791866087793ba3cb4" as="font" type="font/ttf" crossorigin>
 
     <title>Référencement, classement des annonces et contrôle des avis</title>
 	<meta property="fb:app_id" content="510588998981501">
@@ -63,11 +63,17 @@
 	<meta name="google-signin-scope" content="profile email">
 	<meta name="google-signin-client_id" content="709712733747-j1fld3bsesnhq3jndil9ep8g606hkhij.apps.googleusercontent.com">
     
-    <link rel="canonical" href="https://www.allovoisins.com/page/referencement" /><link rel="shortcut icon" type="image/x-icon" href="https://static.allovoisins.com/favicon.ico?5f7edee6ed64b0c6ba6af2b4ae318eaa" /><link rel="shortcut icon" type="image/png" href="https://static.allovoisins.com/favicon.png"/><link rel="apple-touch-icon" href="https://static.allovoisins.com/images/apple_touch_icone.png"><link rel='stylesheet' href='https://static.allovoisins.com/dist/css/all.min.3449c9e5e332f1dbb81505cd739fbf3f.css?5f7edee6ed64b0c6ba6af2b4ae318eaa'>
+    <link rel="canonical" href="https://www.allovoisins.com/page/referencement" /><link rel="shortcut icon" type="image/x-icon" href="https://static.allovoisins.com/favicon.ico?e4e4dba8f5f1d2791866087793ba3cb4" /><link rel="shortcut icon" type="image/png" href="https://static.allovoisins.com/favicon.png"/><link rel="apple-touch-icon" href="https://static.allovoisins.com/images/apple_touch_icone.png"><link rel='stylesheet' href='https://static.allovoisins.com/dist/css/all.min.3449c9e5e332f1dbb81505cd739fbf3f.css?e4e4dba8f5f1d2791866087793ba3cb4'>
     <script>
                 if (typeof window.data == "undefined") {
             window.data = {};
         }
+
+        // HIP Ab Test
+        // Définir la nouvelle variable utile pour les ab_test la ou la fonction get_cookie est définie pour éviter les doublons
+        // Être dans le footer permet une meilleure gestion de cette même data
+                window.ab_test_id = Number('4');
+        // END HIP Ab Test
 
         window.base_url = 'https://www.allovoisins.com/';
         window.static_url = 'https://static.allovoisins.com/';
@@ -103,7 +109,7 @@
         window.ip = "5.196.30.134";window.geoloc_type = "";
     </script>
 
-            <script async src="https://static.allovoisins.com/dist/js/pages_disconnected.js?5f7edee6ed64b0c6ba6af2b4ae318eaa"></script>
+            <script async src="https://static.allovoisins.com/dist/js/pages_disconnected.js?e4e4dba8f5f1d2791866087793ba3cb4"></script>
     
             <script type="didomi/javascript" data-vendor="didomi:google">
     window.googletag = window.googletag || {cmd: []};
@@ -119,7 +125,7 @@
     <script src="https://kit.fontawesome.com/6ca443607f.js" crossorigin="anonymous"></script>
 </head>
 <body class="not_logged is_loading page_page">
-<input type="hidden" name="csrf_token" value="3a4daa97460373b823cdbbfa6ccaf0f6"/>
+<input type="hidden" name="csrf_token" value="d3998f7897f85ffab4b12feee81b27a4"/>
 
 
 <div class="ily-main-container">
@@ -210,6 +216,21 @@
         if(document.getElementById('leaseholder_form_submit') && (document.getElementById('leaseholder_form_submit').length <= 0 || document.getElementById('leaseholder_form_submit').offset().top < 0)) {
             document.getElementById('menubar__postSearch').classList.add('menubar__navItem--show');
         }
+
+        // HIP Ab Test
+        // Définir les 10 segments de l'ab_test
+        const segments = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+        // Calculer le segment rapport à l'ab_test_id
+        // L'ab_test_id est un INT de 1 à 100
+        const ab_test_segment = segments[Math.floor(window.ab_test_id / 10)];
+
+        _mtm.push({
+            'event': 'clic',
+            'eventCategory': 'HIP',
+            'eventAction': 'AB test',
+            'eventName': 'Version ' + ab_test_segment
+        });
+        // END HIP Ab Test
 
         let post_asking = document.querySelector('.post_asking');
         if (post_asking) {
@@ -805,7 +826,7 @@ font-style : italic;
     }
 
 </style>
-<script type="text/javascript" src="https://static.allovoisins.com/js/modals/modal.js?5f7edee6ed64b0c6ba6af2b4ae318eaa"></script>
+<script type="text/javascript" src="https://static.allovoisins.com/js/modals/modal.js?e4e4dba8f5f1d2791866087793ba3cb4"></script>
 
 <div id="modal_credit" class="modal_credit">
     <div class="modal_box">
@@ -1034,7 +1055,7 @@ font-style : italic;
 </div>
 
 <script>
-        var csrft = "3a4daa97460373b823cdbbfa6ccaf0f6";
+        var csrft = "d3998f7897f85ffab4b12feee81b27a4";
 </script>
 
     <footer id="footer" class="footer bg-neutral-00 pd-vt-xxl separator-inherit">
@@ -1257,7 +1278,7 @@ font-style : italic;
             </div>
         </div>
         <span class="num-version">
-        Version 17.5.0    </span>
+        Version 17.5.1    </span>
 </footer>
 
 
