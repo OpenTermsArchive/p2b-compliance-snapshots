@@ -1,8 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+<!--
+   TODO: Migrate Daft frontend to React.
+   We are in the middle of making Daft awesome again - join us. http://distilledsch.ie/open-roles/
+-->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" xmlns:og="http://opengraphprotocol.org/schema/">
-<head>
-<script type="text/javascript">
+    <head>
+
+        <script type="text/javascript">
     window.didomiConfig = {
         user: {
             bots: {
@@ -22,33 +26,34 @@
         }
     });
 </script>
-<script type="text/javascript">window.gdprAppliesGlobally=false;(function(){function n(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var r=document.createElement("iframe");r.style.display="none";r.name=e;r.title=e;t.insertBefore(r,t.firstChild)}else{setTimeout(function(){n(e)},5)}}}function e(r,a,o,c,s){function e(e,t,r,n){if(typeof r!=="function"){return}if(!window[a]){window[a]=[]}var i=false;if(s){i=s(e,n,r)}if(!i){window[a].push({command:e,version:t,callback:r,parameter:n})}}e.stub=true;e.stubVersion=2;function t(n){if(!window[r]||window[r].stub!==true){return}if(!n.data){return}var i=typeof n.data==="string";var e;try{e=i?JSON.parse(n.data):n.data}catch(t){return}if(e[o]){var a=e[o];window[r](a.command,a.version,function(e,t){var r={};r[c]={returnValue:e,success:t,callId:a.callId};n.source.postMessage(i?JSON.stringify(r):r,"*")},a.parameter)}}if(typeof window[r]!=="function"){window[r]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");n("__tcfapiLocator");(function(e,t){var r=document.createElement("link");r.rel="preconnect";r.as="script";var n=document.createElement("link");n.rel="dns-prefetch";n.as="script";var i=document.createElement("link");i.rel="preload";i.as="script";var a=document.createElement("script");a.id="spcloader";a.type="text/javascript";a["async"]=true;a.charset="utf-8";var o="https://sdk.privacy-center.org/"+e+"/loader.js?target_type=notice&target="+t;if(window.didomiConfig&&window.didomiConfig.user){var c=window.didomiConfig.user;var s=c.country;var d=c.region;if(s){o=o+"&country="+s;if(d){o=o+"&region="+d}}}r.href="https://sdk.privacy-center.org/";n.href="https://sdk.privacy-center.org/";i.href=o;a.src=o;var f=document.getElementsByTagName("script")[0];f.parentNode.insertBefore(r,f);f.parentNode.insertBefore(n,f);f.parentNode.insertBefore(i,f);f.parentNode.insertBefore(a,f)})("809d7df8-03ec-4e2a-8b19-ece95ce71f05","nhngjcx9")})();</script>
+
+    <script type="text/javascript">window.gdprAppliesGlobally=false;(function(){function n(e){if(!window.frames[e]){if(document.body&&document.body.firstChild){var t=document.body;var r=document.createElement("iframe");r.style.display="none";r.name=e;r.title=e;t.insertBefore(r,t.firstChild)}else{setTimeout(function(){n(e)},5)}}}function e(r,a,o,c,s){function e(e,t,r,n){if(typeof r!=="function"){return}if(!window[a]){window[a]=[]}var i=false;if(s){i=s(e,n,r)}if(!i){window[a].push({command:e,version:t,callback:r,parameter:n})}}e.stub=true;e.stubVersion=2;function t(n){if(!window[r]||window[r].stub!==true){return}if(!n.data){return}var i=typeof n.data==="string";var e;try{e=i?JSON.parse(n.data):n.data}catch(t){return}if(e[o]){var a=e[o];window[r](a.command,a.version,function(e,t){var r={};r[c]={returnValue:e,success:t,callId:a.callId};n.source.postMessage(i?JSON.stringify(r):r,"*")},a.parameter)}}if(typeof window[r]!=="function"){window[r]=e;if(window.addEventListener){window.addEventListener("message",t,false)}else{window.attachEvent("onmessage",t)}}}e("__tcfapi","__tcfapiBuffer","__tcfapiCall","__tcfapiReturn");n("__tcfapiLocator");(function(e,t){var r=document.createElement("link");r.rel="preconnect";r.as="script";var n=document.createElement("link");n.rel="dns-prefetch";n.as="script";var i=document.createElement("link");i.rel="preload";i.as="script";var a=document.createElement("script");a.id="spcloader";a.type="text/javascript";a["async"]=true;a.charset="utf-8";var o="https://sdk.privacy-center.org/"+e+"/loader.js?target_type=notice&target="+t;if(window.didomiConfig&&window.didomiConfig.user){var c=window.didomiConfig.user;var s=c.country;var d=c.region;if(s){o=o+"&country="+s;if(d){o=o+"&region="+d}}}r.href="https://sdk.privacy-center.org/";n.href="https://sdk.privacy-center.org/";i.href=o;a.src=o;var f=document.getElementsByTagName("script")[0];f.parentNode.insertBefore(r,f);f.parentNode.insertBefore(n,f);f.parentNode.insertBefore(i,f);f.parentNode.insertBefore(a,f)})("809d7df8-03ec-4e2a-8b19-ece95ce71f05","nhngjcx9")})();</script>
 <script>
     window.dataLayer = window.dataLayer || [];
     var tealiumTrackByConfig = function () {};
     var cookieConsent = {};
 </script>
-
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-MHW55M7');</script>
-
-<title>Daft.ie : Information</title>
-<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-<link rel="dns-prefetch" href="//ajax.googleapis.com" />
-<link rel="dns-prefetch" href="//c1.dmstatic.com" />
-<link rel="dns-prefetch" href="//photos.cdn.dsch.ie" />
-<link rel="dns-prefetch" href="//cookie-cutter.dsch.ie" />
-<link rel="dns-prefetch" href="//b.scorecardresearch.com" />
-<link rel="dns-prefetch" href="//www.googletagservices.com" />
-<link rel="dns-prefetch" href="//googleads.g.doubleclick.net" />
-<link rel="dns-prefetch" href="//stats.g.doubleclick.net" />
-<link rel="dns-prefetch" href="//cdn.maptiler.com" />
+<!-- End Google Tag Manager -->
+        <title>Daft.ie : Information</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+    <link rel="dns-prefetch" href="//c1.dmstatic.com" />
+    <link rel="dns-prefetch" href="//photos.cdn.dsch.ie" />
+    <link rel="dns-prefetch" href="//cookie-cutter.dsch.ie" />
+    <link rel="dns-prefetch" href="//b.scorecardresearch.com" />
+    <link rel="dns-prefetch" href="//www.googletagservices.com" />
+    <link rel="dns-prefetch" href="//googleads.g.doubleclick.net" />
+    <link rel="dns-prefetch" href="//stats.g.doubleclick.net" />
+    <link rel="dns-prefetch" href="//cdn.maptiler.com" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <link rel="canonical" href="https://www.daft.ie/legal/" />
-
+<!-- frame busting -->
 <style id="antiClickjack">body{display:none !important;}</style>
 <script type="text/javascript">
    if (self === top) {
@@ -57,31 +62,38 @@
    } else {
        top.location = self.location;
    }
-</script><link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,700,600" />
-<link rel="stylesheet" type="text/css" href="https://c1.dmstatic.com/1045/styles/default/sprited/daft.ie.css" />
-<link rel="stylesheet" type="text/css" href="https://c1.dmstatic.com/1045/styles/default/fonts.css" />
-<link rel="stylesheet" type="text/css" href="https://c1.dmstatic.com/1045/styles/default/sprited/header.css" />
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="//cdn.maptiler.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+</script><link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,700,600'/>
+<link rel="stylesheet" type="text/css" href="https://c1.dmstatic.com/1045/styles/default/sprited/daft.ie.css"/>
+<link rel="stylesheet" type="text/css" href="https://c1.dmstatic.com/1045/styles/default/fonts.css"/>
+<link rel="stylesheet" type="text/css" href="https://c1.dmstatic.com/1045/styles/default/sprited/header.css"/>
+<link rel='stylesheet' type='text/css' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css'/>
+<link rel='stylesheet' type='text/css' href='//cdn.maptiler.com/mapbox-gl-js/v0.53.0/mapbox-gl.css'/>
 <link rel="stylesheet" type="text/css" href="https://cookie-cutter.dsch.ie/1.11.0/cookieconsent.css" />
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<!--[if IE 9]>
+            <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+        <!--[if IE 9]>
             <link rel="stylesheet"
                   type="text/css"
                   href="https://c1.dmstatic.com/1045/styles/default/daft.ie_ie9.css" />
         <![endif]-->
-<link rel="apple-touch-icon-precomposed" href="https://c1.dmstatic.com/1045/apple-touch-icon-precomposed.png" />
-<script type="text/javascript" src="https://c1.dmstatic.com/1045/jscript/daftie/jquery.plugins.min.js">
+        <link rel="apple-touch-icon-precomposed" href="https://c1.dmstatic.com/1045/apple-touch-icon-precomposed.png" />
+
+        <script type="text/javascript"
+            src="https://c1.dmstatic.com/1045/jscript/daftie/jquery.plugins.min.js">
         </script>
-<script type="text/javascript" src="https://c1.dmstatic.com/1045/jscript/daftie/daftcommon.js">
+        <script type="text/javascript"
+            src="https://c1.dmstatic.com/1045/jscript/daftie/daftcommon.js">
         </script>
-<script type="text/javascript" src="https://c1.dmstatic.com/1045/jscript/daftie/modal.js">
+        <script type="text/javascript"
+                src="https://c1.dmstatic.com/1045/jscript/daftie/modal.js">
         </script>
-<script type="text/javascript" src="https://c1.dmstatic.com/1045/jscript/daftie/placeholders.js">
+        <script type="text/javascript"
+                src="https://c1.dmstatic.com/1045/jscript/daftie/placeholders.js">
         </script>
-<script type="text/javascript" src="https://c1.dmstatic.com/1045/jscript/daftie/search-result.js"></script>
-<script defer="defer" src="//cdn.maptiler.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+        <script type="text/javascript" src="https://c1.dmstatic.com/1045/jscript/daftie/search-result.js"></script>
+
+        <script defer="defer" src="//cdn.maptiler.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
 <script>var googletag = googletag || {};
 
 googletag.cmd = googletag.cmd || [];
@@ -102,7 +114,7 @@ googletag.cmd.push(function() {
 	googletag.placement.skyscraper = googletag.defineSlot('/5512429/daft/df_search_side', [[160, 600],[120, 600]], 'dfp-skyscraper').addService(googletag.pubads());
 	googletag.placement.mpu = googletag.defineSlot('/5512429/daft/df_searchform_side', [[300, 250],[300, 600]], 'dfp-mpu').addService(googletag.pubads());
 	googletag.placement.halfbanner = googletag.defineSlot('/5512429/daft/df_native_photobrowser_bottom', [234,60], 'dfp-halfbanner').addService(googletag.pubads());
-	googletag.pubads().setTargeting('tiling', '4');
+	googletag.pubads().setTargeting('tiling', '7');
 	googletag.pubads().setTargeting('furnished', 'available');
 	googletag.pubads().setTargeting('page', 'default');
 	googletag.enableServices();
@@ -110,154 +122,172 @@ googletag.cmd.push(function() {
 </script>
 <script type="text/javascript">var identityEnabled = 1;</script>
 </head>
-<body class>
+<body class=''  >
 
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHW55M7"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
+<!-- End Google Tag Manager (noscript) -->
 <script type="text/javascript" src="https://c1.dmstatic.com/1045/jscript/daftie/multilineTruncation/mulitline-truncation-plugin.js"></script>
-<div id="consent_modal"></div>
+
+
+
+
+
+
+
+<div id='consent_modal'></div>
+
 <div id="heading-container">
-<div class="headerrow">
-<a href="/" id="logo">
-<img src="https://c1.dmstatic.com/1045/frontend/images/logo@2x.png" height="41" width="129" alt="Daft.ie">
-</a>
-<div class="top-nav hidden-xs">
+    <div class="headerrow">
+        <a href="/" id="logo">
+            <img src="https://c1.dmstatic.com/ad03aff49d544627f3dc1/frontend/images/logo@2x.png" height="41" width="129" alt="Daft.ie">
+        </a>
+        <div class="top-nav hidden-xs">
 
-<div class="user-menu logged-out">
-<ul>
-<li class="seperator">
-<a href="/my-daft/?auth[login]=1" class>
-Login to MyDaft
-</a>
-</li>
-<li class="seperator">
-<a href="/my-daft/?register[u]=1" class>
-Register
-</a>
-</li>
-<li>
-<a href="/help" class>
-Help
-</a>
-</li>
-</ul>
-</div>
-<div class="btn btn-primary advertise-property">Advertise My Property
-<div class="advertise-property-dropdown">
-<div class="advertise-column">
-<ul>
-<li><b>Rent a property</b></li>
-<li><a href="/ad-entry/rental">Residential</a></li>
-<li><a href="/ad-entry/commercial-rental">Commercial</a></li>
-<li><a href="/ad-entry/sharing">Sharing</a></li>
-<li><a href="/ad-entry/holiday_home">Holiday Homes</a></li>
-</ul>
-</div>
-<div class="advertise-property-separator"></div>
-<div class="advertise-column">
-<ul>
-<li><b>Sell a property</b></li>
-<li><a href="/ad-entry/sale">Residential</a></li>
-<li><a href="/ad-entry/commercial-sale">Commercial</a></li>
-</ul>
-</div>
-<div class="advertise-property-separator"></div>
-<div class="advertise-column">
-<ul>
-<li><b>Other</b></li>
-<li><a href="/ad-entry/parking">Parking Space</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="nav" class="headerrow">
-<ul class="linkbar">
-<li class=" hover-dropdown sale first">
-<a href="/sales/">For Sale</a>
-<div class="dropdown">
-<ul class="dropdown-menu">
-<li><a href="/ireland/houses-for-sale/">Houses for Sale</a></li>
-<li><a href="/ireland/apartments-for-sale/">Apartments for Sale</a></li>
-<li><a href="/ireland/houses-for-auction/">Auction Properties</a></li>
-<li><a href="https://content.daft.ie/guides">Neighbourhood Guides</a></li>
-<li><a href="/virtual-tours">Virtual Viewing</a></li>
-<li><a href="/ireland/property-for-sale/?s[area_type]=on&amp;s[agreed]=1&amp;s[advanced]=1">Sale Agreed Properties</a></li>
-<li><a href="/estate-agents/">Find Estate Agent</a></li>
-<li><a href="/price-register/">Sold Prices/Price Register</a></li>
-<li><a href="/sales/?s[advanced]=1">Advanced Sale Search</a></li>
-<li class="nav-itemSeperator">
-<img class="mortgageEstimator_Label" src="https://c1.dmstatic.com/1045/i/new_label_alt.svg" alt="New Badge" />
-<a class="mortgageEstimator_Link" href="https://www.daftmortgages.com/?utm_source=Daft%20web%20primarynav" target="_blank">
-Calculate your Max Budget
-<span>
-<img src="https://c1.dmstatic.com/1045/images/search/chevron.svg" class="mortgageEstimator__Chevron" alt="chevron link">
-</span>
-</a>
-</li>
-</ul>
-</div>
-</li>
-<li class="separator"></li>
-<li class=" hover-dropdown rent">
-<a href="/lettings/">To Rent</a>
-<div class="dropdown">
-<ul class="dropdown-menu">
-<li><a href="/ireland/houses-for-rent/">Houses for Rent</a></li>
-<li><a href="/ireland/apartments-for-rent/">Apartments for Rent</a></li>
-<li><a href="/student-accommodation/?s[search_type]=rental">Student Accommodation</a></li>
-<li><a href="/lettings/?s[advanced]=1">Advanced Rental Search</a></li>
-<li><a href="/ireland/properties-for-doctors-and-nurses/">Doctors &amp; Nurses</a></li>
-</ul>
-</div>
-</li>
-<li class="separator"></li>
-<li class=" hover-dropdown sharing">
-<a href="/sharing/">Sharing</a>
-<div class="dropdown">
-<ul class="dropdown-menu">
-<li><a href="/student-accommodation/">Student Accommodation</a></li>
-<li><a href="/sharing/?s[advanced]=1">Advanced Sharing Search</a></li>
-</ul>
-</div>
-</li>
-<li class="separator"></li>
-<li class><a href="/commercial-property/">Commercial</a></li>
-<li class="separator"></li>
-<li class><a href="/new-homes/">New Homes</a></li>
-<li class="separator"></li>
-<li class><a href="/short-term-rentals/">Short Term Lets</a></li>
-<li class="separator"></li>
-<li class><a href="/holiday-homes/">Holiday Homes</a></li>
-<li class="separator"></li>
-<li class><a href="/overseas/">Overseas</a></li>
-</ul>
-</div>
-</div>
-<div id="breadcrumbs">
-<div class="breadcrumbs-inner">
-<span class="left">
-<span class="truncate"><a href="/">Home</a></span>
-<span class="truncate last">
-/
-<a href id="last_crumb">
-information
-</a>
-</span>
-</span>
-<span class="right">
-<strong>54,294</strong> properties online
-<span class="light">
-(118 in the last 24 hours)
-</span>
-</span>
-</div>
+            <!-- not logged in -->
+        <div class="user-menu logged-out">
+            <ul>
+                <li class="seperator">
+                    <a href="/my-daft/?auth[login]=1" class="">
+                        Login to MyDaft
+                    </a>
+                </li>
+                <li class="seperator">
+                    <a href="/my-daft/?register[u]=1" class="">
+                        Register
+                    </a>
+                </li>
+                <li>
+                    <a href="/help" class="">
+                        Help
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+    <div class="btn btn-primary advertise-property">Advertise My Property
+        <div class="advertise-property-dropdown">
+            <div class="advertise-column">
+                <ul>
+                    <li><b>Rent a property</b></li>
+                    <li><a href="/ad-entry/rental">Residential</a></li>
+                    <li><a href="/ad-entry/commercial-rental">Commercial</a></li>
+                    <li><a href="/ad-entry/sharing">Sharing</a></li>
+                    <li><a href="/ad-entry/holiday_home">Holiday Homes</a></li>
+                </ul>
+            </div>
+            <div class="advertise-property-separator"></div>
+            <div class="advertise-column">
+                <ul>
+                    <li><b>Sell a property</b></li>
+                    <li><a href="/ad-entry/sale">Residential</a></li>
+                    <li><a href="/ad-entry/commercial-sale">Commercial</a></li>
+                </ul>
+            </div>
+            <div class="advertise-property-separator"></div>
+            <div class="advertise-column">
+                <ul>
+                    <li><b>Other</b></li>
+                    <li><a href="/ad-entry/parking">Parking Space</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
 </div>
 
-<div id="notice" class="hide">
+    </div>
+            <div id="nav" class="headerrow">
+    <ul class="linkbar">
+        <li class=" hover-dropdown sale first">
+            <a href="/sales/">For Sale</a>
+            <div class="dropdown">
+                <ul class="dropdown-menu">
+                    <li><a href="/ireland/houses-for-sale/">Houses for Sale</a></li>
+                    <li><a href="/ireland/apartments-for-sale/">Apartments for Sale</a></li>
+                    <li><a href="/ireland/houses-for-auction/">Auction Properties</a></li>
+                    <li><a href="https://content.daft.ie/guides">Neighbourhood Guides</a></li>
+                    <li><a href="/virtual-tours">Virtual Viewing</a></li>
+                    <li><a href="/ireland/property-for-sale/?s[area_type]=on&amp;s[agreed]=1&amp;s[advanced]=1">Sale Agreed Properties</a></li>
+                    <li><a href="/estate-agents/">Find Estate Agent</a></li>
+                    <li><a href="/price-register/">Sold Prices/Price Register</a></li>
+                    <li><a href="/sales/?s[advanced]=1">Advanced Sale Search</a></li>
+                    <li class="nav-itemSeperator">
+                        <img class="mortgageEstimator_Label" src="https://c1.dmstatic.com/1045/i/new_label_alt.svg" alt="New Badge" />
+                        <a class="mortgageEstimator_Link" href="https://www.daftmortgages.com/?utm_source=Daft%20web%20primarynav" target="_blank">
+                            Calculate your Max Budget
+                            <span>
+                                <img src="https://c1.dmstatic.com/1045/images/search/chevron.svg" class="mortgageEstimator__Chevron" alt="chevron link" >
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="separator"></li>
+        <li class=" hover-dropdown rent">
+            <a href="/lettings/">To Rent</a>
+            <div class="dropdown">
+                <ul class="dropdown-menu">
+                    <li><a href="/ireland/houses-for-rent/">Houses for Rent</a></li>
+                    <li><a href="/ireland/apartments-for-rent/">Apartments for Rent</a></li>
+                    <li><a href="/student-accommodation/?s[search_type]=rental">Student Accommodation</a></li>
+                    <li><a href="/lettings/?s[advanced]=1">Advanced Rental Search</a></li>
+                    <li><a href="/ireland/properties-for-doctors-and-nurses/">Doctors &amp; Nurses</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="separator"></li>
+        <li class=" hover-dropdown sharing">
+            <a href="/sharing/">Sharing</a>
+            <div class="dropdown">
+                <ul class="dropdown-menu">
+                    <li><a href="/student-accommodation/">Student Accommodation</a></li>
+                    <li><a href="/sharing/?s[advanced]=1">Advanced Sharing Search</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="separator"></li>
+        <li class=""><a href="/commercial-property/">Commercial</a></li>
+        <li class="separator"></li>
+        <li class=""><a href="/new-homes/">New Homes</a></li>
+        <li class="separator"></li>
+        <li class=""><a href="/short-term-rentals/">Short Term Lets</a></li>
+        <li class="separator"></li>
+        <li class=""><a href="/holiday-homes/">Holiday Homes</a></li>
+        <li class="separator"></li>
+        <li class=""><a href="/overseas/">Overseas</a></li>
+    </ul>
 </div>
+    </div>
+
+<div id="breadcrumbs" >
+    <div class="breadcrumbs-inner">
+        <span class="left">
+            <span class="truncate"><a href="/">Home</a></span>
+                            <span class="truncate last">
+                    /
+                    <a href=""
+                        id="last_crumb">
+                        information
+                    </a>
+                </span>
+                    </span>
+        <span class="right">
+            <strong>54,442</strong> properties online
+            <span class="light">
+                (247 in the last 24 hours)
+            </span>
+        </span>
+    </div>
+</div>
+
+
+            <!-- header ends, content begins -->
+                    <div id="notice" class="hide">
+                                    </div>
+        
 <script>
     googletag.cmd.push(function() {
         googletag.pubads().addEventListener('slotRenderEnded', function(event) {
@@ -267,10 +297,13 @@ information
         });
     });
 </script>
+
 <div id="gc_content" style="text-align: justify;">
+
 <h1>Terms & Conditions of Use of Daft</h1>
+
 <div id="gc_links">
-<ul>
+                <ul>
 <li><a href="/about/">About Daft</a></li>
 <li><a href="https://www.daft.ie/blog/">Daft Blog</a></li>
 <li><a href="/content/awards.daft">Awards</a></li>
@@ -285,64 +318,72 @@ information
 <li><a href="/help/">Help</a></li>
 <li><a href="/legal/">Legal</a></li>
 <li><a href="/privacy/">Privacy</a></li></ul>
-</div>
+        </div>
+
+
 <h3>Contents</h3>
-<br/>
+<br />
+
 <ol class="legal-ol">
-<li><a href="#intro">Introduction</a></li>
-<li><a href="#consent">Your consent</a></li>
-<li><a href="#modification">Modification of terms</a></li>
-<li><a href="#us">Information about Us</a></li>
-<li><a href="#access">Access to and use of the Website and the Daft Service</a></li>
-<li><a href="#registration">Registration of accounts, usernames and passwords, deactivating accounts</a></li>
-<li><a href="#use">Using and accessing the Website, Content and the Daft Service</a></li>
-<li><a href="#restrictions">Restrictions on right to use</a></li>
-<li><a href="#interactions">Your interactions with other users</a></li>
-<li><a href="#content">Content standards</a></li>
-<li><a href="#additional">Additional policies</a></li>
-<li><a href="#suspension">Suspension and termination</a></li>
-<li><a href="#concerns">Your concerns and complaints</a></li>
-<li><a href="#disputes">Disputes with third parties</a></li>
-<li><a href="#payments">Payment for advertisements</a></li>
-<li><a href="#cancellation">Cancellation policy</a></li>
-<li><a href="#advertisements">Published advertisements and duration of advertisements</a></li>
-<li><a href="#advertising">Advertising terms and conditions</a></li>
-<li><a href="#commercial">Commercial Advertising</a></li>
-<li><a href="#fair">Fair usage policy</a></li>
-<li><a href="#reporting">Reporting breaches</a></li>
-<li><a href="#standards">Standards</a></li>
-<li><a href="#responsibility">Responsibility</a></li>
-<li><a href="#consequences">Consequences for failure to comply with the Agreement</a></li>
-<li><a href="#banner">Banner advertising</a></li>
-<li><a href="#refund">Refund policy</a></li>
-<li><a href="#intellectual">Intellectual property</a></li>
-<li><a href="#disclaimer">Disclaimer of liability</a></li>
-<li><a href="#indemnity">Indemnity</a></li>
-<li><a href="#endorsement">Disclaimer of endorsement</a></li>
-<li><a href="#linksto">Links to the Website</a></li>
-<li><a href="#linksfrom">Links from the Website</a></li>
-<li><a href="#contact">Contact from Us</a></li>
-<li><a href="#privacy">Privacy and Cookies Policy</a></li>
-<li><a href="#jurisdiction">Governing law and jurisdiction</a></li>
-<li><a href="#waiver">Waiver</a></li>
-<li><a href="#severability">Severability</a></li>
-<li><a href="#assignment">Assignment and entire agreement</a></li>
-<li><a href="#submissions">Submissions</a></li>
+ <li><a href="#intro">Introduction</a></li>
+ <li><a href="#consent">Your consent</a></li>
+ <li><a href="#modification">Modification of terms</a></li>
+ <li><a href="#us">Information about Us</a></li>
+ <li><a href="#access">Access to and use of the Website and the Daft Service</a></li>
+ <li><a href="#registration">Registration of accounts, usernames and passwords, deactivating accounts</a></li>
+ <li><a href="#use">Using and accessing the Website, Content and the Daft Service</a></li>
+ <li><a href="#restrictions">Restrictions on right to use</a></li>
+ <li><a href="#interactions">Your interactions with other users</a></li>
+ <li><a href="#content">Content standards</a></li>
+ <li><a href="#additional">Additional policies</a></li>
+ <li><a href="#suspension">Suspension and termination</a></li>
+ <li><a href="#concerns">Your concerns and complaints</a></li>
+ <li><a href="#disputes">Disputes with third parties</a></li>
+ <li><a href="#payments">Payment for advertisements</a></li>
+ <li><a href="#cancellation">Cancellation policy</a></li>
+ <li><a href="#advertisements">Published advertisements and duration of advertisements</a></li>
+ <li><a href="#advertising">Advertising terms and conditions</a></li>
+ <li><a href="#commercial">Commercial Advertising</a></li>
+ <li><a href="#fair">Fair usage policy</a></li>
+ <li><a href="#reporting">Reporting breaches</a></li>
+ <li><a href="#standards">Standards</a></li>
+ <li><a href="#responsibility">Responsibility</a></li>
+ <li><a href="#consequences">Consequences for failure to comply with the Agreement</a></li>
+ <li><a href="#banner">Banner advertising</a></li>
+ <li><a href="#refund">Refund policy</a></li>
+ <li><a href="#intellectual">Intellectual property</a></li>
+ <li><a href="#disclaimer">Disclaimer of liability</a></li>
+ <li><a href="#indemnity">Indemnity</a></li>
+ <li><a href="#endorsement">Disclaimer of endorsement</a></li>
+ <li><a href="#linksto">Links to the Website</a></li>
+ <li><a href="#linksfrom">Links from the Website</a></li>
+ <li><a href="#contact">Contact from Us</a></li>
+ <li><a href="#privacy">Privacy and Cookies Policy</a></li>
+ <li><a href="#jurisdiction">Governing law and jurisdiction</a></li>
+ <li><a href="#waiver">Waiver</a></li>
+ <li><a href="#severability">Severability</a></li>
+ <li><a href="#assignment">Assignment and entire agreement</a></li>
+ <li><a href="#submissions">Submissions</a></li>
 </ol>
-<br/>
+<br />
+
 <h2 id="intro">1. Introduction</h2>
-<p>Welcome to the Daft.ie website. This document sets out the Terms of Use of our website, and applies to anyone who accesses or uses our site. This includes pages consisting of or containing the daft.ie, rent.ie, property.ie or let.ie. These Terms of Use apply to usage of all services provided by us, including access to our site via desktop, as well as mobile and app usage. The <strong>"Website"</strong>, <strong>"Site"</strong>, or <strong>"Daft.ie"</strong> and the provision of our advertising services on the Website are subject to you accepting the Terms of Use (defined below).</p>
+<p>Welcome to the Daft.ie website. This document sets out the Terms of Use of our website, and applies to anyone who accesses or uses our site.  This includes pages consisting of or containing the daft.ie, rent.ie, property.ie or let.ie. These Terms of Use apply to usage of all services provided by us, including access to our site via desktop, as well as mobile and app usage.  The <strong>"Website"</strong>, <strong>"Site"</strong>, or <strong>"Daft.ie"</strong> and the provision of our advertising services on the Website are subject to you accepting the Terms of Use (defined below).</p>
 <p>The agreement between you and us in relation to your use of the Website (the <strong>"User Agreement"</strong>) consists of these terms and conditions of use (<strong>"Terms of Use"</strong>), the policies referred to in clause 11 below (each a <strong>"Policy"</strong> and together the <strong>"Policies"</strong>), all of which you should read carefully before you start to use the Website.</p>
+
 <h2 id="consent">2. Your consent</h2>
 <p>Please review the Terms of Use and each Policy carefully. By accessing and using the Website, you confirm that you have read, understand and accept the Terms of Use and the Policies and that you agree to abide by their respective terms each time you access and use the Website. If you do not agree with any of the Terms or Use or any Policy, you may not use the Website.</p>
 <p>Registered users of our site will be required to agree to these Terms of Use in order to carry out core services provided by the Site.</p>
+
 <h2 id="modification">3. Modification of terms</h2>
 <p>We reserve the right in our sole discretion to change and update the Terms of Use and any Policy at any time and recommend that you revisit this page regularly to keep informed of the current Terms of Use and Policies that apply to your use of the Website. Any such changes will take effect immediately when posted on the Website.</p>
 <p>Registered users of the site will be alerted to any change of the Terms of Use, and will be required to confirm your agreement to the updated Terms in order to continue to carry out core services provided by the Site. </p>
 <p>By continuing to access, browse and use the Website, unregistered users will be deemed to have agreed to any changes or updates to the Terms Use and any Policy.</p>
 <p>We reserve the right to change the Terms of Use and any Policy at any time and to notify you by posting an updated version of the Term of Use and/or the applicable Policy on the Website. Please the Terms of Use and the Policies from time to time as your continued use of the Website means you have read, understood and agreed to be bound by the then prevailing Terms of Use and Policies.</p>
+
 <h2 id="us">4. Information about us</h2>
 <p>The Website and the Daft Service (defined below) is a website operated by Daft Media Limited (<strong>"we"</strong>, <strong>"us"</strong> or <strong>"our"</strong>). We are incorporated in Ireland under company number 347856 and our registered office is at Latin Hall, Golden Lane, Dublin 8. Our VAT number is IE6367856O.</p>
+
 <h2 id="access">5. Access to and use of the Website and the Daft Service</h2>
 <h2>Age and responsibility</h2>
 <p>The use of the Website and/or the Daft Service by a minor (an individual under 18 years of age) is subject to the consent of their parent or guardian and our contract is with the parent or guardian, who is responsible for the minor's compliance. We advise parents or guardians who permit minors to use the Website and/or the Daft Service that it is important that they communicate with minors about their safety online, as moderation or vetting of advertisements is not guaranteed or fool proof. Minors who are using any interactive service should be made aware of the potential risks to them.</p>
@@ -350,20 +391,23 @@ information
 <p>The services which are made available on the Website by us from time to time will, amongst other things, allow you: (i) to create, publish and manage written advertisements for properties for sale or to let; (ii) to create, publish and manage written advertisements; (iii) to contact other users of the Website; (iv) to purchase a BER assessment; (v) to search our database for advertisements regarding a specific property in a specific location; (vi) to forward advertisements to people you know; (vii) to invite people you know to view the Website; (viii) to download or copy portions of information, data, text, sound, images, photographs, graphics, video, messages and other materials; and (ix) to view third party material and receive short service messages (SMS) as part of the SMS Service (defined below) and other items displayed on the Website ((i) to (ix), together, <strong>"Content"</strong>) (the <strong>"Daft Service"</strong>).</p>
 <p>You may use the Website for your own personal and commercial or non-commercial use to avail of the Daft Service strictly in accordance with the User Agreement.</p>
 <p>The User Agreement applies all users and visitors to the Website and the Daft Service.</p>
+
 <h2 id="registration">6. Registration of accounts, usernames and passwords, deactivating accounts</h2>
 <p>Registration is not required if you simply want to browse through the advertisements on the Website. Registration is required if you want access core services, including but not limited to, placing advertisements, saving searches, and interacting with other users.</p>
-<p>As part of the registration process, you will be asked to enter your email address and a password and you will be responsible for all activities occurring under your account and for keeping your password secure. This includes a responsibility to ensure that you do not enter your account information into a phishing website, or any other website purporting to be or offer services for Daft.ie. All information supplied must be complete and accurate.</p>
+<p>As part of the registration process, you will be asked to enter your email address and a password and you will be responsible for all activities occurring under your account and for keeping your password secure. This includes a responsibility to ensure that you do not enter your account information into a phishing website, or any other website purporting to be or offer services for Daft.ie.  All information supplied must be complete and accurate.</p>
 <p class="legal-underline">Names and Email Addresses</p>
 <p>You may not enter a name or email address that:</p>
 <ul class="legal-margin-left legal-ul">
-<li>Contains "Daft" or otherwise misrepresents your relationship with Daft.ie or any other party;</li>
-<li>Contains any profanity, is vulgar or offensive, or promotes an illegal activity;</li>
-<li>Violates any trade mark or other proprietary right; and/or</li>
-<li>Misleadingly impersonates someone else.</li>
+ <li>Contains "Daft" or otherwise misrepresents your relationship with Daft.ie or any other party;</li>
+ <li>Contains any profanity, is vulgar or offensive, or promotes an illegal activity;</li>
+ <li>Violates any trade mark or other proprietary right; and/or</li>
+ <li>Misleadingly impersonates someone else.</li>
 </ul>
-<br/>
+<br />
+
 <p>We reserve the right to deactivate accounts containing names and/or email addresses that do not comply with these Terms of Use at our discretion.</p>
 <p class="legal-underline">Accounts and passwords</p>
+
 <p>We reserve the right to log off or deactivate accounts that are inactive for an extended period of time.</p>
 <p>You are responsible for all actions taken under your account and you agree only to use or utilise the Website using your own name, email address and password. You must make reasonable efforts to keep your password safe and not disclose it to any other person or permit either directly or indirectly any other person to utilise your email address or password. We reserve the right to terminate your registration without prior notice at our discretion.</p>
 <p>You agree to notify us immediately if you suspect any unauthorised use of your account or access to your password.</p>
@@ -374,8 +418,9 @@ information
 <p>We do not sell or knowingly pass any personal information from your account to any third party, except information which is required to provide the service between buyers and sellers. Your details and privacy are important to us. If you feel that your information has been compromised in any way, please report it immediately to us at <a href="mailto:support@daft.ie">support@daft.ie</a></p>
 <p>Further information about how we use your information, and your rights to update your communication preferences, can be found within our <a href="/privacy">Privacy Policy</a>.</p>
 <p><strong>Deactivating accounts</strong></p>
-<p>In accordance with Data Protection Law, non- registered and registered users of our sites can request we delete any personally identifiable information. In some instances we may be unable to delete your data if we are required to retain it to comply with our legal obligations (including requests from law enforcement agencies).</p>
+<p>In accordance with Data Protection Law, non- registered and registered users of our sites can request we delete any personally identifiable information.  In some instances we may be unable to delete your data if we are required to retain it to comply with our legal obligations (including requests from law enforcement agencies).</p>
 <p>You can learn more about your right to data deletion and how long we retain data for by reading our <a href="/privacy">Privacy Policy</a>.</p>
+
 <h2 id="use">7. Using and accessing the Website, Content and the Daft Service</h2>
 <p>We have the right to temporarily or permanently disable, suspend or restrict without limitation any password, name, mobile phone number, IP address or other method that we may allow to be used on the Website from time to time to identify users (whether chosen by you or allocated by us) (a <strong>"User Identifier"</strong>), at any time, at our discretion, including if, in our opinion, you have failed to comply with any of the provisions of the Terms of Use or any applicable Policy.</p>
 <p>You may not: (i) enter, select, submit or use a false name or an email address owned or controlled by another person with the intent to impersonate that person; (ii) use a User Identifier without appropriate authorisations or rights; or (iii) use or submit a mobile phone number or email to us in respect of which you are not the registered owner, bill-payer and or account holder. We reserve the right in our sole discretion to refuse registration of, suspend or cancel a User Identifier's use or access rights to the Website without notice. You shall be responsible for maintaining the confidentiality of your User Identifier(s) and are fully responsible for all activities that occur under your User Identifier in connection with your use of the Website or the Daft Service. Any User Identifiers created by you or submitted for your access to the Daft Service and Website shall be for your personal use only and are non-transferable.</p>
@@ -390,8 +435,9 @@ information
 <p>You should not rely on any content and/or any other material on the Website to make or refrain from making any decision or take or refrain from taking any action on which reliance should be placed. We disclaim all liability and responsibility arising from any reliance placed on such content and/or materials by any user of the Website, or by anyone who may be informed of any of the content. We accept no responsibility for keeping the information on the Website up to date or complete, nor do we accept any liability for any failure to do so. It is solely your responsibility to evaluate the accuracy, completeness and usefulness of all opinions, advice, services, merchandise and other information provided through the service or on the internet generally.</p>
 <p>We reserve the right to refuse to publish any content or other material or to provide any other services without prior notice to any user or users for any reason or no reason.</p>
 <p>We do encourage the use by you of the 'Report this Ad' mechanism which we have placed on the Website which allows you to report any Content that is in breach of the Terms of Use or any applicable Policy or is in any other way objectionable.</p>
-<p>Daft.ie will use all reasonable endeavors to remove the offending content complained about within a reasonable period of time. Any content reported to us will be reviewed from 9am to 5pm, Monday to Friday, excluding national and public holidays in the Republic of Ireland. Any notification received outside of the aforementioned hours will only be address upon the reopening of Daft.ie offices.</p>
+<p>Daft.ie  will use all reasonable endeavors to remove the offending content complained about within a reasonable period of time. Any content reported to us will be reviewed from 9am to 5pm, Monday to Friday, excluding national and public holidays in the Republic of Ireland. Any notification received outside of the aforementioned hours will only be address upon the reopening of Daft.ie offices.</p>
 <p>Access to the Website and/or the Daft Service is permitted on a temporary basis, and we reserve the right to at any time and without liability to withdraw, suspend or amend any aspect or feature of the Website and/or the Daft Service without notice or liability.</p>
+
 <h2 id="restrictions">8. Restrictions on right to use</h2>
 <p>You must not (and you must not to allow any third party to):</p>
 <p>a. modify, adapt, translate, or reverse engineer any portion of the Website and/or the Daft Service;</p>
@@ -418,6 +464,7 @@ information
 <p>v. post or use any material that is obscene, defamatory, seditious, indecent, offensive, incite racial hatred or incite a crime, be naming or scandalous or inappropriate; and/or</p>
 <p>w. harvest of otherwise collect by any means any programme material or information from the Website unless authorised under the Terms of Use or to monitor, mirror or copy any content of the Website without our prior written consent.</p>
 <p>We reserve the absolute right at our sole discretion, without being obliged to give any reason, to reject, amend or remove any Content posted or submitted by you at any time and without notice to you. We reserve the right to monitor and to review all Content submitted to us, accessed on or published on the Website at any time.</p>
+
 <h2 id="interactions">9. Your interactions with other users</h2>
 <p>We have no obligation to verify the identity of any users when they are connected to the Website or to monitor material provided by them.</p>
 <p>As a result of the variation in community standards and individuals sometimes choosing not to comply with our policies and guidelines, in the process of using the Website, you may be exposed to content that you find offensive or objectionable. You can report such content to us using the "Report this Ad" mechanism.</p>
@@ -432,6 +479,7 @@ information
 <p>c. other purposes that a user expressly agrees to.</p>
 <p>Although we cannot monitor the conduct of its users off-line, you must not use any information obtained from the Website in order to harass, abuse or harm another person, or in order to contact, advertise to, solicit or sell to any user or person without their prior expressive consent.</p>
 <p>We will not disclose any contact details in respect of advertisements that have been deleted or removed in accordance with our obligations under applicable data protection laws. You can view our Privacy Policy <a href="/privacy">here</a>.</p>
+
 <h2 id="content">10. Content standards</h2>
 <p>These provisions apply to any and all Content which you contribute to the Website and/or the Daft Service, and to any interactive services associated with it.</p>
 <p>You must comply with the spirit of the following standards as well as the letter. The standards apply to each part of any Content as well as to its whole.</p>
@@ -454,32 +502,41 @@ information
 <p>i. upload, post, email, transmit or otherwise make available any material that contains software viruses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer software or hardware or telecommunications equipment; and/or</p>
 <p>j. interfere with or disrupt the Website or servers or networks connected to the Website, or disobey any requirements, procedures, policies or regulations of networks connected to the Website.</p>
 <p>We do not control the Content posted by users via the Daft Service, including the content of any advertisements or blog postings, and we do not guarantee the accuracy, integrity or quality of such Content. You understand that by using the Website and/or the Daft Service, you may be exposed to Content that is offensive, indecent or objectionable. You are responsible for complying with all laws applicable to the Content you submit to the Website via the Daft Service. We may refuse any Daft Service without prior notice to any user for any or no reason. We also have the right, at our discretion, to disclose your identity to any third party who is claiming that any Content posted or uploaded by you to the Website constitutes a violation of their intellectual property rights, or of their right to privacy.</p>
+
+
 <h2 id="additional">11. Additional policies</h2>
 <p>Your use of the Website and the Daft Services is subject to compliance with the following policies which provide additional terms and conditions related to specific services and features related to the Website:</p>
 <p>a. <a href="https://www.daft.ie/content/house-rules.daft" target="_blank">House Rules for Advertisers</a></p>
 <p>b. <a href="https://www.daft.ie/equality-guidelines" target="_blank">Property Advertisement Equality Guidelines</a></p>
+
 <h2 id="suspension">12. Suspension and termination</h2>
 <p>We may, with or without cause, immediately delete your advertisement and terminate your access to the Daft Service or a User Identifier without prior notice at our sole discretion. The deletion or otherwise of an advertisement should not be viewed as an indication of wrongdoing on the part of the advertiser.</p>
 <p>Without limiting the foregoing, the following may lead to a deletion by us of a user's advertisement and/or termination of access to the Daft Service: (a) a breach of the User Agreement (b) a request by law enforcement, An Garda S&iacute;och&aacute;na / PSNI, police or other government agencies about you or any Content that you have submitted to us; (c) a request by you (self-initiated deletion(s)); (d) unexpected technical issues or problems; and (e) extended periods of inactivity. Deletion of a user advertisement and termination of access to the Daft Service may result in the removal of all Content that we may decide to delete. It may also result in preventing your further use of the Website or a User Identifier, depending on the circumstances. Furthermore, you agree that termination of the user Agreement or your use of the Website by us shall be made in our sole discretion and that we shall not be liable to you nor any third party for any termination of your account or access to the Website or removal of Content. You can view further information about how we process your data by reading our <a href="/privacy">Privacy Policy</a>.</p>
 <p>We may review and delete any advertisements, blog postings or other Content that in our sole judgment breach the User Agreement or which might be offensive, illegal or that might violate the rights of, harm, or threaten the safety of other users of the Website or us.</p>
 <p>We reserve the right to investigate and we will determine, in our discretion, whether there has been a breach of the User Agreement through your use of the Website and/or the Daft Service. When a breach of the User Agreement has occurred, we may take such action as we deem appropriate.</p>
+
 <h2 id="concerns">13. Your concerns and complaints</h2>
 <p>If you have any concerns about material which appears on the Website or if you believe that Content posted on the Website breaches the User Agreement or is in any other way objectionable, please notify us through the 'Report this Ad' mechanism on the Website or send a letter to Daft.ie, Latin Hall, Golden Lane, Dublin 8, Ireland specifying the full details of your concern or complaint, specifying the reasons for your concern or complaint making clear reference to any connected such Content.</p>
 <p>If you do not provide us with sufficient information, we may be unable to process your complaint. We reserve the right to investigate and we will determine, in our discretion, what action (if any) to take. You are solely responsible for your interactions with other users of the Website. While we reserve the right to monitor or to intervene in disputes between you and other users, we have no obligation to do so.</p>
 <p>We will use all reasonable endeavours to respond to complaints received as soon as possible, and our aim is to respond to all complaints within one working day. However, please note that from time to time it may take longer than one working day to deal with complaints.</p>
+
 <h2 id="disputes">14. Disputes with third parties</h2>
 <p>You must tell us immediately if anyone makes or threatens to make any claim or issue legal proceedings against you relating to your use of the Website and/or the Daft Service. You must, at our request, immediately stop the act complained of. If we ask you to, you must confirm the details of the claim in writing. If you fail to stop the act or acts complained of we reserve the right to take any and all appropriate action against you.</p>
+
 <h2 id="payments">15. Payment for advertisements</h2>
 <p>Publication of an advertisement is subject to payment of a fee to Daft.ie (the "Fee"). The terms of the Fee are set out on the Website and displayed to you in the course of you offering to place an advertisement with us. The Fee for all Daft Services is quoted euro and is payable in euro. All prices are stated inclusive of valued added tax (VAT) at the relevant rate.</p>
 <p>You may save your credit and debit card details for future payments on the Website.</p>
+
 <h2 id="cancellation">16. Cancellation policy</h2>
 <p>Once your advertisement is posted on the Website your request for our services cannot be cancelled at that stage. Prior to the advertisement appear on the Website you may cancel the advertisement by <a href="https://www.daft.ie/contact/" target="_blank">contacting us</a>.</p>
+
 <h2 id="advertisements">17. Published advertisements and duration of advertisements</h2>
 <p>Once you have completed the process of submitting your advertisement we will send you an email confirming receipt of your order for the Daft Service, this email does not constitute an acceptance of your order. Your order for posting an advertisement on the Website will not be accepted and an agreement concluded between us and you in relation to the publication of the advertisement on the Website until the payment for the Daft Service has been received by us.</p>
 <p>Advertisements will be displayed for the period stated on the relevant ad entry page for each ad type. If you wish to extend this period you will be required to resubmit your request for the Daft Service and to make a further payment for those services.</p>
 <p>Content which comprises advertising material will appear on the Website. Individual advertisers are solely responsible for the content of the material which they submit to us including ensuring that it complies with relevant legislation. We accept no responsibility for the content of any business and/or advertising material, including, without limitation, any error, omission or inaccuracy.</p>
 <p>Please note that the content of the published advertisements is provided by external users, and do not represent any views or opinions of Daft.ie, nor should they purport to do so.</p>
 <p>Accordingly, we require that every care is taken by you or on your behalf in drafting the content of your advertisements in order to ensure that they are not in any way defamatory, illegal or in any other way harmful to a third party as you are solely responsible as author and publisher of your advertisement.</p>
+
 <h2 id="advertising">18. Advertising terms and conditions</h2>
 <p>When creating an advertisement on the Website you must provide accurate, current and complete information and to promptly update the information that you provide to us when it changes.</p>
 <p>Advertisements containing illegal, defamatory, obscene, indecent or otherwise offending material are not allowed on the Website. Duplicate advertisements are also prohibited.</p>
@@ -487,9 +544,11 @@ information
 <p>Using multiple addresses means that advertisements appear in the wrong category and search lists, making them inaccurate and therefore we do not allow the use of these in any form on the Website.</p>
 <p>Daft.ie is a family website so we reserve the right to review and reject any advertisements that we feel have an adult theme. In particular no graphic images may be used in advertisements, any inappropriate content will be removed.</p>
 <p>Advertisements which are posted and are found to be in breach of our policies will be removed without prior notification and no refund will be given. Users who are found to be in violation of our policies on more than one occasion may have their account removed and their information passed to the policing authority.</p>
+
 <h2 id="commercial">19. Commercial Advertising</h2>
 <p>Businesses and persons acting in the course of trade are welcome to place classified advertisements on the Website.</p>
 <p>Advertisements published by businesses or persons acting in the course of trade must comply with applicable laws and it is those persons' responsibility to do so. We will hold you responsible for any failure to comply with laws that apply to you or your content. You may need to adhere to the Consumer Protection Act 2007, the European Communities (Misleading and Comparative Marketing Communications) Regulations 2007, the European Communities (Misleading Advertising) Regulations 1988, European Communities (Protection of Consumers in Respect of Contracts made by means of Distance Communications) Regulations 2001, the European Communities (Directive 2001/31/EC) Regulations, 2003 (each as amended, supplemented or replaced from time to time) (the <strong>"Ecommerce Regulations"</strong>) and any other consumer protection legislation at the time being in force. Please note that the Website is aimed at consumers in Ireland (including Northern Ireland), but we cannot prevent you being contacted from other consumers or other third parties nor can we prevent your advertisement being displayed in other jurisdictions.</p>
+
 <h2 id="fair">20. Fair usage policy</h2>
 <p>To ensure the best browsing experience for our users, your potential buyers, we ask that you only create one advertisement per property.</p>
 <p>We only allow one property per advertisement. This ensures that your property will appear in the correct search and helps them sell/rent quicker. Your advertisement may be removed if:</p>
@@ -497,12 +556,16 @@ information
 <p>b. you have multiple listings for one property across several sections; and/or</p>
 <p>c. you have multiple listings for one property across several counties.</p>
 <p>This will make it easier for a potential buyer/tenant to find your property. It will also make it easier for the advertisement to be removed when the property is no longer available. If this policy is not complied with, we reserve the right to remove the offending advertisement(s) from the Website without notice to you and without refund.</p>
+
 <h2 id="reporting">21. Reporting breaches</h2>
 <p>Please use the 'Report this Ad' mechanism which we have placed on the Website to report any advertisement that is in breach of the User Agreement, illegal or in any other way objectionable.</p>
+
 <h2 id="standards">22. Standards</h2>
 <p>All advertisements must adhere to the âCode of Advertising Standards' of <a href="http://www.asai.ie" target="_blank">The Advertising Standards Authority for Ireland</a> in addition to the standards set out in the Agreement.</p>
+
 <h2 id="responsibility">23. Responsibility</h2>
 <p>You are solely responsible for the Content appearing in any of your advertisements and for the property sold or let following advertisement. We are not responsible for the properties appearing on the Website that you advertise or purchase or rent, nor are we responsible for the Content appearing in any of the advertisements. To the fullest extent permitted by law we disclaim any and all liability in respect of any arising from any reliance placed on the Content of any advertisement by any user of the Website or any claims arising in respect of any goods to which the Content relates.</p>
+
 <h2 id="consequences">24. Consequences for failure to comply with the User Agreement</h2>
 <p>Failure by you to comply with the User Agreement may result in our taking all or any of the following actions:</p>
 <p>a. immediate, temporary or permanent withdrawal of your right to use the Website and/or the Daft Service;</p>
@@ -514,10 +577,13 @@ information
 <p>g. other legal action against you; and/or</p>
 <p>h. disclosure of such information to law enforcement authorities as we reasonably feel is necessary, as set out in our <a hre="/privacy" target="_blank">Privacy Policy</a>.</p>
 <p>We exclude liability for actions taken in response to breaches of the Terms of Use. The responses described above are not exhaustive and we may take any other action we reasonably deem appropriate.</p>
+
 <h2 id="banner">25. Banner advertising</h2>
 <p>Banner advertising on the Website is managed and provided by third party service provider(s) whom/which we allow to provide services using the Website and who/which we will identify on the Website from time to time (each a <strong>"Banner Advertiser"</strong>). To place banner advertising on the Website, please contact the Banner Advertisers using the contact details identified on the Website from time to time. Please note that any agreement that you reach with any Banner Advertiser in relation to a banner or other advertising service on the Website is with that Banner Advertiser and it is subject to you entering into an agreement with that Banner Advertiser for that advertisement service. We are not responsible for any Banner Advertiser's services to you notwithstanding that the advertisement will appear on the Website. Please read the privacy policy and terms and conditions that apply to the any Banner Advertiser's services carefully before placing a banner advertisement or availing of another third party advertising service related to or available on the Website.</p>
+
 <h2 id="refund">26. Refund policy</h2>
 <p>Where advertisements or other Content are rejected and/or removed from the Website by us, it is our policy NOT to issue refunds. If you have any doubts about the suitability of a proposed advertisement, please <a href="https://www.daft.ie/contact/" target="_blank">contact us</a> in advance of placing the advertisement for appropriate guidance.</p>
+
 <h2 id="intellectual">27. Intellectual property</h2>
 <p>The Website and the Daft Service (including, but not limited to, text, images, photographs, graphics, video and audio Content) are protected by copyright as works, databases, collective works and/or compilations under the copyright laws of Ireland, Northern Ireland and other countries. All individual advertisements, articles, Content and other elements comprising the Website and the Daft Service are also copyrighted works. Except for the Content that you submit (<strong>"User Content"</strong>), all intellectual property rights (including copyright, design rights and trade marks) in the Website, Content, User Identifiers and the Daft Service (<strong>"Protected IP"</strong>) are as between you and us are owned by us or our licensors. You acknowledge that the Website, User Identifiers and the Daft Service and any underlying technology or software used in connection with the Website and the Daft Service contains our proprietary information. You may not modify, reproduce, distribute, create derivative works of, publicly display or in any way exploit, any of the content, software, and/or materials available on the Website, or the Daft Service in whole or in part except as expressly provided. Except as expressly and unambiguously provided in these Terms of Use, we and our advertisers, licensors or suppliers do not grant you any express or implied rights to use any Protected IP, and all rights in any Protected IP not expressly granted by us to you are reserved by us for our benefit and the benefit of our licensors.</p>
 <p>To the extent you may have any moral rights in any Content (including User Content), you confirm and agree that: (a) you do not require that any personally identifying information be used in connection with the Content, or any derivative works of or upgrades or updates to the Content; (b) you have no objection to the publication, use, modification, deletion and exploitation of the Content by us or our licensees, successors and assigns; (c) you forever waive and agree not to claim or assert any entitlement to any and all moral rights of an author in any of the Content; and (d) you forever release us, and our licensees, successors and assigns, from any claims that you could otherwise assert against us by virtue of any such moral rights.</p>
@@ -527,6 +593,7 @@ information
 <p>Our status (and that of any partners, advertisers or third parties identified on the Website) as the authors of material on the Website must always be acknowledged by you.</p>
 <p>You must not use any part of the Content on the Website for commercial purposes without obtaining a licence to do so from us.</p>
 <p>If you print off, copy or download any part of the Website in breach of the User Agreement, your right to use the Website will cease immediately and you must, at our option, return or destroy any copies of the materials that you have made.</p>
+
 <h2 id="disclaimer">28. Disclaimer of liability</h2>
 <p>The Website and the Daft Service are provided on an 'as is' basis only. You may not rely on any Content and/or other material on the Website and/or the Daft Service to make (or refrain from making) any decision or to take (or refrain from taking) any action on which reliance should be placed. We disclaim all liability (whether in contract, tort or otherwise) arising out of or in connection with any reliance placed on such Content and/or materials by any user of the Website and/or the Daft Service, or by anyone who may be informed of any of the Content. We accept no responsibility for keeping the information in the Website and/or the Daft Service up to date or complete or liability for any failure to do so.</p>
 <p>The Content and other material displayed on the Website is provided without any guarantees, conditions or warranties as to its accuracy. To the extent permitted by law, we expressly exclude:</p>
@@ -540,107 +607,123 @@ information
 <p>Where a discriminatory advertisement has been identified, the advertisement will be removed and no refund will be paid for said advertisement.</p>
 <p>Where the conduct is repeated, it may give rise to a referral of said advertisement to the Irish Human Rights and Equality Commission, the relevant regulatory body, who have the power to refer complaints of discriminatory advertisement to the Workplace Relations Commission, where deemed appropriate.</p>
 <p>A posting of a discriminatory advertisement on this site may constitute a repudiation of the contract and may be a ground for treating the contract as coming to an end.</p>
+
+
 <h2 id="indemnity">29. Indemnity</h2>
 <p>You shall indemnify and keep us, our holding company and subsidiaries (each as defined in the Companies Act 2014) and our and their respective officers, directors, shareholders, employees, agents, licensors and suppliers (each an <strong>"Indemnified Person"</strong>) indemnified on demand from and against all judgments, awards, penalties, settlements, fines, costs and expenses (including without limitation, reasonable legal and accounting fees) suffered or incurred by an Indemnified Person and arising out of or in connection with any of the following:</p>
 <p class="legal-margin-left">(a) any breach of the User Agreement;</p>
 <p class="legal-margin-left">(b) your access to or use of the Website, the Content or the Daft Service in a manner that infringes or is alleged to infringe any applicable law or the rights (including, without limitation, the privacy or intellectual property rights) of any other person.</p>
+
 <h2 id="endorsement">30. Disclaimer of endorsement</h2>
 <p>Content on the Website referring to any products, process or service by trade name, trade mark, manufacturer or otherwise, does not constitute or imply its endorsement, recommendation or validation by us. We have not independently verified the accuracy of any description of any goods or services advertised on the Website. The views, opinions and other Content posted by users on the Website are not ours, shall not be attributed to us by you and shall not be used by you for any advertising or product endorsement purposes unless we expressly authorise it.</p>
-<h2 id="linksto">31. Links to the Website</h2>
+
+<h2 id="linksto">31.  Links to the Website</h2>
 <p>You may link to the Website, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it, but you must not establish a link in such a way as to suggest any form of association, approval, sponsorship or endorsement on our part without our express written permission or in order to directly compete with the Website and redirect traffic from it. You must not establish a link from any website that is not owned by you.</p>
 <p>We reserve the right to withdraw linking permission without notice. The Website (in whole or in part) must not be framed on any other website or in any other way altered or displayed in a different manner to the manner which we display it.</p>
 <p>If you wish to make any use of material on the Website other than in the manner permitted by these Terms of Use including as set out above please <a href="https://www.daft.ie/contact/" target="_blank">contact us.</a></p>
+
 <h2 id="linksfrom">32. Links from the Website</h2>
 <p>Where the Website contains links to other websites and resources provided by Banner Advertisers, advertisers using the Website or other third parties, these links are provided for your information only. We have no control over the contents of those websites or resources, and we accept no responsibility for them or for any loss or damage that may arise from your use of them. If you link to any such websites you leave the Website and do so entirely at your own risk.</p>
+
 <h2 id="contact">33. Contact from Us</h2>
 <p>In the course of providing you services and in respect of your use of the Website, we may need to communicate with you via email or the other details that you have submitted to us. You agree to receive emails which are specific to your order and necessary for the normal functioning of the Website, including emails which help inform users about functionality of the Website. You can read more information about this in our <a href="/privacy">Privacy Policy</a>.</p>
+
 <h2 id="privacy">34. Privacy and Cookies Policies</h2>
-<p>Your privacy is important to us. Please review our <a href="/privacy">Privacy Policy</a> to see how we collect, protect, process and use your personal data. The website also uses cookies and by using the Website you agree to the placement of cookies. To learn more about the cookies we use and how to manage them please review our <a href="/privacy/#cookies">Cookie Policy</a>. Any external links to other websites are clearly identifiable as such, and we are not responsible for the content or the privacy or cookie policies of these other websites.</p>
+<p>Your privacy is important to us.  Please review our <a href="/privacy">Privacy Policy</a> to see how we collect, protect, process and use your personal data.  The website also uses cookies and by using the Website you agree to the placement of cookies.  To learn more about the cookies we use and how to manage them please review our <a href="/privacy/#cookies">Cookie Policy</a>.  Any external links to other websites are clearly identifiable as such, and we are not responsible for the content or the privacy or cookie policies of these other websites.</p>
+
 <h2 id="jurisdiction">35. Governing law and jurisdiction</h2>
 <p>The User Agreement, and any non-contractual obligations arising out of or in connection with the User Agreement are governed by, and shall be construed in accordance with, Irish law, and the courts of Ireland shall have exclusive jurisdiction to hear, settle and determine any dispute which may arise out of or in connection with the User Agreement save that retain the right to bring proceedings against you in your country of residence or any other court of competent jurisdiction.</p>
+
 <h2 id="waiver">36. Waiver, Rights Cumulative</h2>
 <p>A failure to exercise or delay in exercising a right or remedy provided by the User Agreement or by law does not constitute a waiver of the right or remedy or a waiver of other rights or remedies. No single or partial exercise of a right or remedy provided by the User Agreement or by law prevents further exercise of that right or remedy or the exercise of another right or remedy. The rights and remedies contained in the User Agreement are cumulative and not exclusive of rights or remedies provided by law.</p>
+
 <h2 id="severability">37. Severability</h2>
 <p>If the whole or any part of a provision of the User Agreement is or becomes illegal, invalid or unenforceable under the law of any jurisdiction, that shall not affect the legality, validity or enforceability under the law of that jurisdiction of the remainder of the provision in question or any other provision of the User Agreement and the legality, validity or enforceability under the law of any other jurisdiction of that or any other provision of the User Agreement.</p>
+
 <h2 id="assignment">38. Assignment and entire agreement</h2>
 <p>We may assign or subcontract any or all of our rights and obligations under the User Agreement with you to a third party at any time, at our discretion. You may not, without our prior written consent, assign or dispose of any of your rights or obligations arising under the User Agreement.</p>
 <p>By agreeing to the User Agreement you are also agreeing to the transfer of, by way of novation, all respective rights and obligations outlined in this document.</p>
 <p>The Terms of Use and the Policies contains the entire agreement and understanding between the parties relating to the Website and the Daft Service, and supersedes any and all prior agreements, arrangements, statements and understandings, except for any fraud or fraudulent representation by either you or us. In the event of any inconsistency between any Policy and the Terms of Use, then the Terms Use shall take priority.</p>
+
 <h2 id="submissions">39. Submissions</h2>
 <p>You acknowledge and agree that any questions, comments, suggestions, ideas, feedback and other information about the Website and/or the Daft Service provided by you to us are non-confidential and may be used by us at our discretion.</p>
+
+
 </div>
-<div id="footer">
-<div class="row">
-<span>&copy; Daft Media Limited 1997 - 2023</span>
-<ul class="nav">
-<li>
-<a href="/about/">About Us</a>
-</li>
-<li>
-<a href="https://www.daft.ie/blog/">Blog</a>
-</li>
-<li>
-<a href="/report/">Daft Report</a>
-</li>
-<li>
-<a href="https://distilledsch.ie/advertising-solutions/" target="_blank">Media Sales</a>
-</li>
-<li>
-<a href="/content/sitemap.daft">Sitemap</a>
-</li>
-<li>
-<a href="/privacy/">Privacy</a>/<a href="/legal/">Legal</a>
-</li>
-<li>
-<a href="/privacy/#cookies">Cookie Policy</a>
-</li>
-<li>
-<a href="javascript:Didomi.preferences.show()">Consent choices</a>
-</li>
-<li>
-<a href="https://support.daft.ie/hc/en-ie/articles/360003993577-GDPR-Requests" style="cursor:pointer">Data Requests</a>
-</li>
-<li>
-<a href="/help/">Help</a>
-</li>
-<li>
-<a href="/contact/">Contact</a>
-</li>
-<li>
-<a href="/mortgages/">Mortgage Centre</a>
-</li>
-</ul>
-</div>
-<div class="row">
-<span>Sites:</span>
-<ul class="sites">
-<li>
-<a href="https://www.adverts.ie/">Adverts.ie</a>
-</li>
-<li>
-<a href="https://www.donedeal.ie/">DoneDeal.ie</a>
-</li>
-<li>
-<a href="https://www.adverts.ie/shops/">Adverts.ie
-Shops</a>
-</li>
-<li>
-<a href="https://www.property.ie/">Property.ie</a>
-</li>
-<li>
-<a href="https://www.rent.ie/">Rent.ie</a>
-</li>
-<li>
-<a href="https://www.thejournal.ie/">TheJournal.ie</a>
-</li>
-<li>
-<a href="/content/jobs/index.daft">Daft Jobs</a>
-</li>
-</ul>
-</div>
-<div class="clear"></div>
-</div>
-</div>
-<script>(function(){var js = "window['__CF$cv$params']={r:'82c859d609d23645',t:'MTcwMTA2NjkyNC42ODAwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"82c859d609d23645","b":1,"version":"2023.10.0","token":"d27f9b6e08b54abca846fa380c04a89a"}' crossorigin="anonymous"></script>
+                <div id="footer" >
+                    <div class="row">
+                        <span>&copy; Daft Media Limited 1997 - 2023</span>
+                        <ul class="nav">
+                            <li>
+                                <a href="/about/">About Us</a>
+                            </li>
+                            <li>
+                                <a href="https://www.daft.ie/blog/">Blog</a>
+                            </li>
+                            <li>
+                                <a href="/report/">Daft Report</a>
+                            </li>
+                            <li>
+                                <a href="https://distilledsch.ie/advertising-solutions/" target="_blank">Media Sales</a>
+                            </li>
+                            <li>
+                                <a href="/content/sitemap.daft">Sitemap</a>
+                            </li>
+                            <li>
+                                <a href="/privacy/">Privacy</a>/<a
+                                    href="/legal/">Legal</a>
+                            </li>
+                            <li>
+                                <a href="/privacy/#cookies">Cookie Policy</a>
+                            </li>
+                            <li>
+                                <a href="javascript:Didomi.preferences.show()">Consent choices</a>
+                            </li>
+                            <li>
+                                <a href="https://support.daft.ie/hc/en-ie/articles/360003993577-GDPR-Requests" style="cursor:pointer">Data Requests</a>
+                            </li>
+                            <li>
+                                <a href="/help/">Help</a>
+                            </li>
+                            <li>
+                                <a href="/contact/">Contact</a>
+                            </li>
+                            <li>
+                                <a href="/mortgages/">Mortgage Centre</a>
+                            </li>
+                                                    </ul>
+                    </div>
+                    <div class="row">
+                        <span>Sites:</span>
+                        <ul class="sites">
+                            <li>
+                                <a href="https://www.adverts.ie/">Adverts.ie</a>
+                            </li>
+                            <li>
+                                <a href="https://www.donedeal.ie/">DoneDeal.ie</a>
+                            </li>
+                            <li>
+                                <a href="https://www.adverts.ie/shops/">Adverts.ie
+                                    Shops</a>
+                            </li>
+                            <li>
+                                <a href="https://www.property.ie/">Property.ie</a>
+                            </li>
+                            <li>
+                                <a href="https://www.rent.ie/">Rent.ie</a>
+                            </li>
+                            <li>
+                                <a href="https://www.thejournal.ie/">TheJournal.ie</a>
+                            </li>
+                            <li>
+                                <a href="/content/jobs/index.daft">Daft Jobs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div><!-- id="footer" -->
+
+                </div><!-- id="container" -->
+        <script>(function(){var js = "window['__CF$cv$params']={r:'82ca697d09cd5d4d',t:'MTcwMTA4ODUzNy4zODEwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"82ca697d09cd5d4d","b":1,"version":"2023.10.0","token":"d27f9b6e08b54abca846fa380c04a89a"}' crossorigin="anonymous"></script>
 </body>
 </html>
