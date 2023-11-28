@@ -37,7 +37,7 @@
 
                 
                     app.boot.push({"name":"HelpNav","values":[]});
-                    app.boot.push({"name":"ProcessApiCalls","values":{"apiQueueCacheKey":"api:0:b180c85cd91141b1591710f5dddb4ff6","matchedRoute":"fw3k2.ctl_show_static_page._execute"}});
+                    app.boot.push({"name":"ProcessApiCalls","values":{"apiQueueCacheKey":"api:0:a71c002b19cb5ad171061e75e112238d","matchedRoute":"fw3k2.ctl_show_static_page._execute"}});
                     app.boot.push({"name":"LocationMapsService","values":{"locationMapsServiceName":"Mireo","locationMapsServiceSettings":{"mapStyle":"mireo-maps-style"}}});
                     app.boot.push({"name":"PaginationBaseData","values":{"adjustedCanonicalUrl":""}});
                     app.boot.push({"name":"MobileDeeplink","values":{"deeplinkProviderUrl":"https:\/\/bolha.page.link","androidAppIdentifier":"net.trikoder.android.bolha","iosAppIdentifierName":"net.trikoder.iphone.bolha","iosAppId":1540081488}});
@@ -183,8 +183,8 @@
 </script>
 
         
-    <link rel="stylesheet" href="https://static.bolha.com/dist/c15363c118ce23eb9eb7f3db69cf423a_1bcdf4d3b1.css" />
-                                                        <link rel="stylesheet" href="https://static.bolha.com/dist/c15363c118ce23eb9eb7f3db69cf423a_969d85b6fa.css" />
+    <link rel="stylesheet" href="https://static.bolha.com/dist/7280a7658e3c5db04e26250df31204df_1bcdf4d3b1.css" />
+                                                        <link rel="stylesheet" href="https://static.bolha.com/dist/7280a7658e3c5db04e26250df31204df_969d85b6fa.css" />
                 
         <script >(()=>{"use strict";window.app??={},window.app.initialErrors??=[];(()=>{const t=document.documentElement;if(window.CSS?.supports?.("(font:-apple-system-body) and (-webkit-touch-callout:none) and (-webkit-tap-highlight-color:hotpink)")){const t=document.querySelector('meta[name="viewport"]');null!==t&&(t.content=`${t.content},user-scalable=no`)}try{document.querySelector(":focus-visible")}catch(o){t.classList.add("no-focusvisible")}t.classList.remove("no-js"),t.classList.add("js")})()})();</script>
                                                 
@@ -297,36 +297,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
             <div class="Attention HeaderSpotlight" data-nosnippet>
             <!-- brez skrbi -->
-
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
   :root {
     --gap: 15px;
 
     /* Slide 1 */
-    --slide1-bclr: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.2),
-      rgba(238, 238, 238, 0.9)
-    );
-    --slide1-bclr-mobile: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.4),
-      rgba(238, 238, 238, 0.9)
-    );
+    --slide1-bclr: #fff;
     --slide1-clr: #303841;
-    --slide1-fs: clamp(13px, 2.5vw, 17px);
+    --slide1-fs: clamp(8px, 2.5vw, 13px);
 
-    --slide1-bclr-cta: #bed732;
+    --slide1-bclr-cta: #fdcd00;
     --slide1-clr-cta: #303841;
-    --slide1-clr-border-cta: #bed732;
+    --slide1-clr-border-cta: #303841;
 
     --slide1-bclr-cta-hover: #303841;
     --slide1-clr-cta-hover: #fff;
     --slide1-clr-border-cta-hover: #303841;
-    --slide1-fs-cta: clamp(11px, 2.5vw, 15px);
+    --slide1-fs-cta: clamp(8px, 2vw, 10px);
 
     --slide1-image-width: 40px;
     --slide1-image-height: 40px;
@@ -339,13 +326,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   .carousel__slide1 {
-    background: var(--slide1-bclr-mobile);
-  }
-
-  @media (min-width: 728px) {
-    .carousel__slide1 {
-      background: var(--slide1-bclr);
-    }
+    background-color: var(--slide1-bclr);
   }
 
   /* carousel content */
@@ -371,12 +352,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     overflow: hidden;
     font-family: inherit;
     border-radius: 4px;
-    max-width: 800px;
+    max-width: 1300px;
     margin-inline: auto;
     line-height: 1.5;
     box-sizing: border-box;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    font-family: "Ubuntu", sans-serif;
   }
 
   .carousel__images {
@@ -403,12 +383,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .slide1_cta:link,
   .slide1_cta:visited {
     text-decoration: none;
-    padding: 0.4em 0.6em;
+    padding: 0.6em 0.8em;
     position: relative !important;
     z-index: 999 !important;
     display: block;
     border-radius: 4px;
     text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
   }
   .carousel:hover .slide1_cta,
   .carousel:hover .slide2_cta {
@@ -466,15 +448,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <div class="carousel__grid--middle">
           <h3 class="slide1_heading">
-            &#128226;<strong style="color: #bed732; font-weight: 700"
-              >Črni petek je tukaj.</strong
-            >
-            80% popust na dostavo s storitvijo BREZ SKRBI!
+            &#127873;<strong>NAGRADNA IGRA!</strong>&#127873; Zdaj je pravi
+            trenutek, da preizkusiš <strong>storitev BREZ SKRBI</strong>, ki
+            omogoča spletno plačilo in dostavo &#128666; ter je povsem enostavna
+            za uporabo. Zato opravi nakup z uporabo storitve BREZ SKRBI in
+            <strong>osvoji Bluetooth zvočnik z digitalno uro</strong>. Nagradna
+            igra traja do 30.11.2023.
           </h3>
         </div>
         <div class="carousel__grid--right">
-          <a class="slide1_cta" href="https://bit.ly/3upeAcq">
-            Nakupuj zdaj!
+          <a class="slide1_cta" href="https://bit.ly/3sUTkdC">
+            Preizkusi zdaj!
           </a>
         </div>
       </div>
@@ -483,7 +467,63 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 <!-- brez skrbi end -->
+<br>
+<!-- header pasica start -->
+<style>
+  .header__container {
+    text-decoration: none;
+  }
 
+  .header__image {
+    max-width: 100%;
+    display: block;
+  }
+
+  .header__picture--desktop,
+  .header__picture--mobile {
+    border-radius: 4px;
+  }
+
+  .header__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__picture--mobile {
+    display: block;
+  }
+  .header__picture--desktop {
+    display: none;
+  }
+
+  @media (min-width: 690px) {
+    .header__picture--mobile {
+      display: none;
+    }
+    .header__picture--desktop {
+      display: block;
+    }
+  }
+</style>
+<a
+  href="https://www.bolha.com/index.php?ctl=show_static_page&alias=katalogi&open=Bauhaus"
+  target="_blank"
+  class="header__container"
+>
+  <div class="header__content">
+    <img
+      class="header__image header__picture--mobile"
+      src="https://www.bolha.com/3d/banneri/headerpasica/bauhaus20231128/mobile.png"
+      alt="Merkur"
+    />
+    <img
+      class="header__image header__picture--desktop"
+      src="https://www.bolha.com/3d/banneri/headerpasica/bauhaus20231128/desktop.png"
+      alt="Merkur"
+    />
+  </div>
+</a>
+<!-- header pasica end -->
 
 
         </div>
@@ -809,11 +849,11 @@ h1{
 <script type="didomi/javascript" data-vendor="c:xiti-CzN7zA4y"  async src="https://tag.aticdn.net/piano-analytics.js"></script>
 
         
-    <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/c15363c118ce23eb9eb7f3db69cf423a_58afdf0316.js"></script>
+    <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/7280a7658e3c5db04e26250df31204df_bfed029dd7.js"></script>
         <script >"use strict";(self.webpackChunk_bolha_0_app=self.webpackChunk_bolha_0_app||[]).push([[129],{803:(a,e,s)=>{var _=s(21);window.is_b2c_user||s.e(130).then(s.bind(s,983)),(0,_.default)()}},a=>{var e;e=803,a(a.s=e)}]);</script>
-                                                            <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/c15363c118ce23eb9eb7f3db69cf423a_364edc698f.js"></script>
+                                                            <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/7280a7658e3c5db04e26250df31204df_364edc698f.js"></script>
                 
-    <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/c15363c118ce23eb9eb7f3db69cf423a_veze_c749f2ff69.js"></script>
+    <script crossorigin="anonymous" defer src="https://static.bolha.com/dist/7280a7658e3c5db04e26250df31204df_veze_c749f2ff69.js"></script>
 
     
             
