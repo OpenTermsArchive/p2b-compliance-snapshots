@@ -51,8 +51,7 @@
     <meta name="msapplication-TileImage" content="https://www.brenger.nl/en-nl/wp-content/themes/brenger/assets/images/favicons/mstile-150x150.png" />
     <meta name="theme-color" content="#0073fa">
         <meta name="color-scheme" content="only light">
-    
-        <script>
+            <script>
             (function(w, d, s, l, i) {
                 w[l] = w[l] || [];
                 w[l].push({
@@ -75,7 +74,23 @@
         <link rel="preconnect" href="https://customer.brenger.nl" />
         <link rel="modulepreload" href="https://customer.brenger.nl/brenger-merged.js" />
         <link rel="preload" href="https://customer.brenger.nl/brenger-merged.css" as="style" />
-    </head>
+                <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=CMe1O2olPHVUc8A5o0oOMw&gtm_preview=env-1&gtm_cookies_win=x';
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MCM353P');
+        </script>
+</head>
 
 <body class="page-template-default page page-id-303 switch-alt-langs-present">
         <section class="brenger-menu--wrapper hugo-menu">
