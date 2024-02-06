@@ -33,6 +33,9 @@
 <meta name="theme-color" content="#ffffff">
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
 <meta name="google-signin-client_id" content="514584842475-bik4pktiuuvr3erh1irslb0e62vof0ue.apps.googleusercontent.com">
+<link rel="preconnect" href="//app.usercentrics.eu">
+<link rel="preconnect" href="//api.usercentrics.eu">
+<link rel="preload" href="//app.usercentrics.eu/browser-ui/latest/loader.js" as="script">
 <link href="/interface/css/bootstrap.min.css" rel="stylesheet" media="all">
 <link href="/interface/cssmini/hood79.css" rel="stylesheet">
 <script src="/interface/js/jquery.1.12.2.min.js"></script>
@@ -49,6 +52,42 @@ errMsg('Damit wir Ihnen Preise mit der korrekten MwSt. anzeigen können wählen 
 </script>
 <script src="/interface/jsmini/hood56.js?x=1"></script>
 <script src="/interface/jsmini/internal.js"></script>
+<script>
+function showConsentSettings() {
+if(UC_UI) {
+UC_UI.showSecondLayer();
+}
+}
+</script>
+<script>
+function updateConsentCookie() {
+var info = UC_UI.getServicesBaseInfo().map(function(s) {
+return { name: s.name, cat: s.categorySlug, consent: s.consent.status }
+});
+var d = new Date();
+d.setTime(d.getTime() + (10*365*24*60*60*1000));
+var expires = "expires="+ d.toUTCString();
+document.cookie = "HOODCONSENT2=" + encodeURIComponent(JSON.stringify(info)) + ";" + expires + "; Path=/;";
+}
+window.addEventListener('UC_UI_INITIALIZED', function(e) {
+updateConsentCookie();
+if (location.search === "?cookieSettings") {
+UC_UI.showSecondLayer();
+}
+});
+window.addEventListener("UC_UI_CMP_EVENT", function (e) {
+if(e.detail && (e.detail.type === "SAVE" || e.detail.type === "ACCEPT_ALL")) {
+updateConsentCookie();
+// support legacy cookie-settings links
+if (location.search === "?cookieSettings") {
+location.href = location.pathname;
+} else {
+location.reload();
+}
+}
+});
+</script>
+<script id="usercentrics-cmp" data-settings-id="pNebCj3l_JcAnZ" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-tcf-enabled  ></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-995057023"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S00TLRG0FV"></script>
 <script>
@@ -496,7 +535,7 @@ Merkzettel <span class="iArrowFollowRight pull-right "></span>  <span class="pul
 <tr>
 <td style="vertical-align: top;"><strong>Widerrufsbelehrung </strong>
 <p><strong>Widerrufsrecht</strong></p>
-<p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses. Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Hood Media GmbH, Antoniterstr. 19, 50667 Köln, Telefon: +49 (0)221-99990606, E-Mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbd2d6cbc9dec8c8ced6fbd3d4d4df95dfde">[email&#160;protected]</a>) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.</p>
+<p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses. Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Hood Media GmbH, Antoniterstr. 19, 50667 Köln, Telefon: +49 (0)221-99990606, E-Mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1e77736e6c7b6d6d6b735e7671717a307a7b">[email&#160;protected]</a>) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.</p>
 <p><strong>Folgen des Widerrufs</strong></p>
 <p>Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Lieferkosten (mit Ausnahme der zusätzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als die von uns angebotene, günstigste Standardlieferung gewählt haben), unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet. Haben Sie verlangt, dass die Dienstleistung während der Widerrufsfrist beginnen soll, so haben Sie uns einen angemessenen Betrag zu zahlen, der dem Anteil der bis zu dem Zeitpunkt, zu dem Sie uns von der Ausübung des Widerrufsrechts hinsichtlich dieses Vertrags unterrichten, bereits erbrachten Dienstleistungen im Vergleich zum Gesamtumfang der im Vertrag vorgesehenen Dienstleistungen entspricht.</p>
 <p><strong>Muster-Widerrufsformular</strong></p>
@@ -641,7 +680,7 @@ Merkzettel <span class="iArrowFollowRight pull-right "></span>  <span class="pul
 <span class="iInternalLink iEncoded" data-hd="aW1wcmVzc3VtLmh0bQ==">Impressum</span> &nbsp;
 <span class="iInternalLink iEncoded" data-hd="bnV0enVuZ3NiZWRpbmd1bmdlbi5odG0=">Hood-AGB</span> &nbsp;
 <span class="iInternalLink iEncoded" data-hd="ZGF0ZW5zY2h1dHouaHRt">Datenschutz</span> &nbsp;
-<span class="iInternalLink iEncoded" data-hd="P2Nvb2tpZVNldHRpbmdz">Cookie-Einstellungen</span> &nbsp;
+<span class="iInternalLink" onclick="showConsentSettings()">Cookie-Einstellungen</span> &nbsp;
 <span class="iInternalLink iEncoded" data-hd="dGlwcy8xNTg3L2VjaHRoZWl0LWRlci1iZXdlcnR1bmdlbi5odG0=">Echtheit der Bewertungen</span> &nbsp;
 <div class="iFooterCopyRight">© 1999-2024 <span itemprop="name" class="iInternalLink iEncoded" data-hd="aW1wcmVzc3VtLmh0bQ==">Hood Media GmbH</span></div>
 <meta itemprop="url" content="https://www.hood.de/">
@@ -652,327 +691,11 @@ Merkzettel <span class="iArrowFollowRight pull-right "></span>  <span class="pul
 </div>
 </div>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
-$(function () {
-var windowHeight = $(window).height();
-var documentHeight = $(document).height();
-var footerScrollTop = $(".iFooter").position().top;
-setTimeout(function(){
-$(".cookieConsent").fadeIn(500);
-footerScrollTop = $(".iFooter").position().top;
-}, 1000);
-setTimeout(function(){
-$(".cookieIcon").css("color", "#333");
-$(".cookieContainer").addClass('animate');
-footerScrollTop = $(".iFooter").position().top;
-}, 1200);
-setTimeout(function(){
-footerScrollTop = $(".iFooter").position().top;
-}, 4000);
-var dismissed = 0;
-$('#closeCookieConsent').click( function() {
-$('.cookieConsent').hide();
-});
-$('#cookieSettings').click( function() {
-$(".cookieConsent").removeClass('noScroll');
-$('.cookieInfo').hide();
-$('.cookieSettings').fadeIn(500);
-getCheckboxValues();
-});
-$('#checkbox1').click( function() {
-getCheckboxValues();
-});
-$('#checkbox2').click( function() {
-getCheckboxValues();
-});
-$('#checkbox3').click( function() {
-getCheckboxValues();
-});
-function getCheckboxValues() {
-var checkCount = 0;
-if ($('#checkbox1').is( ":checked" )) {
-checkCount = checkCount + 1;
-}
-if ($('#checkbox2').is( ":checked" )) {
-checkCount = checkCount + 1;
-}
-if ($('#checkbox3').is( ":checked" )) {
-checkCount = checkCount + 1;
-}
-if (checkCount == 1) {
-$('.smiley1').fadeIn(500);
-$('.smiley2').fadeOut(500);
-$('.smiley3').fadeOut(500);
-} else if (checkCount == 2) {
-$('.smiley1').fadeOut(500);
-$('.smiley2').fadeIn(500);
-$('.smiley3').fadeOut(500);
-} else if (checkCount == 3) {
-$('.smiley1').fadeOut(500);
-$('.smiley2').fadeOut(500);
-$('.smiley3').fadeIn(500);
-}
-}
-var fadeStatus = 1;
-$( window ).scroll(function() {
-if (dismissed == 0) {
-var scrollTop = $( window ).scrollTop();
-if ((footerScrollTop-scrollTop-windowHeight < 0 /*documentHeight - scrollTop - windowHeight <= 400*/) && fadeStatus == 1) {
-fadeStatus = 0;
-$('.cookieConsent').fadeOut();
-}
-if ((footerScrollTop-scrollTop-windowHeight > 0) && fadeStatus == 0) {
-fadeStatus = 1;
-$('.cookieConsent').fadeIn();
-}
-}
-});
-});
-function setCookiesAll() {
-var d = new Date();
-d.setTime(d.getTime() + (10*365*24*60*60*1000));
-var expires = "expires="+ d.toUTCString();
-document.cookie = "HOODCONSENT=1%2C1" + ";" + expires + "; Path=/;";
-$(".cookieConsent").removeClass('noScroll');
-$('.cookieInfo').hide();
-$('.cookieConsent').remove();
-gtag('consent', 'update', {
-'ad_storage': 'granted',
-'analytics_storage': 'granted'
-});
-}
-</script>
-<style>
-.cookieConsent {
-position:fixed;
-bottom:0;
-left:0px;
-width:100%;
-background-color:#000;
-padding:8px 0px;
-z-index:9999;
-overflow-y:auto;
-overflow-x: hidden;
-max-height:100%;
--webkit-transition:background 2s;
--moz-transition:background 2s;
--o-transition:background 2s;
-transition:background  2s;
-padding-top:40px;
-}
-.cookieConsent.noScroll {
-overflow:hidden;
-}
-.cookieConsent.animate {
-transform: translateY(-400px);
-}
-.closeCookieConsent {
-width: 300px;
-margin-top: 26px;
-}
-@media  (max-width: 767px) { /* xs */
-.cookieConsent {
-padding-top:10px;
-padding-bottom:10px;
-}
-.closeCookieConsent {
-width: 100%;
-margin-top: 6px;
-}
-}
-.cookieSettings { display: none};
-.cookieContainer {
-height:100%;
-}
-.cookieIcon {
-position: absolute;
-right: -180px;
-font-size:140px;
-color: #000;
--webkit-transition:color 10s;
--moz-transition:color 10s;
--o-transition:color 10s;
-transition:color 10s;
--webkit-transition:transform 4s;
--moz-transition:transform 4s;
--o-transition:transform 4s;
-transition:transform 4s;
-transform: rotate(0deg);
-z-index:-1;
-margin-top:20px;
-}
-.cookieContainer.animate .cookieIcon {
-transform: translateX(-300px) rotate(-90deg) scale(2.5,2.5);
-}
-.cookieInfo {
-overflow:hidden;
-}
-</style>
-<div class="cookieConsent noScroll  iFixedshadow iWhite" onclick="">
-<div class="container-fluid">
-<div class="container ">
-<div class="cookieContainer">
-<i class="fal fa-cookie-bite cookieIcon"></i>
-</div>
-<div class="row cookieInfo iMargBxl  " data-nosnippet>
-<div class="col-xs-60">
-<h4>Wir verwenden Cookies <i class="fal fa-cookie-bite"></i></h4>
-</div>
-<div class="col-xs-60 iNormal" data-nosnippet>
-Wir und unsere Partner möchten Cookies und andere Technologien verwenden, damit Du unsere Seiten nutzen kannst und um auf Dich zugeschnittene Inhalte anzuzeigen. Bist Du damit einverstanden? Klicke auf "Geht klar". Wenn nicht, kannst du mit Klick auf "<span class="iInternalLink iInTextLink" id="cookieSettings">Cookie-Einstellungen</span>" Deine Zustimmung anpassen. Ausführliche Infos findest Du <a class="iInternalLink iInTextLink iWhite" href="/datenschutz.htm" target="blank">hier</a>.
-</div>
-<div class="col-xs-60">
-<div id="closeCookieConsent" class="pull-right iBold iBlindLink btn btn-success iMargL closeCookieConsent" onclick="setCookiesAll();" >Geht klar</div>
-</div>
-</div>
-<div class="row cookieSettings">
-<div class="col-xs-60 col-sm-60 iMargTxl" data-nosnippet>
-<h4>Cookie-Einstellungen</h4>
-<p>Hier kannst Du verschiedene Kategorien von Cookies zulassen oder ausschließen. Ausführliche Informationen zu den einzelnen Cookies findest Du in unserer <a class="iInternalLink iInTextLink iWhite" href="/datenschutz.htm" target="blank">Datenschutzerklärung</a>.</p>
-<div class="container">
-<div class="row">
-<div class="col-xs-15 col-sm-5">
-<label class="switch">
-<input type="checkbox" name="cookieConsent1" value="1" id="checkbox1" checked disabled>
-<span class="slider"></span>
-</label>
-</div>
-<div class="col-xs-45 col-sm-55">
-<b>Notwendige Cookies</b>
-<p>Diese Cookies sind immer aktiviert, da diese erforderlich sind, damit Du unsere Seiten überhaupt sicher und zuverlässig nutzen kannst. Dazu gehören Cookies, die Grundfunktionen wie Seitennavigation und Zugriff auf den Mein Hood-Bereich ermöglichen. Nur so kannst Du beispielsweise Produkte auf Deinen Merkzettel setzen oder in Deinen Warenkorb legen.</p>
-</div>
-</div>
-<div class="row">
-<div class="col-xs-15 col-sm-5">
-<label class="switch">
-<input type="checkbox" name="cookieConsent2" value="1" id="checkbox2" >
-<span class="slider"></span>
-</label>
-</div>
-<div class="col-xs-45 col-sm-55">
-<b>Funktionelle Cookies</b>
-<p>Diese Cookies sind optional und helfen uns dabei, anhand von Statistiken das Nutzungserlebnis unserer Besucher anonym zu analysieren, um unseren Marktplatz weiter auf die Bedürfnisse unserer Nutzer anzupassen und Fehler zu beheben.</p>
-</div>
-</div>
-<div class="row">
-<div class="col-xs-15 col-sm-5">
-<label class="switch">
-<input type="checkbox" name="cookieConsent3" value="1" id="checkbox3" >
-<span class="slider "></span>
-</label>
-</div>
-<div class="col-xs-45 col-sm-55">
-<b>Marketing Cookies</b>
-<p>Diese Cookies sind optional und werden dazu verwendet für Dich relevante Inhalte auszuwählen, um Anzeigen auf Hood.de und auch außerhalb unserer Seiten auf Dein persönliches Interesse zuschneiden zu können. Wenn Du nicht zustimmst, werden Dir möglicherweise für Dich nicht interessante Inhalte oder Produkte angezeigt.</p>
-</div>
-</div>
-<div class="row">
-<div class="col-xs-60">
-<div class="pull-left iBold iBlindLink btn btn-default" onclick="Javascript:ActionSubmit('act_shared_none:setCookieConsent=1')">Auswahl speichern</div>
-<div class="pull-right iBold iBlindLink btn btn-success iMargL" onclick="setCookiesAll();" >Alles zulassen</div>
-</div>
-</div>
-<div class="row" aria-hidden="true">
-<div class="col-xs-15 col-sm-5">
-</div>
-<div class="col-xs-45 col-sm-55">
-<div class="smiley1">
-:-|
-</div>
-<div class="smiley2">
-:-)
-</div>
-<div class="smiley3">
-;-)
-</div>
-</div>
-</div>
-</div>
-</div>
-<style>
-.smiley1, .smiley2, .smiley3 {
-color: #222;
-font-size:150px;
-position:absolute;
-bottom: 0px;
-left: 40%;
-display:none;
-transform: rotate(90deg);
-z-index: -1;
-}
-.switch {
-position: relative;
-display: inline-block;
-width: 40px;
-height: 24px;
-}
-.switch.large {
-width: 60px;
-height: 34px;
-}
-.switch input {
-opacity: 0;
-/*width: 0;
-height: 0; */
-}
-.switch .slider {
-position: absolute;
-cursor: pointer;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: #ccc;
--webkit-transition: .4s;
-transition: .4s;
-}
-.switch .slider:before {
-position: absolute;
-content: "";
-height: 16px;
-width: 16px;
-left: 4px;
-bottom: 4px;
-background-color: white;
--webkit-transition: .4s;
-transition: .4s;
-}
-.switch.large .slider:before {
-height: 26px;
-width: 26px;
-}
-.switch input:checked + .slider {
-background-color: #85c903;
-}
-.switch input:focus + .slider {
-box-shadow: 0 0 1px #85c903;
-}
-.switch input:checked + .slider:before {
--webkit-transform: translateX(16px);
--ms-transform: translateX(16px);
-transform: translateX(16px);
-}
-.switch.large input:checked + .slider:before {
--webkit-transform: translateX(26px);
--ms-transform: translateX(26px);
-transform: translateX(26px);
-}
-.switch .slider.round {
-border-radius: 34px;
-}
-.switch .slider.round:before {
-border-radius: 50%;
-}
-</style>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
 </form>
-<script type="text/javascript">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
 var google_tag_params = {
 ecomm_pagetype: 'other'
 };
