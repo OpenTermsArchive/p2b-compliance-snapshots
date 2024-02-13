@@ -52,6 +52,12 @@ li{padding: 5px !important}
 
 <script>
     if (typeof setPageData !== 'undefined' && setPageData) {
+        if (!setPageData.hasOwnProperty('event')) {
+            setPageData['event'] = 'page_view_spa';
+        }
+        if (!setPageData.hasOwnProperty('page_referrer')) {
+            setPageData['page_referrer'] = (document.referrer ? document.referrer : "");
+        }
         window.dataLayer = window.dataLayer || [];
         dataLayer.push(setPageData);
     }
