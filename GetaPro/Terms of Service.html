@@ -247,7 +247,7 @@
                 <h5 class="sidelines text-center mt-10"><span>Ienākt caur</span></h5>
 
                 
-<form action="/account/externallogin" id="ExternalLoginForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="aHhYrTJzdZHtBDkpm9aYizgMqNSd-VHyfCgOIhDYcctAfxPN5J02Z2XIHqTcoNK90WNBHm_AnnVMCKf3g2fVm7oqhPUTWtZyWZJv59P9ncw1" />    <input type="hidden" value="" name="provider" id="provider-input" />
+<form action="/account/externallogin" id="ExternalLoginForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="1IIgqefylbTnjYpMOBohAY____Bhe4mCxodB3DZjV0p1hslqomuucePhCg6ts_ChsvVM7dnNSK0uUeFduRG1nRcWkmo-rJrAWsWTvtYkYcE1" />    <input type="hidden" value="" name="provider" id="provider-input" />
     <a href="#facebook-login" class="btn btn-full-width btn-fb mb-0" value="Facebook" name="provider" onclick="fbLogin();">
         <i class="gicon-fb"></i>
         Facebook
@@ -263,7 +263,7 @@
         clientId: 'com.getapro.webviewapp.live',
         scope: 'name email',
         redirectURI: 'https://getapro.lv/account/loginapple',
-        state: 'Initial user authentication request',
+        state: window.location.href,
         usePopup : false
       });
     </script>
