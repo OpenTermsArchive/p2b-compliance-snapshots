@@ -133,7 +133,6 @@
 
     <meta property="og:url" content="https://www.abebooks.com/docs/BooksellerCentral/agreement/na-agreement-2018-09.shtml">
 
-
     <meta property="og:description" content="This Version Effective September 20, 2018">
 
     <meta property="og:site_name" content="AbeBooks">
@@ -151,7 +150,6 @@
     <meta name="twitter:description" content="This Version Effective September 20, 2018"/>
     
     
-
     
     
     
@@ -291,27 +289,9 @@
     
     <meta name="brightspot.cached" content="false">
 
-    <!--This is needed for custom elements to function in browsers that
-    support them natively but that are using es6 code transpiled to es5.
-    This will cause a non-fatal error to show up in the IE11 console.
-    It can be safely ignored. https://github.com/webcomponents/webcomponentsjs/issues/749 -->
-    <script>
-        (function () {
-        'use strict';
+    <!-- this will add webcomponent polyfills based on browsers. As of 04/29/21 still needed for IE11 and Safari -->
+    <script src="https://assets.brightspot.abebooks.a2z.com/resource/00000179-3cdd-d40f-a779-bedf7f820000/webcomponents-loader/webcomponents-loader.266c0bb4f707570dca3c59bb04633dc0.gz.js"></script>
 
-        (()=>{'use strict';if(!window.customElements)return;const a=HTMLElement,b=window.customElements.define,c=window.customElements.get,d=new Map,e=new Map;let f=!1,g=!1;HTMLElement=function(){if(!f){const a=d.get(this.constructor),b=c.call(window.customElements,a);g=!0;const e=new b;return e}f=!1;},HTMLElement.prototype=a.prototype;Object.defineProperty(window,'customElements',{value:window.customElements,configurable:!0,writable:!0}),Object.defineProperty(window.customElements,'define',{value:(c,h)=>{const i=h.prototype,j=class extends a{constructor(){super(),Object.setPrototypeOf(this,i),g||(f=!0,h.call(this)),g=!1;}},k=j.prototype;j.observedAttributes=h.observedAttributes,k.connectedCallback=i.connectedCallback,k.disconnectedCallback=i.disconnectedCallback,k.attributeChangedCallback=i.attributeChangedCallback,k.adoptedCallback=i.adoptedCallback,d.set(h,c),e.set(c,h),b.call(window.customElements,c,j);},configurable:!0,writable:!0}),Object.defineProperty(window.customElements,'get',{value:(a)=>e.get(a),configurable:!0,writable:!0});})();
-
-        /**
-        @license
-        Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-        This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-        The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-        The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-        Code distributed by Google as part of the polymer project is also
-        subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-        */
-        }());
-    </script>
     <script>
         /**
             This allows us to load the IE polyfills via feature detection so that they do not load
@@ -321,7 +301,7 @@
         var head = document.getElementsByTagName('head')[0];
         if (!window.CSS || !window.CSS.supports || !window.CSS.supports('--fake-var', 0)) {
             var script = document.createElement('script');
-            script.setAttribute('src', "https://assets.brightspot.abebooks.a2z.com/resource/00000179-3cdd-d40f-a779-bedf7f820000/styleguide/util/IEPolyfills.063c3539663cb70af6b9db9e994382cb.gz.js");
+            script.setAttribute('src', "https://assets.brightspot.abebooks.a2z.com/resource/00000179-3cdd-d40f-a779-bedf7f820000/util/IEPolyfills.d06e3699885f30644e9e84c8106feb97.gz.js");
             script.setAttribute('type', 'text/javascript');
             script.async = false;
             head.appendChild(script);
@@ -335,7 +315,7 @@
 
     </script>
 
-    <script src="https://assets.brightspot.abebooks.a2z.com/resource/00000179-3cdd-d40f-a779-bedf7f820000/styleguide/All.min.7cb0b3550a4bbcbe1dbaee0522794cc9.gz.js" defer></script>
+    <script src="https://assets.brightspot.abebooks.a2z.com/resource/00000179-3cdd-d40f-a779-bedf7f820000/styleguide/All.min.d60fa7e791797bfff55f465499097ec6.gz.js" defer></script>
     <script>
 
     window.fbAsyncInit = function() {
@@ -852,7 +832,7 @@ data-has-hat="false"
   <main id="content-main" class="abe-content" data-cy="main" data-templateId="Page">
 
 
-<link data-cssvarsponyfill="true" type="text/css" media="all" class="Webpack-css" rel="stylesheet" href="https://assets.brightspot.abebooks.a2z.com/resource/00000179-3cdd-d40f-a779-bedf7f820000/styleguide/All.min.1bbe8539aed1e4da4992feb0949f7416.gz.css">
+<link data-cssvarsponyfill="true" type="text/css" media="all" class="Webpack-css" rel="stylesheet" href="https://assets.brightspot.abebooks.a2z.com/resource/00000179-3cdd-d40f-a779-bedf7f820000/styleguide/All.min.4108359c2b3c4c0f59518ce2562166ef.gz.css">
 <script> </script>
 
 
@@ -863,6 +843,7 @@ data-has-hat="false"
 
     <div class="Page-main">
         
+
     <div class="Page-pageLead" data-modulewell><div class="HeadingLead" data-module="wide" 
 
 
@@ -910,6 +891,7 @@ data-has-hat="false"
         
         </div>
 </div></div>
+
 
 
 <div class="Page-content" data-modulewell><div class="RichTextModule" data-module 
@@ -1377,6 +1359,6 @@ data-has-hat="false"
 
     <div id="fb-root"></div>
 
-<span data-bsp-pv="e30edf29-8fe1-3857-864d-a0240c664e80"></span><span data-bsp-pv="00000179-d389-d046-adf9-d3bb59090000"></span><script data-bsp-site="00000179-ce78-dced-abff-ef7fe93e0000" data-bsp-contentid="00000179-d389-d046-adf9-d3bb59090000" >window.bspAnalytics = 'https://assets.brightspot.abebooks.a2z.com/resource/00000179-3cdd-d40f-a779-bedf7f820000/styleguide/BSP-analytics.min.e33bb4b38e30a7902dcd68ed3ab31cc8.gz.js'</script></body>
+<span data-bsp-pv="e30edf29-8fe1-3857-864d-a0240c664e80"></span><span data-bsp-pv="00000179-d389-d046-adf9-d3bb59090000"></span><script data-bsp-site="00000179-ce78-dced-abff-ef7fe93e0000" data-bsp-contentid="00000179-d389-d046-adf9-d3bb59090000"></script><script data-bsp-site="00000179-ce78-dced-abff-ef7fe93e0000" data-bsp-contentid="" >window.bspAnalytics = '/styleguide/BSP-analytics.min.js'</script></body>
 
 </html>
