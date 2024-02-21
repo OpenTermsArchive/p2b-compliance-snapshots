@@ -23,8 +23,8 @@
     <link rel="preconnect" href="https://code.jquery.com/" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto:400,600,700,800|Open+Sans:400,600,700,800&subset=cyrillic,latin-ext&display=swap" crossorigin="anonymous">
-        <link rel="preload" href="/bundles/scripts?v=XMyhiC67TOp4xgjerEBf7GRJVR6KCio9R1PL7hr8OuI1" as="script">
-    <link href="/main/css?v=XKJySJh5t9ZMKL7PW9EnIsGq4Ypb3WedJe8muZWYUJ41" rel="stylesheet"/>
+        <link rel="preload" href="/bundles/scripts?v=GdkYiVS46Cn-uxHxfNe8Tqp33zUStuGhO9Br3eR-wc81" as="script">
+    <link href="/main/css?v=EMMlLMmDKs1a3iRdxbtkvaOMTYyw8OoDpbUlAvs_jvg1" rel="stylesheet"/>
 
 
 
@@ -196,11 +196,10 @@
                         </ul>
 
                         
-    <ul class="nav navbar-nav navbar-right">
-        
-        <li class="hidden-xs"><a href="/account/registertradesman">Kļūt par izpildītāju</a></li>
-        <li><a href="#loginModal" data-toggle="modal">Ienākt</a></li>
-    </ul>
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="/account/registertradesman">Kļūt par izpildītāju</a></li>
+    <li><a href="#loginRegisterModal" data-toggle="modal">Ienākt</a></li>
+</ul>
 
                     </div><!-- /.container -->
                 </div><!-- /.navbar-collapse -->
@@ -209,45 +208,91 @@
     </header>
 
 
-<div class="modal fade auth-modal" id="loginModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade auth-modal" id="loginRegisterModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-auto">
         <div class="modal-content">
 
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="icon-cancel-1"></i></span></button>
-                <h3 class="modal-title">Ienākt caur e-pastu</h3>
+                <h3 class="modal-title">Ienākt</h3>
             </div>
 
             <div class="modal-body with-padding">
-                <form method="post" action="/account/loginmodal" data-target="form" class="forms">
-                    <div class="form-group">
-                        <input class="form-control trim-input" name="Email" placeholder="E-pasts" type="text" />
+                <div class="error-msg text-danger field-validation-error" data-message="xhr"></div>
+                <div class="dynamic-content">
+                    <div class="content-item register-content" style="display:none">
+                        <form class="forms">
+                            <div class="form-group">
+                                <input class="form-control trim-input" data-val="true" data-val-email="Lūdzam, ievadīt korektu e-pastu." data-val-regex="Lūdzam, ievadīt korektu e-pastu." data-val-regex-pattern="[ -~]+" data-val-required="Lauks “E-pasts” ir obligāts aizpildīšanai" id="Email" name="Email" placeholder="E-pasts" type="text" value="" />
+                                <span class="field-validation-valid text-danger smallFont" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                            </div>
+                            <div>
+                                <button class="btn btn-default btn-full-width  mt-0 mb-0" id="get-code-btn">Turpināt</button>
+                            </div>
+                            <h5 class="sidelines text-center  mt-10 mb-10"><span>Ienākt caur</span></h5>
+                        </form>
+
                     </div>
 
-                    <div class="form-group">
-                        <input class="form-control" name="Password" placeholder="Parole" type="password" />
-                    </div>
-                    <div class="login-act">
-                        <div class="text-xs">
-                            <a href="/account/forgotpassword">Aizmirsāt paroli?</a>
+                    <div class="content-item email-verification-content" style="display:none">
+                        <p class="text-strong" id="sent-confirmation">Ievadiet 4&#160;ciparu kodu, kas nosūtīts uz e-pastu: %email%</p>
+                        <div class="token text-center">
+                            <input type="number" min="1000" max="9999" placeholder="0000" />
                         </div>
-                        <div>
-                            <label>
-                                <input id="RememberMe" name="RememberMe" type="checkbox" value="true" checked />
-                                <span class="remember-me-text">Atcerēties?</span>
-                            </label>
-                        </div>
+                        <button class="btn btn-default btn-full-width" id="verify-code-btn">Turpināt</button>
                     </div>
-                    <div>
-                        <button type="submit" class="btn btn-default btn-full-width">Ienākt</button>
-                    </div>
-                    <input type="hidden" id="returnUrl" name="returnUrl">
-                </form>
 
-                <h5 class="sidelines text-center mt-10"><span>Ienākt caur</span></h5>
+                    <div class="content-item details-content" style="display:none">
+                        <form class="forms">
+                            <div class="form-group">
+                                <input class="form-control trim-input" data-val="true" data-val-required="Lauks “Name” ir obligāts aizpildīšanai" id="Name" name="Name" placeholder="Jūsu vārds" type="text" value="" />
+                                <span class="field-validation-valid text-danger smallFont" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control trim-input" data-val="true" data-val-required="Lauks “Telefona numurs” ir obligāts aizpildīšanai" id="authPhoneNumber" name="PhoneNumber" placeholder="Telefona numurs" type="tel" value="" />
+                                <span class="field-validation-valid text-danger smallFont" data-valmsg-for="PhoneNumber" data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control trim-input" data-val="true" data-val-length="Parolei ir jāsatur no 6 līdz 18 simboliem" data-val-length-max="18" data-val-length-min="6" data-val-required="Lauks “Parole” ir obligāts aizpildīšanai" id="Password" name="Password" placeholder="Parole" type="password" value="" />
+                                <span class="field-validation-valid text-danger smallFont" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                            </div>
+                            <div>
+                                <button class="btn btn-default btn-full-width" id="register-btn">Reģistrēties</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="content-item login-content">
+                        <form method="post" action="/account/loginmodal" data-target="form" class="forms" data-submit-processing="true">
+                            <div class="form-group">
+                                <input class="form-control trim-input" name="Email" placeholder="E-pasts" type="text" />
+                            </div>
+
+                            <div class="form-group">
+                                <input class="form-control" name="Password" placeholder="Parole" type="password" />
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-default btn-full-width mt-0">Ienākt</button>
+                            </div>
+                            <div class="login-act">
+                                <div class="text-xs">
+                                    <a href="/account/forgotpassword">Aizmirsāt paroli?</a>
+                                </div>
+                                <div>
+                                    <label>
+                                        <input id="RememberMe" name="RememberMe" type="checkbox" value="true" checked />
+                                        <span class="remember-me-text">Atcerēties?</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="hidden" id="returnUrl" name="returnUrl">
+                        </form>
+                    </div>
+                </div>
 
                 
-<form action="/account/externallogin?ReturnUrl=%2Fhome%2Ftermsandconditions" id="ExternalLoginForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="rXx5GXggmrBZPfvttcCbXWruLNiMlOxWOLOY16xFTHdgZbd_cxcbix_DM31gfNUP2g8fhF_-EWtXGqSwN6JGjjI6T_xWQx8En2LOSi2XqGk1" />    <input type="hidden" value="" name="provider" id="provider-input" />
+<form action="/account/externallogin?ReturnUrl=%2Fhome%2Ftermsandconditions" id="ExternalLoginForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="6fl3nrgWXcPeo1fWQ0pUuHz2pvR8uW_AtgJ6BfzuKtK1lXTG-avobB4QYesRgd1gQLUoTuq6EOUpoOVMSwdjioiRWkidAPQ3XCbP3VkPTqE1" />    <input type="hidden" value="" name="provider" id="provider-input" />
     <a href="#facebook-login" class="btn btn-full-width btn-fb mb-0" value="Facebook" name="provider" onclick="fbLogin();">
         <i class="gicon-fb"></i>
         Facebook
@@ -280,12 +325,36 @@
 </script>
 
 
-                <hr class="thin" />
-Vēl neesat reģistrējies?                <a href="/account/registertradesman" class="text-strong">Kļūt par izpildītāju</a>
+                <div class="modal-footer-dynamic">
+                    <h5 class="sidelines text-center mt-10"><span class="footer-label">Vēl neesat reģistrējies?</span></h5>
+                    <span class="footer-btn">
+                        <a href="#" class="btn btn-outline orange btn-full-width mt-0" id="login-btn" style="display:none;">Ienākt</a>
+                        <a href="#" class="btn btn-outline orange btn-full-width mt-0" id="register-modal-btn">Reģistrācija</a>
+                    </span>
+
+                </div>
             </div>
         </div>
     </div>
-</div>    <!-- ============================================================= HEADER : END ============================================================= -->
+</div>
+
+<script>
+    let sendVerificationCodeUrl = "/account/sendverificationcode?email=";
+    let checkVerificationCodeUrl = "/account/checkverificationcode";
+    let registerCustomerAjaxUrl = "/account/registercustomerajax";
+    let jqueryValUrl = '/bundles/jqueryval';
+    let authResources = {
+        EmailValidationError: "Lūdzam, ievadīt korektu e-pastu.",
+        Login: "Ienākt",
+        LoginUsingPassword: "Ienākt caur e-pastu",
+        LoginModalNoAccountYet: "Vēl neesat reģistrējies?",
+        Register: "Reģistrācija",
+        AlreadyRegistered: "Jau reģistrēti?",
+        EmailValidationError: "Lūdzam, ievadīt korektu e-pastu.",
+        RegisterEnterConfirmationCode: "Ievadiet 4 ciparu kodu, kas nosūtīts uz e-pastu: %email%"
+    }
+</script>
+    <!-- ============================================================= HEADER : END ============================================================= -->
     <!-- ============================================================= MAIN ============================================================= -->
 
     <main>
@@ -661,11 +730,11 @@ var google_remarketing_only = true;
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,600,700,800|Open+Sans:400,600,700,800&subset=cyrillic,latin-ext&display=swap" rel="stylesheet" crossorigin="anonymous">
     <link href="/bundles/fonts?v=xfqu2Zr70wxtaH3u5MohA4J6gFXb8bNg5QF98ByBylM1" rel="stylesheet"/>
 
-    <link href="/bundles/css?v=soXQE0gK6dFQ0V6gic3sVRx23dTdxPXEGXHYcOZMW941" rel="stylesheet" data-skrollr-stylesheet />
+    <link href="/bundles/css?v=eaBvLWZDXZHyse4tKvF2IMHHU4bhY2W3HvharLlrygM1" rel="stylesheet" data-skrollr-stylesheet />
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-<script src="/bundles/scripts?v=XMyhiC67TOp4xgjerEBf7GRJVR6KCio9R1PL7hr8OuI1"></script>
+<script src="/bundles/scripts?v=GdkYiVS46Cn-uxHxfNe8Tqp33zUStuGhO9Br3eR-wc81"></script>
 
 
     <div id="notifications-pane" class="popover"></div>
