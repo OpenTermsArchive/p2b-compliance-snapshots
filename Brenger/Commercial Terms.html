@@ -507,50 +507,251 @@
     TODO: vertalingen
  -->
 
-<div class="consent-banner fixed inset-0 bg-black/50" style="z-index: 9999999999;">
-    <div class="h-full w-full bg-black/50 pt-16 flex flex-col-reverse lg:pt-[8vh] lg:pb-[12vh] lg:justify-center lg:flex-row lg:items-center">
-        <div class="bg-white w-full rounded-t-lg lg:w-[700px] lg:rounded-lg max-h-full lg:max-h-[80vh] overflow-hidden flex flex-col relative">
-            <div class="consent-banner--head text-blue-600 flex-none relative">
-                <img class="brenger-logo mx-auto my-4" height="16" width="58" alt="Brenger" src="https://www.brenger.nl/en-nl/wp-content/themes/brenger/assets/images/logo.svg" />
+<div class="consent-banner">
+    <div class="consent-banner--wrapper">
+        <div class="consent-banner--sheet">
+            <div class="consent-banner--head consent-text-blue">
+                <img class="consent-banner--logo" height="16" width="58" alt="Brenger" src="https://www.brenger.nl/en-nl/wp-content/themes/brenger/assets/images/logo.svg" />
             </div>
             <div class="consent-banner--info">
-                <div class="consent-banner--content overflow-auto grow">
-                    <div class="pt-4">
-                        <div class="mb-6">
-                            <h2 class="text-blue-600">Cookies for on the go</h2>
+                <div class="consent-banner--content">
+                    <div style="padding-top: 1.5rem">
+                        <div style="margin-bottom: 1.5rem">
+                            <h2 class="consent-text-blue">Cookies for on the go</h2>
                         </div>
                         <p>To enable Brenger.nl to function optimally, we use cookies.</p>
-<p>These digital helpers provide fast and secure access to our website. Additionally, they personalize your experience and help us see how well everything works, from our website to advertisements and social media.</p>                        <p>More details? Read our <a class="underline text-blue-600" href="https://www.brenger.nl/en-nl/cookies/">cookie terms</a>.</p>
+<p>These digital helpers provide fast and secure access to our website. Additionally, they personalize your experience and help us see how well everything works, from our website to advertisements and social media.</p>                        <p>More details? Read our <a class="consent-text-blue" style="text-decoration: underline;" href="https://www.brenger.nl/en-nl/cookies/">cookie terms</a>.</p>
                     </div>
                 </div>
-                <div class="lg:flex lg:justify-start lg:flex-row-reverse gap-4 p-4" style="box-shadow: 0 4px 10px rgba(0,0,0,0.2)">
-                    <button class="consent-banner--accept-all w-full lg:w-auto btn btn--primary"><span class="w-full text-center">Accept all</span></button>
-                    <button class="w-full lg:w-auto btn btn--outline" onClick="document.body.classList.toggle('settings-cm-banner');"><span class="w-full text-center">Cookie settings</span></button>
+                <div class="consent-banner--buttons">
+                    <button class="consent-banner--accept-all w-full lg:w-auto btn btn--primary"><span class="btn-label">Accept all</span></button>
+                    <button class="w-full lg:w-auto btn btn--outline" onClick="document.body.classList.toggle('settings-cm-banner');"><span class="btn-label">Cookie settings</span></button>
                 </div>
             </div>
             <div class="consent-banner--settings">
-                <svg class="absolute top-5 left-6 lg:left-8" onClick="document.body.classList.toggle('settings-cm-banner')" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="consent-banner--back" onClick="document.body.classList.toggle('settings-cm-banner')" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.196762 7.51237L7.01272 0.235621C7.28792 -0.0606969 7.75511 -0.0798968 8.05591 0.191461C8.35671 0.46282 8.37591 0.922977 8.10071 1.21929L2.21915 7.49381H18.4622C18.8718 7.49381 19.1982 7.82149 19.1982 8.21893C19.1982 8.62213 18.8654 8.94405 18.4622 8.94405H2.63515L8.10071 14.777C8.37591 15.0733 8.35671 15.5334 8.05591 15.8048C7.91511 15.9366 7.73591 16 7.55672 16C7.35832 16 7.15992 15.9245 7.01272 15.7664L0.196762 8.48965C-0.0656376 8.21893 -0.0656376 7.79013 0.196762 7.51237Z" fill="#0073FA" />
                 </svg>
-                <div class="consent-banner--content overflow-auto grow">
-                    <div class="pt-4">
-                        <div class="mb-6">
-                            <h2 class="text-blue-600">Cookie settings</h2>
+                <div class="consent-banner--content">
+                    <div style="padding-top: 1.5rem">
+                        <div style="margin-bottom: 1.5rem">
+                            <h2 class="consent-text-blue">Cookie settings</h2>
                         </div>
-                        <p>Set your personal cookie preferences here. We will save these for your next visit.</p>                        <div class="mb-4 flex justify-between"><b>Functional (e.g., logging in)</b><span class="text-blue-600">Always active</span></div>
-                        <div class="mb-4 flex justify-between"><b>Website performance</b><label class="switch"><input type="checkbox" class="consent-banner--toggle" data-consent-types="analytics_storage" /><span class="slider round"></span></label></div>
-                        <div class="mb-4 flex justify-between"><b>Advertisement performance</b><label class="switch"><input type="checkbox" class="consent-banner--toggle" data-consent-types="ad_storage,ad_user_data,ad_personalization" /><span class="slider round"></span></label></div>
-                        <div class="mb-4">Want to know more? Read our <a class="underline text-blue-600" href="https://www.brenger.nl/en-nl/cookies/">cookie terms</a>.</div>
+                        <p>Set your personal cookie preferences here. We will save these for your next visit.</p>                        <div class="consent-banner--toggle"><b>Functional (e.g., logging in)</b><span class="consent-text-blue">Always active</span></div>
+                        <div class="consent-banner--toggle"><b>Website performance</b><label class="switch"><input type="checkbox" class="consent-banner--toggle" data-consent-types="analytics_storage" /><span class="slider round"></span></label></div>
+                        <div class="consent-banner--toggle"><b>Advertisement performance</b><label class="switch"><input type="checkbox" class="consent-banner--toggle" data-consent-types="ad_storage,ad_user_data,ad_personalization" /><span class="slider round"></span></label></div>
+                        <div>Want to know more? Read our <a class="consent-text-blue" style="text-decoration: underline;" href="https://www.brenger.nl/en-nl/cookies/">cookie terms</a>.</div>
                     </div>
                 </div>
-                <div class="lg:flex lg:justify-start lg:flex-row-reverse gap-4 p-4" style="box-shadow: 0 4px 10px rgba(0,0,0,0.2)">
-                    <button class="consent-banner--accept-selection w-full lg:w-auto btn btn--primary"><span class="w-full text-center">Accept selection</span></button>
-                    <button class="consent-banner--accept-all w-full lg:w-auto btn btn--outline"><span class="w-full text-center">Accept all</span></button>
+                <div class="consent-banner--buttons">
+                    <button class="consent-banner--accept-selection w-full lg:w-auto btn btn--primary"><span class="btn-label">Accept selection</span></button>
+                    <button class="consent-banner--accept-all w-full lg:w-auto btn btn--outline"><span class="btn-label">Accept all</span></button>
                 </div>
             </div>
         </div>
     </div>
-</div>        <script>
+</div>
+<style>
+    .consent-banner {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999999999;
+        display: none;
+    }
+
+    .show-cm-banner .consent-banner {
+        display: block
+    }
+
+    .consent-banner--wrapper {
+        height: 100%;
+        width: 100%;
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    @media(min-width: 992px) {
+        .consent-banner--wrapper {
+            padding-top: 8vh;
+            padding-bottom: 12vh;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .consent-banner--sheet {
+        background-color: #FFF;
+        width: 100%;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        overflow: hidden;
+    }
+
+    @media(min-width: 992px) {
+        .consent-banner--sheet {
+            width: 700px;
+            border-radius: .5rem;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+    }
+
+    .consent-banner--logo {
+        display: block;
+        margin: 1.5rem auto;
+    }
+
+    .consent-banner--back {
+        position: absolute;
+        top: 1.55rem;
+        left: 1.5rem;
+    }
+
+    @media(min-width: 992px) {
+        .consent-banner--back {
+            left: 2rem;
+        }
+    }
+
+    .consent-banner--head {
+        position: relative;
+        flex: none;
+    }
+
+    .consent-banner--toggle {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .consent-banner--buttons {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
+    }
+
+    .consent-banner .btn {
+        width: 100%;
+    }
+
+    @media(min-width: 992px) {
+        .consent-banner .btn {
+            width: auto;
+        }
+    }
+
+    .btn-label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .consent-banner--buttons {
+        padding: 1rem;
+    }
+
+    @media(min-width: 992px) {
+        .consent-banner--buttons {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 1rem;
+        }
+    }
+
+    .consent-text-blue {
+        color: rgb(37, 99, 235)
+    }
+
+    .consent-banner--content {
+        padding: 1.5rem;
+        min-height: 366px;
+        overflow: auto;
+        flex-grow: 1;
+    }
+
+    .consent-banner--content p {
+        margin-bottom: 1em
+    }
+
+    @media(min-width: 992px) {
+        .consent-banner--content {
+            padding: 1.5rem 8rem
+        }
+    }
+
+    .settings-cm-banner .consent-banner--info {
+        display: none
+    }
+
+    .consent-banner--settings {
+        display: none
+    }
+
+    .settings-cm-banner .consent-banner--settings {
+        display: block
+    }
+
+    .consent-banner .switch {
+        position: relative;
+        display: inline-block;
+        width: 38px;
+        height: 24px
+    }
+
+    .consent-banner .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0
+    }
+
+    .consent-banner .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #cde4ff;
+        -webkit-transition: .2s;
+        transition: .2s
+    }
+
+    .consent-banner .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #fff;
+        -webkit-transition: .2s;
+        transition: .2s
+    }
+
+    .consent-banner input:checked+.slider {
+        background-color: #00d896
+    }
+
+    .consent-banner input:focus+.slider {
+        box-shadow: 0 0 1px #2196f3
+    }
+
+    .consent-banner input:checked+.slider:before {
+        -webkit-transform: translateX(13px);
+        -ms-transform: translateX(13px);
+        transform: translateX(13px)
+    }
+
+    .consent-banner .slider.round {
+        border-radius: 34px
+    }
+
+    .consent-banner .slider.round:before {
+        border-radius: 50%
+    }
+</style>        <script>
         var BRENGER_THEME_PATH = "https://www.brenger.nl/en-nl/wp-content/themes/brenger";
         var BRENGER_WP_API_PATH = "https://www.brenger.nl/en-nl/wp-json/brenger/v1";
             </script>
