@@ -51,23 +51,7 @@
     <meta name="msapplication-TileImage" content="https://www.brenger.nl/en-nl/wp-content/themes/brenger/assets/images/favicons/mstile-150x150.png" />
     <meta name="theme-color" content="#0073fa">
         <meta name="color-scheme" content="only light">
-            <script>
-            (function(w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({
-                    'gtm.start': new Date().getTime(),
-                    event: 'gtm.js'
-                });
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s),
-                    dl = l != 'dataLayer' ? '&l=' + l : '';
-                j.async = true;
-                j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=CMe1O2olPHVUc8A5o0oOMw&gtm_preview=env-1&gtm_cookies_win=x';
-                f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-MCM353P');
-        </script>
-        <link rel="preconnect" href="//www.google-analytics.com" crossorigin="">
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin="">
     <link rel="preconnect" href="//www.googletagmanager.com" crossorigin="">
             <link rel="preconnect" href="https://customer.brenger.nl" crossorigin="">
         <link rel="prefetch" href="https://www.brenger.nl/en-nl/customer/" />
@@ -75,6 +59,33 @@
         <link rel="modulepreload" href="https://customer.brenger.nl/brenger-merged.js" />
         <link rel="preload" href="https://customer.brenger.nl/brenger-merged.css" as="style" />
                 <script>
+            // Define dataLayer and the gtag function.
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            /**
+             * CONSENT MODE
+             * - Interaction with GTM trough gtag
+             * - sets up default settings
+             * - see consentMode.ts how we handle updates
+             */
+            // See all types here: https://developers.google.com/tag-platform/security/concepts/consent-mode#consent-types
+            gtag('consent', 'default', {
+                // Ads/analytics - default to denied
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied',
+                // Functional/security default to granted
+                'functionality_storage': 'granted',
+                'personalization_storage': 'granted',
+                'security_storage': 'granted'
+            });
+            var BRENGER_IS_CP = 301 === 303;
+        </script>
+        <script>
             (function(w, d, s, l, i) {
                 w[l] = w[l] || [];
                 w[l].push({
@@ -340,8 +351,6 @@
 		</div>
 		    </div>
     
-
-
 <footer class="hugo-footer theme--black text--bold">
     <div class="container main-footer section-space--t">
         <div class="row">
@@ -494,49 +503,54 @@
             </div>
         </div>
 </footer>
-<div class="cookie-consent">
-    <div class="cookie-consent--body">
-        We make use of cookies.        <a href="https://www.brenger.nl/en-nl/cookies/">Read more</a>
+<!--
+    TODO: vertalingen
+ -->
+
+<div class="consent-banner fixed inset-0 bg-black/50" style="z-index: 9999999999;">
+    <div class="h-full w-full bg-black/50 pt-16 flex flex-col-reverse lg:pt-[8vh] lg:pb-[12vh] lg:justify-center lg:flex-row lg:items-center">
+        <div class="bg-white w-full rounded-t-lg lg:w-[700px] lg:rounded-lg max-h-full lg:max-h-[80vh] overflow-hidden flex flex-col relative">
+            <div class="consent-banner--head text-blue-600 flex-none relative">
+                <img class="brenger-logo mx-auto my-4" height="16" width="58" alt="Brenger" src="https://www.brenger.nl/en-nl/wp-content/themes/brenger/assets/images/logo.svg" />
+            </div>
+            <div class="consent-banner--info">
+                <div class="consent-banner--content overflow-auto grow">
+                    <div class="pt-4">
+                        <div class="mb-6">
+                            <h2 class="text-blue-600">Cookies for on the go</h2>
+                        </div>
+                        <p>To enable Brenger.nl to function optimally, we use cookies.</p>
+<p>These digital helpers provide fast and secure access to our website. Additionally, they personalize your experience and help us see how well everything works, from our website to advertisements and social media.</p>                        <p>More details? Read our <a class="underline text-blue-600" href="https://www.brenger.nl/en-nl/cookies/">cookie terms</a>.</p>
+                    </div>
+                </div>
+                <div class="lg:flex lg:justify-start lg:flex-row-reverse gap-4 p-4" style="box-shadow: 0 4px 10px rgba(0,0,0,0.2)">
+                    <button class="consent-banner--accept-all w-full lg:w-auto btn btn--primary"><span class="w-full text-center">Accept all</span></button>
+                    <button class="w-full lg:w-auto btn btn--outline" onClick="document.body.classList.toggle('settings-cm-banner');"><span class="w-full text-center">Cookie settings</span></button>
+                </div>
+            </div>
+            <div class="consent-banner--settings">
+                <svg class="absolute top-5 left-6 lg:left-8" onClick="document.body.classList.toggle('settings-cm-banner')" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.196762 7.51237L7.01272 0.235621C7.28792 -0.0606969 7.75511 -0.0798968 8.05591 0.191461C8.35671 0.46282 8.37591 0.922977 8.10071 1.21929L2.21915 7.49381H18.4622C18.8718 7.49381 19.1982 7.82149 19.1982 8.21893C19.1982 8.62213 18.8654 8.94405 18.4622 8.94405H2.63515L8.10071 14.777C8.37591 15.0733 8.35671 15.5334 8.05591 15.8048C7.91511 15.9366 7.73591 16 7.55672 16C7.35832 16 7.15992 15.9245 7.01272 15.7664L0.196762 8.48965C-0.0656376 8.21893 -0.0656376 7.79013 0.196762 7.51237Z" fill="#0073FA" />
+                </svg>
+                <div class="consent-banner--content overflow-auto grow">
+                    <div class="pt-4">
+                        <div class="mb-6">
+                            <h2 class="text-blue-600">Cookie settings</h2>
+                        </div>
+                        <p>Set your personal cookie preferences here. We will save these for your next visit.</p>                        <div class="mb-4 flex justify-between"><b>Functional (e.g., logging in)</b><span class="text-blue-600">Always active</span></div>
+                        <div class="mb-4 flex justify-between"><b>Website performance</b><label class="switch"><input type="checkbox" class="consent-banner--toggle" data-consent-types="analytics_storage" /><span class="slider round"></span></label></div>
+                        <div class="mb-4 flex justify-between"><b>Advertisement performance</b><label class="switch"><input type="checkbox" class="consent-banner--toggle" data-consent-types="ad_storage,ad_user_data,ad_personalization" /><span class="slider round"></span></label></div>
+                        <div class="mb-4">Want to know more? Read our <a class="underline text-blue-600" href="https://www.brenger.nl/en-nl/cookies/">cookie terms</a>.</div>
+                    </div>
+                </div>
+                <div class="lg:flex lg:justify-start lg:flex-row-reverse gap-4 p-4" style="box-shadow: 0 4px 10px rgba(0,0,0,0.2)">
+                    <button class="consent-banner--accept-selection w-full lg:w-auto btn btn--primary"><span class="w-full text-center">Accept selection</span></button>
+                    <button class="consent-banner--accept-all w-full lg:w-auto btn btn--outline"><span class="w-full text-center">Accept all</span></button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="cookie-consent--action">
-        <button class="btn btn--primary">Agreed</button>
-    </div>
-</div>
-<style>
-    .cookie-consent {
-        opacity: 0;
-        visibility: hidden;
-        position: fixed;
-        bottom: 15px;
-        left: 50%;
-        transition: all .2s;
-        transform: translate3d(-50%, 30px, 0);
-        width: calc(100% - 30px);
-        max-width: 500px;
-        padding: 15px;
-        background: rgba(0, 0, 0, 0.5);
-        color: #FFF;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        line-height: 1;
-        border-radius: 8px
-    }
-
-    .cookie-consent a {
-        text-decoration: underline
-    }
-
-    .cookie-consent--body {
-        margin-right: auto
-    }
-
-    .cookie-consent--is-visible {
-        opacity: 1;
-        visibility: visible;
-        transform: translate3d(-50%, 0, 0)
-    }
-</style>        <script>
+</div>        <script>
         var BRENGER_THEME_PATH = "https://www.brenger.nl/en-nl/wp-content/themes/brenger";
         var BRENGER_WP_API_PATH = "https://www.brenger.nl/en-nl/wp-json/brenger/v1";
             </script>
