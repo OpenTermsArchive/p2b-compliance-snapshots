@@ -25,6 +25,60 @@
 <link rel="alternate" href="https://www.shiply.com/en-in/terms" hreflang="en-in" />
 <link rel="alternate" href="https://www.shiply.com/hi-in/terms" hreflang="hi-in" />
 <link href="https://www.shiply.com/mx/terms" hreflang="es-mx" />
+<script type="text/javascript">
+function initGrowthbook(i, t) {
+    var e;
+    if (i.getElementById(t)) {
+        initGrowthbookCb();
+    } else {
+        e = i.createElement("script");
+        e.id = t;
+        e.async = !0;
+        e.src = "/js/components/growthbook/dist/bundles/index.min.js";
+        e.onload = initGrowthbookCb;
+        i.head.appendChild(e);
+    }
+}
+
+function initGrowthbookCall() {
+    initGrowthbook(document, "growthbook-js-sdk");
+}
+
+function initGrowthbookDeviceId()
+{
+    let deviceId = localStorage.getItem('growthbookDeviceId');
+
+    if (!deviceId) {
+        deviceId = crypto.randomUUID();
+
+        localStorage.setItem('growthbookDeviceId', deviceId);
+    }
+
+    return deviceId;
+}
+
+function initGrowthbookCb()
+{
+    const gb = new growthbook.GrowthBook({
+        apiHost: "https://gb-api.shiply.com",
+        clientKey: "sdk-GFJOK0Bw6floO3RI",
+        decryptionKey: "2lp9azRh51zR/C26/HuYtg==",
+                enableDevMode: false,
+                subscribeToChanges: true,
+        attributes: {
+                        deviceId: initGrowthbookDeviceId(),
+        },
+    });
+    gb.loadFeatures();
+    }
+
+if (window.addEventListener) {
+    window.addEventListener("load", initGrowthbookCall, !1);
+} else {
+    window.attachEvent("load", initGrowthbookCall, !1);
+}
+</script>
+
 <script type="text/javascript">!function(e){window.mixpanel=e,e.cb=[],e.consuming=!1,e.events=[],e.registries={},e.consume=function(){if(e.consuming||0===e.events.length)return;e.consuming=!0;let n=JSON.stringify(e.events);e.events=[];let t=e.cb;e.cb=[];let s=new XMLHttpRequest;s.onreadystatechange=function(){4==this.readyState&&200==this.status&&e.consumeCallback(t)},s.open("POST","/es/mixpanel_sdk/mixpanel_events/consume",!0),s.setRequestHeader("Content-Type","application/base64"),s.send(btoa(n))},e.consumeCallback=function(n){if(n.length>0)for(;n.length>0;){let t=n.shift();t()}e.consuming=!1,e.events.length>0&&e.consume()},e.register=function(n,t){e.registries[n]=t},e.track=function(n,t,s){t=t||{},"function"==typeof s&&e.cb.push(s),e.events.push({event:n,properties:t,registries:e.registries}),e.consuming||e.consume()}}(window.mixpanel||[]);</script>
  <meta name="google-site-verification" content="Z2DTajo7TF7Fzi0hvYaYBLol3XoxGc1TTOmdFzcJZzE" />
 <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -152,7 +206,7 @@ Nuestros clientes dicen <strong class="reviewsBanner-textStrong">excelente</stro
 </p>
 <p class="reviewsBanner-text">
 <a class="reviewsBanner-anchor" href="http://www.reviews.co.uk/company-reviews/store/shiply" target="_blank">
-<strong class="reviewsBanner-textStrong">4,5</strong> de 5 según <strong class="reviewsBanner-textStrong">40.916</strong> reseñas <img class="reviewsBanner-logo" alt="reviews.io Logo" src="/img/reviewsio-logo.svg" width="112" height="18" />
+<strong class="reviewsBanner-textStrong">4,5</strong> de 5 según <strong class="reviewsBanner-textStrong">40.919</strong> reseñas <img class="reviewsBanner-logo" alt="reviews.io Logo" src="/img/reviewsio-logo.svg" width="112" height="18" />
 </a>
 </p>
 </div>
@@ -583,18 +637,18 @@ Mapa del sitio</a>
 </div>
 </div>
 </div>
-</footer><link rel="stylesheet" href="https://www.shiply.com/css/1709647267/theme.min.css" as="style" onload="this.onload=null;this.media='all'" media="print" />
-<link rel="stylesheet" href="https://www.shiply.com/css/static/1709647267/terms.min.css" as="style" onload="this.onload=null;this.media='all'" media="print" />
+</footer><link rel="stylesheet" href="https://www.shiply.com/css/1709647266/theme.min.css" as="style" onload="this.onload=null;this.media='all'" media="print" />
+<link rel="stylesheet" href="https://www.shiply.com/css/static/1709647266/terms.min.css" as="style" onload="this.onload=null;this.media='all'" media="print" />
 <noscript>
 <link
     rel="stylesheet"
-    href="https://www.shiply.com/css/1709647267/theme.min.css"
+    href="https://www.shiply.com/css/1709647266/theme.min.css"
     as="style"
     media="all"
 />
 <link
     rel="stylesheet"
-    href="https://www.shiply.com/css/static/1709647267/terms.min.css"
+    href="https://www.shiply.com/css/static/1709647266/terms.min.css"
     as="style"
     media="all"
 />
@@ -624,14 +678,14 @@ var helpDeskVar = {"widget_id":500100};
 
         function jQueryCallback()
         {
-                        load("https://www.shiply.com/js/components/1709647267/bootstrap.min.js", "jsBootstrap", bootstrapCallback);
+                        load("https://www.shiply.com/js/components/1709647266/bootstrap.min.js", "jsBootstrap", bootstrapCallback);
             
             return;
         };
 
         function bootstrapCallback()
         {
-                                    load("https://www.shiply.com/js/components/1709647267/global.js", "jsGlobal");
+                                    load("https://www.shiply.com/js/components/1709647266/global.js", "jsGlobal");
                         
             return;
         };
@@ -693,5 +747,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     ></iframe>
 </noscript>
 
-<script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'8675ce9c7f4a4d5a',t:'MTcxMDkzODgwNy44MDMwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+<script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'8677dea5c9452c2e',t:'MTcxMDk2MDQzNi4xNzUwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
 </html>
