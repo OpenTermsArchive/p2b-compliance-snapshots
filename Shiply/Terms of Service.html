@@ -60,6 +60,7 @@
     }
 
     e.cb = () => {
+        const urlParams = new URLSearchParams(window.location.search);
         const gb = new growthbook.GrowthBook({
             apiHost: "https://gb-api.shiply.com",
             clientKey: "sdk-GFJOK0Bw6floO3RI",
@@ -68,7 +69,22 @@
                         subscribeToChanges: true,
             attributes: {
                                 deviceId: e.deviceId(),
-            },
+                url: window.location.href.split('?')[0],
+                path: window.location.pathname,
+                host: window.location.host,
+                query: window.location.search,
+                                deviceType: "desktop",
+                browser: "unknown",
+                                utmSource: urlParams.get("utmSource") ?? "",
+                utmMedium: urlParams.get("utmMedium") ?? "",
+                utmCampaign: urlParams.get("utmCampaign") ?? "",
+                utmTerm: urlParams.get("utmTerm") ?? "",
+                utmContent: urlParams.get("utmContent") ?? "",
+                country: "ES",
+                                userType: "Anonymous",
+                NewUser: false,
+                RepeatUser: false,
+                            },
             trackingCallback: (experiment, result) => {
                                 e.consume([
                     {
@@ -237,7 +253,7 @@ Nuestros clientes dicen <strong class="reviewsBanner-textStrong">excelente</stro
 </p>
 <p class="reviewsBanner-text">
 <a class="reviewsBanner-anchor" href="http://www.reviews.co.uk/company-reviews/store/shiply" target="_blank">
-<strong class="reviewsBanner-textStrong">4,5</strong> de 5 según <strong class="reviewsBanner-textStrong">40.933</strong> reseñas <img class="reviewsBanner-logo" alt="reviews.io Logo" src="/img/reviewsio-logo.svg" width="112" height="18" />
+<strong class="reviewsBanner-textStrong">4,5</strong> de 5 según <strong class="reviewsBanner-textStrong">40.938</strong> reseñas <img class="reviewsBanner-logo" alt="reviews.io Logo" src="/img/reviewsio-logo.svg" width="112" height="18" />
 </a>
 </p>
 </div>
@@ -778,5 +794,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     ></iframe>
 </noscript>
 
-<script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'86864ad62d1b380f',t:'MTcxMTExMTY2OC4yNDEwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+<script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'868858914ef635e5',t:'MTcxMTEzMzIwMi4yMTEwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
 </html>
