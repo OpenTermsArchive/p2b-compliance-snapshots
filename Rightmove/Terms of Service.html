@@ -54,7 +54,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 :where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
 .wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
 </style>
-<link rel='stylesheet' id='rightmove-header-footer-css-css' href='https://www.rightmove.co.uk/c/content/plugins/rightmove-header-footer/assets/css/main.min.css?ver=1.1.20' media='all' />
+<link rel='stylesheet' id='rightmove-header-footer-css-css' href='https://www.rightmove.co.uk/c/content/plugins/rightmove-header-footer/assets/css/main.min.css?ver=1.1.23' media='all' />
 <link rel='stylesheet' id='main-css' href='https://www.rightmove.co.uk/c/content/themes/rightmove-c/assets/css/main.min.css?ver=1.3.0' media='all' />
 <link rel='stylesheet' id='AOS-css' href='https://www.rightmove.co.uk/c/content/themes/rightmove-c/assets/css/vendor/aos.min.css?ver=6.5.2' media='all' />
 <link rel='stylesheet' id='tablepress-default-css' href='https://www.rightmove.co.uk/c/content/plugins/tablepress/css/build/default.css?ver=2.3' media='all' />
@@ -84,6 +84,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','rmDataLayer','GTM-P6B7XWX');</script>
 <!-- End Google Tag Manager (old) -->	<style>
+    :root {
+        --header-nav-offset: 0;
+    }
+
+    .admin-bar {
+        --header-nav-offset: 32px;
+    }
+
     .seo-mob-nav-header {
         display: -ms-flex;
         display: -webkit-flex;
@@ -602,6 +610,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             z-index: 5000;
             width: 100%;
             top: 51px;
+            top: calc(var(--header-nav-offset, 0) + 51px);
             left: 0;
         }
 
@@ -1227,9 +1236,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         data-parent-nav="buy">Property valuation</a></li>
                                 <li><a class="seo-nav-subNav-link" href="/guides/landlord/investor-newsletter/"
                                         data-parent-nav="buy">Investors</a></li>
-                                <li th:if="${!mortgageURLUpdated}"><a class="seo-nav-subNav-link"
-                                        href="/advice/buyer/mortgages-financing/" data-parent-nav="buy">Mortgages</a>
-                                </li>
                                 <li th:if="${mortgageURLUpdated}"><a class="seo-nav-subNav-link" href="/mortgages"
                                         data-parent-nav="buy">Mortgages</a></li>
                             </div>
@@ -1475,8 +1481,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 data-parent-nav="buy">Where can I live</a>
             <a class="seo-mob-nav-link seo-link" href="/guides/landlord/investor-newsletter/" tabindex="-1"
                 data-parent-nav="buy">Investors</a>
-            <a th:if="${!mortgageURLUpdated}" class="seo-mob-nav-link seo-link"
-                href="/advice/buyer/mortgages-and-financing/" tabindex="-1" data-parent-nav="buy">Mortgages</a>
             <a th:if="${mortgageURLUpdated}" class="seo-mob-nav-link seo-link" href="/mortgages" tabindex="-1"
                 data-parent-nav="buy">Mortgages</a>
         </div>
@@ -2396,7 +2400,7 @@ style="">
             <ul class="globalFooter-subMenu">
                 <li class="globalFooter-subMenuItem"><a data-parent-nav="quick links" class="globalFooter-subMenuLink" title="Where can I live?" href="https://where.rightmove.co.uk/">Where can I live?</a></li>
                 <li class="globalFooter-subMenuItem"><a data-parent-nav="quick links" class="globalFooter-subMenuLink" title="Mortgage calculator" href="/mortgages/mortgage-calculator">Mortgage calculator</a></li>
-                <li class="globalFooter-subMenuItem"><a data-parent-nav="quick links" class="globalFooter-subMenuLink" title="Get a Mortgage in Principle" href="mortgages/mortgage-in-principle">Get a Mortgage in Principle</a></li>
+                <li class="globalFooter-subMenuItem"><a data-parent-nav="quick links" class="globalFooter-subMenuLink" title="Get a Mortgage in Principle" href="/mortgages/mortgage-in-principle">Get a Mortgage in Principle</a></li>
                 <li class="globalFooter-subMenuItem"><a data-parent-nav="quick links" class="globalFooter-subMenuLink" title="Stamp duty calculator" href="/stamp-duty-calculator">Stamp duty calculator</a></li>
                 <li class="globalFooter-subMenuItem"><a data-parent-nav="quick links" class="globalFooter-subMenuLink" title="Property details glossary" href="/guides/property-details-glossary/">Property details glossary</a></li>
                 <li class="globalFooter-subMenuItem"><a data-parent-nav="quick links" class="globalFooter-subMenuLink" title="Property investment" href="/guides/landlord/investor-newsletter/">Property investment</a></li>
@@ -2450,7 +2454,7 @@ style="">
             </h4>
             <ul class="globalFooter-subMenu">
                 <li id="fs-customer-link-menu-item" class="globalFooter-subMenuItem-black">
-                    <a class="globalFooter-subMenuLink" title="Rightmove Plus" th:href="${rmPlusUrl}">Rightmove Plus</a>
+                    <a class="globalFooter-subMenuLink" title="Rightmove Plus" href="https://www.rightmove.co.uk/login.html">Rightmove Plus</a>
                 </li>
                 <li class="globalFooter-subMenuItem"><a data-parent-nav="professional" class="globalFooter-subMenuLink" title="Rightmove data services" href="/property-data/">Rightmove data services</a></li>
                 <li class="globalFooter-subMenuItem" data-test="advertise-with-us-link" th:if="${advertiseWithUsLinkEnabled}"><a data-parent-nav="professional" class="globalFooter-subMenuLink" title="Advertise with us" href="/advertise-with-us">Advertise on Rightmove</a></li>
@@ -2912,7 +2916,7 @@ style="">
         transform: rotate(180deg); }
 
 </style>
-    <script src="https://www.rightmove.co.uk/c/content/plugins/rightmove-header-footer/assets/js/main.min.js?ver=1.1.20" id="rightmove-header-footer-js-js"></script>
+    <script src="https://www.rightmove.co.uk/c/content/plugins/rightmove-header-footer/assets/js/main.min.js?ver=1.1.23" id="rightmove-header-footer-js-js"></script>
 <script src="https://www.rightmove.co.uk/c/content/themes/rightmove-c/assets/js/main.min.js?ver=1.3.0" id="main-js"></script>
 <script src="https://www.rightmove.co.uk/c/content/themes/rightmove-c/assets/js/vendor/imagesloaded.pkgd.min.js?ver=6.5.2" id="imagesready-js"></script>
 <script src="https://www.rightmove.co.uk/c/content/themes/rightmove-c/assets/js/vendor/OwlCarousel2-2.3.4/owl.carousel.min.js?ver=2.2.3.4" id="owl-js"></script>
