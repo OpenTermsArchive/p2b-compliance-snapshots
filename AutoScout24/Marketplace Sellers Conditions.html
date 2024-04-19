@@ -1352,27 +1352,19 @@
     (function () {
         'use strict';
 
-        if (/disable-cmp=true/.test(document.cookie) || location.href.indexOf('disable-cmp=true') > -1) {
-            return false;
-        }
-
         ensureVisitorId();
-        setCmpCookiesIfProvidedAsQueryStrings();
 
         // TCF stub
         // prettier-ignore
         !function(){if("function"!=typeof window.__tcfapi||window.__tcfapi&&"function"!=typeof window.__tcfapi.start){var t,a=[],e=window,i=e.document,c=e.__tcfapi?e.__tcfapi.start:function(){};if(!e.__tcfapi&&function t(){var a=!!e.frames.__tcfapiLocator;if(!a){if(i.body){var c=i.createElement("iframe");c.style.cssText="display:none",c.name="__tcfapiLocator",i.body.appendChild(c)}else setTimeout(t,5)}return!a}()||e.__tcfapi&&!e.__tcfapi.start){var f=e.__tcfapi?e.__tcfapi():[];a.push.apply(a,f),e.__tcfapi=function(...e){var i=[...e];if(!e.length)return a;if("setGdprApplies"===i[0])i.length>3&&2===parseInt(i[1],10)&&"boolean"==typeof i[3]&&(t=i[3],"function"==typeof i[2]&&i[2]("set",!0));else if("ping"===i[0]){var c={gdprApplies:t,cmpLoaded:!1,apiVersion:"2.0"};"function"==typeof i[2]&&i[2](c,!0)}else a.push(i)},e.__tcfapi.commandQueue=a,e.__tcfapi.start=c,e.addEventListener("message",function(t){var a="string"==typeof t.data,i={};try{i=a?JSON.parse(t.data):t.data}catch(c){}var f=i.__tcfapiCall;f&&e.__tcfapi(f.command,f.version,function(e,i){if(t.source){var c={__tcfapiReturn:{returnValue:e,success:i,callId:f.callId,command:f.command}};a&&(c=JSON.stringify(c)),t.source.postMessage(c,"*")}},f.parameter)},!1)}}}();
 
+        if (/disable-cmp=true/.test(document.cookie) || location.href.indexOf('disable-cmp=true') > -1) {
+            return false;
+        }
 
-        loadAs24Cmp().then(() => {
-            if (window.__as24CmpEnabled) {
-                deletePersonalizationCookiesIfNeeded();
-                return;
-            }
-            console.log('AS24 CMP not enabled');
-        }).catch(_ => {
-            console.log('AS24 CMP not enabled');
-        });
+        loadAs24Cmp();
+
+        deletePersonalizationCookiesIfNeeded();
 
         /** In case we don't have a visitor id we set one. */
         function ensureVisitorId() {
@@ -1382,57 +1374,24 @@
             }
         }
 
-        /** Apps have their own CMP. For webviews they provide the consent string through query strings. */
-        function setCmpCookiesIfProvidedAsQueryStrings() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var euconsentv2 = urlParams.get('euconsent-v2');
-            var cconsentv2 = urlParams.get('cconsent-v2');
-            var gdprAuditId = urlParams.get('gdpr-auditId');
-            var addtlConsent = urlParams.get('addtl_consent');
-            var gdprLastInteraction = (Date.now() / 1000).toFixed(3);
-
-            var domain = 'domain=' + document.location.hostname.replace('www.', '').replace('local.', '');
-            var path = 'path=/';
-            var maxAge = 'max-age=31536000';
-            var sameSite = 'samesite=Lax';
-
-            if (euconsentv2 && cconsentv2 && gdprAuditId && addtlConsent) {
-                document.cookie = ['euconsent-v2=' + euconsentv2, path, maxAge, domain, sameSite].join(';');
-                document.cookie = ['cconsent-v2=' + cconsentv2, path, maxAge, domain, sameSite].join(';');
-                document.cookie = ['gdpr-auditId=' + gdprAuditId, path, maxAge, domain, sameSite].join(';');
-                document.cookie = ['addtl_consent=' + addtlConsent, path, maxAge, domain, sameSite].join(';');
-                document.cookie = ['gdpr-last-interaction=' + gdprLastInteraction, path, maxAge, domain, sameSite].join(
-                    ';'
-                );
-
-                // We need to delete consent params from the URL
-                // so that they don't corrupt GA tracking and other tools.
-                urlParams.delete('euconsent-v2');
-                urlParams.delete('cconsent-v2');
-                urlParams.delete('gdpr-auditId');
-                urlParams.delete('addtl_consent');
-                urlParams.delete('gdpr-last-interaction');
-
-                history.replaceState(null, '', `?${urlParams.toString()}`);
-            }
-        }
-
         function loadAs24Cmp() {
-            return new Promise(resolve => {
+            return new Promise((resolve) => {
                 var script = document.createElement('script');
                 var ref = document.getElementsByTagName('script')[0];
                 ref.parentNode.insertBefore(script, ref);
                 var culture = getCulture(window.location.hostname, window.location.pathname);
                 script.type = 'module';
                 script.onload = resolve;
-                var prefix = window.location.hostname.startsWith('www.autoscout24.') ? '' : 'https://www.autoscout24.com';
+                var prefix = window.location.hostname.startsWith('www.autoscout24.')
+                    ? ''
+                    : 'https://www.autoscout24.com';
                 script.src = prefix + '/assets/as24-cmp/consent-banner/' + culture + '.js';
             });
         }
 
         function getCulture(hostname, path) {
             const tld = hostname.split('.').pop();
-            
+
             switch (tld) {
                 case 'de':
                     return 'de-DE';
@@ -1469,7 +1428,7 @@
                 case 'ru':
                     return 'ru-RU';
                 case 'tr':
-                    return 'tr-TR';     
+                    return 'tr-TR';
                 case 'be':
                     return path.startsWith('/nl/') ? 'nl-BE' : 'fr-BE';
                 case 'localhost':
@@ -1480,36 +1439,30 @@
         }
 
         function deletePersonalizationCookiesIfNeeded() {
-            var personalizationCookies = [
-                'last-search-feed',
-                'last-seen-classified-guid',
-                'last-5-seen-classifieds'
-            ];
+            var personalizationCookies = ['last-search-feed', 'last-seen-classified-guid', 'last-5-seen-classifieds'];
 
             onCmpDataLoadOrConsentChange(function () {
                 window.__tcfapi('getFullTCData', 2, (tcData) => {
-                    var isPersonalizationCookieAllowed = tcData.purpose.legitimateInterests['25'] && tcData.purpose.consents['26']
+                    var isPersonalizationCookieAllowed =
+                        tcData.purpose.legitimateInterests['25'] && tcData.purpose.consents['26'];
 
-                    if(!isPersonalizationCookieAllowed) {
-                        personalizationCookies.forEach(function(cookie) {
-                            deleteCookie(cookie)
-                        })
+                    if (!isPersonalizationCookieAllowed) {
+                        personalizationCookies.forEach(function (cookie) {
+                            deleteCookie(cookie);
+                        });
                     }
                 });
-            })
+            });
         }
 
         function onCmpDataLoadOrConsentChange(callback) {
-            window.__tcfapi(
-                'addEventListener',
-                2,
-                function (partialTcData, success) {
-                    if (
-                        success &&
-                        (partialTcData.eventStatus === 'tcloaded' || partialTcData.eventStatus === 'useractioncomplete')
-                    ) callback();
-                }
-            );
+            window.__tcfapi('addEventListener', 2, function (partialTcData, success) {
+                if (
+                    success &&
+                    (partialTcData.eventStatus === 'tcloaded' || partialTcData.eventStatus === 'useractioncomplete')
+                )
+                    callback();
+            });
         }
 
         /**
@@ -1518,19 +1471,13 @@
             @return {void}
         */
         function deleteCookie(cookieName) {
-            var date = new Date()
-            var ONE_DAY_IN_MS = 24 * 60 * 60 * 1000
+            var date = new Date();
+            var ONE_DAY_IN_MS = 24 * 60 * 60 * 1000;
             var domain = window.location.hostname.replace('www.', '').replace('local.', '');
 
-            date.setTime(date.getTime() + -1 * ONE_DAY_IN_MS) // Set it expire in -1 days
+            date.setTime(date.getTime() + -1 * ONE_DAY_IN_MS); // Set it expire in -1 days
 
-            document.cookie =
-                cookieName +
-                '=; expires=' +
-                date.toUTCString() +
-                '; domain=' +
-                domain +
-                '; path=/'
+            document.cookie = cookieName + '=; expires=' + date.toUTCString() + '; domain=' + domain + '; path=/';
         }
 
         /** Generates a UUID v4
@@ -1545,7 +1492,7 @@
         }
     })();
 </script>
-<script src="/assets/external/brave-flamingo/master/b9bbb79a442fa2d2902f92d607de584914b2eb74/index.min.js" defer data-pagespeed-no-defer></script>
+<script src="/assets/external/brave-flamingo/master/88ea478c80d636577b789aaa3320b9380a99988b/index.min.js" defer data-pagespeed-no-defer></script>
 
 
     
