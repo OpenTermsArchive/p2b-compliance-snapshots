@@ -284,6 +284,24 @@
 
 
 
+
+<script data-test-id="rum-script-config">
+  window.abebooks.awsRumConfig = {
+    guestRoleArn: 'arn:aws:iam::767397890288:role/rum-app-monitor-unauthenticated-role',
+    identityPoolId: 'us-east-1:f13a4d50-4dfe-4d56-aef3-a044e663246b',
+    appMonitorId: '02eded21-893c-4681-8a72-2c9af912ad5b',
+    appVersion: 'PROD:abebooks.com',
+    sessionSampleRate: 0.1,
+    endpoint: 'https://dataplane.rum.us-east-1.amazonaws.com',
+    region: 'us-east-1',
+    pageId: 'Page',
+    pageTags: [ ]
+  };
+</script>
+<script defer data-test-id="script-rum" src="//assets.prod.abebookscdn.com/cdn/com/scripts/cwrumclient-31753fe285.js"></script>
+
+
+
     
 
     
