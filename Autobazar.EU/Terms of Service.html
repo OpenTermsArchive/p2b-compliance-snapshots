@@ -197,54 +197,6 @@ li{padding: 5px !important}
         loadScript("https://www.autobazar.eu/js/privacy/facebook/all.js")
     }
 
-    document.addEventListener('googleAnalyticsEventInit', function () {
-        if (window.google.grant === true) {
-            ga('create', 'UA-304086-15', 'auto');  // Replace with your property ID.
-        } else {
-            ga('create', 'UA-304086-15', {
-                'storage': 'none',
-                'clientId': window.clientIDHashed
-            });  // Replace with your property ID.
-        }
-        ga('set', 'anonymizeIp', true); //Anonymization IP adresses
-        ga('require', 'GTM-MKFJKK3');
-
-        if (window.google.grant === true) {
-            ga('create', 'UA-304086-1', 'auto', {'name': 'oldTracker'});  // Old tracker.
-        } else {
-            ga('create', 'UA-304086-1', {
-                'storage': 'none',
-                'clientId': window.clientIDHashed
-            }, {
-                'name': 'oldTracker'
-            });  // Old tracker.
-        }
-        ga('oldTracker.set', 'anonymizeIp', true); //Anonymization IP adresses
-        ga('set', 'dimension4', 'nekontaktoval');
-
-        ga('send', 'pageview');
-                ga('oldTracker.send', 'pageview');
-
-        if (window.google.grant === true) {
-            ga('create', 'UA-122504742-2', 'auto', {'name': 'cargroup', 'allowLinker': true});
-        } else {
-            ga('create', 'UA-122504742-2', {
-                'storage': 'none',
-                'clientId': window.clientIDHashed
-            }, {
-                'name': 'cargroup',
-                'allowLinker': true
-            });
-        }
-        ga('cargroup.set', 'anonymizeIp', true); //Anonymization IP adresses
-        ga('cargroup.require', 'linker');
-        ga('cargroup.linker:autoLink', ['autobazar.sk', 'autovia.sk']);
-        ga('cargroup.send', 'pageview');
-    })
-
-    // dummy ga function, when analytics is not loaded
-    window.ga = function () {
-    };
 </script>
 
 
