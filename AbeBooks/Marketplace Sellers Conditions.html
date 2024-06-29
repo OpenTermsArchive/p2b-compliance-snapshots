@@ -765,6 +765,8 @@ data-has-hat="false"
               <input type="hidden" value="t" name="sts" />
               <input type="hidden" value="on" name="searchprefs" />
               <input name="ds" value="20" type="hidden" />
+              <input type="hidden" id="cm-tag" name="cm_sp" value="SearchF-_-topnav-_-Results" />
+
               <fieldset class="gnav-searchbox">
                 <div class="gnav-searchbox-left">
                   <div class="gnav-searchbox-field">
@@ -780,9 +782,7 @@ data-has-hat="false"
           </div>
           <div class="abenav-belt-right">
             
-              <div id="account-nav" class="cf">
-              <a id="sign-on" href="/servlet/LoginDirector" data-cms-ai="0">Sign in</a><a id="my-account" class="hidden-xs" href="/servlet/MembersMainMenu" data-cms-ai="0">My Account</a><a id="basket" href="/servlet/ShopBasketPL" data-cms-ai="0"><span class="deftext">Basket</span><span class="basket-icon">&nbsp;</span><span id="bskc" class="hide"></span></a><a id="help" class="hidden-xs" href="https://support.abebooks.com/s/?language=en_US" data-cms-ai="0">Help</a>
-              </div>
+              <ul id="account-nav" class="cf"><li><a id="sign-on" href="/servlet/LoginDirector" data-cms-ai="0">Sign in</a></li><li><a id="my-account" class="hidden-xs" href="/servlet/MembersMainMenu" data-cms-ai="0">My Account</a></li><li><a id="basket" href="/servlet/ShopBasketPL" data-cms-ai="0"><span class="deftext">Basket</span><span class="basket-icon">&nbsp;</span><span id="bskc" class="hide"></span></a></li><li><a id="help" class="hidden-xs" href="https://support.abebooks.com/s/?language=en_US" data-cms-ai="0">Help</a></li></ul>
             
           </div>
         </div>
@@ -800,6 +800,8 @@ data-has-hat="false"
               <form id="header-searchbox-form-m" method="post" action="/servlet/SearchResults" name="nav-mobile-search" accept-charset="ISO-8859-1">
                 <input type="hidden" value="t" name="sts" />
                 <input type="hidden" value="on" name="searchprefs" />
+                <input type="hidden" id="cm-tag-m" name="cm_sp" value="SearchF-_-topnav-_-Results" />
+
                 <fieldset class="gnav-searchbox-m">
                   <div class="gnav-searchbox-left-m">
                     <input id="header-searchbox-input-m" class="gnav-searchbox-input-m" type="text" maxlength="100" name="kn" aria-label="Search AbeBooks" placeholder="" spellcheck="false" />
@@ -814,33 +816,33 @@ data-has-hat="false"
             <div class="nav-bar cf">
               <div id="nav-wrapper" class="nav-wrapper cf abenav-slideout" tabindex="-1" aria-label="Menu principal">
                 
-                  <div id="global-nav-links" >
+                  <ul id="global-nav-links" >
                     
-                       <a id="mobile-menu-account" class="visible-xs-block" href="/servlet/MembersMainMenu" data-cms-ai="0">My Account</a>
+                       <li class="visible-xs-block"><a id="mobile-menu-account" class="visible-xs-block" href="/servlet/MembersMainMenu" data-cms-ai="0">My Account</a></li>
                       
-                       <a id="mobile-menu-orders" class="visible-xs-block" href="/my-account/purchases" data-cms-ai="0">My Purchases</a>
+                       <li class="visible-xs-block"><a id="mobile-menu-orders" class="visible-xs-block" href="/my-account/purchases" data-cms-ai="0">My Purchases</a></li>
                       
-                       <a id="mobile-menu-signon" class="visible-xs-block" href="/servlet/SignOff?ph=2" data-cms-ai="0">Sign Off</a>
+                       <li class="visible-xs-block"><a id="mobile-menu-signon" class="visible-xs-block" href="/servlet/SignOff?ph=2" data-cms-ai="0">Sign Off</a></li>
                       
-                       <a id="search-entry" class="search-entry" href="/servlet/SearchEntry" title="Search millions of items for sale" data-cms-ai="0">Advanced Search</a>
+                       <li class="search-entry"><a id="search-entry" class="search-entry" href="/servlet/SearchEntry" title="Search millions of items for sale" data-cms-ai="0">Advanced Search</a></li>
                       
-                       <a id="collections-link" class="collections-link" href="/collections/" title="Browse books, fine art &amp; collectibles" data-cms-ai="0">Browse Collections</a>
+                       <li class="collections-link"><a id="collections-link" class="collections-link" href="/collections/" title="Browse books, fine art &amp; collectibles" data-cms-ai="0">Browse Collections</a></li>
                       
-                       <a id="rare-books" href="/books/rarebooks/" title="Find rare &amp; collectible books" data-cms-ai="0">Rare Books</a>
+                       <li ><a id="rare-books" href="/books/rarebooks/" title="Find rare &amp; collectible books" data-cms-ai="0">Rare Books</a></li>
                       
-                       <a id="hdr-nbc" href="/collectibles/" title="Search fine art &amp; collectibles" data-cms-ai="0">Art &amp; Collectibles</a>
+                       <li ><a id="hdr-nbc" href="/collectibles/" title="Search fine art &amp; collectibles" data-cms-ai="0">Art &amp; Collectibles</a></li>
                       
-                       <a id="text-books" href="/books/textbooks/" title="Buy cheap new and used textbooks" data-cms-ai="0">Textbooks</a>
+                       <li ><a id="text-books" href="/books/textbooks/" title="Buy cheap new and used textbooks" data-cms-ai="0">Textbooks</a></li>
                       
-                       <a id="hdr-sellers" href="/servlet/BookstoreSearch" title="Search AbeBooks sellers from around the world" data-cms-ai="0">Sellers</a>
+                       <li ><a id="hdr-sellers" href="/servlet/BookstoreSearch" title="Search AbeBooks sellers from around the world" data-cms-ai="0">Sellers</a></li>
                       
-                       <a id="hdr-sell" href="/books/sell/" title="Become a professional AbeBooks seller" data-cms-ai="0">Start Selling</a>
+                       <li ><a id="hdr-sell" href="/books/sell/" title="Become a professional AbeBooks seller" data-cms-ai="0">Start Selling</a></li>
                       
-                       <a id="mobile-menu-help" class="visible-xs-block" href="https://support.abebooks.com/s/?language=en_US" data-cms-ai="0">Help</a>
+                       <li class="visible-xs-block"><a id="mobile-menu-help" class="visible-xs-block" href="https://support.abebooks.com/s/?language=en_US" data-cms-ai="0">Help</a></li>
                       
-                       <a id="mobile-menu-close" class="visible-xs-block text-center mobile-close" href="javascript:void(0)" aria-controls="nav-wrapper" aria-expanded="true" role="button" tabindex="0" data-cms-ai="0"><span>CLOSE</span></a>
+                       <li class="visible-xs-block text-center mobile-close"><a id="mobile-menu-close" class="visible-xs-block text-center mobile-close" href="javascript:void(0)" aria-controls="nav-wrapper" aria-expanded="true" role="button" tabindex="0" data-cms-ai="0"><span>CLOSE</span></a></li>
                       
-                  </div>
+                  </ul>
                 
               </div>
             </div>
