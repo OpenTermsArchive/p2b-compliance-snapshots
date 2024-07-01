@@ -64,7 +64,9 @@
         <link rel="preconnect" href="https://customer.brenger.nl" />
         <link rel="modulepreload" href="https://customer.brenger.nl/brenger-merged.js" />
         <link rel="preload" href="https://customer.brenger.nl/brenger-merged.css" as="style" />
-                <script>
+        <script>
+        var BRENGER_IS_CP = false    </script>
+            <script>
             // Define dataLayer and the gtag function.
             window.dataLayer = window.dataLayer || [];
 
@@ -89,7 +91,6 @@
                 'personalization_storage': 'granted',
                 'security_storage': 'granted'
             });
-            var BRENGER_IS_CP = 301 === 303;
         </script>
         <script>
             (function(w, d, s, l, i) {
