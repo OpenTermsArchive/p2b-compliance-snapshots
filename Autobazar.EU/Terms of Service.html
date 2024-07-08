@@ -75,6 +75,10 @@ li{padding: 5px !important}
     window.clientIP = '5.196.30.134';
     window.google = window.google || {};
     window.google.grant = true;
+    window.ga=function() {}
+    window.fbq=function() {}
+    window.googletag = window.googletag || {};
+    window.googletag.cmd = window.googletag.cmd || [];
 
     /**
      $(document).ready(function () {
@@ -83,7 +87,7 @@ li{padding: 5px !important}
             actionPrivacySettings.on('click', function (e) {
                 e.preventDefault();
                 if (typeof window._sp_ !== "undefined") {
-                    //window._sp_.gdpr.loadPrivacyManagerModal(915910);
+                    window._sp_.gdpr.loadPrivacyManagerModal(915910);
                 }
             })
         }
@@ -205,9 +209,9 @@ li{padding: 5px !important}
         </script>
 
         <script>
-            document.addEventListener('grantGoogleAnalytics', function () {
+            /*document.addEventListener('grantGoogleAnalytics', function () {
                 includeGoogleAnalytics();
-            });
+            });*/
 
             window._sp_queue = [];
             window._sp_ = {
@@ -228,7 +232,7 @@ li{padding: 5px !important}
                             if (success) {
 
                                 // google analytics
-                                if (vendorConsents.grants["5e542b3a4cd8884eb41b5a72"].vendorGrant === true) {
+                                /*if (vendorConsents.grants["5e542b3a4cd8884eb41b5a72"].vendorGrant === true) {
                                     var grantGoogleAnalytics;
                                     if (typeof (Event) === 'function') {
                                         grantGoogleAnalytics = new Event('grantGoogleAnalytics');
@@ -242,7 +246,7 @@ li{padding: 5px !important}
                                     window.google.grant = vendorConsents.grants["5e542b3a4cd8884eb41b5a72"].vendorGrant === true;
 
                                     document.dispatchEvent(grantGoogleAnalytics);
-                                }
+                                }*/
 
                                 // google analytics remarketing
                                 if (vendorConsents.grants["5ef20f14bcc0cb09c5bf7117"].vendorGrant === true) {
@@ -260,12 +264,7 @@ li{padding: 5px !important}
                                 // - Google ads conversion tracking
                                 // - Google Adwords
                                 // - Google Optimze
-                                if (vendorConsents.grants["5e952f6107d9d20c88e7c975"].vendorGrant === true
-                                    || vendorConsents.grants["5ed0eb688a76503f1016578f"].vendorGrant === true
-                                    || vendorConsents.grants["604b523293bce6248acd0f1f"].vendorGrant === true
-                                    || vendorConsents.grants["5ecc95435cf6286f3b5872a2"].vendorGrant === true
-                                    || vendorConsents.grants["5eb2856cbb0c9a4439bfe303"].vendorGrant === true
-                                ) {
+                                if (vendorConsents.grants["5e952f6107d9d20c88e7c975"].vendorGrant === true) {
                                     includeGoogleTagManager();
                                 }
 
@@ -309,7 +308,7 @@ li{padding: 5px !important}
                     }
                 } else {
                     // gdprApplies and when false and to simply skip the current purpose/consent verification logic.
-                    includeGoogleAnalytics();
+                    //includeGoogleAnalytics();
                     includeGoogleTagManager();
                     includeGoogleOptimize();
                     includeGoogleDoubleclick();
